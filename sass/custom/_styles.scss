@@ -4,6 +4,8 @@
 $bg: #F8F9FA;
 $link-color: #0066CC;
 $subtle: #aaa;
+$faint: #F2F2F2;
+$h1-size: 2em;
 
 html {
   background: $bg;
@@ -29,6 +31,9 @@ html {
   ul, ol {
     margin-left: 20px;
   }
+  h3 {
+    margin-bottom: 0.5em;
+  }
 }
 
 body {
@@ -40,10 +45,10 @@ body {
 
   > nav {
     background: $bg;
-    border-bottom: 1px solid #F2F2F2;
+    border-bottom: 1px solid $faint;
     padding-left: 0px;
     padding-right: 0px;
-    font-size: 0.7em;
+    font-size: 0.8em;
     padding-top: .4em;
     padding-bottom: .4em;
     margin-top: 1em;
@@ -51,6 +56,13 @@ body {
     a {
       text-shadow: none;
     }
+    li+li {
+      border-left: 1px solid $faint;
+    }
+  }
+
+  > div {
+    border-bottom: none;
   }
 
   > footer {
@@ -78,9 +90,12 @@ body {
 }
 
 article {
+  h2 {
+    background: none;
+  }
   header {
     h1 {
-      font-size: 2em !important;
+      font-size: $h1-size !important;
     }
     p.meta {
       font-size: 0.8em;
@@ -91,11 +106,20 @@ article {
   }
 }
 
+#main > #content > div > article > h1 {
+  font-size: $h1-size;
+}
+
 .blog-index article+article, #blog-archives article {
   background: none;
 }
-
 .meta {
   color: $subtle;
+}
+p.meta {
+  border-top: 1px solid $faint;
+  +.sharing {
+    background: none;
+  }
 }
 
