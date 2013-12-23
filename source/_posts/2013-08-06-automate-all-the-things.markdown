@@ -59,5 +59,5 @@ I like to think of OS X as having the best of both worlds of Windows and Linux: 
 [^1]: As also remarked by Gary Larizza in what turned out to be a [highly useful Boxen primer](http://garylarizza.com/blog/2013/02/15/puppet-plus-github-equals-laptop-love/).
 [^2]: Via the Mac App Store to install the Xcode developer tools which provide the system ruby and git binaries necessary for Boxen to bootstrap itself.
 [^3]: Using the method of https repository access and the OS X system keychain, not ssh keys.
-[^4]: A happy side benefit to letting boxen manage ruby versions is the obviation of somewhat horrible kludges like `.rvmrc` files in ruby project directories
+[^4]: A happy side benefit to letting boxen manage ruby versions is the obviation of somewhat horrible kludges like `.rvmrc` files in ruby project directories.
 

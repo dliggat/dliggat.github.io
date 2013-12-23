@@ -3,7 +3,7 @@
 
 $bg: #F8F9FA;
 $link-color: #0066CC;
-
+$subtle: #aaa;
 
 html {
   background: $bg;
@@ -75,7 +75,13 @@ article {
       display: inline-block;
       position: relative;
     }
+    background: none;
   }
+}
+
+.blog-index article+article {
+  background: none;
+//  border-bottom: 1px solid $subtle;
 }
 
 
