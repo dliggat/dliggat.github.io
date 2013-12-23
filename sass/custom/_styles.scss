@@ -48,6 +48,10 @@ body {
     background: $bg;
     text-shadow: none;
     font-size: 0.7em;
+    p {
+      margin-bottom: 0.1em;
+      line-height: 1.3em;
+    }
   }
 
   // Hide the sidebar nonsense.
