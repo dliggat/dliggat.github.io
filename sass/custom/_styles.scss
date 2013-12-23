@@ -2,6 +2,7 @@
 // Add styles here to make changes without digging in too much
 
 $bg: #fff;
+$link-color: #0066CC;
 
 #main {
   position: relative;
@@ -12,7 +13,21 @@ $bg: #fff;
 
 html {
   background: $bg;
+  a:active {  // Subtle link click button effect.
+    position: relative;
+    top: 1px;
+  }
+  a, a:visited, a:hover {
+    text-decoration: none !important;
+  }
+  a, a:visited {
+    color: $link-color;
+  }
+  a:hover {
+    color: red;
+  }
 }
+
 
 article {
   header {
@@ -31,6 +46,7 @@ body {
     background: $bg;
     text-align: center;
   }
+
 }
 
 
