@@ -1,7 +1,7 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
 
-$bg: #fff;
+$bg: #F8F9FA;
 $link-color: #0066CC;
 
 
@@ -39,8 +39,20 @@ body {
     padding-bottom: .4em;
     margin-top: 1em;
     margin-bottom: 1em;
-    text-shadow: none;
-  }
+    a {
+      text-shadow: none;
+    }
+
+//  > nav form .search {
+//    border-radius: 0.2em 0.2em 0.2em 0.2em;
+//    box-shadow: none;
+//    border: 0px;
+//    padding-top: 0.3em;
+//    padding-bottom: 0.3em;
+//    padding-left: 0.5em;
+//    padding-right: 0.5em;
+//  }
+}
 
   // Hide the sidebar nonsense.
   > div > div {
