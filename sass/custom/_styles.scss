@@ -79,9 +79,7 @@ article {
   }
 }
 
-.blog-index article+article {
+.blog-index article+article, #blog-archives article {
   background: none;
-//  border-bottom: 1px solid $subtle;
 }
-
 
