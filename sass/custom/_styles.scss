@@ -4,12 +4,6 @@
 $bg: #fff;
 $link-color: #0066CC;
 
-#main {
-  position: relative;
-  display: block;
-  max-width: 800px;
-  margin: 0 auto;
-}
 
 html {
   background: $bg;
@@ -28,10 +22,42 @@ html {
   }
 }
 
+body {
+  max-width: 850px;
+  > header {
+    background: $bg;
+    text-align: center;
+  }
+
+  > nav {
+    background: $bg;
+    border-bottom: 1px solid #F2F2F2;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 0.7em;
+    padding-top: .4em;
+    padding-bottom: .4em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-shadow: none;
+  }
+
+  // Hide the sidebar nonsense.
+  > div > div {
+    background: $bg;
+    border-right: none;
+  }
+}
+
+#main {
+  position: relative;
+  display: block;
+  max-width: 800px;
+  margin: 0 auto;
+}
 
 article {
   header {
-//    padding-top: 0em;
     p.meta {
       font-size: 0.8em;
       display: inline-block;
@@ -40,30 +66,4 @@ article {
   }
 }
 
-body {
-  max-width: 850px;
-  > header {
-    background: $bg;
-    text-align: center;
-  }
 
-}
-
-
-body>div>div {
-  background: $bg;
-  border-right: none;
-}
-
-body>nav {
-  background: $bg;
-  border-bottom: 1px solid #F2F2F2;
-  padding-left: 0px;
-  padding-right: 0px;
-  font-size: 0.7em;
-  padding-top: .4em;
-  padding-bottom: .4em;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  text-shadow: none;
-}
