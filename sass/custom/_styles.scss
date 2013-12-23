@@ -14,7 +14,28 @@ html {
   background: $bg;
 }
 
+body {
+  max-width: 850px;
+  > header {
+    background: $bg;
+    text-align: center;
+  }
+}
+
+
 body>div>div {
   background: $bg;
   border-right: none;
+}
+
+body>nav {
+  background: $bg;
+  border-bottom: 1px solid #F2F2F2;
+  padding-left: 0px;
+  padding-right: 0px;
+  font-size: 0.7em;
+  padding-top: .4em;
+  padding-bottom: .4em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
