@@ -20,6 +20,15 @@ html {
   a:hover {
     color: red;
   }
+  time {
+    text-transform: capitalize;
+  }
+  li {
+    margin-bottom: 10px;
+  }
+  ul, ol {
+    margin-left: 20px;
+  }
 }
 
 body {
@@ -70,6 +79,9 @@ body {
 
 article {
   header {
+    h1 {
+      font-size: 2em !important;
+    }
     p.meta {
       font-size: 0.8em;
       display: inline-block;
@@ -81,5 +93,9 @@ article {
 
 .blog-index article+article, #blog-archives article {
   background: none;
+}
+
+.meta {
+  color: $subtle;
 }
 

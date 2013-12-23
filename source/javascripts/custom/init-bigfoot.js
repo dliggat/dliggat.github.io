@@ -22,6 +22,7 @@
     var bigfoot = $.bigfoot({
       activateOnHover: true,
       deleteOnUnhover: true
+      // actionOriginalFN: "ignore"
     });
 
   });
