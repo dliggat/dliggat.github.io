@@ -1,2 +1,20 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+
+$bg: #fff;
+
+#main {
+  position: relative;
+  display: block;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+html {
+  background: $bg;
+}
+
+body>div>div {
+  background: $bg;
+  border-right: none;
+}
