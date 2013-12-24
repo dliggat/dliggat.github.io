@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Rant | liggat.org]]></title>
+  <link href="http://dliggat.github.io/blog/categories/rant/atom.xml" rel="self"/>
+  <link href="http://dliggat.github.io/"/>
+  <updated>2013-12-24T12:40:02-08:00</updated>
+  <id>http://dliggat.github.io/</id>
+  <author>
+    <name><![CDATA[Dave Liggat]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[A Minor Rant on Package Tracking]]></title>
+    <link href="http://dliggat.github.io/2013/11/30/a-minor-rant-on-package-tracking/"/>
+    <updated>2013-11-30T23:11:00-08:00</updated>
+    <id>http://dliggat.github.io/2013/11/30/a-minor-rant-on-package-tracking</id>
+    <content type="html"><![CDATA[<p>I do a fair bit of online shopping<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, and have done so for pretty much my entire credit-card-wielding life. It&rsquo;s a familiar ritual: every time, shortly after I&rsquo;ve clicked <code>Purchase</code>, an email arrives containing a linked phrase with roughly the following copy: <em>Click here to track your shipment</em>. <!--more-->And every time I receive that email, I dutifully click that link, only to be met with the following 404-esque response:</p>
+
+<p><img class="center" src="/images/2013/tracking.png" width="600" title="&lsquo;tracking&rsquo;" ></p>
+
+<p>It does not seem to matter whether the year is 2005 or 2013, and whether the logistics handler in question is Canada Post, USPS, UPS, etc &ndash; this is invariably the experience. This is a minor but absolutely-nagging annoyance if you know anything about software. It does not need to be this way.</p>
+
+<p>Subsequent to the buyer&rsquo;s order, the seller and the logistics handler must perform an asynchronous (with respect to the buyer) transaction in which, among other things, data is exchanged regarding the delivery to be executed. At some point in this process, the seller is provided with a tracking number for that delivery, which they happily relay to the buyer in the aforesaid email. Therefore, when the buyer excitedly clicks on the tracking link, they are performing a lookup of <strong>a record that is certain to exist somewhere on the logistics handler&rsquo;s systems</strong>, and yet are <em>told</em> it doesn&rsquo;t exist.</p>
+
+<p>I imagine that at this point, given the opportunity, the CTO of one of these logistics handler outfits might loudly interject <em>&ldquo;Well, of course &ndash; but the consumer web frontend and the logistics backend are entirely separate systems that we need to batch transfer over, and because of our legacy&hellip; and because of our storage requirements&hellip; and because of our load balancing&hellip; and because of Sarbanes-Oxley&hellip; and&hellip;.&rdquo;</em></p>
+
+<p>And I&rsquo;m sure these would all be perfectly justified reasons, within the infrastructure team of that firm. The point is though, I don&rsquo;t care <strong>why</strong> the tracker was <em>unable to find any results</em>. And neither does any other user. This is a bad experience, and they can, and should do better. A few suggestions, in increasing order of implementation complexity:</p>
+
+<ol>
+<li>Make a better <em>unable to find any results</em> page. Acknowledge that this is a new tracking number, and will be in the systems shortly. Provide a timeframe. Differentiate between new numbers, and erroneous ones (use a <a href="http://en.wikipedia.org/wiki/Checksum">checksumming</a> scheme in the numbers themselves if necessary).</li>
+<li>Coordinate with the seller. Don&rsquo;t fire out emails containing tracking links until both the seller and the logistics handler agree that the delivery will be performed, a tracking number exists, and the tracking number is queryable. I don&rsquo;t want an email with a link that I can&rsquo;t use until some unspecified period has passed.</li>
+<li>Build better infrastructure. It is well within the ability of humanity&rsquo;s current software engineering to run systems without such absurd temporal lags within a single organization&rsquo;s infrastructure. This is not an especially complex technical problem. If your logistics and web-query systems are entirely separate, and they take 6 hours to propagate records &ndash; get that 6 down to 5. Then to 4. Then to 3. Etc.</li>
+</ol>
+
+
+<p>Clearly, this is not an important concern in the grand scheme of the universe. Invariably, the links start working eventually, and the packages arrive. But the triviality is no reason to not demand a modicum of progress.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>I did even more when I lived in the USA. The selection and swiftness of delivery of online purchasing there is nothing short of remarkable, especially under Amazon Prime.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+</feed>

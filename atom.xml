@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[liggat.org]]></title>
+  <link href="http://dliggat.github.io/atom.xml" rel="self"/>
+  <link href="http://dliggat.github.io/"/>
+  <updated>2013-12-24T12:40:02-08:00</updated>
+  <id>http://dliggat.github.io/</id>
+  <author>
+    <name><![CDATA[Dave Liggat]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Canadian Housing: Noting for Posterity]]></title>
+    <link href="http://dliggat.github.io/2013/12/15/canadian-housing-noting-for-posterity/"/>
+    <updated>2013-12-15T08:52:00-08:00</updated>
+    <id>http://dliggat.github.io/2013/12/15/canadian-housing-noting-for-posterity</id>
+    <content type="html"><![CDATA[<p>I&rsquo;m posting the following chart from <a href="http://blog.bcaresearch.com/canadian-housing-the-bubble-debate">BCA Research</a> not for the purposes of persuasion, but rather, for posterity.<!--more--></p>
+
+<p><img class="center http://www.google.ca" src="http://dliggat.github.io/images/2013/Canada-Housing.gif" title="'Canada Housing'" ></p>
+
+<p>If you have a sense of the historical economic similarity between Canada and the United States, understand the computation and significance of <code>price:rent</code> and <code>price:income</code> as housing valuation metrics, and yet still don&rsquo;t feel <em>even a flutter of anxiety</em> about the future of the Canadian housing market, and more importantly, the downstream economic and societal implications of a <a href="http://en.wikipedia.org/wiki/Regression_toward_the_mean">reversion to the mean</a> &ndash; then you&rsquo;re far beyond the power of my rhetoric to change your mind<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.</p>
+
+<p>As I write this, in late 2013, <a href="http://www.theglobeandmail.com/report-on-business/top-business-stories/canadas-housing-market-most-overvalued-in-the-world-deutsche-bank-says/article15878166/">Deutsche Bank</a> joins a growing list of spectators whose ranks include <a href="http://www.economist.com/news/finance-and-economics/21584361-america-surges-much-europe-sinks-mixed-messages">The Economist</a>, <a href="http://www.cnbc.com/id/101150382">Goldman-Sachs</a>, <a href="http://business.financialpost.com/2012/09/21/canada-heading-into-a-slow-motion-version-of-the-u-s-housing-bust-robert-shiller/">Robert Shiller</a>, the <a href="http://business.financialpost.com/2013/11/27/according-to-the-imf-canada-has-the-most-overvalued-housing-market-in-the-world/">IMF</a>, <a href="http://www.theglobeandmail.com/report-on-business/top-business-stories/nouriel-roubini-aka-dr-doom-warns-of-frothy-canadian-housing-market/article15807846/">Nouriel Roubini</a>, and <a href="http://ca.finance.yahoo.com/blogs/balance-sheet/paul-krugman-warns-canada-vulnerable-big-deleveraging-shock-183728127.html">Paul Krugman</a> &ndash; all of whom have expressed incredulity and/or concern in one form or another about the stratospheric valuations in the Canadian housing market.</p>
+
+<p>My opinion, irrelevant and disinterested<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> though it may be, is very straightforward, and has been unchanged for several years now: <strong>this will end badly</strong>, for the <a href="http://en.wikipedia.org/wiki/Leverage_(finance)">leveraged</a> and unleveraged, alike. Just ask anyone from the Republic of Ireland. Or look a little closer to home &ndash; below the 49th Parallel.</p>
+
+<p>Feel free to disagree with me<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>. Most Canadians do, at least as a default position. But if you do disagree, surely it&rsquo;s at least partially concerning to witness all this opposing consensus among weighty, if not necessarily clairvoyant, external parties?</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>Or, quite possibly, you&rsquo;re subject to the phenomenon, originally noted by Upton Sinclair, that <em>it is difficult to get a man to understand something, when his salary depends on his not understanding it</em>.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>I really mean this &ndash; I&rsquo;m <a href="http://www.dailywritingtips.com/disinterested-not-the-same-as-uninterested">disinterested</a> (but not <em>uninterested</em> clearly, as all of this is deeply fascinating to me &ndash; in a train-wreck sort of way). I have no real stake in whether or not there&rsquo;s a massive housing bubble in Canada, other than the stake of preferring not to live in a country captured by the fallacious belief that trading real estate is the preeminent way to generate wealth.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>Keep in mind: it&rsquo;s possible to simultaneously {own property | need to buy it soon} and {find the status quo very concerning}.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A Minor Rant on Package Tracking]]></title>
+    <link href="http://dliggat.github.io/2013/11/30/a-minor-rant-on-package-tracking/"/>
+    <updated>2013-11-30T23:11:00-08:00</updated>
+    <id>http://dliggat.github.io/2013/11/30/a-minor-rant-on-package-tracking</id>
+    <content type="html"><![CDATA[<p>I do a fair bit of online shopping<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, and have done so for pretty much my entire credit-card-wielding life. It&rsquo;s a familiar ritual: every time, shortly after I&rsquo;ve clicked <code>Purchase</code>, an email arrives containing a linked phrase with roughly the following copy: <em>Click here to track your shipment</em>. <!--more-->And every time I receive that email, I dutifully click that link, only to be met with the following 404-esque response:</p>
+
+<p><img class="center" src="http://dliggat.github.io/images/2013/tracking.png" width="600" title="'tracking'" ></p>
+
+<p>It does not seem to matter whether the year is 2005 or 2013, and whether the logistics handler in question is Canada Post, USPS, UPS, etc &ndash; this is invariably the experience. This is a minor but absolutely-nagging annoyance if you know anything about software. It does not need to be this way.</p>
+
+<p>Subsequent to the buyer&rsquo;s order, the seller and the logistics handler must perform an asynchronous (with respect to the buyer) transaction in which, among other things, data is exchanged regarding the delivery to be executed. At some point in this process, the seller is provided with a tracking number for that delivery, which they happily relay to the buyer in the aforesaid email. Therefore, when the buyer excitedly clicks on the tracking link, they are performing a lookup of <strong>a record that is certain to exist somewhere on the logistics handler&rsquo;s systems</strong>, and yet are <em>told</em> it doesn&rsquo;t exist.</p>
+
+<p>I imagine that at this point, given the opportunity, the CTO of one of these logistics handler outfits might loudly interject <em>&ldquo;Well, of course &ndash; but the consumer web frontend and the logistics backend are entirely separate systems that we need to batch transfer over, and because of our legacy&hellip; and because of our storage requirements&hellip; and because of our load balancing&hellip; and because of Sarbanes-Oxley&hellip; and&hellip;.&rdquo;</em></p>
+
+<p>And I&rsquo;m sure these would all be perfectly justified reasons, within the infrastructure team of that firm. The point is though, I don&rsquo;t care <strong>why</strong> the tracker was <em>unable to find any results</em>. And neither does any other user. This is a bad experience, and they can, and should do better. A few suggestions, in increasing order of implementation complexity:</p>
+
+<ol>
+<li>Make a better <em>unable to find any results</em> page. Acknowledge that this is a new tracking number, and will be in the systems shortly. Provide a timeframe. Differentiate between new numbers, and erroneous ones (use a <a href="http://en.wikipedia.org/wiki/Checksum">checksumming</a> scheme in the numbers themselves if necessary).</li>
+<li>Coordinate with the seller. Don&rsquo;t fire out emails containing tracking links until both the seller and the logistics handler agree that the delivery will be performed, a tracking number exists, and the tracking number is queryable. I don&rsquo;t want an email with a link that I can&rsquo;t use until some unspecified period has passed.</li>
+<li>Build better infrastructure. It is well within the ability of humanity&rsquo;s current software engineering to run systems without such absurd temporal lags within a single organization&rsquo;s infrastructure. This is not an especially complex technical problem. If your logistics and web-query systems are entirely separate, and they take 6 hours to propagate records &ndash; get that 6 down to 5. Then to 4. Then to 3. Etc.</li>
+</ol>
+
+
+<p>Clearly, this is not an important concern in the grand scheme of the universe. Invariably, the links start working eventually, and the packages arrive. But the triviality is no reason to not demand a modicum of progress.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>I did even more when I lived in the USA. The selection and swiftness of delivery of online purchasing there is nothing short of remarkable, especially under Amazon Prime.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Static Hosting on Amazon S3]]></title>
+    <link href="http://dliggat.github.io/2013/11/03/static-hosting-on-amazon-s3/"/>
+    <updated>2013-11-03T13:13:00-08:00</updated>
+    <id>http://dliggat.github.io/2013/11/03/static-hosting-on-amazon-s3</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve had an outstanding <strong>todo</strong> for quite some time to migrate my basic and essentially-static <a href="http://www.factorialsystems.ca">business website</a> off of <a href="http://www.squarespace.com">Squarespace</a>. I ended up replacing it with a combination of <a href="http://octopress.org">Octopress</a> and Amazon Simple Storage Service (<a href="http://aws.amazon.com/s3">S3</a>), which, it turns out, are a fantastic duo.<!--more--></p>
+
+<h3>Prelude</h3>
+
+<p>A brief prelude: Squarespace is fantastic, and should be the first port of call for anyone, especially a business, who needs a website. I can&rsquo;t even enumerate the number of ostensibly well-run restaurants and businesses who either don&rsquo;t have a website, or if they do, it&rsquo;s some horrid Flash-payload thing that won&rsquo;t run on the primary device customers tend to be using at the point of need: their phones! Squarespace isn&rsquo;t free, but is totally worth the small monthly cost for pretty much anyone.</p>
+
+<p>I started my business site there due to a combination of being overwhelmingly-busy at the time, as well as generally curious about the service&hellip; but it eventually became time for me to move on<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.</p>
+
+<h3>Octopress</h3>
+
+<p>I&rsquo;ve become quite enamoured with Octopress &ndash; the blogging engine that I use for this site (and host on GitHub). I like to think of it as the anti-Wordpress &ndash; it produces good, old-fashioned directory trees of HTML pages from <a href="http://en.wikipedia.org/wiki/Markdown">markdown</a>-formatted source files and <a href="http://sass-lang.com/">SASS</a> style sheets. No application server or database, and the attendant care and feeding, required &ndash; just a plain old web server serving files<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>. This is a perfect choice, it turns out, for a basic company site. It has all the necessary infrastructure for blogging, should that become necessary, and has built-in responsive design and other niceties.</p>
+
+<h3>Hosting</h3>
+
+<p>S3 is Amazon Web Services&#8217; online file storage service (distributed, redundant, RESTful, etc). It is purportedly used as the persistence backend for <a href="http://dropbox.com">Dropbox</a>, among others. My needs are considerably more modest &ndash; I just want it to store and serve my site content. It turns out it has an option for exactly this purpose:</p>
+
+<p><img class="center" src="http://dliggat.github.io/images/2013/s3.png" width="600" title="'S3 Static Website Hosting'" ></p>
+
+<p>Thus, a static website with Octopress and S3 requires that you simply:</p>
+
+<ol>
+<li>create content within an Octopress repository</li>
+<li>execute Octopress&#8217; <code>bundle exec rake generate</code> to produce static HTML</li>
+<li>deploy the output to an S3 bucket (<code>bundle exec rake deploy</code>)</li>
+</ol>
+
+
+<h3>Deploying</h3>
+
+<p>Out of the box, Octopress does not know how to deploy to S3. That&rsquo;s easily remedied via an extension to the <code>Rakefile</code> that I found via this <a href="http://www.jerome-bernard.com/blog/2011/08/20/quick-tip-for-easily-deploying-octopress-blog-on-amazon-s3/">blog post</a>. With that <code>s3</code> rake task added, and S3 bucket variables defined, it&rsquo;s simply a matter of running <code>bundle exec rake deploy</code>. to deploy new content. The underlying <code>s3cmd</code> is, obviously, smart enough to only send content deltas to the S3 bucket.</p>
+
+<h3>Cost</h3>
+
+<p>At the time of writing, Amazon charges 9.5¢ per Gigabyte-month for the first 1TB of storage (cheaper thereafter), plus 0.5¢ per 1000 RESTful (GET, PUT, etc) operations, plus some minimal data transfer charge. One reasonable way to describe this might be: <strong>extremely inexpensive</strong>!</p>
+
+<h3>So Far, So Good</h3>
+
+<p>Thus far, I&rsquo;m really happy with this setup. My personal blog, this site, is currently hosted on <a href="http://pages.github.com">GitHub Pages</a><sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>, but I&rsquo;ll probably move this over to S3 also. Obviously, the static site constraint remains &ndash; I can&rsquo;t, for instance, have a page with a form, or an XHR endpoint, etc. But if those should become necessary &ndash; it&rsquo;s very easy to upgrade to an EC2 instance with Rails, and remain within the Amazon ecosystem. I guess that&rsquo;s how they get you&hellip;</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>Squarespace is definitely overkill for a static site if you have the time, knowledge and inclination to host it elsewhere. But many website-needing entities do not possess the intersection of those properties &ndash; hence the genius of Squarespace as a product itself.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>This resultant simplicity has an inherent appeal &ndash; not dissimilar to that, for me, of iOS vs OS X. The former trades possibility for simplicity &ndash; a desirable exchange in many (but obviously not all) scenarios.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>GitHub Pages hosts static sites for free &ndash; not wishing to trespass on GitHub&rsquo;s awesomeness, I reasoned that I should probably pay for the business site&rsquo;s hosting. All 68¢ of it, or whatever the final bill ends up being.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Walter White, Art Aficionado]]></title>
+    <link href="http://dliggat.github.io/2013/10/15/walter-white/"/>
+    <updated>2013-10-15T10:41:00-07:00</updated>
+    <id>http://dliggat.github.io/2013/10/15/walter-white</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve been re-watching <em>Breaking Bad</em>, one of my favourite television dramas, ever. Yesterday, midway through an early second season episode, I noticed a connection to a much later point in the story that I haven&rsquo;t seen discussed anywhere else.</p>
+
+<!--more-->
+
+
+<p><em>Don&rsquo;t read this if you&rsquo;re keen to avoid Breaking Bad plot details.</em></p>
+
+<h3>The Painting</h3>
+
+<p>By the midpoint of season five<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, Walter is at the height of his Heisenberg-persona hubris. He&rsquo;s built his own drug empire, defeated his enemies &ndash; notably Fring, and still gone unnoticed by law enforcement. He&rsquo;s invincible. As if to telegraph this &ndash; while Uncle Jack and his band of Nazis are struggling over the minutiae of their planned murderous rampage at three separate Albuquerque jails &ndash; Walt stares at a painting in the motel room, uninterested in the conversation around him.</p>
+
+<p><img class="center" src="http://dliggat.github.io/images/2013/painting_second.jpg" width="500" title="Painting in the Motel" ></p>
+
+<p>He idly speculates: <em>Where do you suppose these come from? I&rsquo;ve seen this one before. I wonder &ndash; are they all in some giant warehouse someplace?</em>, and invites the ire of Uncle Jack &ndash; incredulous at his lack of focus on planning the operation.</p>
+
+<h3>First Appearance</h3>
+
+<p>It turns out that this same painting featured much earlier in the story<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>. A browbeaten Walt was finishing up a chemotherapy session, and spent a moment staring at a print of it on the hospital wall. The camera lingers at what is surely an instance of symbolism: the painting is of a man, rowing <em>away</em> from his family on the shore towards a waiting ship.</p>
+
+<p><img class="center" src="http://dliggat.github.io/images/2013/painting_first.jpg" width="500" title="Painting in the Hospital" ></p>
+
+<p>Walt&rsquo;s comment is therefore made with the recognition that he&rsquo;s noticed at least two of these things in the wild. Virtually the only constant between these two moments in the <em>Breaking Bad</em> story is the notion of that warehouse somewhere, churning out an endless supply of mediocre stock art.</p>
+
+<p>The inclusion of, and callback to, this painting is just one more in another long line of fantastic touches by the show&rsquo;s creators.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>These events occurred in the fifth season episode, <em>Gliding all Over</em>.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>This was visible in the second season episode <em>Bit by Dead Bee</em>. Walt had just completed implementing his not-altogether-plausible &lsquo;fugue state&rsquo; alibi, and was back in chemo.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Simulating the Birthday Paradox]]></title>
+    <link href="http://dliggat.github.io/2013/10/13/simulating-the-birthday-paradox/"/>
+    <updated>2013-10-13T10:59:00-07:00</updated>
+    <id>http://dliggat.github.io/2013/10/13/simulating-the-birthday-paradox</id>
+    <content type="html"><![CDATA[<p>Probability theory is a pretty special branch of mathematics in the sense that it is (1) highly applicable to daily life; (2) many of its results are easily comprehensible to most people; and yet despite this (3) it remains a profoundly complex area of mathematical inquiry<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.<!--more--></p>
+
+<p>An example which perfectly encapsulates this is the <a href="http://en.wikipedia.org/wiki/Birthday_paradox">birthday paradox</a>. In short, it can be represented by the question:</p>
+
+<blockquote><p>With a group of <code>N</code> randomly chosen people, how large does <code>N</code> need to be so that there&rsquo;s a 50% chance of a shared birthday within the group?</p></blockquote>
+
+<p>The birthday paradox is a great opportunity to use some basic computation as an exploratory tool. I think more people should have the ability to use this.</p>
+
+<h3>Finding N</h3>
+
+<p>The group size is clearly less than or equal to 365. Above 365, we know with 100% certainty that there&rsquo;s a shared birthday somewhere<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>. Intuition (or at least my intuition before I knew the answer) usually suggests that the 50% probability threshold value for N is probably at or around the 100-150 mark. In other words, we might guess that you need 100-150 people in the group before the probability of a shared birthday is equal to a coin flip.</p>
+
+<p>It turns out that&rsquo;s a gross overestimate. The actual value is <strong>staggeringly lower</strong> than people tend to guess:</p>
+
+<blockquote><p>With a group size of 23 people, the probability that two people share a birthday is ~= 50.36%.</p></blockquote>
+
+<p>This is a pretty astonishing result. It is, of course, provably true by an <a href="http://en.wikipedia.org/wiki/Birthday_paradox#Calculating_the_probability">analytical argument</a>, but it is actually far easier to convince oneself of its trueness with a simple computational exercise (full version on <a href="https://gist.github.com/dliggat/6963840">GitHub</a>):</p>
+
+<figure class='code'><figcaption><span>birthday.rb: Simulate the birthday paradox </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="c1">#!/usr/bin/env ruby</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">shared_birthday?</span><span class="p">(</span><span class="n">group_size</span><span class="p">)</span>
+</span><span class='line'>  <span class="c1"># Generate an array with size `group_size`, and randomly assign every member a birthday.</span>
+</span><span class='line'>  <span class="c1"># Return true if two members share a birthday; else return false.</span>
+</span><span class='line'>  <span class="n">counter</span>   <span class="o">=</span> <span class="no">Hash</span><span class="o">.</span><span class="n">new</span> <span class="mi">0</span>
+</span><span class='line'>  <span class="n">birthdays</span> <span class="o">=</span> <span class="n">group_size</span><span class="o">.</span><span class="n">times</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="nb">rand</span> <span class="mi">365</span> <span class="p">}</span>
+</span><span class='line'>  <span class="n">birthdays</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">birthday</span><span class="o">|</span>
+</span><span class='line'>    <span class="n">counter</span><span class="o">[</span><span class="n">birthday</span><span class="o">]</span> <span class="o">+=</span> <span class="mi">1</span>
+</span><span class='line'>    <span class="k">return</span> <span class="kp">true</span> <span class="k">if</span> <span class="n">counter</span><span class="o">[</span><span class="n">birthday</span><span class="o">]</span> <span class="o">&gt;</span> <span class="mi">1</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>  <span class="kp">false</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">run_birthday_trials</span><span class="p">(</span><span class="n">group_size</span><span class="p">,</span> <span class="n">trial_count</span><span class="p">)</span>
+</span><span class='line'>  <span class="c1"># Run the shared_birthday? experiment `trial_count` times.</span>
+</span><span class='line'>  <span class="c1"># Return the number of experiments which resulted in a shared birthday.</span>
+</span><span class='line'>  <span class="n">successes</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span class='line'>  <span class="n">trial_count</span><span class="o">.</span><span class="n">times</span> <span class="p">{</span> <span class="n">successes</span> <span class="o">+=</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">shared_birthday?</span> <span class="n">group_size</span> <span class="p">}</span>
+</span><span class='line'>  <span class="n">successes</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">run_birthday_trials</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">1000</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This very simple code runs a series of birthday-paradox experiments &ndash; within each trial, it generates a group of people, and tests for the presence of a shared birthday. By doing this repeatedly, a thousand times in this case, we can approximate the actual probability of a shared birthday with a particular group size.</p>
+
+<h3>Why Bother Sharing This?</h3>
+
+<p>To any mildly-capable programmer<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>, none of this is particularly interesting or novel. Many of us in this line of work have a pretty decent mathematical background, and have done all sorts of these little simulation exercises in the past, both academically and professionally.</p>
+
+<p>However, it is my firm belief that a great many people could stand to benefit if the ability to use basic computational principles and tools were more widely disseminated. Windows and OS X machines ship with browsers with full JavaScript runtimes; Ruby and Python runtimes <em>ship</em> with OS X, and can easily be added to Windows. The tools of exploratory computation are everywhere &ndash; but very few people were ever given the knowledge to use them. This could be easily remedied by offering basic Computer Science in high school, either on its own, or as part of a math or science class. This might be the case today for all I know, but my own experience on that front was not encouraging<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>.</p>
+
+<p>To anyone even moderately interested in the vast possibilities that are unlocked with a bit of computational knowledge, I strongly encourage you to check out <a href="http://www.codecademy.com/">Code Academy</a> or <a href="http://projecteuler.net">Project Euler</a>. Of all of Steve Jobs&#8217; various witty and insightful aphorisms, the notion that a computer is a <em>bicycle for the mind</em> has always struck me as especially apt.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>Unlike, say, <a href="http://en.wikipedia.org/wiki/Real_analysis">real analysis</a>, which has zero applicability to daily life and is not comprehensible by most people, including myself.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>By the <a href="http://en.wikipedia.org/wiki/Pigeonhole_principle">pigeonhole principle</a>: If we have 365 pigeonholes into which we place 366 objects, at least one pigeonhole must contain more than one object.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p><a href="http://www.codinghorror.com/blog/2007/02/why-cant-programmers-program.html">FizzBuzz</a>, as ever, remains a cautionary tale about our industry.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p>Around the time I was in grade 11 and 12, Computer Science was <em>dropped</em> as an offering at my high school. Yes, <em>dropped</em>. Lack of demand; lack of staff to teach it. University was thus my first opportunity to gain exposure to computation as an academic/professional field.<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[On Boredom]]></title>
+    <link href="http://dliggat.github.io/2013/09/25/on-boredom/"/>
+    <updated>2013-09-25T09:32:00-07:00</updated>
+    <id>http://dliggat.github.io/2013/09/25/on-boredom</id>
+    <content type="html"><![CDATA[<p><a href="http://teamcoco.com/video/louis-ck-springsteen-cell-phone">Another</a> of Louis C.K.&rsquo;s hilarious talk-show interview diatribes is being widely circulated on the web and Twitter right now &ndash; this time about smartphones, and why he won&rsquo;t let his children have one. It&rsquo;s well worth a watch, but his argument essentially boils down to the observation that smartphones provide a constant stream of distraction that removes the condition, boredom, that is arguably necessary for healthy self-reflection.<!--more--></p>
+
+<p>Humour aside, I think he&rsquo;s really onto something here. Speaking personally, boredom, at least how I understood the term pre-Internet, has essentially disappeared from my life. Very few of my waking hours are spent without mental stimulation of one form or another. If I&rsquo;m waiting in a lineup, on public transport, unable to sleep, or killing time in an airport &ndash; out comes my phone, and the usual suspects <a href="http://tapbots.com/software/tweetbot/">Tweetbot</a> or <a href="http://instapaper.com">Instapaper</a> will occupy me for the duration of that transitory event. Even when I&rsquo;m cooking, cycling, exercising, or walking the dog, I&rsquo;m spared from any possible exposure to boredom through a now-years-old tendency to listen to podcasts<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> or audiobooks whenever my hands are occupied.</p>
+
+<p>As a technophile and enthusiast-for-non-boredom, it&rsquo;s hard for me to know how I should feel about this state of affairs. It&rsquo;s fairly easy to reason that since happiness may only exist in a world with sadness, then perhaps excitement and boredom share a similar, inextricable, symbiosis? I certainly don&rsquo;t currently <em>feel</em> like my life: work, personal or otherwise, lacks excitement &ndash; far from it. But this is 2013 &ndash; what about 2033 when we have <em>{insert your favourite prediction about technology two decades out<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>}</em>?</p>
+
+<p>Kids born in the recent past seem to be genuinely puzzled when they encounter a display which is not touch-sensitive, and I find it likely that this will be their response at the very notion of boredom as a concept in the years to come. I feel privileged to have grown up during that big epoch-defining<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup> transition from pre-Internet to our now permanent state of connectedness. I have vivid memories of what it was like to have only four TV channels and a few toys and books as the sole available vehicles for entertainment; and still more vivid memories of the initial realizations that I now had the power to answer virtually any question I could conceive of with just a few keystrokes.</p>
+
+<p>I don&rsquo;t think the significance of this shift has been truly internalized by many people yet. Other than Louis C.K., of course.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>I love podcasts, but my subscriptions have grown well beyond the point of my ability to actually listen to them all.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>Visible screens inscribed on contact lenses?<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>I am convinced that historians will have a well-defined name for this period in decades/centuries to come.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Farewell, Old Friend]]></title>
+    <link href="http://dliggat.github.io/2013/09/09/farewell-old-friend/"/>
+    <updated>2013-09-09T15:39:00-07:00</updated>
+    <id>http://dliggat.github.io/2013/09/09/farewell-old-friend</id>
+    <content type="html"><![CDATA[<p>iOS 7<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> and a new iPhone are imminent. <!--more--> Tomorrow is Apple Christmas Morning.</p>
+
+<p>It&rsquo;s the end of the road for <a href="http://en.wikipedia.org/wiki/Iphone_4s">you</a>, my old friend.</p>
+
+<p><img class="center" src="http://dliggat.github.io/images/2013/iphone_4s.png" width="400" title="'iPhone 4S'" ></p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>I fully expect this screenshot to look hilariously out of date once iOS 7 is rolled out everywhere and the new aesthetic is &lsquo;normal&rsquo; and not at all novel. I won&rsquo;t miss stitched leather one bit.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Efficient Currency Conversion]]></title>
+    <link href="http://dliggat.github.io/2013/09/06/efficient-currency-conversion/"/>
+    <updated>2013-09-06T09:52:00-07:00</updated>
+    <id>http://dliggat.github.io/2013/09/06/efficient-currency-conversion</id>
+    <content type="html"><![CDATA[<p>I&rsquo;m willing to bet that Canadians, on average, do more foreign exchange (forex) transactions than citizens of many other countries. This is an obvious consequence of the significant shopping and investing opportunities south of the <a href="http://en.wikipedia.org/wiki/49th_parallel_north#The_Canada_.E2.80.93_United_States_border">49th parallel</a>. Moreover, plenty of Canadian software contractors such as myself find themselves billing in American dollars (<span class="money usd">USD</span>) occasionally.</p>
+
+<!--more-->
+
+
+<p>Unfortunately, currency conversion to and from Canadian dollars (<span class="money cad">CAD</span>) is no exception to that frequently-bemoaned axiom of Canadian life: it&rsquo;s expensive, and domestic vendors extract a cosy profit margin (i.e. banks in this case). This phenomenon is perennially annoying<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> in general, but especially so when we&rsquo;re talking about <em>bits in a database</em>, which is all money really is at this point.</p>
+
+<p>However, it turns out there&rsquo;s a neat trick you can pull off to convert <span class="money cad">CAD</span> ⇔ <span class="money usd">USD</span> [almost] optimally called <strong>Norbert&rsquo;s Gambit</strong>. There are plenty of <a href="http://canadiancouchpotato.com/2013/07/09/norberts-gambit-at-cibc/">other</a> <a href="http://www.canadiancapitalist.com/a-foolproof-method-to-convert-canadian-dollars-into-us-dollars/">blog</a> <a href="http://www.michaeljamesonmoney.com/2012/03/trying-norbert-gambit-at-bmo.html">posts</a> out there explaining this &ndash; I thought I&rsquo;d throw my hat into the ring also by documenting my experience. <em>This hopefully goes without saying, but this is a personal record of events by a layman of finance, not the provision of financial advice. Your mileage may vary &ndash; do your own research.</em></p>
+
+<p><a href="http://en.wikipedia.org/wiki/Wikipedia:Too_long;_didn't_read">tl; dr</a> version:</p>
+
+<blockquote><p>In conversion rate terms, this is a gain of $138.25 CAD over what the bank offered on the $5,000.00 USD conversion.</p></blockquote>
+
+<h3>Background</h3>
+
+<p><img class="right" src="http://dliggat.github.io/images/forex.jpg" width="325" title="'Forex'" >
+For the sake of completeness, it is worth mentioning the concept of the <strong>mid-market rate</strong> in forex. Although we tend to think of a unit of currency having a fixed, reversible value in a different currency (e.g. <span class="money usd price">$1.00 USD</span> = <span class="money cad price">$1.05 CAD</span>), generally no one will sell you the opposite currency at that rate. Currency conversion boards seen in train stations and airports illustrate this concept; they show <em>two rates</em> &ndash; vendors will transact in the opposite currency at a higher or lower rate, depending on whether you wish to buy or sell, respectively. The difference, of course, is their profit<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>.</p>
+
+<p>The mid-market rate is theoretically equidistant between the two rates, and it&rsquo;s the rate we would ideally achieve when we participate in a forex transaction. Mid-market rates for currency pairs are reported on <a href="http://finance.google.com">Google Finance</a>, <a href="http://xe.com">XE</a>, etc.</p>
+
+<h3>Objective</h3>
+
+<p>My objective on the morning of <strong>2013-09-05</strong> was to convert <span class="money usd price">$5,000.00 USD</span> to <span class="money cad">CAD</span> as efficiently as possible. The value of that sum of money, in <span class="money cad">CAD</span>, implied by the mid-market rate at the time was <span class="money cad price">$5,252.15 CAD</span>. In optimization terms, this is a clear <em>upper bound</em> on the quantity I&rsquo;m trying to maximize.</p>
+
+<h5>Option A: Bank Transfer</h5>
+
+<p>As far as I&rsquo;m aware, most Canadian banks allow for a immediate conversion of <span class="money cad">CAD</span> ⇔ <span class="money usd">USD</span> online from a <span class="money cad">CAD</span>-denominated account to a <span class="money usd">USD</span>-denominated account or vice-versa. In a matter of seconds, one can perform this transaction. The price for this convenience, however, is the suboptimal forex rate that they apply<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>. My bank offered me <span class="money cad price">$5,112.50 CAD</span> in exchange for <span class="money usd price">$5,000.00 USD</span> on <strong>2013-09-05</strong>. Easy, and hassle-free &ndash; but we can do better.</p>
+
+<h5>Option B: Third Party Currency Trader</h5>
+
+<p>Rather than use the functionality built into online banking, we can outsource the conversion to an outfit like <a href="http://xe.com">XE</a>. It&rsquo;s a bit of a hassle to set up, and the website is straight out of 2002, but that aside, it does exactly what it says on the tin. You book a trade; money gets withdrawn in one currency (e.g. <span class="money cad">CAD</span>) and shows up a few days later, converted, in the other currency (e.g. <span class="money usd">USD</span>). I&rsquo;ve used XE on very seldom occasions across a duration of many years and it has always worked out great. On the morning of <strong>2013-09-05</strong>, they quoted a rate of <span class="money cad price">$5,186.72 CAD</span> in exchange for <span class="money usd price">$5,000.00 USD</span>. Not quite the mid-market rate, but this is already an improvement of <span class="money cad price">$74.22 CAD</span> over Option A.</p>
+
+<h3>Option C: Norbert&rsquo;s Gambit</h3>
+
+<p>The process for doing even better relies on what I understand to be the following approximate logic:</p>
+
+<ul>
+<li>Start with money in a given currency, say, <span class="money usd">USD</span>.</li>
+<li>Use that money to purchase units of a security that lists on both the NYSE and TSX. Through the magic of <a href="http://en.wikipedia.org/wiki/Arbitrage">arbitrage</a>, the security on both markets will tend towards an identical price (even if traded in different currencies).</li>
+<li>Once you own it on the NYSE, ask your broker to swap it for equivalent units on the TSX.</li>
+<li>Sell those TSX-listed units of the security, now denominated in <span class="money cad">CAD</span>.</li>
+<li>Congratulations &ndash; all going well, you just converted <span class="money usd ">USD</span> to <span class="money cad">CAD</span> at essentially the mid-market rate. Provided, of course, the security didn&rsquo;t fluctuate much in value between the two trades.</li>
+</ul>
+
+
+<h3>Outcome</h3>
+
+<p>In practice, it seems you don&rsquo;t need to worry too much about the price fluctuation between trades. An <a href="http://en.wikipedia.org/wiki/Exchange-traded_fund">ETF</a> with symbol <a href="http://www.horizonsetfs.com/pub/en/etfs/?etf=DLR&amp;">DLR</a> was apparently created as a stable vehicle for precisely this manoeuvre. I followed <a href="http://www.michaeljamesonmoney.com/2012/03/trying-norbert-gambit-at-bmo.html">these instructions</a> closely and it worked out exactly as described. On <strong>2013-09-05</strong>, I phoned the broker<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>, bought DLR.U with <span class="money usd">USD</span>, exchanged it for DLR, and immediately sold to receive <span class="money cad">CAD</span>.</p>
+
+<p>In actual numeric terms, I bought <span class="money usd">502 DLR.U × $9.97 USD/DLR.U</span> = <span class="money usd price">$5,004.94 USD</span> and subsequently sold <span class="money cad">502 DLR × $10.47 CAD/DLR</span> = <span class="money cad price">$5,255.94 CAD</span>. In conversion rate terms, this is a gain of <span class="money cad price">$138.25 CAD</span> over what the bank offered on the <span class="money usd price">$5,000.00 USD</span> conversion, and the achieved rate <em>is</em> the mid-market rate to three decimal places.</p>
+
+<h4>But wait! There&rsquo;s More</h4>
+
+<p>We can&rsquo;t just call this a <span class="money cad price">$138.25 CAD</span> job well done though. I had to execute two trades&hellip; and trading has transaction costs. Depending on your bank/broker, and various policies, etc, this could be anywhere from $5.00 to $30.00 each direction. So the savings realized in this scenario is actually: <span class="money cad price">$138.25 CAD &ndash; 2 × { cost per trade }</span>. Still, it&rsquo;s a pretty good outcome for doing basically nothing but a bit of one-time research. And the savings scale in proportion to the amount converted!</p>
+
+<p>This is part of the reason<sup id="fnref:5"><a href="#fn:5" rel="footnote">5</a></sup> why banks are so ludicrously profitable. It&rsquo;s all just bits in a database&hellip; but the act of flipping those bits can come at a higher or lower cost depending on how you tell the bank to manipulate them.</p>
+
+<h4>Summary of Implied Rates</h4>
+
+<p>Here&rsquo;s the various rates summarized. Note that the Norbert&rsquo;s Gambit result <strong>does not</strong> include the cost of the trades, which must be accounted for in practice.</p>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <td>Method</td>
+      <td>Starting Value</td>
+      <td>Resulting Value</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bank Transfer</td>
+      <td><span class="money usd">$5,000.00 USD</span></td>
+      <td><span class="money cad">$5,112.50 CAD</span></td>
+    </tr>
+    <tr>
+      <td>Third Party Conversion</td>
+      <td><span class="money usd">$5,000.00 USD</span></td>
+      <td><span class="money cad">$5,186.72 CAD</span></td>
+    </tr>
+    <tr>
+      <td>Norbert&#8217;s Gambit</td>
+      <td><span class="money usd">$5,000.00 USD</span></td>
+      <td><span class="money cad">$5,250.75 CAD</span></td>
+    </tr>
+    <tr>
+      <td>Theoretical Mid-Market Optimum</td>
+      <td><span class="money usd">$5,000.00 USD</span></td>
+      <td><span class="money cad">$5,252.15 CAD</span></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<p>One last remark: it&rsquo;s probably wise to be circumspect within any dealings with your bank when setting up accounts for this or actually executing the trade. Norbert&rsquo;s Gambit<sup id="fnref:6"><a href="#fn:6" rel="footnote">6</a></sup> is a perfectly legitimate operation, but it&rsquo;s pretty easy to imagine banks getting upset at this reduction in their effortless-profit, and potentially erecting obstacles.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>Especially to a Scotsman.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>Sometimes these airport outfits add an extra &lsquo;fee&rsquo; on top, as if getting to charge a spread that they pick isn&rsquo;t already a &lsquo;fee&rsquo;.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>Even if the rate is bad, for smaller amounts of money, the convenience is worth it. It&rsquo;s only well into the four-digit zone does this start to become a worthwhile consideration.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p>I had to phone rather than do this over the web because apparently the bank&rsquo;s online systems can&rsquo;t handle DLR.U. I don&rsquo;t imagine there&rsquo;s a sound technical reason for this outside of &ldquo;banks being banks&rdquo;, but the guy on the phone was super polite and efficient at getting it done, and didn&rsquo;t charge any extra for the phone service over what it normally costs to transact online.<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+<li id="fn:5">
+<p>Other reasons include real and artificial barriers to entry, and riskless profits thanks to taxpayer guarantees on various loans issued, but all of that is a rant for another day.<a href="#fnref:5" rev="footnote">&#8617;</a></p></li>
+<li id="fn:6">
+<p>New bucket list item &ndash; invent a thing that comes to be known as <strong>Liggat&rsquo;s Gambit</strong>. How cool would it be to have a <em>gambit</em> to your name&hellip;<a href="#fnref:6" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A Golden Age of Software]]></title>
+    <link href="http://dliggat.github.io/2013/09/03/a-comparatively-golden-age-of-software/"/>
+    <updated>2013-09-03T17:57:00-07:00</updated>
+    <id>http://dliggat.github.io/2013/09/03/a-comparatively-golden-age-of-software</id>
+    <content type="html"><![CDATA[<p>As someone to whom pessimism and cynicism come naturally, I&rsquo;m often more inclined to complain about things than sit and reflect on positivity. However, I think it&rsquo;s worth taking a moment to acknowledge one thing: we live in a golden age of software right now, at least relative to any point in the past.</p>
+
+<!--more-->
+
+
+<p>This is not to suggest there aren&rsquo;t problems. For example &ndash; I&rsquo;m incredulous to the point of <a href="http://en.wikipedia.org/wiki/Facepalm">speechlessness</a> whenever I use a television set with any current digital TV product at just how universally terrible it all is. I&rsquo;m not at all interested in live TV or any sports or the various trappings, and thus am not in the target market &ndash; but I can scarcely believe people willingly buy these altars of frustration. Just consider, for a moment, the breathtaking lack of product and user-focus that this on-screen prompt represents:</p>
+
+<blockquote><p>This programming is also available in High-Definition. Would you prefer to switch to that instead?</p></blockquote>
+
+<p>All the way from product development, through system design and implementation, to QA, and finally deployment, with presumably a good few boardroom demos along the way &ndash; apparently no one thought about the absurdity of <em>even bothering to ask</em> if HD is preferable to the viewer over SD<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>. I could rant all day about examples like this. Clearly humanity&rsquo;s grand experiment with software has not yet reached its zenith.</p>
+
+<p>However, when I reflect on my career in software &ndash; now close to entering its tenth year &ndash; the progress of that period from <code>2003</code> to <code>now</code>, just in terms of my own personal &lsquo;software environment&rsquo;, is truly staggering to behold:</p>
+
+<ul>
+<li><strong>Operating System</strong>: I used to get work done in Windows XP, which, on good days, would manage to not kernel panic. Linux was around, but &ndash; only if you didn&rsquo;t care about digital cameras or WiFi, and enjoyed endless tinkering with device drivers. For all of Unix&rsquo;s enduring importance from the seventies onwards &ndash; Windows &amp; Microsoft were the absolute ironclad conduit between most people and computation. Compare that to today &ndash; it&rsquo;s worlds apart.</li>
+<li><strong>Productivity</strong>: It used to be that if it had words it went into a <code>.doc</code>, and if it had numbers it went into a <code>.xls</code>. End of story. Now, I have very little real need for an office suite &ndash; all the various little uses cases have been unbundled into more suitable specialized tools. Notes go into Evernote. <a href="http://www.acqualia.com/soulver/">Soulver</a> and <a href="http://www.alfredapp.com/">Alfred</a> for impromptu calculations. Google Docs (and soon, iWork for iCloud) for persisted spreadsheets. <a href="http://www.freshbooks.com/">Freshbooks</a> for accounting. <a href="http://www.goodiware.com/goodreader.html">GoodReader</a> for annotating PDFs. Etc. Excel remains a peerless tool at the high end &ndash; but it overserves most people&rsquo;s, or at least my, needs in the vast majority of cases.</li>
+<li><strong>Email</strong>: I have vivid memories of the days when an email account was tightly coupled to a single physical computer, almost by axiom. No web access, no multi-gigabyte, searchable, hosted backing store, and certainly no IMAP, push notifications, or synchronized read state between multiple devices. Mail host storage was a jealously guarded commodity &ndash; and shunted off their systems to your <em>sole</em> machine with haste.</li>
+<li><strong>Version Control</strong>: God help you if you attempted a merge and got it wrong with early (and hell, probably current, if they still make it) versions of Source Safe. And branches? Forget it. There&rsquo;s no terror quite like the terror of a computer-science co-op student who is pretty sure he just fouled up the company VSS repository (me; circa 2004). Today, git, especially used within <a href="http://github.com">GitHub</a>, verges on perfection for covering the problem space of &lsquo;version control&rsquo;. I&rsquo;m not sure I can name a piece of software more powerful, or useful, or robust, or complete at doing the job it was designed to do.</li>
+<li><strong>Programming Languages</strong>: Dynamic, strongly-typed, ultra-expressive languages like <code>ruby</code> and <code>python</code> have a rich history, but they&rsquo;ve only really come into widespread use in the latter portion of the 2000s. I learned to program in <code>C++</code>, and looking back, I&rsquo;m surprised that didn&rsquo;t put me off the whole enterprise<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>. <code>Java</code> is worse &ndash; the hideous jargon endemic to its ecosystem and infuriating toolchains for starters, let alone the needlessly-verbose language itself.</li>
+<li><strong>Writing Code</strong>: Visual Studio or Eclipse<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup> versus <a href="http://www.sublimetext.com/2">Sublime Text 2</a> &ndash; enough said. IDEs still have a role to be sure, especially for developing native software, but I dislike using them, and I&rsquo;m glad I mostly don&rsquo;t have to.</li>
+</ul>
+
+
+<p>In writing this, I&rsquo;ve basically deduced what are actually two pretty obvious observations:</p>
+
+<ol>
+<li>Current software which already had a predecessor equivalent in the past has gotten <em>profoundly</em> better.</li>
+<li>Devices/objects which weren&rsquo;t software driven in the past and now are (e.g. TVs, cars) need to, and presumably will, improve drastically.</li>
+</ol>
+
+
+<p>It&rsquo;ll be fun to revisit this post in another ten years and opine, hopefully, about how good television<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup> software is and that it has since joined the ranks of productivity, email, version control, etc. I sure hope so.</p>
+
+<p>In the meantime, get rid of the damn HD prompt, <em>please</em>.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>Honestly, this was on a shipping digital TV unit that I used.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>To be fair, I did hate the first half of UBC&rsquo;s <code>C++</code>-based CPSC 152 until things started to click about two-thirds in. And I do think new programmers should be exposed to the world of pointers and manual memory management &ndash; but I would argue that <code>C</code> is a better environment than <code>C++</code> for that.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>Apparently people still use this. Oh, the humanity.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p>Assuming &lsquo;television&rsquo; is even a relevant concept in 10 years. I would not be at all surprised if 100% of the software and network functionality moves to phones and tablets, and TVs become nothing more than dumb wireless output devices for their content. Initiatives like AirPlay, locked thought it is to the Apple ecosystem, are a pretty big step in this direction.<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Automate All the Things]]></title>
+    <link href="http://dliggat.github.io/2013/08/06/automate-all-the-things/"/>
+    <updated>2013-08-06T13:04:00-07:00</updated>
+    <id>http://dliggat.github.io/2013/08/06/automate-all-the-things</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve spent much of my career in software with automation an implicit and often explicit goal: in testing, in environment creation and deployments, in backups, etc. A conspicuous absence from this list has been the actual development machines I spend many hours each day using, which for me are my Mac desktop and laptop, and occasionally a VM or two. Traditionally, these have ended up at their working state through hours upon hours of gentle tinkering. It&rsquo;s a case of the cobbler&rsquo;s children having no shoes<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, I suppose.</p>
+
+<!--more-->
+
+
+<p>To correct this error, I&rsquo;ve spent a portion of the past few weeks getting up to speed with GitHub Inc&rsquo;s excellent Puppet-based <a href="https://boxen.github.com">Boxen</a> tool for provisioning their own internal OS X 10.8 Mountain Lion machines. Although the learning curve is not exactly shallow, and the documentation sparse at times &ndash; the payoff has been tremendous. You can use it to script absolutely every aspect of your development machine(s), resulting in the same degree of repeatability and auditability that we normally reserve for production servers.</p>
+
+<h3>My Boxen</h3>
+
+<p>From a clean install<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>, I&rsquo;ve now got a fully-specified, version-controlled, <a href="https://github.com/dliggat/boxen">boxen instance</a> that, at a stroke can:</p>
+
+<ul>
+<li>Set up, and store my GitHub credentials<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup> for convenient push/pull to authorized repositories</li>
+<li>Install system-wide versions of git, node.js, and rubies (1.8.7, 1.9.3, 2.0.0)<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup></li>
+<li>Install standard apps like Dropbox, Chrome, iTerm and even VMWare Fusion</li>
+<li>Set my fussy OS X system preferences for the Dock, Dashboard, Trackpad, etc</li>
+<li>Clone my <a href="https://github.com/dliggat/dotfiles">dotfile repository</a> and define various symlinks from <code>~</code> into that repo; e.g. <code>~/.bashrc -&gt; /Users/daveliggat/git/dotfiles/bashrc</code>, plus define any other symlinks or environment variables that I might want to have</li>
+<li>Install system-wide gems (e.g. <code>pry</code>) and homebrew packages (e.g. <code>sqlite</code>, <code>markdown</code>)</li>
+<li>Define and spin-up resources needed on a per project basis, which for a rails app likely includes local MySQL or PostgreSQL instances, a cloned git repository, and a redis server</li>
+<li>Set up my text editor of choice, <a href="http://www.sublimetext.com/2">Sublime Text 2</a>, and install the plethora of plugins and preferences that I use</li>
+</ul>
+
+
+<figure class='code'><figcaption><span>Boxen/Puppet allows encapsulation of automation areas into &#8216;classes&#8217; </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="k">class</span> <span class="ss">people</span><span class="p">:</span><span class="ss">:dliggat</span> <span class="p">{</span>
+</span><span class='line'>  <span class="n">notify</span> <span class="p">{</span> <span class="s1">&#39;class people::dliggat declared&#39;</span><span class="p">:</span> <span class="p">}</span>
+</span><span class='line'>  <span class="kp">include</span> <span class="ss">people</span><span class="p">:</span><span class="ss">:dliggat</span><span class="o">::</span><span class="n">apps</span>
+</span><span class='line'>  <span class="kp">include</span> <span class="ss">people</span><span class="p">:</span><span class="ss">:dliggat</span><span class="o">::</span><span class="n">dotfiles</span>
+</span><span class='line'>  <span class="kp">include</span> <span class="ss">people</span><span class="p">:</span><span class="ss">:dliggat</span><span class="o">::</span><span class="n">git</span>
+</span><span class='line'>  <span class="kp">include</span> <span class="ss">people</span><span class="p">:</span><span class="ss">:dliggat</span><span class="o">::</span><span class="n">homebrew</span>
+</span><span class='line'>  <span class="kp">include</span> <span class="ss">people</span><span class="p">:</span><span class="ss">:dliggat</span><span class="o">::</span><span class="n">symlinks</span>
+</span><span class='line'>  <span class="kp">include</span> <span class="ss">people</span><span class="p">:</span><span class="ss">:dliggat</span><span class="o">::</span><span class="n">loginitems</span>
+</span><span class='line'>  <span class="kp">include</span> <span class="ss">people</span><span class="p">:</span><span class="ss">:dliggat</span><span class="o">::</span><span class="n">osx</span>
+</span><span class='line'>  <span class="kp">include</span> <span class="ss">people</span><span class="p">:</span><span class="ss">:dliggat</span><span class="o">::</span><span class="n">sublime_text_2</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Assuming you&rsquo;re inclined to care about things like this, it&rsquo;s hard to overstate the satisfaction of kicking off this script and coming back to a fully-provisioned machine a couple of hours later. Best of all, Boxen is cumulative and <a href="http://en.wikipedia.org/wiki/Idempotence">idempotent</a>, so changes can be made to my Boxen install (and then always specified and available in future) and re-run without worrying about it blowing up because it encounters its own previous completions.</p>
+
+<p>If anything, everything I&rsquo;ve written here <em>understates</em> how capable Boxen is. I&rsquo;m presently using it for a couple of machines in a home office &ndash; GitHub uses it for their <em>entire</em> corporate fleet of MacBook Pros. Eventually the plan is that this becomes a centerpiece of the &lsquo;onboarding&rsquo; experience at <a href="http://plyfe.com">Plyfe</a>, so new people can be productive instantly without messing around with <code>rvm</code> or <code>redis-server</code> or whatever else.</p>
+
+<h3>tl;dr &ndash; Automation Rules!</h3>
+
+<p><a href="https://plus.google.com/+BrunoOliveira">Bruno Oliveira</a> captured the essence of why automation is so great in a widely circulated <a href="https://plus.google.com/+BrunoOliveira/posts/MGxauXypb1Y">chart</a> a year or so ago:</p>
+
+<p><img class="fancybox center" src="http://dliggat.github.io/images/geeks.png" width="550" title="'Geeks'" ></p>
+
+<h3>Appendix, or Why I like OS X</h3>
+
+<p>Occasionally I&rsquo;m asked why I like OS X so much. There&rsquo;s a certain subset of the tech population that still thinks, apparently with genuine conviction, that Apple only makes toys. It&rsquo;s a bizarre and/or myopic belief in a world where Google Inc is known to be one of the largest institutional buyers of MacBook Pros (and I know from first-hand experience they certainly aren&rsquo;t buying them to mess about with GarageBand), but it persists.</p>
+
+<p>Anyway, the very existence of projects like Boxen is just about the best answer I can give in response. There&rsquo;s so much cool stuff going on in software these days, and a huge portion of it is done with OS X. I might be moving in the wrong circles, but I simply don&rsquo;t see this level of innovation going on in the Windows world. And given how inherently less scriptable Windows is than anything Unix-based, it&rsquo;s hard to imagine an equal Windows-based peer of Boxen emerging anytime soon.</p>
+
+<p>I like to think of OS X as having the best of both worlds of Windows and Linux: user-facing conveniences, plus a modern UI, plus a high degree of scriptability, plus access to forty-years worth of Unix utilities, <strong>minus</strong> the interminable and recurrent headaches with video card drivers, etc that you (or at least I) get with Linux. If I&rsquo;m restricted to buying Apple gear to get that combination for now, so be it.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>As also remarked by Gary Larizza in what turned out to be a <a href="http://garylarizza.com/blog/2013/02/15/puppet-plus-github-equals-laptop-love/">highly useful Boxen primer</a>.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>Via the Mac App Store to install the Xcode developer tools which provide the system ruby and git binaries necessary for Boxen to bootstrap itself.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>Using the method of https repository access and the OS X system keychain, not ssh keys.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p>A happy side benefit to letting boxen manage ruby versions is the obviation of somewhat horrible kludges like <code>.rvmrc</code> files in ruby project directories.<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Paperless, Finally]]></title>
+    <link href="http://dliggat.github.io/2013/07/21/paperless/"/>
+    <updated>2013-07-21T13:33:00-07:00</updated>
+    <id>http://dliggat.github.io/2013/07/21/paperless</id>
+    <content type="html"><![CDATA[<p>I&rsquo;m sick to death of accumulating useless paper detritus. I&rsquo;ve fantasized for quite a while about finally finding a &lsquo;paperless&rsquo; workflow that will work well for me now and, <em>crucially</em>, many years (decades) into the future. After reading posts on <a href="http://shawnblanc.net/2012/09/the-paperless-puzzel/">similar</a> <a href="http://speirs.org/blog/2012/6/25/book-scanning.html">initiatives</a>, I think I&rsquo;ve got it. I figured I&rsquo;d document it here, mostly as an exercise in <a href="https://en.wikipedia.org/wiki/Rubber_duck_debugging">rubber-duck debugging</a> of sorts.<!--more--></p>
+
+<h3>Requirements</h3>
+
+<ul>
+<li><strong>Recallable</strong>: I should be able to look up a particular document or item purely by knowing a keyword or two, or the rough timeframe in which it was generated. Vast hierarchical organization schemes are only defensible if you&rsquo;re a librarian in the pre-computing age. We can do much better in 2013. The Gmail ethos of &ldquo;search, don&rsquo;t sort&rdquo; works really well for me.</li>
+<li><strong>Enduring</strong>: This needs to last for the long haul. There&rsquo;s an expectation I&rsquo;ve set for myself that the core elements of this workflow will persist well beyond a decade, and ideally for the entirety of my [useful] life.</li>
+<li><strong>Robust</strong>: Really this applies to all my personal data at this point &ndash; but under <strong>no</strong> circumstances can a paperless archive be allowed to suffer any data loss.</li>
+<li><strong>Secure</strong>: Whatever system one has for organizing personal documents, even if that&rsquo;s a physical shoebox full of physical documents, there&rsquo;s a chance that a breach of one&rsquo;s personal data can occur. Acknowledging this, I want my system to make sensible security decisions where possible, and overall, to <em>minimize regret</em>. Trade-offs, as ever, exist &ndash; the shoebox may not be vulnerable to Belarusian hackers, but it <em>is</em> vulnerable to house fires.</li>
+</ul>
+
+
+<h3>Implementation</h3>
+
+<h4>Platform</h4>
+
+<p><a href="http://www.evernote.com">Evernote</a> [Premium] forms the centrepiece of my paperless workflow. I&rsquo;m totally sympathetic to the assertion that it&rsquo;s better to keep long-lived data in highly-portable formats (e.g. PDF files, markdown-formatted UTF-8 text, etc). Using Evernote is somewhat in contravention of this goal, as it stores notes within its own opaque archive format. However, this archive is fully-exportable and navigable, and in the event of Evernote dropping off the face of the earth, there will be no shortage of tools for migrating its notes and notebooks to a new platform. And Evernote has proven itself over the years &ndash; achieving profitability, and garnering ever more paying consumers, businesses, and educational institutions every year &ndash; even going so far as to declare itself a <a href="http://techcrunch.com/2011/11/06/evernote-ceo-phil-libins-top-three-tips-for-building-a-hundred-year-old-company">hundred-year company</a>.</p>
+
+<p>Taken together, objections to Evernote for paperless seem mostly theoretical, rather than actual, to me. Moreover, the benefits in having a syncing, sortable, and <em>highly searchable</em> archive seem worth tolerating that conjectural downside.</p>
+
+<h4>Scanning</h4>
+
+<p><img class="right" src="http://dliggat.github.io/images/send_to_evernote.png" width="275" title="'Send to Evernote'" ></p>
+
+<p>I recently ordered a <a href="http://www.getdoxie.com/product/one/">Doxie One scanner</a>, for $147 CAD or thereabouts. It&rsquo;s simple, and gets the job done. Its OS X app manages to be not terrible for scanning/printing software, which is notable, though admittedly only due to the poverty of the competitive landscape. It quickly processes pages, and saves scans to an included SD card. The app purportedly does <a href="http://en.wikipedia.org/wiki/Optical_character_recognition">OCR</a> (I&rsquo;ll be relying on Evernote for this though), and allows individual PDFs to be &lsquo;stapled&rsquo; into multi-page documents, and then sent on to Evernote.</p>
+
+<h4>Evernote Notes Titles</h4>
+
+<p>Once in Evernote, I assign the note containing the scanned PDF to an appropriate notebook (a yearly one for business expenses, and Archive for everything else). I wrote a small bash function to generate note titles in a consistent format:</p>
+
+<pre><code>$ISO8601_FORMATTED_DATE =&gt; $LOWERCASE_DESCRIPTION (Paperless)
+</code></pre>
+
+<p>For example:</p>
+
+<pre><code>2013-07-11 =&gt; apple ipod receipt (Paperless)
+</code></pre>
+
+<p>I reasoned that the date (hat tip to <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO8601</a> for its equivalent chronological and lexicographical sorting) is important enough for later retrieval to warrant hard coding in the title metadata<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>. You can find the bash snippet for this in <a href="https://gist.github.com/dliggat/5990988">this gist</a>.</p>
+
+<h4>Security</h4>
+
+<p>I view &lsquo;security&rsquo; as the dual-property that my data is available to me, and unavailable to unauthorized parties. To this end, I:</p>
+
+<ul>
+<li>Use strong authentication in Evernote: Set a long, unique, random passphrase, and enable 2FA (2-factor authentication)</li>
+<li>Turn on full-disk encryption on my computers and mobile devices</li>
+<li>Set the mobile app passcode for the Evernote iOS apps</li>
+<li>Export my entire archive biweekly, and backup to an external drive and an off-site location<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup></li>
+<li>Encrypt particularly sensitive stored PDFs with a strong key (stored, obviously, outside of Evernote).</li>
+</ul>
+
+
+<p>With these practices in place, I feel sufficiently confident that access to my account is highly-restricted, and even in the worst case scenario of a full data-breach at Evernote, my most sensitive documents (tax receipts, bank statements, etc) are enciphered.</p>
+
+<p><img class="fancybox center" src="http://dliggat.github.io/images/evernote_pdf_protected.png" title="'Protected PDF'" ></p>
+
+<h3>Fin</h3>
+
+<p>I&rsquo;ll inevitably evolve this over time, but I&rsquo;m feeling pretty good about the setup so far, and its adherence to my goals of <strong>Recallable</strong>, <strong>Enduring</strong>, <strong>Robust</strong>, &amp; <strong>Secure</strong>. So far, I&rsquo;ve been happily adding stuff to my archive, and not yet experienced any inertia or fedup-ness. That&rsquo;s probably a good sign.</p>
+
+<p>There will be a few documents I&rsquo;ll begrudgingly retain in paper form &ndash; governments, perennially stuck in the clipboard and fax-machine era, tend to take a dim view of anything digital, but mostly, I&rsquo;ll be enthusiastically converting documents into Evernote notes, and destroying the originals forever.</p>
+
+<p>Another victory for bits over atoms. Any comments, suggestions, or questions, please <a href="http://dliggat.github.io/about">get in touch</a>.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>The date is for sorting and narrowing, the description terms are for searching, and the (Paperless) suffix identifies a note as originating from this workflow<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>I know this probably seems excessive, but having a catastrophic data loss in the past [many years ago] will do that to a person<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress.new]]></title>
+    <link href="http://dliggat.github.io/2013/07/14/octopress-dot-new/"/>
+    <updated>2013-07-14T13:43:00-07:00</updated>
+    <id>http://dliggat.github.io/2013/07/14/octopress-dot-new</id>
+    <content type="html"><![CDATA[<p>Just migrated my [meagre] blog content over from Tumblr to a brand new, shiny Octopress instance.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Android as Anti-Platform]]></title>
+    <link href="http://dliggat.github.io/2013/05/11/android-as-anti-platform/"/>
+    <updated>2013-05-11T09:55:00-07:00</updated>
+    <id>http://dliggat.github.io/2013/05/11/android-as-anti-platform</id>
+    <content type="html"><![CDATA[<p>It feels awkward to criticize Android as the owner of several physical manifestations of the pride of Cupertino. That ownership seems to irrevocably wash away any possibility of one’s objectivity in the court of Android opinion, despite what ought to count as pretty good “Android credentials&#8221; (I’m a happy alumni of the G1, Nexus One, HTC Desire HD and Nexus 7, and participated in beta-testing/review of the G1 before it was announced as a consumer product). <!--more--> And yet, it’s impossible for me not to voice displeasure at what Samsung is now up to:</p>
+
+<blockquote><p>In an unprecedented move Samsung announced a deal on Thursday to make an established, high profile
+Android app incompatible with every Android smartphone except its own. The app in question is ITV
+Player, the catch up service for ITV &ndash; the UK’s largest independent terrestrial broadcaster</p></blockquote>
+
+<p>In retrospect, the ideals of Android were hopelessly optimistic: a modern, mobile platform unicorn that would disrupt, humble, and commoditize the carriers, and unite the hardware manufacturers into providing a cornucopia of consumer choice. It should’ve been obvious, at least, that the cellular gatekeepers would not be trounced so easily &ndash; which is why we now live in a world of forked carrier versions of Android, serviceable hardware hobbled by the lack of carrier-controlled OS updates, and needless “value-adding differentiation&#8221; of software on devices. At least much of that could be avoided by sticking with pure-Android Nexus devices, bought straight from Google.</p>
+
+<p>But consider the subversion of Android that this latest chess-move by Samsung represents. They’ve managed to outright exclude Nexus owners from ITV Player in favour of their own devices, using, undoubtedly, the persuasive power of currency. I’m not sure that a precedent for this exists elsewhere in the computing industry’s [rather cutthroat] past. Imagine if Dell successfully convinced Adobe that Photoshop should only be compatible with their particular incarnation of Windows XP machines. Consequently, Android is no longer simply <em>not-a-platform</em> (thanks to the carriers); it has in fact become an <em>anti-platform</em> &ndash; an agent of chaos among existing Android network-effects.</p>
+
+<p>All things considered, it’s just one more disappointment in a long line. But I wish the anti-Apple brigade would spend even 10% of the energy they have for generating vitriol in protest of the destructive actions of the subversive actors in the Android space. This is why, in May 2013, iOS remains the only serious mobile computing <em>platform</em>. I wish it were not thus, but I’m not optimistic this will change any time soon.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tweet Archive]]></title>
+    <link href="http://dliggat.github.io/2013/05/07/tweet-archive/"/>
+    <updated>2013-05-07T09:55:00-07:00</updated>
+    <id>http://dliggat.github.io/2013/05/07/tweet-archive</id>
+    <content type="html"><![CDATA[<p>When Twitter announced in late 2012 that its users could download their tweet archive, it had a begrudging whiff about it. Given the company’s recent heavy-handedness with API access for not only 3rd-party clients but also complementary services such as Flipboard, I was somewhat surprised it even arrived as promised months earlier. <!--more--> I have no insight into the machinations of Twitter Inc. whatsoever, but for some reason I imagine an executive suite very reluctant to relinquish sole ownership of the veritable treasure trove of historical tweets. However, the constant haranguing by their power users, as well as a general environment that frowns upon overtly blatant lock-in (Google Takeout and the Data Liberation Front do a pretty good job setting a decent industry standard here) probably swung the balance.</p>
+
+<p>This leads me to speculate that Twitter didn’t foresee what an incredible enhancement to their product that Tweet Archive actually is. To look back at previous tweets, retweets and favourites is like a time machine for visiting my own personality in the past. It is truly fascinating to see what I was interested in <code>$X $TIME_UNITS</code> ago, and consequently, I’m tweeting, retweeting, and favouriting more now &ndash; just for the pure whimsical pleasure of viewing this data in the future. Twitter has relinquished a measure of control over its service, and has consequently ‘locked-in’, at least me, ever more. This feels like a nice all-around dynamic &ndash; they’ve given me more control over my data, and have managed to bring me closer into the fold as a user as a result.</p>
+]]></content>
+  </entry>
+  
+</feed>

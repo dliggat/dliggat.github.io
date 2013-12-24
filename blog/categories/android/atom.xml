@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Android | liggat.org]]></title>
+  <link href="http://dliggat.github.io/blog/categories/android/atom.xml" rel="self"/>
+  <link href="http://dliggat.github.io/"/>
+  <updated>2013-12-24T12:40:02-08:00</updated>
+  <id>http://dliggat.github.io/</id>
+  <author>
+    <name><![CDATA[Dave Liggat]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Android as Anti-Platform]]></title>
+    <link href="http://dliggat.github.io/2013/05/11/android-as-anti-platform/"/>
+    <updated>2013-05-11T09:55:00-07:00</updated>
+    <id>http://dliggat.github.io/2013/05/11/android-as-anti-platform</id>
+    <content type="html"><![CDATA[<p>It feels awkward to criticize Android as the owner of several physical manifestations of the pride of Cupertino. That ownership seems to irrevocably wash away any possibility of one’s objectivity in the court of Android opinion, despite what ought to count as pretty good “Android credentials" (I’m a happy alumni of the G1, Nexus One, HTC Desire HD and Nexus 7, and participated in beta-testing/review of the G1 before it was announced as a consumer product). <!--more--> And yet, it’s impossible for me not to voice displeasure at what Samsung is now up to:</p>
+
+<blockquote><p>In an unprecedented move Samsung announced a deal on Thursday to make an established, high profile
+Android app incompatible with every Android smartphone except its own. The app in question is ITV
+Player, the catch up service for ITV &ndash; the UK’s largest independent terrestrial broadcaster</p></blockquote>
+
+<p>In retrospect, the ideals of Android were hopelessly optimistic: a modern, mobile platform unicorn that would disrupt, humble, and commoditize the carriers, and unite the hardware manufacturers into providing a cornucopia of consumer choice. It should’ve been obvious, at least, that the cellular gatekeepers would not be trounced so easily &ndash; which is why we now live in a world of forked carrier versions of Android, serviceable hardware hobbled by the lack of carrier-controlled OS updates, and needless “value-adding differentiation" of software on devices. At least much of that could be avoided by sticking with pure-Android Nexus devices, bought straight from Google.</p>
+
+<p>But consider the subversion of Android that this latest chess-move by Samsung represents. They’ve managed to outright exclude Nexus owners from ITV Player in favour of their own devices, using, undoubtedly, the persuasive power of currency. I’m not sure that a precedent for this exists elsewhere in the computing industry’s [rather cutthroat] past. Imagine if Dell successfully convinced Adobe that Photoshop should only be compatible with their particular incarnation of Windows XP machines. Consequently, Android is no longer simply <em>not-a-platform</em> (thanks to the carriers); it has in fact become an <em>anti-platform</em> &ndash; an agent of chaos among existing Android network-effects.</p>
+
+<p>All things considered, it’s just one more disappointment in a long line. But I wish the anti-Apple brigade would spend even 10% of the energy they have for generating vitriol in protest of the destructive actions of the subversive actors in the Android space. This is why, in May 2013, iOS remains the only serious mobile computing <em>platform</em>. I wish it were not thus, but I’m not optimistic this will change any time soon.</p>
+]]></content>
+  </entry>
+  
+</feed>

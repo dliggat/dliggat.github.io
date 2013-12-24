@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Finance | liggat.org]]></title>
+  <link href="http://dliggat.github.io/blog/categories/finance/atom.xml" rel="self"/>
+  <link href="http://dliggat.github.io/"/>
+  <updated>2013-12-24T12:40:02-08:00</updated>
+  <id>http://dliggat.github.io/</id>
+  <author>
+    <name><![CDATA[Dave Liggat]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Efficient Currency Conversion]]></title>
+    <link href="http://dliggat.github.io/2013/09/06/efficient-currency-conversion/"/>
+    <updated>2013-09-06T09:52:00-07:00</updated>
+    <id>http://dliggat.github.io/2013/09/06/efficient-currency-conversion</id>
+    <content type="html"><![CDATA[<p>I&rsquo;m willing to bet that Canadians, on average, do more foreign exchange (forex) transactions than citizens of many other countries. This is an obvious consequence of the significant shopping and investing opportunities south of the <a href="http://en.wikipedia.org/wiki/49th_parallel_north#The_Canada_.E2.80.93_United_States_border">49th parallel</a>. Moreover, plenty of Canadian software contractors such as myself find themselves billing in American dollars (<span class="money usd">USD</span>) occasionally.</p>
+
+<!--more-->
+
+
+<p>Unfortunately, currency conversion to and from Canadian dollars (<span class="money cad">CAD</span>) is no exception to that frequently-bemoaned axiom of Canadian life: it&rsquo;s expensive, and domestic vendors extract a cosy profit margin (i.e. banks in this case). This phenomenon is perennially annoying<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> in general, but especially so when we&rsquo;re talking about <em>bits in a database</em>, which is all money really is at this point.</p>
+
+<p>However, it turns out there&rsquo;s a neat trick you can pull off to convert <span class="money cad">CAD</span> ⇔ <span class="money usd">USD</span> [almost] optimally called <strong>Norbert&rsquo;s Gambit</strong>. There are plenty of <a href="http://canadiancouchpotato.com/2013/07/09/norberts-gambit-at-cibc/">other</a> <a href="http://www.canadiancapitalist.com/a-foolproof-method-to-convert-canadian-dollars-into-us-dollars/">blog</a> <a href="http://www.michaeljamesonmoney.com/2012/03/trying-norbert-gambit-at-bmo.html">posts</a> out there explaining this &ndash; I thought I&rsquo;d throw my hat into the ring also by documenting my experience. <em>This hopefully goes without saying, but this is a personal record of events by a layman of finance, not the provision of financial advice. Your mileage may vary &ndash; do your own research.</em></p>
+
+<p><a href="http://en.wikipedia.org/wiki/Wikipedia:Too_long;_didn't_read">tl; dr</a> version:</p>
+
+<blockquote><p>In conversion rate terms, this is a gain of $138.25 CAD over what the bank offered on the $5,000.00 USD conversion.</p></blockquote>
+
+<h3>Background</h3>
+
+<p><img class="right" src="/images/forex.jpg" width="325" title="&lsquo;Forex&rsquo;" >
+For the sake of completeness, it is worth mentioning the concept of the <strong>mid-market rate</strong> in forex. Although we tend to think of a unit of currency having a fixed, reversible value in a different currency (e.g. <span class="money usd price">$1.00 USD</span> = <span class="money cad price">$1.05 CAD</span>), generally no one will sell you the opposite currency at that rate. Currency conversion boards seen in train stations and airports illustrate this concept; they show <em>two rates</em> &ndash; vendors will transact in the opposite currency at a higher or lower rate, depending on whether you wish to buy or sell, respectively. The difference, of course, is their profit<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>.</p>
+
+<p>The mid-market rate is theoretically equidistant between the two rates, and it&rsquo;s the rate we would ideally achieve when we participate in a forex transaction. Mid-market rates for currency pairs are reported on <a href="http://finance.google.com">Google Finance</a>, <a href="http://xe.com">XE</a>, etc.</p>
+
+<h3>Objective</h3>
+
+<p>My objective on the morning of <strong>2013-09-05</strong> was to convert <span class="money usd price">$5,000.00 USD</span> to <span class="money cad">CAD</span> as efficiently as possible. The value of that sum of money, in <span class="money cad">CAD</span>, implied by the mid-market rate at the time was <span class="money cad price">$5,252.15 CAD</span>. In optimization terms, this is a clear <em>upper bound</em> on the quantity I&rsquo;m trying to maximize.</p>
+
+<h5>Option A: Bank Transfer</h5>
+
+<p>As far as I&rsquo;m aware, most Canadian banks allow for a immediate conversion of <span class="money cad">CAD</span> ⇔ <span class="money usd">USD</span> online from a <span class="money cad">CAD</span>-denominated account to a <span class="money usd">USD</span>-denominated account or vice-versa. In a matter of seconds, one can perform this transaction. The price for this convenience, however, is the suboptimal forex rate that they apply<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>. My bank offered me <span class="money cad price">$5,112.50 CAD</span> in exchange for <span class="money usd price">$5,000.00 USD</span> on <strong>2013-09-05</strong>. Easy, and hassle-free &ndash; but we can do better.</p>
+
+<h5>Option B: Third Party Currency Trader</h5>
+
+<p>Rather than use the functionality built into online banking, we can outsource the conversion to an outfit like <a href="http://xe.com">XE</a>. It&rsquo;s a bit of a hassle to set up, and the website is straight out of 2002, but that aside, it does exactly what it says on the tin. You book a trade; money gets withdrawn in one currency (e.g. <span class="money cad">CAD</span>) and shows up a few days later, converted, in the other currency (e.g. <span class="money usd">USD</span>). I&rsquo;ve used XE on very seldom occasions across a duration of many years and it has always worked out great. On the morning of <strong>2013-09-05</strong>, they quoted a rate of <span class="money cad price">$5,186.72 CAD</span> in exchange for <span class="money usd price">$5,000.00 USD</span>. Not quite the mid-market rate, but this is already an improvement of <span class="money cad price">$74.22 CAD</span> over Option A.</p>
+
+<h3>Option C: Norbert&rsquo;s Gambit</h3>
+
+<p>The process for doing even better relies on what I understand to be the following approximate logic:</p>
+
+<ul>
+<li>Start with money in a given currency, say, <span class="money usd">USD</span>.</li>
+<li>Use that money to purchase units of a security that lists on both the NYSE and TSX. Through the magic of <a href="http://en.wikipedia.org/wiki/Arbitrage">arbitrage</a>, the security on both markets will tend towards an identical price (even if traded in different currencies).</li>
+<li>Once you own it on the NYSE, ask your broker to swap it for equivalent units on the TSX.</li>
+<li>Sell those TSX-listed units of the security, now denominated in <span class="money cad">CAD</span>.</li>
+<li>Congratulations &ndash; all going well, you just converted <span class="money usd ">USD</span> to <span class="money cad">CAD</span> at essentially the mid-market rate. Provided, of course, the security didn&rsquo;t fluctuate much in value between the two trades.</li>
+</ul>
+
+
+<h3>Outcome</h3>
+
+<p>In practice, it seems you don&rsquo;t need to worry too much about the price fluctuation between trades. An <a href="http://en.wikipedia.org/wiki/Exchange-traded_fund">ETF</a> with symbol <a href="http://www.horizonsetfs.com/pub/en/etfs/?etf=DLR&amp;">DLR</a> was apparently created as a stable vehicle for precisely this manoeuvre. I followed <a href="http://www.michaeljamesonmoney.com/2012/03/trying-norbert-gambit-at-bmo.html">these instructions</a> closely and it worked out exactly as described. On <strong>2013-09-05</strong>, I phoned the broker<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>, bought DLR.U with <span class="money usd">USD</span>, exchanged it for DLR, and immediately sold to receive <span class="money cad">CAD</span>.</p>
+
+<p>In actual numeric terms, I bought <span class="money usd">502 DLR.U × $9.97 USD/DLR.U</span> = <span class="money usd price">$5,004.94 USD</span> and subsequently sold <span class="money cad">502 DLR × $10.47 CAD/DLR</span> = <span class="money cad price">$5,255.94 CAD</span>. In conversion rate terms, this is a gain of <span class="money cad price">$138.25 CAD</span> over what the bank offered on the <span class="money usd price">$5,000.00 USD</span> conversion, and the achieved rate <em>is</em> the mid-market rate to three decimal places.</p>
+
+<h4>But wait! There&rsquo;s More</h4>
+
+<p>We can&rsquo;t just call this a <span class="money cad price">$138.25 CAD</span> job well done though. I had to execute two trades&hellip; and trading has transaction costs. Depending on your bank/broker, and various policies, etc, this could be anywhere from $5.00 to $30.00 each direction. So the savings realized in this scenario is actually: <span class="money cad price">$138.25 CAD &ndash; 2 × { cost per trade }</span>. Still, it&rsquo;s a pretty good outcome for doing basically nothing but a bit of one-time research. And the savings scale in proportion to the amount converted!</p>
+
+<p>This is part of the reason<sup id="fnref:5"><a href="#fn:5" rel="footnote">5</a></sup> why banks are so ludicrously profitable. It&rsquo;s all just bits in a database&hellip; but the act of flipping those bits can come at a higher or lower cost depending on how you tell the bank to manipulate them.</p>
+
+<h4>Summary of Implied Rates</h4>
+
+<p>Here&rsquo;s the various rates summarized. Note that the Norbert&rsquo;s Gambit result <strong>does not</strong> include the cost of the trades, which must be accounted for in practice.</p>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <td>Method</td>
+      <td>Starting Value</td>
+      <td>Resulting Value</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bank Transfer</td>
+      <td><span class="money usd">$5,000.00 USD</span></td>
+      <td><span class="money cad">$5,112.50 CAD</span></td>
+    </tr>
+    <tr>
+      <td>Third Party Conversion</td>
+      <td><span class="money usd">$5,000.00 USD</span></td>
+      <td><span class="money cad">$5,186.72 CAD</span></td>
+    </tr>
+    <tr>
+      <td>Norbert's Gambit</td>
+      <td><span class="money usd">$5,000.00 USD</span></td>
+      <td><span class="money cad">$5,250.75 CAD</span></td>
+    </tr>
+    <tr>
+      <td>Theoretical Mid-Market Optimum</td>
+      <td><span class="money usd">$5,000.00 USD</span></td>
+      <td><span class="money cad">$5,252.15 CAD</span></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<p>One last remark: it&rsquo;s probably wise to be circumspect within any dealings with your bank when setting up accounts for this or actually executing the trade. Norbert&rsquo;s Gambit<sup id="fnref:6"><a href="#fn:6" rel="footnote">6</a></sup> is a perfectly legitimate operation, but it&rsquo;s pretty easy to imagine banks getting upset at this reduction in their effortless-profit, and potentially erecting obstacles.</p>
+
+<p></p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>Especially to a Scotsman.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>Sometimes these airport outfits add an extra &lsquo;fee&rsquo; on top, as if getting to charge a spread that they pick isn&rsquo;t already a &lsquo;fee&rsquo;.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>Even if the rate is bad, for smaller amounts of money, the convenience is worth it. It&rsquo;s only well into the four-digit zone does this start to become a worthwhile consideration.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p>I had to phone rather than do this over the web because apparently the bank&rsquo;s online systems can&rsquo;t handle DLR.U. I don&rsquo;t imagine there&rsquo;s a sound technical reason for this outside of &ldquo;banks being banks&rdquo;, but the guy on the phone was super polite and efficient at getting it done, and didn&rsquo;t charge any extra for the phone service over what it normally costs to transact online.<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+<li id="fn:5">
+<p>Other reasons include real and artificial barriers to entry, and riskless profits thanks to taxpayer guarantees on various loans issued, but all of that is a rant for another day.<a href="#fnref:5" rev="footnote">&#8617;</a></p></li>
+<li id="fn:6">
+<p>New bucket list item &ndash; invent a thing that comes to be known as <strong>Liggat&rsquo;s Gambit</strong>. How cool would it be to have a <em>gambit</em> to your name&hellip;<a href="#fnref:6" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+</feed>

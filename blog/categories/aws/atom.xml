@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Aws | liggat.org]]></title>
+  <link href="http://dliggat.github.io/blog/categories/aws/atom.xml" rel="self"/>
+  <link href="http://dliggat.github.io/"/>
+  <updated>2013-12-24T12:40:02-08:00</updated>
+  <id>http://dliggat.github.io/</id>
+  <author>
+    <name><![CDATA[Dave Liggat]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Static Hosting on Amazon S3]]></title>
+    <link href="http://dliggat.github.io/2013/11/03/static-hosting-on-amazon-s3/"/>
+    <updated>2013-11-03T13:13:00-08:00</updated>
+    <id>http://dliggat.github.io/2013/11/03/static-hosting-on-amazon-s3</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve had an outstanding <strong>todo</strong> for quite some time to migrate my basic and essentially-static <a href="http://www.factorialsystems.ca">business website</a> off of <a href="http://www.squarespace.com">Squarespace</a>. I ended up replacing it with a combination of <a href="http://octopress.org">Octopress</a> and Amazon Simple Storage Service (<a href="http://aws.amazon.com/s3">S3</a>), which, it turns out, are a fantastic duo.<!--more--></p>
+
+<h3>Prelude</h3>
+
+<p>A brief prelude: Squarespace is fantastic, and should be the first port of call for anyone, especially a business, who needs a website. I can&rsquo;t even enumerate the number of ostensibly well-run restaurants and businesses who either don&rsquo;t have a website, or if they do, it&rsquo;s some horrid Flash-payload thing that won&rsquo;t run on the primary device customers tend to be using at the point of need: their phones! Squarespace isn&rsquo;t free, but is totally worth the small monthly cost for pretty much anyone.</p>
+
+<p>I started my business site there due to a combination of being overwhelmingly-busy at the time, as well as generally curious about the service&hellip; but it eventually became time for me to move on<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.</p>
+
+<h3>Octopress</h3>
+
+<p>I&rsquo;ve become quite enamoured with Octopress &ndash; the blogging engine that I use for this site (and host on GitHub). I like to think of it as the anti-Wordpress &ndash; it produces good, old-fashioned directory trees of HTML pages from <a href="http://en.wikipedia.org/wiki/Markdown">markdown</a>-formatted source files and <a href="http://sass-lang.com/">SASS</a> style sheets. No application server or database, and the attendant care and feeding, required &ndash; just a plain old web server serving files<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>. This is a perfect choice, it turns out, for a basic company site. It has all the necessary infrastructure for blogging, should that become necessary, and has built-in responsive design and other niceties.</p>
+
+<h3>Hosting</h3>
+
+<p>S3 is Amazon Web Services' online file storage service (distributed, redundant, RESTful, etc). It is purportedly used as the persistence backend for <a href="http://dropbox.com">Dropbox</a>, among others. My needs are considerably more modest &ndash; I just want it to store and serve my site content. It turns out it has an option for exactly this purpose:</p>
+
+<p><img class="center" src="/images/2013/s3.png" width="600" title="&lsquo;S3 Static Website Hosting&rsquo;" ></p>
+
+<p>Thus, a static website with Octopress and S3 requires that you simply:</p>
+
+<ol>
+<li>create content within an Octopress repository</li>
+<li>execute Octopress' <code>bundle exec rake generate</code> to produce static HTML</li>
+<li>deploy the output to an S3 bucket (<code>bundle exec rake deploy</code>)</li>
+</ol>
+
+
+<h3>Deploying</h3>
+
+<p>Out of the box, Octopress does not know how to deploy to S3. That&rsquo;s easily remedied via an extension to the <code>Rakefile</code> that I found via this <a href="http://www.jerome-bernard.com/blog/2011/08/20/quick-tip-for-easily-deploying-octopress-blog-on-amazon-s3/">blog post</a>. With that <code>s3</code> rake task added, and S3 bucket variables defined, it&rsquo;s simply a matter of running <code>bundle exec rake deploy</code>. to deploy new content. The underlying <code>s3cmd</code> is, obviously, smart enough to only send content deltas to the S3 bucket.</p>
+
+<h3>Cost</h3>
+
+<p>At the time of writing, Amazon charges 9.5¢ per Gigabyte-month for the first 1TB of storage (cheaper thereafter), plus 0.5¢ per 1000 RESTful (GET, PUT, etc) operations, plus some minimal data transfer charge. One reasonable way to describe this might be: <strong>extremely inexpensive</strong>!</p>
+
+<h3>So Far, So Good</h3>
+
+<p>Thus far, I&rsquo;m really happy with this setup. My personal blog, this site, is currently hosted on <a href="http://pages.github.com">GitHub Pages</a><sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>, but I&rsquo;ll probably move this over to S3 also. Obviously, the static site constraint remains &ndash; I can&rsquo;t, for instance, have a page with a form, or an XHR endpoint, etc. But if those should become necessary &ndash; it&rsquo;s very easy to upgrade to an EC2 instance with Rails, and remain within the Amazon ecosystem. I guess that&rsquo;s how they get you&hellip;</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>Squarespace is definitely overkill for a static site if you have the time, knowledge and inclination to host it elsewhere. But many website-needing entities do not possess the intersection of those properties &ndash; hence the genius of Squarespace as a product itself.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>This resultant simplicity has an inherent appeal &ndash; not dissimilar to that, for me, of iOS vs OS X. The former trades possibility for simplicity &ndash; a desirable exchange in many (but obviously not all) scenarios.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>GitHub Pages hosts static sites for free &ndash; not wishing to trespass on GitHub&rsquo;s awesomeness, I reasoned that I should probably pay for the business site&rsquo;s hosting. All 68¢ of it, or whatever the final bill ends up being.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+</feed>

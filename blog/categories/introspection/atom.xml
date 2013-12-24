@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Introspection | liggat.org]]></title>
+  <link href="http://dliggat.github.io/blog/categories/introspection/atom.xml" rel="self"/>
+  <link href="http://dliggat.github.io/"/>
+  <updated>2013-12-24T12:40:02-08:00</updated>
+  <id>http://dliggat.github.io/</id>
+  <author>
+    <name><![CDATA[Dave Liggat]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[On Boredom]]></title>
+    <link href="http://dliggat.github.io/2013/09/25/on-boredom/"/>
+    <updated>2013-09-25T09:32:00-07:00</updated>
+    <id>http://dliggat.github.io/2013/09/25/on-boredom</id>
+    <content type="html"><![CDATA[<p><a href="http://teamcoco.com/video/louis-ck-springsteen-cell-phone">Another</a> of Louis C.K.&rsquo;s hilarious talk-show interview diatribes is being widely circulated on the web and Twitter right now &ndash; this time about smartphones, and why he won&rsquo;t let his children have one. It&rsquo;s well worth a watch, but his argument essentially boils down to the observation that smartphones provide a constant stream of distraction that removes the condition, boredom, that is arguably necessary for healthy self-reflection.<!--more--></p>
+
+<p>Humour aside, I think he&rsquo;s really onto something here. Speaking personally, boredom, at least how I understood the term pre-Internet, has essentially disappeared from my life. Very few of my waking hours are spent without mental stimulation of one form or another. If I&rsquo;m waiting in a lineup, on public transport, unable to sleep, or killing time in an airport &ndash; out comes my phone, and the usual suspects <a href="http://tapbots.com/software/tweetbot/">Tweetbot</a> or <a href="http://instapaper.com">Instapaper</a> will occupy me for the duration of that transitory event. Even when I&rsquo;m cooking, cycling, exercising, or walking the dog, I&rsquo;m spared from any possible exposure to boredom through a now-years-old tendency to listen to podcasts<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> or audiobooks whenever my hands are occupied.</p>
+
+<p>As a technophile and enthusiast-for-non-boredom, it&rsquo;s hard for me to know how I should feel about this state of affairs. It&rsquo;s fairly easy to reason that since happiness may only exist in a world with sadness, then perhaps excitement and boredom share a similar, inextricable, symbiosis? I certainly don&rsquo;t currently <em>feel</em> like my life: work, personal or otherwise, lacks excitement &ndash; far from it. But this is 2013 &ndash; what about 2033 when we have <em>{insert your favourite prediction about technology two decades out<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>}</em>?</p>
+
+<p>Kids born in the recent past seem to be genuinely puzzled when they encounter a display which is not touch-sensitive, and I find it likely that this will be their response at the very notion of boredom as a concept in the years to come. I feel privileged to have grown up during that big epoch-defining<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup> transition from pre-Internet to our now permanent state of connectedness. I have vivid memories of what it was like to have only four TV channels and a few toys and books as the sole available vehicles for entertainment; and still more vivid memories of the initial realizations that I now had the power to answer virtually any question I could conceive of with just a few keystrokes.</p>
+
+<p>I don&rsquo;t think the significance of this shift has been truly internalized by many people yet. Other than Louis C.K., of course.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>I love podcasts, but my subscriptions have grown well beyond the point of my ability to actually listen to them all.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>Visible screens inscribed on contact lenses?<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>I am convinced that historians will have a well-defined name for this period in decades/centuries to come.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+</feed>

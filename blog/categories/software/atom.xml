@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Software | liggat.org]]></title>
+  <link href="http://dliggat.github.io/blog/categories/software/atom.xml" rel="self"/>
+  <link href="http://dliggat.github.io/"/>
+  <updated>2013-12-24T12:40:02-08:00</updated>
+  <id>http://dliggat.github.io/</id>
+  <author>
+    <name><![CDATA[Dave Liggat]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[A Minor Rant on Package Tracking]]></title>
+    <link href="http://dliggat.github.io/2013/11/30/a-minor-rant-on-package-tracking/"/>
+    <updated>2013-11-30T23:11:00-08:00</updated>
+    <id>http://dliggat.github.io/2013/11/30/a-minor-rant-on-package-tracking</id>
+    <content type="html"><![CDATA[<p>I do a fair bit of online shopping<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, and have done so for pretty much my entire credit-card-wielding life. It&rsquo;s a familiar ritual: every time, shortly after I&rsquo;ve clicked <code>Purchase</code>, an email arrives containing a linked phrase with roughly the following copy: <em>Click here to track your shipment</em>. <!--more-->And every time I receive that email, I dutifully click that link, only to be met with the following 404-esque response:</p>
+
+<p><img class="center" src="/images/2013/tracking.png" width="600" title="&lsquo;tracking&rsquo;" ></p>
+
+<p>It does not seem to matter whether the year is 2005 or 2013, and whether the logistics handler in question is Canada Post, USPS, UPS, etc &ndash; this is invariably the experience. This is a minor but absolutely-nagging annoyance if you know anything about software. It does not need to be this way.</p>
+
+<p>Subsequent to the buyer&rsquo;s order, the seller and the logistics handler must perform an asynchronous (with respect to the buyer) transaction in which, among other things, data is exchanged regarding the delivery to be executed. At some point in this process, the seller is provided with a tracking number for that delivery, which they happily relay to the buyer in the aforesaid email. Therefore, when the buyer excitedly clicks on the tracking link, they are performing a lookup of <strong>a record that is certain to exist somewhere on the logistics handler&rsquo;s systems</strong>, and yet are <em>told</em> it doesn&rsquo;t exist.</p>
+
+<p>I imagine that at this point, given the opportunity, the CTO of one of these logistics handler outfits might loudly interject <em>&ldquo;Well, of course &ndash; but the consumer web frontend and the logistics backend are entirely separate systems that we need to batch transfer over, and because of our legacy&hellip; and because of our storage requirements&hellip; and because of our load balancing&hellip; and because of Sarbanes-Oxley&hellip; and&hellip;.&rdquo;</em></p>
+
+<p>And I&rsquo;m sure these would all be perfectly justified reasons, within the infrastructure team of that firm. The point is though, I don&rsquo;t care <strong>why</strong> the tracker was <em>unable to find any results</em>. And neither does any other user. This is a bad experience, and they can, and should do better. A few suggestions, in increasing order of implementation complexity:</p>
+
+<ol>
+<li>Make a better <em>unable to find any results</em> page. Acknowledge that this is a new tracking number, and will be in the systems shortly. Provide a timeframe. Differentiate between new numbers, and erroneous ones (use a <a href="http://en.wikipedia.org/wiki/Checksum">checksumming</a> scheme in the numbers themselves if necessary).</li>
+<li>Coordinate with the seller. Don&rsquo;t fire out emails containing tracking links until both the seller and the logistics handler agree that the delivery will be performed, a tracking number exists, and the tracking number is queryable. I don&rsquo;t want an email with a link that I can&rsquo;t use until some unspecified period has passed.</li>
+<li>Build better infrastructure. It is well within the ability of humanity&rsquo;s current software engineering to run systems without such absurd temporal lags within a single organization&rsquo;s infrastructure. This is not an especially complex technical problem. If your logistics and web-query systems are entirely separate, and they take 6 hours to propagate records &ndash; get that 6 down to 5. Then to 4. Then to 3. Etc.</li>
+</ol>
+
+
+<p>Clearly, this is not an important concern in the grand scheme of the universe. Invariably, the links start working eventually, and the packages arrive. But the triviality is no reason to not demand a modicum of progress.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>I did even more when I lived in the USA. The selection and swiftness of delivery of online purchasing there is nothing short of remarkable, especially under Amazon Prime.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Simulating the Birthday Paradox]]></title>
+    <link href="http://dliggat.github.io/2013/10/13/simulating-the-birthday-paradox/"/>
+    <updated>2013-10-13T10:59:00-07:00</updated>
+    <id>http://dliggat.github.io/2013/10/13/simulating-the-birthday-paradox</id>
+    <content type="html"><![CDATA[<p>Probability theory is a pretty special branch of mathematics in the sense that it is (1) highly applicable to daily life; (2) many of its results are easily comprehensible to most people; and yet despite this (3) it remains a profoundly complex area of mathematical inquiry<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.<!--more--></p>
+
+<p>An example which perfectly encapsulates this is the <a href="http://en.wikipedia.org/wiki/Birthday_paradox">birthday paradox</a>. In short, it can be represented by the question:</p>
+
+<blockquote><p>With a group of <code>N</code> randomly chosen people, how large does <code>N</code> need to be so that there&rsquo;s a 50% chance of a shared birthday within the group?</p></blockquote>
+
+<p>The birthday paradox is a great opportunity to use some basic computation as an exploratory tool. I think more people should have the ability to use this.</p>
+
+<h3>Finding N</h3>
+
+<p>The group size is clearly less than or equal to 365. Above 365, we know with 100% certainty that there&rsquo;s a shared birthday somewhere<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>. Intuition (or at least my intuition before I knew the answer) usually suggests that the 50% probability threshold value for N is probably at or around the 100-150 mark. In other words, we might guess that you need 100-150 people in the group before the probability of a shared birthday is equal to a coin flip.</p>
+
+<p>It turns out that&rsquo;s a gross overestimate. The actual value is <strong>staggeringly lower</strong> than people tend to guess:</p>
+
+<blockquote><p>With a group size of 23 people, the probability that two people share a birthday is ~= 50.36%.</p></blockquote>
+
+<p>This is a pretty astonishing result. It is, of course, provably true by an <a href="http://en.wikipedia.org/wiki/Birthday_paradox#Calculating_the_probability">analytical argument</a>, but it is actually far easier to convince oneself of its trueness with a simple computational exercise (full version on <a href="https://gist.github.com/dliggat/6963840">GitHub</a>):</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>birthday.rb: Simulate the birthday paradox </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;h1&gt;!/us</span><span class="n">r</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">env</span> <span class="n">ruby</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;def shared_birthday?(group_size)</span>
+</span><span class='line'><span class="sr">  # Generate an array with size &lt;code&gt;group_size&lt;/</span><span class="n">code</span><span class="o">&gt;</span><span class="p">,</span> <span class="ow">and</span> <span class="n">randomly</span> <span class="n">assign</span> <span class="n">every</span> <span class="n">member</span> <span class="n">a</span> <span class="n">birthday</span><span class="o">.</span>
+</span><span class='line'>  <span class="c1"># Return true if two members share a birthday; else return false.</span>
+</span><span class='line'>  <span class="n">counter</span>   <span class="o">=</span> <span class="no">Hash</span><span class="o">.</span><span class="n">new</span> <span class="mi">0</span>
+</span><span class='line'>  <span class="n">birthdays</span> <span class="o">=</span> <span class="n">group_size</span><span class="o">.</span><span class="n">times</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="nb">rand</span> <span class="mi">365</span> <span class="p">}</span>
+</span><span class='line'>  <span class="n">birthdays</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">birthday</span><span class="o">|&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;counter[birthday] += 1</span>
+</span><span class='line'><span class="sr">return true if counter[birthday] &amp;gt; 1</span>
+</span><span class='line'><span class="sr">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;</span><span class="sr">/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;  end</span>
+</span><span class='line'><span class="sr">  false</span>
+</span><span class='line'><span class="sr">end&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="k">def</span> <span class="nf">run_birthday_trials</span><span class="p">(</span><span class="n">group_size</span><span class="p">,</span> <span class="n">trial_count</span><span class="p">)</span>
+</span><span class='line'>  <span class="c1"># Run the shared_birthday? experiment &lt;code&gt;trial_count&lt;/code&gt; times.</span>
+</span><span class='line'>  <span class="c1"># Return the number of experiments which resulted in a shared birthday.</span>
+</span><span class='line'>  <span class="n">successes</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span class='line'>  <span class="n">trial_count</span><span class="o">.</span><span class="n">times</span> <span class="p">{</span> <span class="n">successes</span> <span class="o">+=</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">shared_birthday?</span> <span class="n">group_size</span> <span class="p">}</span>
+</span><span class='line'>  <span class="n">successes</span>
+</span><span class='line'><span class="k">end</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;run_birthday_trials 23, 1000</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>This very simple code runs a series of birthday-paradox experiments &ndash; within each trial, it generates a group of people, and tests for the presence of a shared birthday. By doing this repeatedly, a thousand times in this case, we can approximate the actual probability of a shared birthday with a particular group size.</p>
+
+<h3>Why Bother Sharing This?</h3>
+
+<p>To any mildly-capable programmer<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>, none of this is particularly interesting or novel. Many of us in this line of work have a pretty decent mathematical background, and have done all sorts of these little simulation exercises in the past, both academically and professionally.</p>
+
+<p>However, it is my firm belief that a great many people could stand to benefit if the ability to use basic computational principles and tools were more widely disseminated. Windows and OS X machines ship with browsers with full JavaScript runtimes; Ruby and Python runtimes <em>ship</em> with OS X, and can easily be added to Windows. The tools of exploratory computation are everywhere &ndash; but very few people were ever given the knowledge to use them. This could be easily remedied by offering basic Computer Science in high school, either on its own, or as part of a math or science class. This might be the case today for all I know, but my own experience on that front was not encouraging<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>.</p>
+
+<p>To anyone even moderately interested in the vast possibilities that are unlocked with a bit of computational knowledge, I strongly encourage you to check out <a href="http://www.codecademy.com/">Code Academy</a> or <a href="http://projecteuler.net">Project Euler</a>. Of all of Steve Jobs' various witty and insightful aphorisms, the notion that a computer is a <em>bicycle for the mind</em> has always struck me as especially apt.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>Unlike, say, <a href="http://en.wikipedia.org/wiki/Real_analysis">real analysis</a>, which has zero applicability to daily life and is not comprehensible by most people, including myself.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>By the <a href="http://en.wikipedia.org/wiki/Pigeonhole_principle">pigeonhole principle</a>: If we have 365 pigeonholes into which we place 366 objects, at least one pigeonhole must contain more than one object.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p><a href="http://www.codinghorror.com/blog/2007/02/why-cant-programmers-program.html">FizzBuzz</a>, as ever, remains a cautionary tale about our industry.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p>Around the time I was in grade 11 and 12, Computer Science was <em>dropped</em> as an offering at my high school. Yes, <em>dropped</em>. Lack of demand; lack of staff to teach it. University was thus my first opportunity to gain exposure to computation as an academic/professional field.<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A Golden Age of Software]]></title>
+    <link href="http://dliggat.github.io/2013/09/03/a-comparatively-golden-age-of-software/"/>
+    <updated>2013-09-03T17:57:00-07:00</updated>
+    <id>http://dliggat.github.io/2013/09/03/a-comparatively-golden-age-of-software</id>
+    <content type="html"><![CDATA[<p>As someone to whom pessimism and cynicism come naturally, I&rsquo;m often more inclined to complain about things than sit and reflect on positivity. However, I think it&rsquo;s worth taking a moment to acknowledge one thing: we live in a golden age of software right now, at least relative to any point in the past.</p>
+
+<!--more-->
+
+
+<p>This is not to suggest there aren&rsquo;t problems. For example &ndash; I&rsquo;m incredulous to the point of <a href="http://en.wikipedia.org/wiki/Facepalm">speechlessness</a> whenever I use a television set with any current digital TV product at just how universally terrible it all is. I&rsquo;m not at all interested in live TV or any sports or the various trappings, and thus am not in the target market &ndash; but I can scarcely believe people willingly buy these altars of frustration. Just consider, for a moment, the breathtaking lack of product and user-focus that this on-screen prompt represents:</p>
+
+<blockquote><p>This programming is also available in High-Definition. Would you prefer to switch to that instead?</p></blockquote>
+
+<p>All the way from product development, through system design and implementation, to QA, and finally deployment, with presumably a good few boardroom demos along the way &ndash; apparently no one thought about the absurdity of <em>even bothering to ask</em> if HD is preferable to the viewer over SD<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>. I could rant all day about examples like this. Clearly humanity&rsquo;s grand experiment with software has not yet reached its zenith.</p>
+
+<p>However, when I reflect on my career in software &ndash; now close to entering its tenth year &ndash; the progress of that period from <code>2003</code> to <code>now</code>, just in terms of my own personal &lsquo;software environment&rsquo;, is truly staggering to behold:</p>
+
+<ul>
+<li><strong>Operating System</strong>: I used to get work done in Windows XP, which, on good days, would manage to not kernel panic. Linux was around, but &ndash; only if you didn&rsquo;t care about digital cameras or WiFi, and enjoyed endless tinkering with device drivers. For all of Unix&rsquo;s enduring importance from the seventies onwards &ndash; Windows &amp; Microsoft were the absolute ironclad conduit between most people and computation. Compare that to today &ndash; it&rsquo;s worlds apart.</li>
+<li><strong>Productivity</strong>: It used to be that if it had words it went into a <code>.doc</code>, and if it had numbers it went into a <code>.xls</code>. End of story. Now, I have very little real need for an office suite &ndash; all the various little uses cases have been unbundled into more suitable specialized tools. Notes go into Evernote. <a href="http://www.acqualia.com/soulver/">Soulver</a> and <a href="http://www.alfredapp.com/">Alfred</a> for impromptu calculations. Google Docs (and soon, iWork for iCloud) for persisted spreadsheets. <a href="http://www.freshbooks.com/">Freshbooks</a> for accounting. <a href="http://www.goodiware.com/goodreader.html">GoodReader</a> for annotating PDFs. Etc. Excel remains a peerless tool at the high end &ndash; but it overserves most people&rsquo;s, or at least my, needs in the vast majority of cases.</li>
+<li><strong>Email</strong>: I have vivid memories of the days when an email account was tightly coupled to a single physical computer, almost by axiom. No web access, no multi-gigabyte, searchable, hosted backing store, and certainly no IMAP, push notifications, or synchronized read state between multiple devices. Mail host storage was a jealously guarded commodity &ndash; and shunted off their systems to your <em>sole</em> machine with haste.</li>
+<li><strong>Version Control</strong>: God help you if you attempted a merge and got it wrong with early (and hell, probably current, if they still make it) versions of Source Safe. And branches? Forget it. There&rsquo;s no terror quite like the terror of a computer-science co-op student who is pretty sure he just fouled up the company VSS repository (me; circa 2004). Today, git, especially used within <a href="http://github.com">GitHub</a>, verges on perfection for covering the problem space of &lsquo;version control&rsquo;. I&rsquo;m not sure I can name a piece of software more powerful, or useful, or robust, or complete at doing the job it was designed to do.</li>
+<li><strong>Programming Languages</strong>: Dynamic, strongly-typed, ultra-expressive languages like <code>ruby</code> and <code>python</code> have a rich history, but they&rsquo;ve only really come into widespread use in the latter portion of the 2000s. I learned to program in <code>C++</code>, and looking back, I&rsquo;m surprised that didn&rsquo;t put me off the whole enterprise<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>. <code>Java</code> is worse &ndash; the hideous jargon endemic to its ecosystem and infuriating toolchains for starters, let alone the needlessly-verbose language itself.</li>
+<li><strong>Writing Code</strong>: Visual Studio or Eclipse<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup> versus <a href="http://www.sublimetext.com/2">Sublime Text 2</a> &ndash; enough said. IDEs still have a role to be sure, especially for developing native software, but I dislike using them, and I&rsquo;m glad I mostly don&rsquo;t have to.</li>
+</ul>
+
+
+<p>In writing this, I&rsquo;ve basically deduced what are actually two pretty obvious observations:</p>
+
+<ol>
+<li>Current software which already had a predecessor equivalent in the past has gotten <em>profoundly</em> better.</li>
+<li>Devices/objects which weren&rsquo;t software driven in the past and now are (e.g. TVs, cars) need to, and presumably will, improve drastically.</li>
+</ol>
+
+
+<p>It&rsquo;ll be fun to revisit this post in another ten years and opine, hopefully, about how good television<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup> software is and that it has since joined the ranks of productivity, email, version control, etc. I sure hope so.</p>
+
+<p>In the meantime, get rid of the damn HD prompt, <em>please</em>.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>Honestly, this was on a shipping digital TV unit that I used.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>To be fair, I did hate the first half of UBC&rsquo;s <code>C++</code>-based CPSC 152 until things started to click about two-thirds in. And I do think new programmers should be exposed to the world of pointers and manual memory management &ndash; but I would argue that <code>C</code> is a better environment than <code>C++</code> for that.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>Apparently people still use this. Oh, the humanity.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p>Assuming &lsquo;television&rsquo; is even a relevant concept in 10 years. I would not be at all surprised if 100% of the software and network functionality moves to phones and tablets, and TVs become nothing more than dumb wireless output devices for their content. Initiatives like AirPlay, locked thought it is to the Apple ecosystem, are a pretty big step in this direction.<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+</feed>

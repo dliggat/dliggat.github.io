@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Simulating the Birthday Paradox - liggat.org</title>
+  <meta name="author" content="Dave Liggat">
+
+  
+  <meta name="description" content="Probability theory is a pretty special branch of mathematics in the sense that it is (1) highly applicable to daily life; (2) many of its results are &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://dliggat.github.io/2013/10/13/simulating-the-birthday-paradox">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="liggat.org" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<!-- <link href='http://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic' rel='stylesheet' type='text/css'> -->
+
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,700italic|Lora:400,400italic|Raleway:100|Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-42613016-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body    class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">liggat.org</a></h1>
+  
+    <h2>by Dave Liggat</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:dliggat.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/archive">Archive</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/contact">Contact</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Simulating the Birthday Paradox</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-13T10:59:00-07:00" pubdate data-updated="true">October 13<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Probability theory is a pretty special branch of mathematics in the sense that it is (1) highly applicable to daily life; (2) many of its results are easily comprehensible to most people; and yet despite this (3) it remains a profoundly complex area of mathematical inquiry<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.<!--more--></p>
+
+<p>An example which perfectly encapsulates this is the <a href="http://en.wikipedia.org/wiki/Birthday_paradox">birthday paradox</a>. In short, it can be represented by the question:</p>
+
+<blockquote><p>With a group of <code>N</code> randomly chosen people, how large does <code>N</code> need to be so that there&rsquo;s a 50% chance of a shared birthday within the group?</p></blockquote>
+
+<p>The birthday paradox is a great opportunity to use some basic computation as an exploratory tool. I think more people should have the ability to use this.</p>
+
+<h3>Finding N</h3>
+
+<p>The group size is clearly less than or equal to 365. Above 365, we know with 100% certainty that there&rsquo;s a shared birthday somewhere<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>. Intuition (or at least my intuition before I knew the answer) usually suggests that the 50% probability threshold value for N is probably at or around the 100-150 mark. In other words, we might guess that you need 100-150 people in the group before the probability of a shared birthday is equal to a coin flip.</p>
+
+<p>It turns out that&rsquo;s a gross overestimate. The actual value is <strong>staggeringly lower</strong> than people tend to guess:</p>
+
+<blockquote><p>With a group size of 23 people, the probability that two people share a birthday is ~= 50.36%.</p></blockquote>
+
+<p>This is a pretty astonishing result. It is, of course, provably true by an <a href="http://en.wikipedia.org/wiki/Birthday_paradox#Calculating_the_probability">analytical argument</a>, but it is actually far easier to convince oneself of its trueness with a simple computational exercise (full version on <a href="https://gist.github.com/dliggat/6963840">GitHub</a>):</p>
+
+<figure class='code'><figcaption><span>birthday.rb: Simulate the birthday paradox </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="c1">#!/usr/bin/env ruby</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">shared_birthday?</span><span class="p">(</span><span class="n">group_size</span><span class="p">)</span>
+</span><span class='line'>  <span class="c1"># Generate an array with size `group_size`, and randomly assign every member a birthday.</span>
+</span><span class='line'>  <span class="c1"># Return true if two members share a birthday; else return false.</span>
+</span><span class='line'>  <span class="n">counter</span>   <span class="o">=</span> <span class="no">Hash</span><span class="o">.</span><span class="n">new</span> <span class="mi">0</span>
+</span><span class='line'>  <span class="n">birthdays</span> <span class="o">=</span> <span class="n">group_size</span><span class="o">.</span><span class="n">times</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="nb">rand</span> <span class="mi">365</span> <span class="p">}</span>
+</span><span class='line'>  <span class="n">birthdays</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">birthday</span><span class="o">|</span>
+</span><span class='line'>    <span class="n">counter</span><span class="o">[</span><span class="n">birthday</span><span class="o">]</span> <span class="o">+=</span> <span class="mi">1</span>
+</span><span class='line'>    <span class="k">return</span> <span class="kp">true</span> <span class="k">if</span> <span class="n">counter</span><span class="o">[</span><span class="n">birthday</span><span class="o">]</span> <span class="o">&gt;</span> <span class="mi">1</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>  <span class="kp">false</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">run_birthday_trials</span><span class="p">(</span><span class="n">group_size</span><span class="p">,</span> <span class="n">trial_count</span><span class="p">)</span>
+</span><span class='line'>  <span class="c1"># Run the shared_birthday? experiment `trial_count` times.</span>
+</span><span class='line'>  <span class="c1"># Return the number of experiments which resulted in a shared birthday.</span>
+</span><span class='line'>  <span class="n">successes</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span class='line'>  <span class="n">trial_count</span><span class="o">.</span><span class="n">times</span> <span class="p">{</span> <span class="n">successes</span> <span class="o">+=</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">shared_birthday?</span> <span class="n">group_size</span> <span class="p">}</span>
+</span><span class='line'>  <span class="n">successes</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">run_birthday_trials</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">1000</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This very simple code runs a series of birthday-paradox experiments &ndash; within each trial, it generates a group of people, and tests for the presence of a shared birthday. By doing this repeatedly, a thousand times in this case, we can approximate the actual probability of a shared birthday with a particular group size.</p>
+
+<h3>Why Bother Sharing This?</h3>
+
+<p>To any mildly-capable programmer<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>, none of this is particularly interesting or novel. Many of us in this line of work have a pretty decent mathematical background, and have done all sorts of these little simulation exercises in the past, both academically and professionally.</p>
+
+<p>However, it is my firm belief that a great many people could stand to benefit if the ability to use basic computational principles and tools were more widely disseminated. Windows and OS X machines ship with browsers with full JavaScript runtimes; Ruby and Python runtimes <em>ship</em> with OS X, and can easily be added to Windows. The tools of exploratory computation are everywhere &ndash; but very few people were ever given the knowledge to use them. This could be easily remedied by offering basic Computer Science in high school, either on its own, or as part of a math or science class. This might be the case today for all I know, but my own experience on that front was not encouraging<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>.</p>
+
+<p>To anyone even moderately interested in the vast possibilities that are unlocked with a bit of computational knowledge, I strongly encourage you to check out <a href="http://www.codecademy.com/">Code Academy</a> or <a href="http://projecteuler.net">Project Euler</a>. Of all of Steve Jobs&#8217; various witty and insightful aphorisms, the notion that a computer is a <em>bicycle for the mind</em> has always struck me as especially apt.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>Unlike, say, <a href="http://en.wikipedia.org/wiki/Real_analysis">real analysis</a>, which has zero applicability to daily life and is not comprehensible by most people, including myself.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>By the <a href="http://en.wikipedia.org/wiki/Pigeonhole_principle">pigeonhole principle</a>: If we have 365 pigeonholes into which we place 366 objects, at least one pigeonhole must contain more than one object.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p><a href="http://www.codinghorror.com/blog/2007/02/why-cant-programmers-program.html">FizzBuzz</a>, as ever, remains a cautionary tale about our industry.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p>Around the time I was in grade 11 and 12, Computer Science was <em>dropped</em> as an offering at my high school. Yes, <em>dropped</em>. Lack of demand; lack of staff to teach it. University was thus my first opportunity to gain exposure to computation as an academic/professional field.<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Dave Liggat</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-13T10:59:00-07:00" pubdate data-updated="true">October 13<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/math/'>math</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/software/'>software</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://dliggat.github.io/2013/10/13/simulating-the-birthday-paradox/" data-via="" data-counturl="http://dliggat.github.io/2013/10/13/simulating-the-birthday-paradox/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2013/09/25/on-boredom/" title="Previous Post: On Boredom">&laquo; On Boredom</a>
+      
+      
+        <a class="basic-alignment right" href="/2013/10/15/walter-white/" title="Next Post: Walter White, Art Aficionado">Walter White, Art Aficionado &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - <a href="http://liggat.org/about">Dave Liggat</a>.
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span> &
+  <span class="credit">hosted on <a href="http://pages.github.com">GitHub Pages</a></span>.
+</p>
+<p id="duration-statement">
+  <span class="credit">Liggat.org has been active for <span id='site-duration'></span>. </span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'liggatorg';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://dliggat.github.io/2013/10/13/simulating-the-birthday-paradox/';
+        var disqus_url = 'http://dliggat.github.io/2013/10/13/simulating-the-birthday-paradox/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+<script src="/javascripts/bigfoot.min.js"></script>
+<script src="/javascripts/moment.min.js"></script>
+<script src="/javascripts/custom/init-footer.js"></script>
+<script src="/javascripts/custom/init-bigfoot.js"></script>
+
+</body>
+</html>

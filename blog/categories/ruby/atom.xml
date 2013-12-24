@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ruby | liggat.org]]></title>
+  <link href="http://dliggat.github.io/blog/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://dliggat.github.io/"/>
+  <updated>2013-12-24T12:40:02-08:00</updated>
+  <id>http://dliggat.github.io/</id>
+  <author>
+    <name><![CDATA[Dave Liggat]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Simulating the Birthday Paradox]]></title>
+    <link href="http://dliggat.github.io/2013/10/13/simulating-the-birthday-paradox/"/>
+    <updated>2013-10-13T10:59:00-07:00</updated>
+    <id>http://dliggat.github.io/2013/10/13/simulating-the-birthday-paradox</id>
+    <content type="html"><![CDATA[<p>Probability theory is a pretty special branch of mathematics in the sense that it is (1) highly applicable to daily life; (2) many of its results are easily comprehensible to most people; and yet despite this (3) it remains a profoundly complex area of mathematical inquiry<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.<!--more--></p>
+
+<p>An example which perfectly encapsulates this is the <a href="http://en.wikipedia.org/wiki/Birthday_paradox">birthday paradox</a>. In short, it can be represented by the question:</p>
+
+<blockquote><p>With a group of <code>N</code> randomly chosen people, how large does <code>N</code> need to be so that there&rsquo;s a 50% chance of a shared birthday within the group?</p></blockquote>
+
+<p>The birthday paradox is a great opportunity to use some basic computation as an exploratory tool. I think more people should have the ability to use this.</p>
+
+<h3>Finding N</h3>
+
+<p>The group size is clearly less than or equal to 365. Above 365, we know with 100% certainty that there&rsquo;s a shared birthday somewhere<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>. Intuition (or at least my intuition before I knew the answer) usually suggests that the 50% probability threshold value for N is probably at or around the 100-150 mark. In other words, we might guess that you need 100-150 people in the group before the probability of a shared birthday is equal to a coin flip.</p>
+
+<p>It turns out that&rsquo;s a gross overestimate. The actual value is <strong>staggeringly lower</strong> than people tend to guess:</p>
+
+<blockquote><p>With a group size of 23 people, the probability that two people share a birthday is ~= 50.36%.</p></blockquote>
+
+<p>This is a pretty astonishing result. It is, of course, provably true by an <a href="http://en.wikipedia.org/wiki/Birthday_paradox#Calculating_the_probability">analytical argument</a>, but it is actually far easier to convince oneself of its trueness with a simple computational exercise (full version on <a href="https://gist.github.com/dliggat/6963840">GitHub</a>):</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>birthday.rb: Simulate the birthday paradox </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;h1&gt;!/us</span><span class="n">r</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">env</span> <span class="n">ruby</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;def shared_birthday?(group_size)</span>
+</span><span class='line'><span class="sr">  # Generate an array with size &lt;code&gt;group_size&lt;/</span><span class="n">code</span><span class="o">&gt;</span><span class="p">,</span> <span class="ow">and</span> <span class="n">randomly</span> <span class="n">assign</span> <span class="n">every</span> <span class="n">member</span> <span class="n">a</span> <span class="n">birthday</span><span class="o">.</span>
+</span><span class='line'>  <span class="c1"># Return true if two members share a birthday; else return false.</span>
+</span><span class='line'>  <span class="n">counter</span>   <span class="o">=</span> <span class="no">Hash</span><span class="o">.</span><span class="n">new</span> <span class="mi">0</span>
+</span><span class='line'>  <span class="n">birthdays</span> <span class="o">=</span> <span class="n">group_size</span><span class="o">.</span><span class="n">times</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="nb">rand</span> <span class="mi">365</span> <span class="p">}</span>
+</span><span class='line'>  <span class="n">birthdays</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">birthday</span><span class="o">|&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;counter[birthday] += 1</span>
+</span><span class='line'><span class="sr">return true if counter[birthday] &amp;gt; 1</span>
+</span><span class='line'><span class="sr">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;</span><span class="sr">/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;  end</span>
+</span><span class='line'><span class="sr">  false</span>
+</span><span class='line'><span class="sr">end&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="k">def</span> <span class="nf">run_birthday_trials</span><span class="p">(</span><span class="n">group_size</span><span class="p">,</span> <span class="n">trial_count</span><span class="p">)</span>
+</span><span class='line'>  <span class="c1"># Run the shared_birthday? experiment &lt;code&gt;trial_count&lt;/code&gt; times.</span>
+</span><span class='line'>  <span class="c1"># Return the number of experiments which resulted in a shared birthday.</span>
+</span><span class='line'>  <span class="n">successes</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span class='line'>  <span class="n">trial_count</span><span class="o">.</span><span class="n">times</span> <span class="p">{</span> <span class="n">successes</span> <span class="o">+=</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">shared_birthday?</span> <span class="n">group_size</span> <span class="p">}</span>
+</span><span class='line'>  <span class="n">successes</span>
+</span><span class='line'><span class="k">end</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;run_birthday_trials 23, 1000</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>This very simple code runs a series of birthday-paradox experiments &ndash; within each trial, it generates a group of people, and tests for the presence of a shared birthday. By doing this repeatedly, a thousand times in this case, we can approximate the actual probability of a shared birthday with a particular group size.</p>
+
+<h3>Why Bother Sharing This?</h3>
+
+<p>To any mildly-capable programmer<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>, none of this is particularly interesting or novel. Many of us in this line of work have a pretty decent mathematical background, and have done all sorts of these little simulation exercises in the past, both academically and professionally.</p>
+
+<p>However, it is my firm belief that a great many people could stand to benefit if the ability to use basic computational principles and tools were more widely disseminated. Windows and OS X machines ship with browsers with full JavaScript runtimes; Ruby and Python runtimes <em>ship</em> with OS X, and can easily be added to Windows. The tools of exploratory computation are everywhere &ndash; but very few people were ever given the knowledge to use them. This could be easily remedied by offering basic Computer Science in high school, either on its own, or as part of a math or science class. This might be the case today for all I know, but my own experience on that front was not encouraging<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>.</p>
+
+<p>To anyone even moderately interested in the vast possibilities that are unlocked with a bit of computational knowledge, I strongly encourage you to check out <a href="http://www.codecademy.com/">Code Academy</a> or <a href="http://projecteuler.net">Project Euler</a>. Of all of Steve Jobs' various witty and insightful aphorisms, the notion that a computer is a <em>bicycle for the mind</em> has always struck me as especially apt.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>Unlike, say, <a href="http://en.wikipedia.org/wiki/Real_analysis">real analysis</a>, which has zero applicability to daily life and is not comprehensible by most people, including myself.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>By the <a href="http://en.wikipedia.org/wiki/Pigeonhole_principle">pigeonhole principle</a>: If we have 365 pigeonholes into which we place 366 objects, at least one pigeonhole must contain more than one object.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p><a href="http://www.codinghorror.com/blog/2007/02/why-cant-programmers-program.html">FizzBuzz</a>, as ever, remains a cautionary tale about our industry.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p>Around the time I was in grade 11 and 12, Computer Science was <em>dropped</em> as an offering at my high school. Yes, <em>dropped</em>. Lack of demand; lack of staff to teach it. University was thus my first opportunity to gain exposure to computation as an academic/professional field.<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+</feed>

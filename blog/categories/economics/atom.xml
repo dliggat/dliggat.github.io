@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Economics | liggat.org]]></title>
+  <link href="http://dliggat.github.io/blog/categories/economics/atom.xml" rel="self"/>
+  <link href="http://dliggat.github.io/"/>
+  <updated>2013-12-24T12:40:02-08:00</updated>
+  <id>http://dliggat.github.io/</id>
+  <author>
+    <name><![CDATA[Dave Liggat]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Canadian Housing: Noting for Posterity]]></title>
+    <link href="http://dliggat.github.io/2013/12/15/canadian-housing-noting-for-posterity/"/>
+    <updated>2013-12-15T08:52:00-08:00</updated>
+    <id>http://dliggat.github.io/2013/12/15/canadian-housing-noting-for-posterity</id>
+    <content type="html"><![CDATA[<p>I&rsquo;m posting the following chart from <a href="http://blog.bcaresearch.com/canadian-housing-the-bubble-debate">BCA Research</a> not for the purposes of persuasion, but rather, for posterity.<!--more--></p>
+
+<p><img class="center <a href=http://www.google.ca>http://www.google.ca</a>" src="/images/2013/Canada-Housing.gif" title="&lsquo;Canada Housing&rsquo;" ></p>
+
+<p>If you have a sense of the historical economic similarity between Canada and the United States, understand the computation and significance of <code>price:rent</code> and <code>price:income</code> as housing valuation metrics, and yet still don&rsquo;t feel <em>even a flutter of anxiety</em> about the future of the Canadian housing market, and more importantly, the downstream economic and societal implications of a <a href="http://en.wikipedia.org/wiki/Regression_toward_the_mean">reversion to the mean</a> &ndash; then you&rsquo;re far beyond the power of my rhetoric to change your mind<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.</p>
+
+<p>As I write this, in late 2013, <a href="http://www.theglobeandmail.com/report-on-business/top-business-stories/canadas-housing-market-most-overvalued-in-the-world-deutsche-bank-says/article15878166/">Deutsche Bank</a> joins a growing list of spectators whose ranks include <a href="http://www.economist.com/news/finance-and-economics/21584361-america-surges-much-europe-sinks-mixed-messages">The Economist</a>, <a href="http://www.cnbc.com/id/101150382">Goldman-Sachs</a>, <a href="http://business.financialpost.com/2012/09/21/canada-heading-into-a-slow-motion-version-of-the-u-s-housing-bust-robert-shiller/">Robert Shiller</a>, the <a href="http://business.financialpost.com/2013/11/27/according-to-the-imf-canada-has-the-most-overvalued-housing-market-in-the-world/">IMF</a>, <a href="http://www.theglobeandmail.com/report-on-business/top-business-stories/nouriel-roubini-aka-dr-doom-warns-of-frothy-canadian-housing-market/article15807846/">Nouriel Roubini</a>, and <a href="http://ca.finance.yahoo.com/blogs/balance-sheet/paul-krugman-warns-canada-vulnerable-big-deleveraging-shock-183728127.html">Paul Krugman</a> &ndash; all of whom have expressed incredulity and/or concern in one form or another about the stratospheric valuations in the Canadian housing market.</p>
+
+<p>My opinion, irrelevant and disinterested<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> though it may be, is very straightforward, and has been unchanged for several years now: <strong>this will end badly</strong>, for the <a href="http://en.wikipedia.org/wiki/Leverage_(finance)">leveraged</a> and unleveraged, alike. Just ask anyone from the Republic of Ireland. Or look a little closer to home &ndash; below the 49th Parallel.</p>
+
+<p>Feel free to disagree with me<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>. Most Canadians do, at least as a default position. But if you do disagree, surely it&rsquo;s at least partially concerning to witness all this opposing consensus among weighty, if not necessarily clairvoyant, external parties?</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>Or, quite possibly, you&rsquo;re subject to the phenomenon, originally noted by Upton Sinclair, that <em>it is difficult to get a man to understand something, when his salary depends on his not understanding it</em>.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>I really mean this &ndash; I&rsquo;m <a href="http://www.dailywritingtips.com/disinterested-not-the-same-as-uninterested">disinterested</a> (but not <em>uninterested</em> clearly, as all of this is deeply fascinating to me &ndash; in a train-wreck sort of way). I have no real stake in whether or not there&rsquo;s a massive housing bubble in Canada, other than the stake of preferring not to live in a country captured by the fallacious belief that trading real estate is the preeminent way to generate wealth.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>Keep in mind: it&rsquo;s possible to simultaneously {own property | need to buy it soon} and {find the status quo very concerning}.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+</feed>

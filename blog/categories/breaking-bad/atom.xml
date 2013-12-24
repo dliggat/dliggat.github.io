@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Breaking_bad | liggat.org]]></title>
+  <link href="http://dliggat.github.io/blog/categories/breaking-bad/atom.xml" rel="self"/>
+  <link href="http://dliggat.github.io/"/>
+  <updated>2013-12-24T12:40:02-08:00</updated>
+  <id>http://dliggat.github.io/</id>
+  <author>
+    <name><![CDATA[Dave Liggat]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Walter White, Art Aficionado]]></title>
+    <link href="http://dliggat.github.io/2013/10/15/walter-white/"/>
+    <updated>2013-10-15T10:41:00-07:00</updated>
+    <id>http://dliggat.github.io/2013/10/15/walter-white</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve been re-watching <em>Breaking Bad</em>, one of my favourite television dramas, ever. Yesterday, midway through an early second season episode, I noticed a connection to a much later point in the story that I haven&rsquo;t seen discussed anywhere else.</p>
+
+<!--more-->
+
+
+<p><em>Don&rsquo;t read this if you&rsquo;re keen to avoid Breaking Bad plot details.</em></p>
+
+<h3>The Painting</h3>
+
+<p>By the midpoint of season five<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, Walter is at the height of his Heisenberg-persona hubris. He&rsquo;s built his own drug empire, defeated his enemies &ndash; notably Fring, and still gone unnoticed by law enforcement. He&rsquo;s invincible. As if to telegraph this &ndash; while Uncle Jack and his band of Nazis are struggling over the minutiae of their planned murderous rampage at three separate Albuquerque jails &ndash; Walt stares at a painting in the motel room, uninterested in the conversation around him.</p>
+
+<p><img class="center" src="/images/2013/painting_second.jpg" width="500" title="Painting in the Motel" ></p>
+
+<p>He idly speculates: <em>Where do you suppose these come from? I&rsquo;ve seen this one before. I wonder &ndash; are they all in some giant warehouse someplace?</em>, and invites the ire of Uncle Jack &ndash; incredulous at his lack of focus on planning the operation.</p>
+
+<h3>First Appearance</h3>
+
+<p>It turns out that this same painting featured much earlier in the story<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>. A browbeaten Walt was finishing up a chemotherapy session, and spent a moment staring at a print of it on the hospital wall. The camera lingers at what is surely an instance of symbolism: the painting is of a man, rowing <em>away</em> from his family on the shore towards a waiting ship.</p>
+
+<p><img class="center" src="/images/2013/painting_first.jpg" width="500" title="Painting in the Hospital" ></p>
+
+<p>Walt&rsquo;s comment is therefore made with the recognition that he&rsquo;s noticed at least two of these things in the wild. Virtually the only constant between these two moments in the <em>Breaking Bad</em> story is the notion of that warehouse somewhere, churning out an endless supply of mediocre stock art.</p>
+
+<p>The inclusion of, and callback to, this painting is just one more in another long line of fantastic touches by the show&rsquo;s creators.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>These events occurred in the fifth season episode, <em>Gliding all Over</em>.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>This was visible in the second season episode <em>Bit by Dead Bee</em>. Walt had just completed implementing his not-altogether-plausible &lsquo;fugue state&rsquo; alibi, and was back in chemo.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+</feed>

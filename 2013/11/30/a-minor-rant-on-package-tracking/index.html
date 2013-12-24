@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>A Minor Rant on Package Tracking - liggat.org</title>
+  <meta name="author" content="Dave Liggat">
+
+  
+  <meta name="description" content="I do a fair bit of online shopping1, and have done so for pretty much my entire credit-card-wielding life. It&rsquo;s a familiar ritual: every time, &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://dliggat.github.io/2013/11/30/a-minor-rant-on-package-tracking">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="liggat.org" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<!-- <link href='http://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic' rel='stylesheet' type='text/css'> -->
+
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,700italic|Lora:400,400italic|Raleway:100|Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-42613016-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body    class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">liggat.org</a></h1>
+  
+    <h2>by Dave Liggat</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:dliggat.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/archive">Archive</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/contact">Contact</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">A Minor Rant on Package Tracking</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-30T23:11:00-08:00" pubdate data-updated="true">November 30<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>I do a fair bit of online shopping<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, and have done so for pretty much my entire credit-card-wielding life. It&rsquo;s a familiar ritual: every time, shortly after I&rsquo;ve clicked <code>Purchase</code>, an email arrives containing a linked phrase with roughly the following copy: <em>Click here to track your shipment</em>. <!--more-->And every time I receive that email, I dutifully click that link, only to be met with the following 404-esque response:</p>
+
+<p><img class="center" src="/images/2013/tracking.png" width="600" title="'tracking'" ></p>
+
+<p>It does not seem to matter whether the year is 2005 or 2013, and whether the logistics handler in question is Canada Post, USPS, UPS, etc &ndash; this is invariably the experience. This is a minor but absolutely-nagging annoyance if you know anything about software. It does not need to be this way.</p>
+
+<p>Subsequent to the buyer&rsquo;s order, the seller and the logistics handler must perform an asynchronous (with respect to the buyer) transaction in which, among other things, data is exchanged regarding the delivery to be executed. At some point in this process, the seller is provided with a tracking number for that delivery, which they happily relay to the buyer in the aforesaid email. Therefore, when the buyer excitedly clicks on the tracking link, they are performing a lookup of <strong>a record that is certain to exist somewhere on the logistics handler&rsquo;s systems</strong>, and yet are <em>told</em> it doesn&rsquo;t exist.</p>
+
+<p>I imagine that at this point, given the opportunity, the CTO of one of these logistics handler outfits might loudly interject <em>&ldquo;Well, of course &ndash; but the consumer web frontend and the logistics backend are entirely separate systems that we need to batch transfer over, and because of our legacy&hellip; and because of our storage requirements&hellip; and because of our load balancing&hellip; and because of Sarbanes-Oxley&hellip; and&hellip;.&rdquo;</em></p>
+
+<p>And I&rsquo;m sure these would all be perfectly justified reasons, within the infrastructure team of that firm. The point is though, I don&rsquo;t care <strong>why</strong> the tracker was <em>unable to find any results</em>. And neither does any other user. This is a bad experience, and they can, and should do better. A few suggestions, in increasing order of implementation complexity:</p>
+
+<ol>
+<li>Make a better <em>unable to find any results</em> page. Acknowledge that this is a new tracking number, and will be in the systems shortly. Provide a timeframe. Differentiate between new numbers, and erroneous ones (use a <a href="http://en.wikipedia.org/wiki/Checksum">checksumming</a> scheme in the numbers themselves if necessary).</li>
+<li>Coordinate with the seller. Don&rsquo;t fire out emails containing tracking links until both the seller and the logistics handler agree that the delivery will be performed, a tracking number exists, and the tracking number is queryable. I don&rsquo;t want an email with a link that I can&rsquo;t use until some unspecified period has passed.</li>
+<li>Build better infrastructure. It is well within the ability of humanity&rsquo;s current software engineering to run systems without such absurd temporal lags within a single organization&rsquo;s infrastructure. This is not an especially complex technical problem. If your logistics and web-query systems are entirely separate, and they take 6 hours to propagate records &ndash; get that 6 down to 5. Then to 4. Then to 3. Etc.</li>
+</ol>
+
+
+<p>Clearly, this is not an important concern in the grand scheme of the universe. Invariably, the links start working eventually, and the packages arrive. But the triviality is no reason to not demand a modicum of progress.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>I did even more when I lived in the USA. The selection and swiftness of delivery of online purchasing there is nothing short of remarkable, especially under Amazon Prime.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Dave Liggat</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-30T23:11:00-08:00" pubdate data-updated="true">November 30<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/rant/'>rant</a>, <a class='category' href='/blog/categories/software/'>software</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://dliggat.github.io/2013/11/30/a-minor-rant-on-package-tracking/" data-via="" data-counturl="http://dliggat.github.io/2013/11/30/a-minor-rant-on-package-tracking/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2013/11/03/static-hosting-on-amazon-s3/" title="Previous Post: Static Hosting on Amazon S3">&laquo; Static Hosting on Amazon S3</a>
+      
+      
+        <a class="basic-alignment right" href="/2013/12/15/canadian-housing-noting-for-posterity/" title="Next Post: Canadian Housing: Noting For Posterity">Canadian Housing: Noting For Posterity &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - <a href="http://liggat.org/about">Dave Liggat</a>.
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span> &
+  <span class="credit">hosted on <a href="http://pages.github.com">GitHub Pages</a></span>.
+</p>
+<p id="duration-statement">
+  <span class="credit">Liggat.org has been active for <span id='site-duration'></span>. </span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'liggatorg';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://dliggat.github.io/2013/11/30/a-minor-rant-on-package-tracking/';
+        var disqus_url = 'http://dliggat.github.io/2013/11/30/a-minor-rant-on-package-tracking/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+<script src="/javascripts/bigfoot.min.js"></script>
+<script src="/javascripts/moment.min.js"></script>
+<script src="/javascripts/custom/init-footer.js"></script>
+<script src="/javascripts/custom/init-bigfoot.js"></script>
+
+</body>
+</html>

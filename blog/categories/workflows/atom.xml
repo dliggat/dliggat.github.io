@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Workflows | liggat.org]]></title>
+  <link href="http://dliggat.github.io/blog/categories/workflows/atom.xml" rel="self"/>
+  <link href="http://dliggat.github.io/"/>
+  <updated>2013-12-24T12:40:02-08:00</updated>
+  <id>http://dliggat.github.io/</id>
+  <author>
+    <name><![CDATA[Dave Liggat]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Automate All the Things]]></title>
+    <link href="http://dliggat.github.io/2013/08/06/automate-all-the-things/"/>
+    <updated>2013-08-06T13:04:00-07:00</updated>
+    <id>http://dliggat.github.io/2013/08/06/automate-all-the-things</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve spent much of my career in software with automation an implicit and often explicit goal: in testing, in environment creation and deployments, in backups, etc. A conspicuous absence from this list has been the actual development machines I spend many hours each day using, which for me are my Mac desktop and laptop, and occasionally a VM or two. Traditionally, these have ended up at their working state through hours upon hours of gentle tinkering. It&rsquo;s a case of the cobbler&rsquo;s children having no shoes<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, I suppose.</p>
+
+<!--more-->
+
+
+<p>To correct this error, I&rsquo;ve spent a portion of the past few weeks getting up to speed with GitHub Inc&rsquo;s excellent Puppet-based <a href="https://boxen.github.com">Boxen</a> tool for provisioning their own internal OS X 10.8 Mountain Lion machines. Although the learning curve is not exactly shallow, and the documentation sparse at times &ndash; the payoff has been tremendous. You can use it to script absolutely every aspect of your development machine(s), resulting in the same degree of repeatability and auditability that we normally reserve for production servers.</p>
+
+<h3>My Boxen</h3>
+
+<p>From a clean install<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>, I&rsquo;ve now got a fully-specified, version-controlled, <a href="https://github.com/dliggat/boxen">boxen instance</a> that, at a stroke can:</p>
+
+<ul>
+<li>Set up, and store my GitHub credentials<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup> for convenient push/pull to authorized repositories</li>
+<li>Install system-wide versions of git, node.js, and rubies (1.8.7, 1.9.3, 2.0.0)<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup></li>
+<li>Install standard apps like Dropbox, Chrome, iTerm and even VMWare Fusion</li>
+<li>Set my fussy OS X system preferences for the Dock, Dashboard, Trackpad, etc</li>
+<li>Clone my <a href="https://github.com/dliggat/dotfiles">dotfile repository</a> and define various symlinks from <code>~</code> into that repo; e.g. <code>~/.bashrc -&gt; /Users/daveliggat/git/dotfiles/bashrc</code>, plus define any other symlinks or environment variables that I might want to have</li>
+<li>Install system-wide gems (e.g. <code>pry</code>) and homebrew packages (e.g. <code>sqlite</code>, <code>markdown</code>)</li>
+<li>Define and spin-up resources needed on a per project basis, which for a rails app likely includes local MySQL or PostgreSQL instances, a cloned git repository, and a redis server</li>
+<li>Set up my text editor of choice, <a href="http://www.sublimetext.com/2">Sublime Text 2</a>, and install the plethora of plugins and preferences that I use</li>
+</ul>
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Boxen/Puppet allows encapsulation of automation areas into &lsquo;classes&rsquo; </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="k">class</span> <span class="ss">people</span><span class="p">:</span><span class="ss">:dliggat</span> <span class="p">{</span>
+</span><span class='line'>  <span class="n">notify</span> <span class="p">{</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="k">class</span> <span class="ss">people</span><span class="p">:</span><span class="ss">:dliggat</span> <span class="n">declared</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;:</span> <span class="p">}</span>
+</span><span class='line'>  <span class="kp">include</span> <span class="ss">people</span><span class="p">:</span><span class="ss">:dliggat</span><span class="o">::</span><span class="n">apps</span>
+</span><span class='line'>  <span class="kp">include</span> <span class="ss">people</span><span class="p">:</span><span class="ss">:dliggat</span><span class="o">::</span><span class="n">dotfiles</span>
+</span><span class='line'>  <span class="kp">include</span> <span class="ss">people</span><span class="p">:</span><span class="ss">:dliggat</span><span class="o">::</span><span class="n">git</span>
+</span><span class='line'>  <span class="kp">include</span> <span class="ss">people</span><span class="p">:</span><span class="ss">:dliggat</span><span class="o">::</span><span class="n">homebrew</span>
+</span><span class='line'>  <span class="kp">include</span> <span class="ss">people</span><span class="p">:</span><span class="ss">:dliggat</span><span class="o">::</span><span class="n">symlinks</span>
+</span><span class='line'>  <span class="kp">include</span> <span class="ss">people</span><span class="p">:</span><span class="ss">:dliggat</span><span class="o">::</span><span class="n">loginitems</span>
+</span><span class='line'>  <span class="kp">include</span> <span class="ss">people</span><span class="p">:</span><span class="ss">:dliggat</span><span class="o">::</span><span class="n">osx</span>
+</span><span class='line'>  <span class="kp">include</span> <span class="ss">people</span><span class="p">:</span><span class="ss">:dliggat</span><span class="o">::</span><span class="n">sublime_text_2</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Assuming you&rsquo;re inclined to care about things like this, it&rsquo;s hard to overstate the satisfaction of kicking off this script and coming back to a fully-provisioned machine a couple of hours later. Best of all, Boxen is cumulative and <a href="http://en.wikipedia.org/wiki/Idempotence">idempotent</a>, so changes can be made to my Boxen install (and then always specified and available in future) and re-run without worrying about it blowing up because it encounters its own previous completions.</p>
+
+<p>If anything, everything I&rsquo;ve written here <em>understates</em> how capable Boxen is. I&rsquo;m presently using it for a couple of machines in a home office &ndash; GitHub uses it for their <em>entire</em> corporate fleet of MacBook Pros. Eventually the plan is that this becomes a centerpiece of the &lsquo;onboarding&rsquo; experience at <a href="http://plyfe.com">Plyfe</a>, so new people can be productive instantly without messing around with <code>rvm</code> or <code>redis-server</code> or whatever else.</p>
+
+<h3>tl;dr &ndash; Automation Rules!</h3>
+
+<p><a href="https://plus.google.com/+BrunoOliveira">Bruno Oliveira</a> captured the essence of why automation is so great in a widely circulated <a href="https://plus.google.com/+BrunoOliveira/posts/MGxauXypb1Y">chart</a> a year or so ago:</p>
+
+<p><img class="fancybox center" src="/images/geeks.png" width="550" title="&lsquo;Geeks&rsquo;" ></p>
+
+<h3>Appendix, or Why I like OS X</h3>
+
+<p>Occasionally I&rsquo;m asked why I like OS X so much. There&rsquo;s a certain subset of the tech population that still thinks, apparently with genuine conviction, that Apple only makes toys. It&rsquo;s a bizarre and/or myopic belief in a world where Google Inc is known to be one of the largest institutional buyers of MacBook Pros (and I know from first-hand experience they certainly aren&rsquo;t buying them to mess about with GarageBand), but it persists.</p>
+
+<p>Anyway, the very existence of projects like Boxen is just about the best answer I can give in response. There&rsquo;s so much cool stuff going on in software these days, and a huge portion of it is done with OS X. I might be moving in the wrong circles, but I simply don&rsquo;t see this level of innovation going on in the Windows world. And given how inherently less scriptable Windows is than anything Unix-based, it&rsquo;s hard to imagine an equal Windows-based peer of Boxen emerging anytime soon.</p>
+
+<p>I like to think of OS X as having the best of both worlds of Windows and Linux: user-facing conveniences, plus a modern UI, plus a high degree of scriptability, plus access to forty-years worth of Unix utilities, <strong>minus</strong> the interminable and recurrent headaches with video card drivers, etc that you (or at least I) get with Linux. If I&rsquo;m restricted to buying Apple gear to get that combination for now, so be it.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>As also remarked by Gary Larizza in what turned out to be a <a href="http://garylarizza.com/blog/2013/02/15/puppet-plus-github-equals-laptop-love/">highly useful Boxen primer</a>.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>Via the Mac App Store to install the Xcode developer tools which provide the system ruby and git binaries necessary for Boxen to bootstrap itself.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>Using the method of https repository access and the OS X system keychain, not ssh keys.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p>A happy side benefit to letting boxen manage ruby versions is the obviation of somewhat horrible kludges like <code>.rvmrc</code> files in ruby project directories.<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Paperless, Finally]]></title>
+    <link href="http://dliggat.github.io/2013/07/21/paperless/"/>
+    <updated>2013-07-21T13:33:00-07:00</updated>
+    <id>http://dliggat.github.io/2013/07/21/paperless</id>
+    <content type="html"><![CDATA[<p>I&rsquo;m sick to death of accumulating useless paper detritus. I&rsquo;ve fantasized for quite a while about finally finding a &lsquo;paperless&rsquo; workflow that will work well for me now and, <em>crucially</em>, many years (decades) into the future. After reading posts on <a href="http://shawnblanc.net/2012/09/the-paperless-puzzel/">similar</a> <a href="http://speirs.org/blog/2012/6/25/book-scanning.html">initiatives</a>, I think I&rsquo;ve got it. I figured I&rsquo;d document it here, mostly as an exercise in <a href="https://en.wikipedia.org/wiki/Rubber_duck_debugging">rubber-duck debugging</a> of sorts.<!--more--></p>
+
+<h3>Requirements</h3>
+
+<ul>
+<li><strong>Recallable</strong>: I should be able to look up a particular document or item purely by knowing a keyword or two, or the rough timeframe in which it was generated. Vast hierarchical organization schemes are only defensible if you&rsquo;re a librarian in the pre-computing age. We can do much better in 2013. The Gmail ethos of &ldquo;search, don&rsquo;t sort&rdquo; works really well for me.</li>
+<li><strong>Enduring</strong>: This needs to last for the long haul. There&rsquo;s an expectation I&rsquo;ve set for myself that the core elements of this workflow will persist well beyond a decade, and ideally for the entirety of my [useful] life.</li>
+<li><strong>Robust</strong>: Really this applies to all my personal data at this point &ndash; but under <strong>no</strong> circumstances can a paperless archive be allowed to suffer any data loss.</li>
+<li><strong>Secure</strong>: Whatever system one has for organizing personal documents, even if that&rsquo;s a physical shoebox full of physical documents, there&rsquo;s a chance that a breach of one&rsquo;s personal data can occur. Acknowledging this, I want my system to make sensible security decisions where possible, and overall, to <em>minimize regret</em>. Trade-offs, as ever, exist &ndash; the shoebox may not be vulnerable to Belarusian hackers, but it <em>is</em> vulnerable to house fires.</li>
+</ul>
+
+
+<h3>Implementation</h3>
+
+<h4>Platform</h4>
+
+<p><a href="http://www.evernote.com">Evernote</a> [Premium] forms the centrepiece of my paperless workflow. I&rsquo;m totally sympathetic to the assertion that it&rsquo;s better to keep long-lived data in highly-portable formats (e.g. PDF files, markdown-formatted UTF-8 text, etc). Using Evernote is somewhat in contravention of this goal, as it stores notes within its own opaque archive format. However, this archive is fully-exportable and navigable, and in the event of Evernote dropping off the face of the earth, there will be no shortage of tools for migrating its notes and notebooks to a new platform. And Evernote has proven itself over the years &ndash; achieving profitability, and garnering ever more paying consumers, businesses, and educational institutions every year &ndash; even going so far as to declare itself a <a href="http://techcrunch.com/2011/11/06/evernote-ceo-phil-libins-top-three-tips-for-building-a-hundred-year-old-company">hundred-year company</a>.</p>
+
+<p>Taken together, objections to Evernote for paperless seem mostly theoretical, rather than actual, to me. Moreover, the benefits in having a syncing, sortable, and <em>highly searchable</em> archive seem worth tolerating that conjectural downside.</p>
+
+<h4>Scanning</h4>
+
+<p><img class="right" src="/images/send_to_evernote.png" width="275" title="&lsquo;Send to Evernote&rsquo;" ></p>
+
+<p>I recently ordered a <a href="http://www.getdoxie.com/product/one/">Doxie One scanner</a>, for $147 CAD or thereabouts. It&rsquo;s simple, and gets the job done. Its OS X app manages to be not terrible for scanning/printing software, which is notable, though admittedly only due to the poverty of the competitive landscape. It quickly processes pages, and saves scans to an included SD card. The app purportedly does <a href="http://en.wikipedia.org/wiki/Optical_character_recognition">OCR</a> (I&rsquo;ll be relying on Evernote for this though), and allows individual PDFs to be &lsquo;stapled&rsquo; into multi-page documents, and then sent on to Evernote.</p>
+
+<h4>Evernote Notes Titles</h4>
+
+<p>Once in Evernote, I assign the note containing the scanned PDF to an appropriate notebook (a yearly one for business expenses, and Archive for everything else). I wrote a small bash function to generate note titles in a consistent format:</p>
+
+<pre><code>$ISO8601_FORMATTED_DATE =&gt; $LOWERCASE_DESCRIPTION (Paperless)
+</code></pre>
+
+<p>For example:</p>
+
+<pre><code>2013-07-11 =&gt; apple ipod receipt (Paperless)
+</code></pre>
+
+<p>I reasoned that the date (hat tip to <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO8601</a> for its equivalent chronological and lexicographical sorting) is important enough for later retrieval to warrant hard coding in the title metadata<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>. You can find the bash snippet for this in <a href="https://gist.github.com/dliggat/5990988">this gist</a>.</p>
+
+<h4>Security</h4>
+
+<p>I view &lsquo;security&rsquo; as the dual-property that my data is available to me, and unavailable to unauthorized parties. To this end, I:</p>
+
+<ul>
+<li>Use strong authentication in Evernote: Set a long, unique, random passphrase, and enable 2FA (2-factor authentication)</li>
+<li>Turn on full-disk encryption on my computers and mobile devices</li>
+<li>Set the mobile app passcode for the Evernote iOS apps</li>
+<li>Export my entire archive biweekly, and backup to an external drive and an off-site location<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup></li>
+<li>Encrypt particularly sensitive stored PDFs with a strong key (stored, obviously, outside of Evernote).</li>
+</ul>
+
+
+<p>With these practices in place, I feel sufficiently confident that access to my account is highly-restricted, and even in the worst case scenario of a full data-breach at Evernote, my most sensitive documents (tax receipts, bank statements, etc) are enciphered.</p>
+
+<p><img class="fancybox center" src="/images/evernote_pdf_protected.png" title="&lsquo;Protected PDF&rsquo;" ></p>
+
+<h3>Fin</h3>
+
+<p>I&rsquo;ll inevitably evolve this over time, but I&rsquo;m feeling pretty good about the setup so far, and its adherence to my goals of <strong>Recallable</strong>, <strong>Enduring</strong>, <strong>Robust</strong>, &amp; <strong>Secure</strong>. So far, I&rsquo;ve been happily adding stuff to my archive, and not yet experienced any inertia or fedup-ness. That&rsquo;s probably a good sign.</p>
+
+<p>There will be a few documents I&rsquo;ll begrudgingly retain in paper form &ndash; governments, perennially stuck in the clipboard and fax-machine era, tend to take a dim view of anything digital, but mostly, I&rsquo;ll be enthusiastically converting documents into Evernote notes, and destroying the originals forever.</p>
+
+<p>Another victory for bits over atoms. Any comments, suggestions, or questions, please <a href="/about">get in touch</a>.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>The date is for sorting and narrowing, the description terms are for searching, and the (Paperless) suffix identifies a note as originating from this workflow<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>I know this probably seems excessive, but having a catastrophic data loss in the past [many years ago] will do that to a person<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+</feed>
