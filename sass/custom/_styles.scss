@@ -163,7 +163,6 @@ $usd-blue:   #0000A0;
 
 .money {
   font-weight: bold;
-  font-family: "Helvetica Neue", sans-serif;
   &.usd {
     color: $usd-blue;   // Generates .money.usd { font-weight: bold; color: #0000A0; }
     &.price {
