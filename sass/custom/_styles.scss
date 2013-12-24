@@ -150,3 +150,33 @@ p.meta {
   }
 }
 
+//////// Currency styling.
+$cad-red:    #800000;
+$usd-blue:   #0000A0;
+@mixin money-block {
+  border-radius: 0.4em;
+  display: inline-block;
+  line-height: 1.5em;
+  font-size: 0.8em;
+  padding: 0 0.3em;
+}
+
+.money {
+  font-weight: bold;
+  font-family: "Helvetica Neue", sans-serif;
+  &.usd {
+    color: $usd-blue;   // Generates .money.usd { font-weight: bold; color: #0000A0; }
+    &.price {
+      border: 1px solid $usd-blue;
+      @include money-block;
+    }
+  }
+  &.cad {
+    color: $cad-red;
+    &.price {
+      border: 1px solid $cad-red;
+      @include money-block;
+    }
+  }
+}
+//// End currency styling.
