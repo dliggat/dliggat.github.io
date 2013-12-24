@@ -6,7 +6,7 @@ footer: false
 ---
 
 # About
-My name is Dave Liggat; I'm an independent software engineer with a strong focus on Ruby on Rails, Data Analytics and Web & Analytics Infrastructure (and, once in a while, ASP.NET). Opinions are my own. Contact details [here](/contact).
+My name is Dave Liggat; I'm an independent software engineer primarily focused on Ruby on Rails, Data Analytics/Visualization and Web & Analytics Infrastructure (and, once in a while, ASP.NET). Opinions are my own. Contact details [here](/contact).
 
 ## Why Does this Site Exist?
 Primarily - as a creative outlet. I've always enjoyed writing, and I like the opportunity for permanence that the web provides. Also, it's fascinating to me to get insight into my past personality and interests - so I post things here (and on Twitter) of current interest knowing that I'm basically queuing up future entertainment & reflection for myself.
