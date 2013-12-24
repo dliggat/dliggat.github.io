@@ -11,10 +11,6 @@ $h1-size: 2em;
 
 html {
   background: $bg;
-  a:active {  // Subtle link click button effect.
-    position: relative;
-    top: 1px;
-  }
   a, a:visited, a:hover {
     text-decoration: none !important;
   }
@@ -127,6 +123,10 @@ body {
 }
 
 article {
+  a:active {  // Subtle link click button effect.
+    position: relative;
+    top: 1px;
+  }
   h2 {
     background: none;
   }
