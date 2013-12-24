@@ -123,6 +123,14 @@ body {
 }
 
 article {
+  a {
+    white-space: nowrap;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    a {
+      white-space: normal;
+    }
+  }
   a:active {  // Subtle link click button effect.
     position: relative;
     top: 1px;
