@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://dliggat.github.io/sitemap.xml 
+Sitemap: http://liggat.org/sitemap.xml 

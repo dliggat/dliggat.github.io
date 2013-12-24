@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Software | liggat.org]]></title>
-  <link href="http://dliggat.github.io/blog/categories/software/atom.xml" rel="self"/>
-  <link href="http://dliggat.github.io/"/>
-  <updated>2013-12-24T13:04:01-08:00</updated>
-  <id>http://dliggat.github.io/</id>
+  <link href="http://liggat.org/blog/categories/software/atom.xml" rel="self"/>
+  <link href="http://liggat.org/"/>
+  <updated>2013-12-24T13:23:35-08:00</updated>
+  <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[A Minor Rant on Package Tracking]]></title>
-    <link href="http://dliggat.github.io/2013/11/30/a-minor-rant-on-package-tracking/"/>
+    <link href="http://liggat.org/2013/11/30/a-minor-rant-on-package-tracking/"/>
     <updated>2013-11-30T23:11:00-08:00</updated>
-    <id>http://dliggat.github.io/2013/11/30/a-minor-rant-on-package-tracking</id>
+    <id>http://liggat.org/2013/11/30/a-minor-rant-on-package-tracking</id>
     <content type="html"><![CDATA[<p>I do a fair bit of online shopping<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, and have done so for pretty much my entire credit-card-wielding life. It&rsquo;s a familiar ritual: every time, shortly after I&rsquo;ve clicked <code>Purchase</code>, an email arrives containing a linked phrase with roughly the following copy: <em>Click here to track your shipment</em>. <!--more-->And every time I receive that email, I dutifully click that link, only to be met with the following 404-esque response:</p>
 
 <p><img class="center" src="/images/2013/tracking.png" width="600" title="&lsquo;tracking&rsquo;" ></p>
@@ -51,9 +51,9 @@
   
   <entry>
     <title type="html"><![CDATA[Simulating the Birthday Paradox]]></title>
-    <link href="http://dliggat.github.io/2013/10/13/simulating-the-birthday-paradox/"/>
+    <link href="http://liggat.org/2013/10/13/simulating-the-birthday-paradox/"/>
     <updated>2013-10-13T10:59:00-07:00</updated>
-    <id>http://dliggat.github.io/2013/10/13/simulating-the-birthday-paradox</id>
+    <id>http://liggat.org/2013/10/13/simulating-the-birthday-paradox</id>
     <content type="html"><![CDATA[<p>Probability theory is a pretty special branch of mathematics in the sense that it is (1) highly applicable to daily life; (2) many of its results are easily comprehensible to most people; and yet despite this (3) it remains a profoundly complex area of mathematical inquiry<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.<!--more--></p>
 
 <p>An example which perfectly encapsulates this is the <a href="http://en.wikipedia.org/wiki/Birthday_paradox">birthday paradox</a>. In short, it can be represented by the question:</p>
@@ -159,9 +159,9 @@
   
   <entry>
     <title type="html"><![CDATA[A Golden Age of Software]]></title>
-    <link href="http://dliggat.github.io/2013/09/03/a-comparatively-golden-age-of-software/"/>
+    <link href="http://liggat.org/2013/09/03/a-comparatively-golden-age-of-software/"/>
     <updated>2013-09-03T17:57:00-07:00</updated>
-    <id>http://dliggat.github.io/2013/09/03/a-comparatively-golden-age-of-software</id>
+    <id>http://liggat.org/2013/09/03/a-comparatively-golden-age-of-software</id>
     <content type="html"><![CDATA[<p>As someone to whom pessimism and cynicism come naturally, I&rsquo;m often more inclined to complain about things than sit and reflect on positivity. However, I think it&rsquo;s worth taking a moment to acknowledge one thing: we live in a golden age of software right now, at least relative to any point in the past.</p>
 
 <!--more-->

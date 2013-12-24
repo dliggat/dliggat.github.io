@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Tech_societal | liggat.org]]></title>
-  <link href="http://dliggat.github.io/blog/categories/tech-societal/atom.xml" rel="self"/>
-  <link href="http://dliggat.github.io/"/>
-  <updated>2013-12-24T13:04:01-08:00</updated>
-  <id>http://dliggat.github.io/</id>
+  <link href="http://liggat.org/blog/categories/tech-societal/atom.xml" rel="self"/>
+  <link href="http://liggat.org/"/>
+  <updated>2013-12-24T13:23:35-08:00</updated>
+  <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[On Boredom]]></title>
-    <link href="http://dliggat.github.io/2013/09/25/on-boredom/"/>
+    <link href="http://liggat.org/2013/09/25/on-boredom/"/>
     <updated>2013-09-25T09:32:00-07:00</updated>
-    <id>http://dliggat.github.io/2013/09/25/on-boredom</id>
+    <id>http://liggat.org/2013/09/25/on-boredom</id>
     <content type="html"><![CDATA[<p><a href="http://teamcoco.com/video/louis-ck-springsteen-cell-phone">Another</a> of Louis C.K.&rsquo;s hilarious talk-show interview diatribes is being widely circulated on the web and Twitter right now &ndash; this time about smartphones, and why he won&rsquo;t let his children have one. It&rsquo;s well worth a watch, but his argument essentially boils down to the observation that smartphones provide a constant stream of distraction that removes the condition, boredom, that is arguably necessary for healthy self-reflection.<!--more--></p>
 
 <p>Humour aside, I think he&rsquo;s really onto something here. Speaking personally, boredom, at least how I understood the term pre-Internet, has essentially disappeared from my life. Very few of my waking hours are spent without mental stimulation of one form or another. If I&rsquo;m waiting in a lineup, on public transport, unable to sleep, or killing time in an airport &ndash; out comes my phone, and the usual suspects <a href="http://tapbots.com/software/tweetbot/">Tweetbot</a> or <a href="http://instapaper.com">Instapaper</a> will occupy me for the duration of that transitory event. Even when I&rsquo;m cooking, cycling, exercising, or walking the dog, I&rsquo;m spared from any possible exposure to boredom through a now-years-old tendency to listen to podcasts<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> or audiobooks whenever my hands are occupied.</p>

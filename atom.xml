@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[liggat.org]]></title>
-  <link href="http://dliggat.github.io/atom.xml" rel="self"/>
-  <link href="http://dliggat.github.io/"/>
-  <updated>2013-12-24T13:04:01-08:00</updated>
-  <id>http://dliggat.github.io/</id>
+  <link href="http://liggat.org/atom.xml" rel="self"/>
+  <link href="http://liggat.org/"/>
+  <updated>2013-12-24T13:23:35-08:00</updated>
+  <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
     
@@ -15,12 +15,12 @@
   
   <entry>
     <title type="html"><![CDATA[Canadian Housing: Noting for Posterity]]></title>
-    <link href="http://dliggat.github.io/2013/12/15/canadian-housing-noting-for-posterity/"/>
+    <link href="http://liggat.org/2013/12/15/canadian-housing-noting-for-posterity/"/>
     <updated>2013-12-15T08:52:00-08:00</updated>
-    <id>http://dliggat.github.io/2013/12/15/canadian-housing-noting-for-posterity</id>
+    <id>http://liggat.org/2013/12/15/canadian-housing-noting-for-posterity</id>
     <content type="html"><![CDATA[<p>I&rsquo;m posting the following chart from <a href="http://blog.bcaresearch.com/canadian-housing-the-bubble-debate">BCA Research</a> not for the purposes of persuasion, but rather, for posterity.<!--more--></p>
 
-<p><img class="center http://www.google.ca" src="http://dliggat.github.io/images/2013/Canada-Housing.gif" title="'Canada Housing'" ></p>
+<p><img class="center http://www.google.ca" src="http://liggat.org/images/2013/Canada-Housing.gif" title="'Canada Housing'" ></p>
 
 <p>If you have a sense of the historical economic similarity between Canada and the United States, understand the computation and significance of <code>price:rent</code> and <code>price:income</code> as housing valuation metrics, and yet still don&rsquo;t feel <em>even a flutter of anxiety</em> about the future of the Canadian housing market, and more importantly, the downstream economic and societal implications of a <a href="http://en.wikipedia.org/wiki/Regression_toward_the_mean">reversion to the mean</a> &ndash; then you&rsquo;re far beyond the power of my rhetoric to change your mind<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.</p>
 
@@ -46,12 +46,12 @@
   
   <entry>
     <title type="html"><![CDATA[A Minor Rant on Package Tracking]]></title>
-    <link href="http://dliggat.github.io/2013/11/30/a-minor-rant-on-package-tracking/"/>
+    <link href="http://liggat.org/2013/11/30/a-minor-rant-on-package-tracking/"/>
     <updated>2013-11-30T23:11:00-08:00</updated>
-    <id>http://dliggat.github.io/2013/11/30/a-minor-rant-on-package-tracking</id>
+    <id>http://liggat.org/2013/11/30/a-minor-rant-on-package-tracking</id>
     <content type="html"><![CDATA[<p>I do a fair bit of online shopping<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, and have done so for pretty much my entire credit-card-wielding life. It&rsquo;s a familiar ritual: every time, shortly after I&rsquo;ve clicked <code>Purchase</code>, an email arrives containing a linked phrase with roughly the following copy: <em>Click here to track your shipment</em>. <!--more-->And every time I receive that email, I dutifully click that link, only to be met with the following 404-esque response:</p>
 
-<p><img class="center" src="http://dliggat.github.io/images/2013/tracking.png" width="600" title="'tracking'" ></p>
+<p><img class="center" src="http://liggat.org/images/2013/tracking.png" width="600" title="'tracking'" ></p>
 
 <p>It does not seem to matter whether the year is 2005 or 2013, and whether the logistics handler in question is Canada Post, USPS, UPS, etc &ndash; this is invariably the experience. This is a minor but absolutely-nagging annoyance if you know anything about software. It does not need to be this way.</p>
 
@@ -82,9 +82,9 @@
   
   <entry>
     <title type="html"><![CDATA[Static Hosting on Amazon S3]]></title>
-    <link href="http://dliggat.github.io/2013/11/03/static-hosting-on-amazon-s3/"/>
+    <link href="http://liggat.org/2013/11/03/static-hosting-on-amazon-s3/"/>
     <updated>2013-11-03T13:13:00-08:00</updated>
-    <id>http://dliggat.github.io/2013/11/03/static-hosting-on-amazon-s3</id>
+    <id>http://liggat.org/2013/11/03/static-hosting-on-amazon-s3</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve had an outstanding <strong>todo</strong> for quite some time to migrate my basic and essentially-static <a href="http://www.factorialsystems.ca">business website</a> off of <a href="http://www.squarespace.com">Squarespace</a>. I ended up replacing it with a combination of <a href="http://octopress.org">Octopress</a> and Amazon Simple Storage Service (<a href="http://aws.amazon.com/s3">S3</a>), which, it turns out, are a fantastic duo.<!--more--></p>
 
 <h3>Prelude</h3>
@@ -101,7 +101,7 @@
 
 <p>S3 is Amazon Web Services&#8217; online file storage service (distributed, redundant, RESTful, etc). It is purportedly used as the persistence backend for <a href="http://dropbox.com">Dropbox</a>, among others. My needs are considerably more modest &ndash; I just want it to store and serve my site content. It turns out it has an option for exactly this purpose:</p>
 
-<p><img class="center" src="http://dliggat.github.io/images/2013/s3.png" width="600" title="'S3 Static Website Hosting'" ></p>
+<p><img class="center" src="http://liggat.org/images/2013/s3.png" width="600" title="'S3 Static Website Hosting'" ></p>
 
 <p>Thus, a static website with Octopress and S3 requires that you simply:</p>
 
@@ -140,9 +140,9 @@
   
   <entry>
     <title type="html"><![CDATA[Walter White, Art Aficionado]]></title>
-    <link href="http://dliggat.github.io/2013/10/15/walter-white/"/>
+    <link href="http://liggat.org/2013/10/15/walter-white/"/>
     <updated>2013-10-15T10:41:00-07:00</updated>
-    <id>http://dliggat.github.io/2013/10/15/walter-white</id>
+    <id>http://liggat.org/2013/10/15/walter-white</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve been re-watching <em>Breaking Bad</em>, one of my favourite television dramas, ever. Yesterday, midway through an early second season episode, I noticed a connection to a much later point in the story that I haven&rsquo;t seen discussed anywhere else.</p>
 
 <!--more-->
@@ -154,7 +154,7 @@
 
 <p>By the midpoint of season five<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, Walter is at the height of his Heisenberg-persona hubris. He&rsquo;s built his own drug empire, defeated his enemies &ndash; notably Fring, and still gone unnoticed by law enforcement. He&rsquo;s invincible. As if to telegraph this &ndash; while Uncle Jack and his band of Nazis are struggling over the minutiae of their planned murderous rampage at three separate Albuquerque jails &ndash; Walt stares at a painting in the motel room, uninterested in the conversation around him.</p>
 
-<p><img class="center" src="http://dliggat.github.io/images/2013/painting_second.jpg" width="500" title="Painting in the Motel" ></p>
+<p><img class="center" src="http://liggat.org/images/2013/painting_second.jpg" width="500" title="Painting in the Motel" ></p>
 
 <p>He idly speculates: <em>Where do you suppose these come from? I&rsquo;ve seen this one before. I wonder &ndash; are they all in some giant warehouse someplace?</em>, and invites the ire of Uncle Jack &ndash; incredulous at his lack of focus on planning the operation.</p>
 
@@ -162,7 +162,7 @@
 
 <p>It turns out that this same painting featured much earlier in the story<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>. A browbeaten Walt was finishing up a chemotherapy session, and spent a moment staring at a print of it on the hospital wall. The camera lingers at what is surely an instance of symbolism: the painting is of a man, rowing <em>away</em> from his family on the shore towards a waiting ship.</p>
 
-<p><img class="center" src="http://dliggat.github.io/images/2013/painting_first.jpg" width="500" title="Painting in the Hospital" ></p>
+<p><img class="center" src="http://liggat.org/images/2013/painting_first.jpg" width="500" title="Painting in the Hospital" ></p>
 
 <p>Walt&rsquo;s comment is therefore made with the recognition that he&rsquo;s noticed at least two of these things in the wild. Virtually the only constant between these two moments in the <em>Breaking Bad</em> story is the notion of that warehouse somewhere, churning out an endless supply of mediocre stock art.</p>
 
@@ -182,9 +182,9 @@
   
   <entry>
     <title type="html"><![CDATA[Simulating the Birthday Paradox]]></title>
-    <link href="http://dliggat.github.io/2013/10/13/simulating-the-birthday-paradox/"/>
+    <link href="http://liggat.org/2013/10/13/simulating-the-birthday-paradox/"/>
     <updated>2013-10-13T10:59:00-07:00</updated>
-    <id>http://dliggat.github.io/2013/10/13/simulating-the-birthday-paradox</id>
+    <id>http://liggat.org/2013/10/13/simulating-the-birthday-paradox</id>
     <content type="html"><![CDATA[<p>Probability theory is a pretty special branch of mathematics in the sense that it is (1) highly applicable to daily life; (2) many of its results are easily comprehensible to most people; and yet despite this (3) it remains a profoundly complex area of mathematical inquiry<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.<!--more--></p>
 
 <p>An example which perfectly encapsulates this is the <a href="http://en.wikipedia.org/wiki/Birthday_paradox">birthday paradox</a>. In short, it can be represented by the question:</p>
@@ -281,9 +281,9 @@
   
   <entry>
     <title type="html"><![CDATA[On Boredom]]></title>
-    <link href="http://dliggat.github.io/2013/09/25/on-boredom/"/>
+    <link href="http://liggat.org/2013/09/25/on-boredom/"/>
     <updated>2013-09-25T09:32:00-07:00</updated>
-    <id>http://dliggat.github.io/2013/09/25/on-boredom</id>
+    <id>http://liggat.org/2013/09/25/on-boredom</id>
     <content type="html"><![CDATA[<p><a href="http://teamcoco.com/video/louis-ck-springsteen-cell-phone">Another</a> of Louis C.K.&rsquo;s hilarious talk-show interview diatribes is being widely circulated on the web and Twitter right now &ndash; this time about smartphones, and why he won&rsquo;t let his children have one. It&rsquo;s well worth a watch, but his argument essentially boils down to the observation that smartphones provide a constant stream of distraction that removes the condition, boredom, that is arguably necessary for healthy self-reflection.<!--more--></p>
 
 <p>Humour aside, I think he&rsquo;s really onto something here. Speaking personally, boredom, at least how I understood the term pre-Internet, has essentially disappeared from my life. Very few of my waking hours are spent without mental stimulation of one form or another. If I&rsquo;m waiting in a lineup, on public transport, unable to sleep, or killing time in an airport &ndash; out comes my phone, and the usual suspects <a href="http://tapbots.com/software/tweetbot/">Tweetbot</a> or <a href="http://instapaper.com">Instapaper</a> will occupy me for the duration of that transitory event. Even when I&rsquo;m cooking, cycling, exercising, or walking the dog, I&rsquo;m spared from any possible exposure to boredom through a now-years-old tendency to listen to podcasts<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> or audiobooks whenever my hands are occupied.</p>
@@ -310,14 +310,14 @@
   
   <entry>
     <title type="html"><![CDATA[Farewell, Old Friend]]></title>
-    <link href="http://dliggat.github.io/2013/09/09/farewell-old-friend/"/>
+    <link href="http://liggat.org/2013/09/09/farewell-old-friend/"/>
     <updated>2013-09-09T15:39:00-07:00</updated>
-    <id>http://dliggat.github.io/2013/09/09/farewell-old-friend</id>
+    <id>http://liggat.org/2013/09/09/farewell-old-friend</id>
     <content type="html"><![CDATA[<p>iOS 7<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> and a new iPhone are imminent. <!--more--> Tomorrow is Apple Christmas Morning.</p>
 
 <p>It&rsquo;s the end of the road for <a href="http://en.wikipedia.org/wiki/Iphone_4s">you</a>, my old friend.</p>
 
-<p><img class="center" src="http://dliggat.github.io/images/2013/iphone_4s.png" width="400" title="'iPhone 4S'" ></p>
+<p><img class="center" src="http://liggat.org/images/2013/iphone_4s.png" width="400" title="'iPhone 4S'" ></p>
 <div class="footnotes">
 <hr/>
 <ol>
@@ -331,9 +331,9 @@
   
   <entry>
     <title type="html"><![CDATA[Efficient Currency Conversion]]></title>
-    <link href="http://dliggat.github.io/2013/09/06/efficient-currency-conversion/"/>
+    <link href="http://liggat.org/2013/09/06/efficient-currency-conversion/"/>
     <updated>2013-09-06T09:52:00-07:00</updated>
-    <id>http://dliggat.github.io/2013/09/06/efficient-currency-conversion</id>
+    <id>http://liggat.org/2013/09/06/efficient-currency-conversion</id>
     <content type="html"><![CDATA[<p>I&rsquo;m willing to bet that Canadians, on average, do more foreign exchange (forex) transactions than citizens of many other countries. This is an obvious consequence of the significant shopping and investing opportunities south of the <a href="http://en.wikipedia.org/wiki/49th_parallel_north#The_Canada_.E2.80.93_United_States_border">49th parallel</a>. Moreover, plenty of Canadian software contractors such as myself find themselves billing in American dollars (<span class="money usd">USD</span>) occasionally.</p>
 
 <!--more-->
@@ -349,7 +349,7 @@
 
 <h3>Background</h3>
 
-<p><img class="right" src="http://dliggat.github.io/images/forex.jpg" width="325" title="'Forex'" >
+<p><img class="right" src="http://liggat.org/images/forex.jpg" width="325" title="'Forex'" >
 For the sake of completeness, it is worth mentioning the concept of the <strong>mid-market rate</strong> in forex. Although we tend to think of a unit of currency having a fixed, reversible value in a different currency (e.g. <span class="money usd price">$1.00 USD</span> = <span class="money cad price">$1.05 CAD</span>), generally no one will sell you the opposite currency at that rate. Currency conversion boards seen in train stations and airports illustrate this concept; they show <em>two rates</em> &ndash; vendors will transact in the opposite currency at a higher or lower rate, depending on whether you wish to buy or sell, respectively. The difference, of course, is their profit<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>.</p>
 
 <p>The mid-market rate is theoretically equidistant between the two rates, and it&rsquo;s the rate we would ideally achieve when we participate in a forex transaction. Mid-market rates for currency pairs are reported on <a href="http://finance.google.com">Google Finance</a>, <a href="http://xe.com">XE</a>, etc.</p>
@@ -452,9 +452,9 @@ For the sake of completeness, it is worth mentioning the concept of the <strong>
   
   <entry>
     <title type="html"><![CDATA[A Golden Age of Software]]></title>
-    <link href="http://dliggat.github.io/2013/09/03/a-comparatively-golden-age-of-software/"/>
+    <link href="http://liggat.org/2013/09/03/a-comparatively-golden-age-of-software/"/>
     <updated>2013-09-03T17:57:00-07:00</updated>
-    <id>http://dliggat.github.io/2013/09/03/a-comparatively-golden-age-of-software</id>
+    <id>http://liggat.org/2013/09/03/a-comparatively-golden-age-of-software</id>
     <content type="html"><![CDATA[<p>As someone to whom pessimism and cynicism come naturally, I&rsquo;m often more inclined to complain about things than sit and reflect on positivity. However, I think it&rsquo;s worth taking a moment to acknowledge one thing: we live in a golden age of software right now, at least relative to any point in the past.</p>
 
 <!--more-->
@@ -508,9 +508,9 @@ For the sake of completeness, it is worth mentioning the concept of the <strong>
   
   <entry>
     <title type="html"><![CDATA[Automate All the Things]]></title>
-    <link href="http://dliggat.github.io/2013/08/06/automate-all-the-things/"/>
+    <link href="http://liggat.org/2013/08/06/automate-all-the-things/"/>
     <updated>2013-08-06T13:04:00-07:00</updated>
-    <id>http://dliggat.github.io/2013/08/06/automate-all-the-things</id>
+    <id>http://liggat.org/2013/08/06/automate-all-the-things</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve spent much of my career in software with automation an implicit and often explicit goal: in testing, in environment creation and deployments, in backups, etc. A conspicuous absence from this list has been the actual development machines I spend many hours each day using, which for me are my Mac desktop and laptop, and occasionally a VM or two. Traditionally, these have ended up at their working state through hours upon hours of gentle tinkering. It&rsquo;s a case of the cobbler&rsquo;s children having no shoes<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, I suppose.</p>
 
 <!--more-->
@@ -568,7 +568,7 @@ For the sake of completeness, it is worth mentioning the concept of the <strong>
 
 <p><a href="https://plus.google.com/+BrunoOliveira">Bruno Oliveira</a> captured the essence of why automation is so great in a widely circulated <a href="https://plus.google.com/+BrunoOliveira/posts/MGxauXypb1Y">chart</a> a year or so ago:</p>
 
-<p><img class="fancybox center" src="http://dliggat.github.io/images/geeks.png" width="550" title="'Geeks'" ></p>
+<p><img class="fancybox center" src="http://liggat.org/images/geeks.png" width="550" title="'Geeks'" ></p>
 
 <h3>Appendix, or Why I like OS X</h3>
 
@@ -596,9 +596,9 @@ For the sake of completeness, it is worth mentioning the concept of the <strong>
   
   <entry>
     <title type="html"><![CDATA[Paperless, Finally]]></title>
-    <link href="http://dliggat.github.io/2013/07/21/paperless/"/>
+    <link href="http://liggat.org/2013/07/21/paperless/"/>
     <updated>2013-07-21T13:33:00-07:00</updated>
-    <id>http://dliggat.github.io/2013/07/21/paperless</id>
+    <id>http://liggat.org/2013/07/21/paperless</id>
     <content type="html"><![CDATA[<p>I&rsquo;m sick to death of accumulating useless paper detritus. I&rsquo;ve fantasized for quite a while about finally finding a &lsquo;paperless&rsquo; workflow that will work well for me now and, <em>crucially</em>, many years (decades) into the future. After reading posts on <a href="http://shawnblanc.net/2012/09/the-paperless-puzzel/">similar</a> <a href="http://speirs.org/blog/2012/6/25/book-scanning.html">initiatives</a>, I think I&rsquo;ve got it. I figured I&rsquo;d document it here, mostly as an exercise in <a href="https://en.wikipedia.org/wiki/Rubber_duck_debugging">rubber-duck debugging</a> of sorts.<!--more--></p>
 
 <h3>Requirements</h3>
@@ -621,7 +621,7 @@ For the sake of completeness, it is worth mentioning the concept of the <strong>
 
 <h4>Scanning</h4>
 
-<p><img class="right" src="http://dliggat.github.io/images/send_to_evernote.png" width="275" title="'Send to Evernote'" ></p>
+<p><img class="right" src="http://liggat.org/images/send_to_evernote.png" width="275" title="'Send to Evernote'" ></p>
 
 <p>I recently ordered a <a href="http://www.getdoxie.com/product/one/">Doxie One scanner</a>, for $147 CAD or thereabouts. It&rsquo;s simple, and gets the job done. Its OS X app manages to be not terrible for scanning/printing software, which is notable, though admittedly only due to the poverty of the competitive landscape. It quickly processes pages, and saves scans to an included SD card. The app purportedly does <a href="http://en.wikipedia.org/wiki/Optical_character_recognition">OCR</a> (I&rsquo;ll be relying on Evernote for this though), and allows individual PDFs to be &lsquo;stapled&rsquo; into multi-page documents, and then sent on to Evernote.</p>
 
@@ -654,7 +654,7 @@ For the sake of completeness, it is worth mentioning the concept of the <strong>
 
 <p>With these practices in place, I feel sufficiently confident that access to my account is highly-restricted, and even in the worst case scenario of a full data-breach at Evernote, my most sensitive documents (tax receipts, bank statements, etc) are enciphered.</p>
 
-<p><img class="fancybox center" src="http://dliggat.github.io/images/evernote_pdf_protected.png" title="'Protected PDF'" ></p>
+<p><img class="fancybox center" src="http://liggat.org/images/evernote_pdf_protected.png" title="'Protected PDF'" ></p>
 
 <h3>Fin</h3>
 
@@ -662,7 +662,7 @@ For the sake of completeness, it is worth mentioning the concept of the <strong>
 
 <p>There will be a few documents I&rsquo;ll begrudgingly retain in paper form &ndash; governments, perennially stuck in the clipboard and fax-machine era, tend to take a dim view of anything digital, but mostly, I&rsquo;ll be enthusiastically converting documents into Evernote notes, and destroying the originals forever.</p>
 
-<p>Another victory for bits over atoms. Any comments, suggestions, or questions, please <a href="http://dliggat.github.io/about">get in touch</a>.</p>
+<p>Another victory for bits over atoms. Any comments, suggestions, or questions, please <a href="http://liggat.org/about">get in touch</a>.</p>
 <div class="footnotes">
 <hr/>
 <ol>
@@ -678,18 +678,18 @@ For the sake of completeness, it is worth mentioning the concept of the <strong>
   
   <entry>
     <title type="html"><![CDATA[Octopress.new]]></title>
-    <link href="http://dliggat.github.io/2013/07/14/octopress-dot-new/"/>
+    <link href="http://liggat.org/2013/07/14/octopress-dot-new/"/>
     <updated>2013-07-14T13:43:00-07:00</updated>
-    <id>http://dliggat.github.io/2013/07/14/octopress-dot-new</id>
+    <id>http://liggat.org/2013/07/14/octopress-dot-new</id>
     <content type="html"><![CDATA[<p>Just migrated my [meagre] blog content over from Tumblr to a brand new, shiny Octopress instance.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Android as Anti-Platform]]></title>
-    <link href="http://dliggat.github.io/2013/05/11/android-as-anti-platform/"/>
+    <link href="http://liggat.org/2013/05/11/android-as-anti-platform/"/>
     <updated>2013-05-11T09:55:00-07:00</updated>
-    <id>http://dliggat.github.io/2013/05/11/android-as-anti-platform</id>
+    <id>http://liggat.org/2013/05/11/android-as-anti-platform</id>
     <content type="html"><![CDATA[<p>It feels awkward to criticize Android as the owner of several physical manifestations of the pride of Cupertino. That ownership seems to irrevocably wash away any possibility of one’s objectivity in the court of Android opinion, despite what ought to count as pretty good “Android credentials&#8221; (I’m a happy alumni of the G1, Nexus One, HTC Desire HD and Nexus 7, and participated in beta-testing/review of the G1 before it was announced as a consumer product). <!--more--> And yet, it’s impossible for me not to voice displeasure at what Samsung is now up to:</p>
 
 <blockquote><p>In an unprecedented move Samsung announced a deal on Thursday to make an established, high profile
@@ -706,9 +706,9 @@ Player, the catch up service for ITV &ndash; the UK’s largest independent terr
   
   <entry>
     <title type="html"><![CDATA[Tweet Archive]]></title>
-    <link href="http://dliggat.github.io/2013/05/07/tweet-archive/"/>
+    <link href="http://liggat.org/2013/05/07/tweet-archive/"/>
     <updated>2013-05-07T09:55:00-07:00</updated>
-    <id>http://dliggat.github.io/2013/05/07/tweet-archive</id>
+    <id>http://liggat.org/2013/05/07/tweet-archive</id>
     <content type="html"><![CDATA[<p>When Twitter announced in late 2012 that its users could download their tweet archive, it had a begrudging whiff about it. Given the company’s recent heavy-handedness with API access for not only 3rd-party clients but also complementary services such as Flipboard, I was somewhat surprised it even arrived as promised months earlier. <!--more--> I have no insight into the machinations of Twitter Inc. whatsoever, but for some reason I imagine an executive suite very reluctant to relinquish sole ownership of the veritable treasure trove of historical tweets. However, the constant haranguing by their power users, as well as a general environment that frowns upon overtly blatant lock-in (Google Takeout and the Data Liberation Front do a pretty good job setting a decent industry standard here) probably swung the balance.</p>
 
 <p>This leads me to speculate that Twitter didn’t foresee what an incredible enhancement to their product that Tweet Archive actually is. To look back at previous tweets, retweets and favourites is like a time machine for visiting my own personality in the past. It is truly fascinating to see what I was interested in <code>$X $TIME_UNITS</code> ago, and consequently, I’m tweeting, retweeting, and favouriting more now &ndash; just for the pure whimsical pleasure of viewing this data in the future. Twitter has relinquished a measure of control over its service, and has consequently ‘locked-in’, at least me, ever more. This feels like a nice all-around dynamic &ndash; they’ve given me more control over my data, and have managed to bring me closer into the fold as a user as a result.</p>
