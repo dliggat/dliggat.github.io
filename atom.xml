@@ -4,7 +4,7 @@
   <title><![CDATA[liggat.org]]></title>
   <link href="http://liggat.org/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2013-12-25T21:52:31-08:00</updated>
+  <updated>2013-12-25T22:10:59-08:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -12,15 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[A New Design]]></title>
-    <link href="http://liggat.org/2013/12/24/a-new-design/"/>
-    <updated>2013-12-24T18:14:09-08:00</updated>
-    <id>http://liggat.org/2013/12/24/a-new-design</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[Canadian Housing: Noting for Posterity]]></title>
