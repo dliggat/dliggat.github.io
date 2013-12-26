@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Blogging | liggat.org]]></title>
   <link href="http://liggat.org/blog/categories/blogging/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2013-12-26T13:09:48-08:00</updated>
+  <updated>2013-12-26T13:10:51-08:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -12,6 +12,60 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[A New Design]]></title>
+    <link href="http://liggat.org/2013/12/24/a-new-design/"/>
+    <updated>2013-12-24T18:14:09-08:00</updated>
+    <id>http://liggat.org/2013/12/24/a-new-design</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve been using <a href="http://octopress.org">Octopress</a> as a blogging platform for over six months now, and can&rsquo;t recommend it enough for tech capable (or curious) writers. However, I&rsquo;ve never been fully happy with my minor adaptations to the default style. I finally got around to implementing an improved design.<!--more--></p>
+
+<h3>Original</h3>
+
+<p>My site started off looking like this:
+<img class="center" src="/images/2013/old-octopress-style.png" width="700" title="&lsquo;Old&rsquo;" ></p>
+
+<p>It was by all means serviceable, but I was starting to tire of the excess <em>chrome</em> &ndash; the prominent header, the large nav-bar, and the unnecessary <em>Recent Posts</em> sidebar. Morever, despite numerous tweaks to the layout, colouring, and typography &ndash; it still instantly <em>looked</em> like an Octopress site<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.</p>
+
+<h3>Design Objectives</h3>
+
+<p>I&rsquo;m not a UI designer, either by trade or by realistic-aspiration<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>. Still, I had a pretty good idea in mind what I wanted my home on the web to look like.</p>
+
+<ul>
+<li><strong>Content Focus</strong>: This site exists for one purpose &ndash; a place to store material that I write. Anything that&rsquo;s not written content distracts from that objective. Among other things, that means the large, colourful header needs to go.</li>
+<li><strong>De-Octopress the UI</strong>: Octopress is the infrastructure for this site, and will be for the far-foreseeable future. That doesn&rsquo;t mean I need to rely on its default UI styling, and in fact, I&rsquo;d greatly prefer it didn&rsquo;t <em>look</em> like an Octopress site. I still want to rely on the basic Octopress layout though, as well as its <a href="http://coding.smashingmagazine.com/2011/01/12/guidelines-for-responsive-web-design/">responsive design</a>.</li>
+<li><strong>Better Typography</strong>: I&rsquo;ve long been a little too zealous in observing the &lsquo;rule&rsquo; that <a href="http://en.wikipedia.org/wiki/Sans-serif">sans-serif</a> headers should be paired with <a href="http://en.wikipedia.org/wiki/Serif">serif</a> body text. Accordingly, I initially used the serif Google Font <a href="https://www.google.com/fonts/specimen/Lora">Lora</a> for the body, but was never quite happy with the choice. Many blogs I read eschew serifs entirely, and the effect is well-suited to the content<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>.</li>
+<li><strong>Better Footnote Styling</strong>: Chris Suave&rsquo;s excellent <a href="http://cmsauve.com/labs/bigfoot/">Bigfoot</a> footnote implementation is far superior to numeric in-page anchors. I wanted to replace the latter with the former (or similar).</li>
+</ul>
+
+
+<h3>Result</h3>
+
+<p>With a bit of spare time over Christmas 2013, I hacked away at my blog&rsquo;s <a href="https://github.com/dliggat/dliggat.github.io">git repo</a> to shape the design. I&rsquo;m pretty happy with how it&rsquo;s turned out:</p>
+
+<h4>Desktop Layout:</h4>
+
+<p><img class="center" src="/images/2013/new-octopress-style.png" width="700" title="&lsquo;New&rsquo;" ></p>
+
+<h4>Mobile Layout:</h4>
+
+<p><img class="center" src="/images/2013/new-octopress-style-mobile.png" width="350" title="&lsquo;New&rsquo;" ></p>
+
+<p>I&rsquo;m still a bit ambivalent about having comments at all, but otherwise, I&rsquo;m happy with how it looks. It&rsquo;ll be interesting to review these design decisions down the line.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>This style is instantly recognizable around various corners of the web &ndash; all deriving from the design on <a href="http://octopress.org">octopress.org</a> itself. The gradient and text-shadow on the nav-bar is a dead giveaway.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>I have <em>just</em> enough design knowledge to overcome the <a href="http://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect">Dunning-Kruger effect</a>.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>i.e., we&rsquo;re not writing the New York Times here.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Static Hosting on Amazon S3]]></title>

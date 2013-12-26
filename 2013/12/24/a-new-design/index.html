@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>A New Design - liggat.org</title>
+  <meta name="author" content="Dave Liggat">
+
+  
+  <meta name="description" content="I&rsquo;ve been using Octopress as a blogging platform for over six months now, and can&rsquo;t recommend it enough for tech capable (or curious) &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://liggat.org/2013/12/24/a-new-design">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="liggat.org" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<!-- <link href='http://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic' rel='stylesheet' type='text/css'> -->
+
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,700italic|Lora:400,400italic|Raleway:100|Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-42613016-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body    class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">liggat.org</a></h1>
+  
+    <h2>by Dave Liggat</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:liggat.org" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/archive">Archive</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/contact">Contact</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">A New Design</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-24T18:14:09-08:00" pubdate data-updated="true">December 24<span>th</span>, 2013</time>  • <a rel="full-article" href="">&infin;</a> 
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>I&rsquo;ve been using <a href="http://octopress.org">Octopress</a> as a blogging platform for over six months now, and can&rsquo;t recommend it enough for tech capable (or curious) writers. However, I&rsquo;ve never been fully happy with my minor adaptations to the default style. I finally got around to implementing an improved design.<!--more--></p>
+
+<h3>Original</h3>
+
+<p>My site started off looking like this:
+<img class="center" src="/images/2013/old-octopress-style.png" width="700" title="'Old'" ></p>
+
+<p>It was by all means serviceable, but I was starting to tire of the excess <em>chrome</em> &ndash; the prominent header, the large nav-bar, and the unnecessary <em>Recent Posts</em> sidebar. Morever, despite numerous tweaks to the layout, colouring, and typography &ndash; it still instantly <em>looked</em> like an Octopress site<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.</p>
+
+<h3>Design Objectives</h3>
+
+<p>I&rsquo;m not a UI designer, either by trade or by realistic-aspiration<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>. Still, I had a pretty good idea in mind what I wanted my home on the web to look like.</p>
+
+<ul>
+<li><strong>Content Focus</strong>: This site exists for one purpose &ndash; a place to store material that I write. Anything that&rsquo;s not written content distracts from that objective. Among other things, that means the large, colourful header needs to go.</li>
+<li><strong>De-Octopress the UI</strong>: Octopress is the infrastructure for this site, and will be for the far-foreseeable future. That doesn&rsquo;t mean I need to rely on its default UI styling, and in fact, I&rsquo;d greatly prefer it didn&rsquo;t <em>look</em> like an Octopress site. I still want to rely on the basic Octopress layout though, as well as its <a href="http://coding.smashingmagazine.com/2011/01/12/guidelines-for-responsive-web-design/">responsive design</a>.</li>
+<li><strong>Better Typography</strong>: I&rsquo;ve long been a little too zealous in observing the &lsquo;rule&rsquo; that <a href="http://en.wikipedia.org/wiki/Sans-serif">sans-serif</a> headers should be paired with <a href="http://en.wikipedia.org/wiki/Serif">serif</a> body text. Accordingly, I initially used the serif Google Font <a href="https://www.google.com/fonts/specimen/Lora">Lora</a> for the body, but was never quite happy with the choice. Many blogs I read eschew serifs entirely, and the effect is well-suited to the content<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>.</li>
+<li><strong>Better Footnote Styling</strong>: Chris Suave&rsquo;s excellent <a href="http://cmsauve.com/labs/bigfoot/">Bigfoot</a> footnote implementation is far superior to numeric in-page anchors. I wanted to replace the latter with the former (or similar).</li>
+</ul>
+
+
+<h3>Result</h3>
+
+<p>With a bit of spare time over Christmas 2013, I hacked away at my blog&rsquo;s <a href="https://github.com/dliggat/dliggat.github.io">git repo</a> to shape the design. I&rsquo;m pretty happy with how it&rsquo;s turned out:</p>
+
+<h4>Desktop Layout:</h4>
+
+<p><img class="center" src="/images/2013/new-octopress-style.png" width="700" title="'New'" ></p>
+
+<h4>Mobile Layout:</h4>
+
+<p><img class="center" src="/images/2013/new-octopress-style-mobile.png" width="350" title="'New'" ></p>
+
+<p>I&rsquo;m still a bit ambivalent about having comments at all, but otherwise, I&rsquo;m happy with how it looks. It&rsquo;ll be interesting to review these design decisions down the line.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>This style is instantly recognizable around various corners of the web &ndash; all deriving from the design on <a href="http://octopress.org">octopress.org</a> itself. The gradient and text-shadow on the nav-bar is a dead giveaway.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>I have <em>just</em> enough design knowledge to overcome the <a href="http://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect">Dunning-Kruger effect</a>.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>i.e., we&rsquo;re not writing the New York Times here.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Dave Liggat</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-24T18:14:09-08:00" pubdate data-updated="true">December 24<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/blogging/'>blogging</a>, <a class='category' href='/blog/categories/design/'>design</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://liggat.org/2013/12/24/a-new-design/" data-via="" data-counturl="http://liggat.org/2013/12/24/a-new-design/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2013/12/15/canadian-housing-noting-for-posterity/" title="Previous Post: Canadian Housing: Noting For Posterity">&laquo; Canadian Housing: Noting For Posterity</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - <a href="http://liggat.org/about">Dave Liggat</a>.
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span> &
+  <span class="credit">hosted on <a href="http://pages.github.com">GitHub Pages</a></span>.
+</p>
+<p id="duration-statement">
+  <span class="credit">Liggat.org has been active for <span id='site-duration'></span>. </span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'liggatorg';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://liggat.org/2013/12/24/a-new-design/';
+        var disqus_url = 'http://liggat.org/2013/12/24/a-new-design/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+<script src="/javascripts/bigfoot.min.js"></script>
+<script src="/javascripts/moment.min.js"></script>
+<script src="/javascripts/custom/init-footer.js"></script>
+<script src="/javascripts/custom/init-bigfoot.js"></script>
+
+</body>
+</html>
