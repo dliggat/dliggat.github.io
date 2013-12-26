@@ -55,37 +55,39 @@ This is part of the reason[^5] why banks are so ludicrously profitable. It's all
 
 Here's the various rates summarized. Note that the Norbert's Gambit result **does not** include the cost of the trades, which must be accounted for in practice.
 
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <td>Method</td>
-      <td>Starting Value</td>
-      <td>Resulting Value</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Bank Transfer</td>
-      <td><span class="money usd">$5,000.00 USD</span></td>
-      <td><span class="money cad">$5,112.50 CAD</span></td>
-    </tr>
-    <tr>
-      <td>Third Party Conversion</td>
-      <td><span class="money usd">$5,000.00 USD</span></td>
-      <td><span class="money cad">$5,186.72 CAD</span></td>
-    </tr>
-    <tr>
-      <td>Norbert's Gambit</td>
-      <td><span class="money usd">$5,000.00 USD</span></td>
-      <td><span class="money cad">$5,250.75 CAD</span></td>
-    </tr>
-    <tr>
-      <td>Theoretical Mid-Market Optimum</td>
-      <td><span class="money usd">$5,000.00 USD</span></td>
-      <td><span class="money cad">$5,252.15 CAD</span></td>
-    </tr>
-  </tbody>
-</table>
+<div class="summary">
+  <table>
+    <thead>
+      <tr>
+        <td>Method</td>
+        <td>Starting Value</td>
+        <td>Resulting Value</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Bank Transfer</td>
+        <td><span class="money usd">$5,000.00 USD</span></td>
+        <td><span class="money cad">$5,112.50 CAD</span></td>
+      </tr>
+      <tr>
+        <td>Third Party Conversion</td>
+        <td><span class="money usd">$5,000.00 USD</span></td>
+        <td><span class="money cad">$5,186.72 CAD</span></td>
+      </tr>
+      <tr>
+        <td>Norbert's Gambit</td>
+        <td><span class="money usd">$5,000.00 USD</span></td>
+        <td><span class="money cad">$5,250.75 CAD</span></td>
+      </tr>
+      <tr>
+        <td>Theoretical Mid-Market Optimum</td>
+        <td><span class="money usd">$5,000.00 USD</span></td>
+        <td><span class="money cad">$5,252.15 CAD</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 One last remark: it's probably wise to be circumspect within any dealings with your bank when setting up accounts for this or actually executing the trade. Norbert's Gambit[^6] is a perfectly legitimate operation, but it's pretty easy to imagine banks getting upset at this reduction in their effortless-profit, and potentially erecting obstacles.
 

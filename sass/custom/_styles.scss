@@ -35,23 +35,6 @@ html {
   h4, h5 {
     margin-bottom: 0.7em;
   }
-  table {
-    max-width: 100%;
-    width: 95%;
-    background-color: transparent;
-    border: 1px solid $table-outline-color;
-    border-color: $table-outline-color;
-    margin-bottom: 1em;
-  }
-  thead {
-    td {
-      font-weight: bold;
-    }
-  }
-  td {
-    border: 1px solid $table-outline-color;
-    padding: 6px;
-  }
 }
 
 body {
@@ -176,6 +159,26 @@ p.meta {
   border-top: 1px solid $faint;
   +.sharing {
     background: none;
+  }
+}
+
+.summary {
+  table {
+    max-width: 100%;
+    width: 95%;
+    background-color: transparent;
+    border: 1px solid $table-outline-color;
+    border-color: $table-outline-color;
+    margin-bottom: 1em;
+  }
+  thead {
+    td {
+      font-weight: bold;
+    }
+  }
+  td {
+    border: 1px solid $table-outline-color;
+    padding: 6px;
   }
 }
 
