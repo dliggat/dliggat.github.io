@@ -3,7 +3,6 @@ layout: post
 title: "A New Design"
 date: 2013-12-24 18:14:09 -0800
 comments: true
-published: false
 categories: design blogging octopress
 ---
 I've been using [Octopress][octopress] as a blogging platform for over six months now, and can't recommend it enough for tech capable (or curious) writers. However, I've never been fully happy with my minor adaptations to the default style. I finally got around to implementing an improved design.<!--more-->
