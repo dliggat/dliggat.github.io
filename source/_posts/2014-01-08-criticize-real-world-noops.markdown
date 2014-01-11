@@ -5,7 +5,7 @@ date: 2014-01-08 23:37:42 -0500
 comments: true
 categories: media
 ---
-In the world of computation, a *NOOP* (*No-Op*eration) is an instruction that has zero effect on the state of the machine. The term originally hails from the esoteric world of CPU-architecture and instruction-sets[^1], but the term is also used semi-colloquially as programmer shorthand for **'this achieves nothing'**.
+In the world of computation, a *NOOP* (*No-Op*eration) is an instruction that has zero effect on the state of the machine. The term originally hails from the esoteric world of CPU-architecture and instruction-sets[^1], but the term is also used semi-colloquially as programmer shorthand for **'this achieves nothing'**.<!--more-->
 
 A very simple example in code might be in setting a variable to the difference of itself and zero (`x = x - 0`), but they tend, as a rule, to not be so obvious. On first glance, they *look* like useful work.
 
