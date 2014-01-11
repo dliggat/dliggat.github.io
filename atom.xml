@@ -4,7 +4,7 @@
   <title><![CDATA[liggat.org]]></title>
   <link href="http://liggat.org/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2014-01-11T18:13:09-05:00</updated>
+  <updated>2014-01-11T18:14:42-05:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -18,7 +18,7 @@
     <link href="http://liggat.org/2014/01/08/criticize-real-world-noops/"/>
     <updated>2014-01-08T23:37:42-05:00</updated>
     <id>http://liggat.org/2014/01/08/criticize-real-world-noops</id>
-    <content type="html"><![CDATA[<p>In the world of computation, a <em>NOOP</em> (<em>No-Op</em>eration) is an instruction that has zero effect on the state of the machine. The term originally hails from the esoteric world of CPU-architecture and instruction-sets<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, but the term is also used semi-colloquially as programmer shorthand for <strong>&lsquo;this achieves nothing&rsquo;</strong>.</p>
+    <content type="html"><![CDATA[<p>In the world of computation, a <em>NOOP</em> (<em>No-Op</em>eration) is an instruction that has zero effect on the state of the machine. The term originally hails from the esoteric world of CPU-architecture and instruction-sets<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, but the term is also used semi-colloquially as programmer shorthand for <strong>&lsquo;this achieves nothing&rsquo;</strong>.<!--more--></p>
 
 <p>A very simple example in code might be in setting a variable to the difference of itself and zero (<code>x = x - 0</code>), but they tend, as a rule, to not be so obvious. On first glance, they <em>look</em> like useful work.</p>
 
