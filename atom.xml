@@ -4,7 +4,7 @@
   <title><![CDATA[liggat.org]]></title>
   <link href="http://liggat.org/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2013-12-26T13:10:51-08:00</updated>
+  <updated>2014-01-11T18:13:09-05:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -14,9 +14,47 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Criticize Real-World NOOPs]]></title>
+    <link href="http://liggat.org/2014/01/08/criticize-real-world-noops/"/>
+    <updated>2014-01-08T23:37:42-05:00</updated>
+    <id>http://liggat.org/2014/01/08/criticize-real-world-noops</id>
+    <content type="html"><![CDATA[<p>In the world of computation, a <em>NOOP</em> (<em>No-Op</em>eration) is an instruction that has zero effect on the state of the machine. The term originally hails from the esoteric world of CPU-architecture and instruction-sets<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, but the term is also used semi-colloquially as programmer shorthand for <strong>&lsquo;this achieves nothing&rsquo;</strong>.</p>
+
+<p>A very simple example in code might be in setting a variable to the difference of itself and zero (<code>x = x - 0</code>), but they tend, as a rule, to not be so obvious. On first glance, they <em>look</em> like useful work.</p>
+
+<p>Programmers regard NOOPs with suspicion. Good code reviewers will identify them, question their existence, and  demand exceptional justification for their continued presence. They are unwelcome in quality software not for their outcome &ndash; they do nothing after all &ndash; but because they <em>sow confusion</em>. On first glance, they appear to have a purpose; they subconsciously assuage concerns that might otherwise have been raised in their absence. Many a pernicious bug can be traced back to a NOOP that misled its programmers. A NOOP is a facade: an illusion of real work being performed.</p>
+
+<p>Lately I&rsquo;ve been thinking that the term might be applicable in the real-world also. Consider this story:</p>
+
+<h4><a href="http://rt.com/news/france-google-fine-privacy-339/">France hands down data privacy fine to Google</a></h4>
+
+<blockquote><p>French data protection watchdog CNIL fined Google 150,000 euros ($204,000) for ignoring its three-month deadline to align its
+practice of tracking and storing user information with the country’s law.</p></blockquote>
+
+<p>I&rsquo;m not commenting on<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>, or even particularly interested in this French legal ruling. That&rsquo;s for France and Google Inc to work out.</p>
+
+<p>But it seems to me that regardless of the fine&rsquo;s merit &ndash; imposing a €150,000 fine on a company which earns that amount in revenue every <em>two minutes</em><sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>, very closely fits the definition of a NOOP. It is the act of doing nothing masquerading as the act of doing something of significance. To an extremely close approximation, it is the judicial equivalent of subtracting zero from an integer.</p>
+
+<p>In its article, RT makes no effort to contextualize this, and it&rsquo;s not just a failing of theirs &ndash; it&rsquo;s frankly rare in news media. This is precisely the opposite of the programmer mentality: NOOPs are always to be identified as such, and their presence criticized. The world would greatly benefit from a culture that does a better job in <strong>pointing out pointlessness</strong>.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>An idle CPU can&rsquo;t actually do nothing, so they would traditionally just repeatedly execute the NOOP instruction in the absence of actual work to do. I suspect that&rsquo;s an oversimplification circa-2014 with the vast amounts of research that have gone into processor energy-efficiency.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>Disclosure: I&rsquo;m an ex-Google employee (departed on highly-amicable terms to pursue a Masters) and a long-time admirer of the firm, pre and post employment.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>Google has <a href="http://investor.google.com/financial/tables.html">yearly revenues</a> on the order of <code>$50,000,000,000</code>. There are <code>365 * 24 * 60 = 525,600</code> minutes per year. <code>$50B / 525.6k ~= $95k ~= €68k</code>. Two minutes revenue <code>~= €150k</code>.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[A New Design]]></title>
     <link href="http://liggat.org/2013/12/24/a-new-design/"/>
-    <updated>2013-12-24T18:14:09-08:00</updated>
+    <updated>2013-12-24T21:14:09-05:00</updated>
     <id>http://liggat.org/2013/12/24/a-new-design</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve been using <a href="http://octopress.org">Octopress</a> as a blogging platform for over six months now, and can&rsquo;t recommend it enough for tech capable (or curious) writers. However, I&rsquo;ve never been fully happy with my minor adaptations to the default style. I finally got around to implementing an improved design.<!--more--></p>
 
@@ -70,7 +108,7 @@
   <entry>
     <title type="html"><![CDATA[Canadian Housing: Noting for Posterity]]></title>
     <link href="http://liggat.org/2013/12/15/canadian-housing-noting-for-posterity/"/>
-    <updated>2013-12-15T08:52:00-08:00</updated>
+    <updated>2013-12-15T08:52:00-05:00</updated>
     <id>http://liggat.org/2013/12/15/canadian-housing-noting-for-posterity</id>
     <content type="html"><![CDATA[<p>I&rsquo;m posting the following chart from <a href="http://blog.bcaresearch.com/canadian-housing-the-bubble-debate">BCA Research</a> not for the purposes of persuasion, but rather, for posterity.<!--more--></p>
 
@@ -101,7 +139,7 @@
   <entry>
     <title type="html"><![CDATA[A Minor Rant on Package Tracking]]></title>
     <link href="http://liggat.org/2013/11/30/a-minor-rant-on-package-tracking/"/>
-    <updated>2013-11-30T23:11:00-08:00</updated>
+    <updated>2013-11-30T23:11:00-05:00</updated>
     <id>http://liggat.org/2013/11/30/a-minor-rant-on-package-tracking</id>
     <content type="html"><![CDATA[<p>I do a fair bit of online shopping<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, and have done so for pretty much my entire credit-card-wielding life. It&rsquo;s a familiar ritual: every time, shortly after I&rsquo;ve clicked <code>Purchase</code>, an email arrives containing a linked phrase with roughly the following copy: <em>Click here to track your shipment</em>. <!--more-->And every time I receive that email, I dutifully click that link, only to be met with the following 404-esque response:</p>
 
@@ -137,7 +175,7 @@
   <entry>
     <title type="html"><![CDATA[Static Hosting on Amazon S3]]></title>
     <link href="http://liggat.org/2013/11/03/static-hosting-on-amazon-s3/"/>
-    <updated>2013-11-03T13:13:00-08:00</updated>
+    <updated>2013-11-03T13:13:00-05:00</updated>
     <id>http://liggat.org/2013/11/03/static-hosting-on-amazon-s3</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve had an outstanding <strong>todo</strong> for quite some time to migrate my basic and essentially-static <a href="http://www.factorialsystems.ca">business website</a> off of <a href="http://www.squarespace.com">Squarespace</a>. I ended up replacing it with a combination of <a href="http://octopress.org">Octopress</a> and Amazon Simple Storage Service (<a href="http://aws.amazon.com/s3">S3</a>), which, it turns out, are a fantastic duo.<!--more--></p>
 
@@ -195,7 +233,7 @@
   <entry>
     <title type="html"><![CDATA[Walter White, Art Aficionado]]></title>
     <link href="http://liggat.org/2013/10/15/walter-white/"/>
-    <updated>2013-10-15T10:41:00-07:00</updated>
+    <updated>2013-10-15T10:41:00-04:00</updated>
     <id>http://liggat.org/2013/10/15/walter-white</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve been re-watching <em>Breaking Bad</em>, one of my favourite television dramas, ever. Yesterday, midway through an early second season episode, I noticed a connection to a much later point in the story that I haven&rsquo;t seen discussed anywhere else.</p>
 
@@ -237,7 +275,7 @@
   <entry>
     <title type="html"><![CDATA[Simulating the Birthday Paradox]]></title>
     <link href="http://liggat.org/2013/10/13/simulating-the-birthday-paradox/"/>
-    <updated>2013-10-13T10:59:00-07:00</updated>
+    <updated>2013-10-13T10:59:00-04:00</updated>
     <id>http://liggat.org/2013/10/13/simulating-the-birthday-paradox</id>
     <content type="html"><![CDATA[<p>Probability theory is a pretty special branch of mathematics in the sense that it is (1) highly applicable to daily life; (2) many of its results are easily comprehensible to most people; and yet despite this (3) it remains a profoundly complex area of mathematical inquiry<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.<!--more--></p>
 
@@ -336,7 +374,7 @@
   <entry>
     <title type="html"><![CDATA[On Boredom]]></title>
     <link href="http://liggat.org/2013/09/25/on-boredom/"/>
-    <updated>2013-09-25T09:32:00-07:00</updated>
+    <updated>2013-09-25T09:32:00-04:00</updated>
     <id>http://liggat.org/2013/09/25/on-boredom</id>
     <content type="html"><![CDATA[<p><a href="http://teamcoco.com/video/louis-ck-springsteen-cell-phone">Another</a> of Louis C.K.&rsquo;s hilarious talk-show interview diatribes is being widely circulated on the web and Twitter right now &ndash; this time about smartphones, and why he won&rsquo;t let his children have one. It&rsquo;s well worth a watch, but his argument essentially boils down to the observation that smartphones provide a constant stream of distraction that removes the condition, boredom, that is arguably necessary for healthy self-reflection.<!--more--></p>
 
@@ -365,7 +403,7 @@
   <entry>
     <title type="html"><![CDATA[Farewell, Old Friend]]></title>
     <link href="http://liggat.org/2013/09/09/farewell-old-friend/"/>
-    <updated>2013-09-09T15:39:00-07:00</updated>
+    <updated>2013-09-09T15:39:00-04:00</updated>
     <id>http://liggat.org/2013/09/09/farewell-old-friend</id>
     <content type="html"><![CDATA[<p>iOS 7<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> and a new iPhone are imminent. <!--more--> Tomorrow is Apple Christmas Morning.</p>
 
@@ -386,7 +424,7 @@
   <entry>
     <title type="html"><![CDATA[Efficient Currency Conversion]]></title>
     <link href="http://liggat.org/2013/09/06/efficient-currency-conversion/"/>
-    <updated>2013-09-06T09:52:00-07:00</updated>
+    <updated>2013-09-06T09:52:00-04:00</updated>
     <id>http://liggat.org/2013/09/06/efficient-currency-conversion</id>
     <content type="html"><![CDATA[<p>I&rsquo;m willing to bet that Canadians, on average, do more foreign exchange (forex) transactions than citizens of many other countries. This is an obvious consequence of the significant shopping and investing opportunities south of the <a href="http://en.wikipedia.org/wiki/49th_parallel_north#The_Canada_.E2.80.93_United_States_border">49th parallel</a>. Moreover, plenty of Canadian software contractors such as myself find themselves billing in American dollars (<span class="money usd">USD</span>) occasionally.</p>
 
@@ -509,7 +547,7 @@ For the sake of completeness, it is worth mentioning the concept of the <strong>
   <entry>
     <title type="html"><![CDATA[A Golden Age of Software]]></title>
     <link href="http://liggat.org/2013/09/03/a-comparatively-golden-age-of-software/"/>
-    <updated>2013-09-03T17:57:00-07:00</updated>
+    <updated>2013-09-03T17:57:00-04:00</updated>
     <id>http://liggat.org/2013/09/03/a-comparatively-golden-age-of-software</id>
     <content type="html"><![CDATA[<p>As someone to whom pessimism and cynicism come naturally, I&rsquo;m often more inclined to complain about things than sit and reflect on positivity. However, I think it&rsquo;s worth taking a moment to acknowledge one thing: we live in a golden age of software right now, at least relative to any point in the past.</p>
 
@@ -565,7 +603,7 @@ For the sake of completeness, it is worth mentioning the concept of the <strong>
   <entry>
     <title type="html"><![CDATA[Automate All the Things]]></title>
     <link href="http://liggat.org/2013/08/06/automate-all-the-things/"/>
-    <updated>2013-08-06T13:04:00-07:00</updated>
+    <updated>2013-08-06T13:04:00-04:00</updated>
     <id>http://liggat.org/2013/08/06/automate-all-the-things</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve spent much of my career in software with automation an implicit and often explicit goal: in testing, in environment creation and deployments, in backups, etc. A conspicuous absence from this list has been the actual development machines I spend many hours each day using, which for me are my Mac desktop and laptop, and occasionally a VM or two. Traditionally, these have ended up at their working state through hours upon hours of gentle tinkering. It&rsquo;s a case of the cobbler&rsquo;s children having no shoes<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, I suppose.</p>
 
@@ -653,7 +691,7 @@ For the sake of completeness, it is worth mentioning the concept of the <strong>
   <entry>
     <title type="html"><![CDATA[Paperless, Finally]]></title>
     <link href="http://liggat.org/2013/07/21/paperless/"/>
-    <updated>2013-07-21T13:33:00-07:00</updated>
+    <updated>2013-07-21T13:33:00-04:00</updated>
     <id>http://liggat.org/2013/07/21/paperless</id>
     <content type="html"><![CDATA[<p>I&rsquo;m sick to death of accumulating useless paper detritus. I&rsquo;ve fantasized for quite a while about finally finding a &lsquo;paperless&rsquo; workflow that will work well for me now and, <em>crucially</em>, many years (decades) into the future. After reading posts on <a href="http://shawnblanc.net/2012/09/the-paperless-puzzel/">similar</a> <a href="http://speirs.org/blog/2012/6/25/book-scanning.html">initiatives</a>, I think I&rsquo;ve got it. I figured I&rsquo;d document it here, mostly as an exercise in <a href="https://en.wikipedia.org/wiki/Rubber_duck_debugging">rubber-duck debugging</a> of sorts.<!--more--></p>
 
@@ -735,7 +773,7 @@ For the sake of completeness, it is worth mentioning the concept of the <strong>
   <entry>
     <title type="html"><![CDATA[Octopress.new]]></title>
     <link href="http://liggat.org/2013/07/14/octopress-dot-new/"/>
-    <updated>2013-07-14T13:43:00-07:00</updated>
+    <updated>2013-07-14T13:43:00-04:00</updated>
     <id>http://liggat.org/2013/07/14/octopress-dot-new</id>
     <content type="html"><![CDATA[<p>Just migrated my [meagre] blog content over from Tumblr to a brand new, shiny Octopress instance.</p>
 ]]></content>
@@ -744,7 +782,7 @@ For the sake of completeness, it is worth mentioning the concept of the <strong>
   <entry>
     <title type="html"><![CDATA[Android as Anti-Platform]]></title>
     <link href="http://liggat.org/2013/05/11/android-as-anti-platform/"/>
-    <updated>2013-05-11T09:55:00-07:00</updated>
+    <updated>2013-05-11T09:55:00-04:00</updated>
     <id>http://liggat.org/2013/05/11/android-as-anti-platform</id>
     <content type="html"><![CDATA[<p>It feels awkward to criticize Android as the owner of several physical manifestations of the pride of Cupertino. That ownership seems to irrevocably wash away any possibility of one’s objectivity in the court of Android opinion, despite what ought to count as pretty good “Android credentials&#8221; (I’m a happy alumni of the G1, Nexus One, HTC Desire HD and Nexus 7, and participated in beta-testing/review of the G1 before it was announced as a consumer product). <!--more--> And yet, it’s impossible for me not to voice displeasure at what Samsung is now up to:</p>
 
@@ -763,7 +801,7 @@ Player, the catch up service for ITV &ndash; the UK’s largest independent terr
   <entry>
     <title type="html"><![CDATA[Tweet Archive]]></title>
     <link href="http://liggat.org/2013/05/07/tweet-archive/"/>
-    <updated>2013-05-07T09:55:00-07:00</updated>
+    <updated>2013-05-07T09:55:00-04:00</updated>
     <id>http://liggat.org/2013/05/07/tweet-archive</id>
     <content type="html"><![CDATA[<p>When Twitter announced in late 2012 that its users could download their tweet archive, it had a begrudging whiff about it. Given the company’s recent heavy-handedness with API access for not only 3rd-party clients but also complementary services such as Flipboard, I was somewhat surprised it even arrived as promised months earlier. <!--more--> I have no insight into the machinations of Twitter Inc. whatsoever, but for some reason I imagine an executive suite very reluctant to relinquish sole ownership of the veritable treasure trove of historical tweets. However, the constant haranguing by their power users, as well as a general environment that frowns upon overtly blatant lock-in (Google Takeout and the Data Liberation Front do a pretty good job setting a decent industry standard here) probably swung the balance.</p>
 

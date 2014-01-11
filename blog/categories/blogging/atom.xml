@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Blogging | liggat.org]]></title>
   <link href="http://liggat.org/blog/categories/blogging/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2013-12-26T13:10:51-08:00</updated>
+  <updated>2014-01-11T18:13:09-05:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[A New Design]]></title>
     <link href="http://liggat.org/2013/12/24/a-new-design/"/>
-    <updated>2013-12-24T18:14:09-08:00</updated>
+    <updated>2013-12-24T21:14:09-05:00</updated>
     <id>http://liggat.org/2013/12/24/a-new-design</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve been using <a href="http://octopress.org">Octopress</a> as a blogging platform for over six months now, and can&rsquo;t recommend it enough for tech capable (or curious) writers. However, I&rsquo;ve never been fully happy with my minor adaptations to the default style. I finally got around to implementing an improved design.<!--more--></p>
 
@@ -70,7 +70,7 @@
   <entry>
     <title type="html"><![CDATA[Static Hosting on Amazon S3]]></title>
     <link href="http://liggat.org/2013/11/03/static-hosting-on-amazon-s3/"/>
-    <updated>2013-11-03T13:13:00-08:00</updated>
+    <updated>2013-11-03T13:13:00-05:00</updated>
     <id>http://liggat.org/2013/11/03/static-hosting-on-amazon-s3</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve had an outstanding <strong>todo</strong> for quite some time to migrate my basic and essentially-static <a href="http://www.factorialsystems.ca">business website</a> off of <a href="http://www.squarespace.com">Squarespace</a>. I ended up replacing it with a combination of <a href="http://octopress.org">Octopress</a> and Amazon Simple Storage Service (<a href="http://aws.amazon.com/s3">S3</a>), which, it turns out, are a fantastic duo.<!--more--></p>
 
@@ -128,7 +128,7 @@
   <entry>
     <title type="html"><![CDATA[Octopress.new]]></title>
     <link href="http://liggat.org/2013/07/14/octopress-dot-new/"/>
-    <updated>2013-07-14T13:43:00-07:00</updated>
+    <updated>2013-07-14T13:43:00-04:00</updated>
     <id>http://liggat.org/2013/07/14/octopress-dot-new</id>
     <content type="html"><![CDATA[<p>Just migrated my [meagre] blog content over from Tumblr to a brand new, shiny Octopress instance.</p>
 ]]></content>

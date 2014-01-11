@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Finance | liggat.org]]></title>
   <link href="http://liggat.org/blog/categories/finance/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2013-12-26T13:10:51-08:00</updated>
+  <updated>2014-01-11T18:13:09-05:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Efficient Currency Conversion]]></title>
     <link href="http://liggat.org/2013/09/06/efficient-currency-conversion/"/>
-    <updated>2013-09-06T09:52:00-07:00</updated>
+    <updated>2013-09-06T09:52:00-04:00</updated>
     <id>http://liggat.org/2013/09/06/efficient-currency-conversion</id>
     <content type="html"><![CDATA[<p>I&rsquo;m willing to bet that Canadians, on average, do more foreign exchange (forex) transactions than citizens of many other countries. This is an obvious consequence of the significant shopping and investing opportunities south of the <a href="http://en.wikipedia.org/wiki/49th_parallel_north#The_Canada_.E2.80.93_United_States_border">49th parallel</a>. Moreover, plenty of Canadian software contractors such as myself find themselves billing in American dollars (<span class="money usd">USD</span>) occasionally.</p>
 

@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Tweet Archive - liggat.org</title>
+  <title>Criticize Real-World NOOPs - liggat.org</title>
   <meta name="author" content="Dave Liggat">
 
   
-  <meta name="description" content="When Twitter announced in late 2012 that its users could download their tweet archive, it had a begrudging whiff about it. Given the company’s recent &hellip;">
+  <meta name="description" content="In the world of computation, a NOOP (No-Operation) is an instruction that has zero effect on the state of the machine. The term originally hails from &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://liggat.org/2013/05/07/tweet-archive">
+  <link rel="canonical" href="http://liggat.org/2014/01/08/criticize-real-world-noops">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="liggat.org" type="application/atom+xml">
@@ -85,7 +85,7 @@
   
   <header>
     
-      <h1 class="entry-title">Tweet Archive</h1>
+      <h1 class="entry-title">Criticize Real-World NOOPs</h1>
     
     
       <p class="meta">
@@ -101,16 +101,43 @@
   
 
 
-<time datetime="2013-05-07T09:55:00-04:00" pubdate data-updated="true">May 7<span>th</span>, 2013</time>  • <a rel="full-article" href="">&infin;</a> 
+<time datetime="2014-01-08T23:37:42-05:00" pubdate data-updated="true">January 8<span>th</span>, 2014</time>  • <a rel="full-article" href="">&infin;</a> 
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>When Twitter announced in late 2012 that its users could download their tweet archive, it had a begrudging whiff about it. Given the company’s recent heavy-handedness with API access for not only 3rd-party clients but also complementary services such as Flipboard, I was somewhat surprised it even arrived as promised months earlier. <!--more--> I have no insight into the machinations of Twitter Inc. whatsoever, but for some reason I imagine an executive suite very reluctant to relinquish sole ownership of the veritable treasure trove of historical tweets. However, the constant haranguing by their power users, as well as a general environment that frowns upon overtly blatant lock-in (Google Takeout and the Data Liberation Front do a pretty good job setting a decent industry standard here) probably swung the balance.</p>
+<div class="entry-content"><p>In the world of computation, a <em>NOOP</em> (<em>No-Op</em>eration) is an instruction that has zero effect on the state of the machine. The term originally hails from the esoteric world of CPU-architecture and instruction-sets<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, but the term is also used semi-colloquially as programmer shorthand for <strong>&lsquo;this achieves nothing&rsquo;</strong>.</p>
 
-<p>This leads me to speculate that Twitter didn’t foresee what an incredible enhancement to their product that Tweet Archive actually is. To look back at previous tweets, retweets and favourites is like a time machine for visiting my own personality in the past. It is truly fascinating to see what I was interested in <code>$X $TIME_UNITS</code> ago, and consequently, I’m tweeting, retweeting, and favouriting more now &ndash; just for the pure whimsical pleasure of viewing this data in the future. Twitter has relinquished a measure of control over its service, and has consequently ‘locked-in’, at least me, ever more. This feels like a nice all-around dynamic &ndash; they’ve given me more control over my data, and have managed to bring me closer into the fold as a user as a result.</p>
+<p>A very simple example in code might be in setting a variable to the difference of itself and zero (<code>x = x - 0</code>), but they tend, as a rule, to not be so obvious. On first glance, they <em>look</em> like useful work.</p>
+
+<p>Programmers regard NOOPs with suspicion. Good code reviewers will identify them, question their existence, and  demand exceptional justification for their continued presence. They are unwelcome in quality software not for their outcome &ndash; they do nothing after all &ndash; but because they <em>sow confusion</em>. On first glance, they appear to have a purpose; they subconsciously assuage concerns that might otherwise have been raised in their absence. Many a pernicious bug can be traced back to a NOOP that misled its programmers. A NOOP is a facade: an illusion of real work being performed.</p>
+
+<p>Lately I&rsquo;ve been thinking that the term might be applicable in the real-world also. Consider this story:</p>
+
+<h4><a href="http://rt.com/news/france-google-fine-privacy-339/">France hands down data privacy fine to Google</a></h4>
+
+<blockquote><p>French data protection watchdog CNIL fined Google 150,000 euros ($204,000) for ignoring its three-month deadline to align its
+practice of tracking and storing user information with the country’s law.</p></blockquote>
+
+<p>I&rsquo;m not commenting on<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>, or even particularly interested in this French legal ruling. That&rsquo;s for France and Google Inc to work out.</p>
+
+<p>But it seems to me that regardless of the fine&rsquo;s merit &ndash; imposing a €150,000 fine on a company which earns that amount in revenue every <em>two minutes</em><sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>, very closely fits the definition of a NOOP. It is the act of doing nothing masquerading as the act of doing something of significance. To an extremely close approximation, it is the judicial equivalent of subtracting zero from an integer.</p>
+
+<p>In its article, RT makes no effort to contextualize this, and it&rsquo;s not just a failing of theirs &ndash; it&rsquo;s frankly rare in news media. This is precisely the opposite of the programmer mentality: NOOPs are always to be identified as such, and their presence criticized. The world would greatly benefit from a culture that does a better job in <strong>pointing out pointlessness</strong>.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>An idle CPU can&rsquo;t actually do nothing, so they would traditionally just repeatedly execute the NOOP instruction in the absence of actual work to do. I suspect that&rsquo;s an oversimplification circa-2014 with the vast amounts of research that have gone into processor energy-efficiency.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>Disclosure: I&rsquo;m an ex-Google employee (departed on highly-amicable terms to pursue a Masters) and a long-time admirer of the firm, pre and post employment.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>Google has <a href="http://investor.google.com/financial/tables.html">yearly revenues</a> on the order of <code>$50,000,000,000</code>. There are <code>365 * 24 * 60 = 525,600</code> minutes per year. <code>$50B / 525.6k ~= $95k ~= €68k</code>. Two minutes revenue <code>~= €150k</code>.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
 </div>
 
 
@@ -133,12 +160,12 @@
   
 
 
-<time datetime="2013-05-07T09:55:00-04:00" pubdate data-updated="true">May 7<span>th</span>, 2013</time>
+<time datetime="2014-01-08T23:37:42-05:00" pubdate data-updated="true">January 8<span>th</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/tech-business/'>tech_business</a>, <a class='category' href='/blog/categories/twitter/'>twitter</a>
+    <a class='category' href='/blog/categories/media/'>media</a>
   
 </span>
 
@@ -147,7 +174,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://liggat.org/2013/05/07/tweet-archive/" data-via="" data-counturl="http://liggat.org/2013/05/07/tweet-archive/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://liggat.org/2014/01/08/criticize-real-world-noops/" data-via="" data-counturl="http://liggat.org/2014/01/08/criticize-real-world-noops/" >Tweet</a>
   
   
   
@@ -156,8 +183,8 @@
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/2013/12/24/a-new-design/" title="Previous Post: A New Design">&laquo; A New Design</a>
       
-        <a class="basic-alignment right" href="/2013/05/11/android-as-anti-platform/" title="Next Post: Android as Anti-Platform">Android as Anti-Platform &raquo;</a>
       
     </p>
   </footer>
@@ -197,8 +224,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://liggat.org/2013/05/07/tweet-archive/';
-        var disqus_url = 'http://liggat.org/2013/05/07/tweet-archive/';
+        var disqus_identifier = 'http://liggat.org/2014/01/08/criticize-real-world-noops/';
+        var disqus_url = 'http://liggat.org/2014/01/08/criticize-real-world-noops/';
         var disqus_script = 'embed.js';
       
     (function () {
