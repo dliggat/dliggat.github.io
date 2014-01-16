@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Tech Strategy | liggat.org]]></title>
+  <link href="http://liggat.org/blog/categories/tech-strategy/atom.xml" rel="self"/>
+  <link href="http://liggat.org/"/>
+  <updated>2014-01-15T23:30:38-05:00</updated>
+  <id>http://liggat.org/</id>
+  <author>
+    <name><![CDATA[Dave Liggat]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[In Charge of Windows 9]]></title>
+    <link href="http://liggat.org/2014/01/15/in-charge-of-windows-9/"/>
+    <updated>2014-01-15T17:23:19-05:00</updated>
+    <id>http://liggat.org/2014/01/15/in-charge-of-windows-9</id>
+    <content type="html"><![CDATA[<p>Peter, an old UBC classmate and frequent co-banterer on Twitter, randomly posed an interesting question to me earlier today:<!--more--></p>
+
+<blockquote class="twitter-tweet" lang="en"><p><a href="https://twitter.com/liggs">@liggs</a> Serious question: if you were put in charge of Windows 9 tomorrow, what would you do with it?</p>&mdash; Peter J. Cavan (@PJCavan) <a href="https://twitter.com/PJCavan/statuses/423564952683560960">January 15, 2014</a></blockquote>
+
+
+<script async src="http://liggat.org//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p>I immediately replied that I think this is the single most difficult strategic question in the tech industry today, moreso even than the challenge over at BlackBerry Inc. The response, assuming I can come up with one worth the bits it&rsquo;s written on, will definitely not fit into 140-characters. Hence, a blog post.</p>
+
+<p>The unlucky soul in charge of birthing Windows 9 has the following difficult truths to contend with:</p>
+
+<ol>
+<li>Selling operating systems to OEM-device manufacturers, as a business, is essentially dying. It&rsquo;s a sustainment business at best. This is the business model on which Windows ascended, and it&rsquo;s come to the end. There are now really only two ways to make money as an OS vendor &ndash; you wrap it in aluminum and glass and sell the whole device (Apple), or you give it away and own the market for the user&rsquo;s attention (Google). Microsoft has had a few punts at the Apple approach in the form of Zune and Surface, but has yet to set the world on fire doing this.</li>
+<li>Windows 8 has not been well received by its userbase, to put it mildly. I haven&rsquo;t actually used it myself, but in terms of reception, <em>Vista 2.0</em>, does not seem an unfair moniker. Aside from the bold user-interface change<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, apparently unloved by many, the RT/Pro distinction is <em>confusing as hell</em>.</li>
+<li>Mobile and tablets happened. Anyone still rattling on that iOS (or Android) is unsuitable for <em>real work™</em> is missing the point &ndash; mobile devices unbundle the Internet from the PC. Ten years ago, it was axiomatic that if you wanted to participate in online activities &ndash; Facebook, email and so on &ndash; you needed a PC, and that usually meant a Windows PC. <em>Tons</em> of PC use cases are being chipped away by more personal mobile devices, and that trend is only going to increase.</li>
+<li>All of that might not be so bad if Microsoft was a major player in mobile &ndash; but it isn&rsquo;t. Mobile as it stands is a duopoly between iOS and Android, and I&rsquo;m far from convinced there&rsquo;s room for a third stack. The undoubted merits of Microsoft&rsquo;s mobile and tablet efforts in the form of Windows Phone and Surface notwithstanding &ndash; these are not yet products with a non-trivial market-share, let alone mind-share.</li>
+<li>Anyone doubting any of the above need only refer to <a href="http://ben-evans.com/benedictevans/2013/7/20/the-irrelevance-of-microsoft">Microsoft&rsquo;s share</a> of Internet-connected devices: 90% down to 20% in just a few years.</li>
+</ol>
+
+
+<p>So what&rsquo;s a chief product manager of Windows 9 to do? I can&rsquo;t begin to do Peter&rsquo;s question justice, but I can offer a few humble suggestions:</p>
+
+<ul>
+<li>Windows 8 was a noble though misguided attempt to be all things to all people: multiple concepts all resident within a single device. However, we live in a <a href="http://mattgemmell.com/the-unacknowledged-compromise/">multi-device</a> world now. The machine one uses for AutoCAD design work with a mouse and keyboard needn&rsquo;t also be the same one that has a touch-enabled Twitter client in another layer. Windows 9 should therefore build upon the best parts of the generally-well-liked Windows 7, in the same way that, say, OS X Mavericks iterated upon OS X Mountain Lion &ndash; <em>without</em> attempting to change the paradigm. Better power-management, UI refinement, etc is the order of the day here.</li>
+<li>Forget touch. Windows has always been about keyboard/mouse input devices, and grafting a touch layer on top is pointless. No one wants to use touch on a laptop, or God-forbid, a desktop, anyway.</li>
+<li>Office remains an important business for Microsoft, and an important tool<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> for a ton of people. They are leaving a lot of money and future relevance on the table by not porting a first-class version to iOS (and Android), but even if they do &ndash; Windows should exist to provide a preeminent environment for complex applications like Office, and play to its keyboard/mouse/file-system strengths.</li>
+<li>This really shouldn&rsquo;t need to be said, but native PDF viewing in Windows is an idea whose time has come.</li>
+</ul>
+
+
+<p>Whoever ends up driving this project has my well wishes (and sympathies). From where I stand, it&rsquo;s hard not to see it as a <a href="http://en.wikipedia.org/wiki/Sisyphus">Sisyphean</a> task.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>I applauded the vision when Metro was first announced, but it was clear from the beginning that the outcome would either be spectacularly good or spectacularly bad, with very little room for an outcome in the middle.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>Well Excel is peerless anyway; I&rsquo;m less certain that anything other than organizational inertia keeps Word and PowerPoint in such widespread use.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+</feed>
