@@ -4,7 +4,7 @@
   <title><![CDATA[liggat.org]]></title>
   <link href="http://liggat.org/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2014-01-15T23:30:38-05:00</updated>
+  <updated>2014-02-01T11:44:25-05:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -12,6 +12,53 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Navigating Canadian Cellular Number Portability (in 8 Easy Steps)]]></title>
+    <link href="http://liggat.org/2014/01/30/navigating-canadian-cellular-number-portability/"/>
+    <updated>2014-01-30T22:47:12-05:00</updated>
+    <id>http://liggat.org/2014/01/30/navigating-canadian-cellular-number-portability</id>
+    <content type="html"><![CDATA[<p>Since 2007, Canadians have been afforded the right to migrate (&lsquo;port&rsquo;) their cellular <a href="http://en.wikipedia.org/wiki/Pstn">PSTN</a> number with them when they switch to a new cellular operator. The legislation which enacted this brought to bear a small reduction in <a href="http://en.wikipedia.org/wiki/Switching_barriers">switching costs</a> in a &lsquo;market&rsquo;<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> widely reputed for hostility towards its customers, not to mention, [at the very least] <em>perceived</em> collusion among the operators themselves.<!--more--></p>
+
+<p>Unfortunately, no matter which head of the <a href="https://www.google.ca/search?client=safari&amp;rls=en&amp;q=robelus">tripartite Cerberus</a> one ends up dealing with, this is far more hassle, and potentially more expensive, than it needs to be.</p>
+
+<p>Cellular services are paid for one month in advance, and when you initiate a port, <em>no matter when you initiate it</em>, your current operator will attempt to bill you for one final advance month. The rationale, they say, is that they need thirty days of notice. This would be semi-reasonable if there were some official way to give that notice ahead of time. There isn&rsquo;t. The only way, in their view, to give that notice is through the port itself. So you&rsquo;re stuck paying for a month of service that cannot actually be delivered.</p>
+
+<p>Let me repeat that: they demand thirty days of notice, but won&rsquo;t let you provide it in any way other than that which results in receiving a bill for an unnecessary month of undeliverable service. This is, obviously, bullshit. Here&rsquo;s how to get around it<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>:</p>
+
+<ol>
+<li>Ensure your contract is over, and you don&rsquo;t owe an early-termination fee for the device subsidy you likely received two or three years ago. e.g. if you signed up on <code>2010-03-13</code> with a three year contract, by <code>2013-03-14</code> you&rsquo;re definitely in the clear.</li>
+<li>Work out your billing cycle. This may or may not be explicitly stated on your invoice, but it generally covers your invoice date (e.g. the 15th of the month) plus 30 days.</li>
+<li>Two days before your invoice date (e.g. April 13th), phone your operator and tell them you are intending to cancel. You&rsquo;ll probably need to sit through a barrage of retention offers. <strong>It&rsquo;s important that they don&rsquo;t actually cancel right then</strong> &ndash; you may lose the service and number. Tell the retention agent that you intend to cancel, but that you will phone back if you wish to accept the retention offer. Record the agent&rsquo;s name, call reference number, and the current date/time.</li>
+<li>Use your phone as normal for another month.</li>
+<li>Again two days before your invoice date (e.g. now May 13th) sign up for service with your new operator (hopefully a better deal than your current one) and have them initiate a port of the number.</li>
+<li>Your previous operator will receive notice of the cancellation, and will issue a final bill covering any overage plus service from May 15th plus 30 days. This is the service they cannot actually provide, yet still bill for.</li>
+<li>Now the real fun begins: phone the original operator to complain about the bill for undeliverable service. They will tell you that they require thirty days of notice for cancellations. Mention your &lsquo;notice&rsquo; call &ndash; done a month ago in step (3). They will say it doesn&rsquo;t count. Escalate to a manager. Patiently explain that the company is billing for something that it cannot possibly provide (the number is gone). Prepare to be the recipient of a deeply-flawed, logically-inconsistent argument about why it makes sense to be billed for this. End the call in despair, but again, ensure to record the agent&rsquo;s name, call reference number, and the current date/time.</li>
+<li>Visit the <a href="https://www.ccts-cprst.ca/en/complaints/complaint-form">CCTS</a> (the Commissioner for Complaints for Telecommunications Services). Create a new complaint. Explain the timeline<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup> of events, and be sure to mention the particular timestamps and call reference numbers.</li>
+</ol>
+
+
+<p>In a few days time &ndash; expect to receive an incredibly cordial and understanding call from the operator&rsquo;s Office of the President or similar Ombudsman-type department. This person will explain that the other agents were mistaken, and that you are in the right. They will happily nullify the &lsquo;erroneous&rsquo; charge and graciously thank you for your time.</p>
+
+<p>This is <strong>nuts</strong> of course &ndash; but this elaborate dance is what&rsquo;s required of you if you want to port without paying for two sets of service for a month. One could be forgiven for believing this was an isolated incident, <a href="https://www.google.ca/search?q=rogers+port+ccts&amp;oq=rogers+port+ccts">but it definitely isn&rsquo;t</a>. Hell &ndash; I learned how to do all this by piecing it together from other anecdotes online.</p>
+
+<p>There&rsquo;s no panacea to fixing telecom in Canada<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>, but I&rsquo;m happy to accept small victories where I can.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>I use the term loosely.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>I went through this whole dance recently with Rogers, but singling them out only really serves to substantiate the fiction that these are three separate, competitive enterprises. There&rsquo;s virtually no daylight between the three operators on most issues of any import.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>Pro tip: <a href="https://evernote.com">Evernote</a> is an excellent tool for tracking things like this.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p>You can remove the protectionism, but Canada&rsquo;s size, geography, and low population density guarantee it will always be a difficult country when it comes to infrastructure.<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[In Charge of Windows 9]]></title>
