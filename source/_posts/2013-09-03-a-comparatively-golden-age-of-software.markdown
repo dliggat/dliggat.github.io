@@ -4,6 +4,7 @@ title: "A Golden Age of Software"
 date: 2013-09-03 17:57
 comments: true
 categories: software
+description: The high quality of contemporary software.
 ---
 As someone to whom pessimism and cynicism come naturally, I'm often more inclined to complain about things than sit and reflect on positivity. However, I think it's worth taking a moment to acknowledge one thing: we live in a golden age of software right now, at least relative to any point in the past.
 <!--more-->

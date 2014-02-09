@@ -4,6 +4,7 @@ title: "Navigating Canadian Cellular Number Portability (in 8 Easy Steps)"
 date: 2014-01-30 22:47:12 -0500
 comments: true
 categories: ["canadian telecom", canada, cellular, rogers]
+description: How to port a Canadian cellular number at minimal cost.
 ---
 Since 2007, Canadians have been afforded the right to migrate ('port') their cellular [PSTN](http://en.wikipedia.org/wiki/Pstn) number with them when they switch to a new cellular operator. The legislation which enacted this brought to bear a small reduction in [switching costs](http://en.wikipedia.org/wiki/Switching_barriers) in a 'market'[^1] widely reputed for hostility towards its customers, not to mention, [at the very least] *perceived* collusion among the operators themselves.<!--more-->
 

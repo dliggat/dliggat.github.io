@@ -4,6 +4,7 @@ title: "Paperless, Finally"
 date: 2013-07-21 13:33
 comments: true
 categories: workflows paperless evernote
+description: How my paperless workflow works.
 ---
 I'm sick to death of accumulating useless paper detritus. I've fantasized for quite a while about finally finding a 'paperless' workflow that will work well for me now and, _crucially_, many years (decades) into the future. After reading posts on [similar](http://shawnblanc.net/2012/09/the-paperless-puzzel/) [initiatives](http://speirs.org/blog/2012/6/25/book-scanning.html), I think I've got it. I figured I'd document it here, mostly as an exercise in [rubber-duck debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging) of sorts.<!--more-->
 

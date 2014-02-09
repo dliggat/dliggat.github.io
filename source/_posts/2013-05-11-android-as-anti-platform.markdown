@@ -4,6 +4,7 @@ title: "Android as Anti-Platform"
 date: 2013-05-11 09:55
 comments: true
 categories: mobile android
+description: Samsung's impact on Android.
 ---
 It feels awkward to criticize Android as the owner of several physical manifestations of the pride of Cupertino. That ownership seems to irrevocably wash away any possibility of one’s objectivity in the court of Android opinion, despite what ought to count as pretty good “Android credentials" (I’m a happy alumni of the G1, Nexus One, HTC Desire HD and Nexus 7, and participated in beta-testing/review of the G1 before it was announced as a consumer product). <!--more--> And yet, it’s impossible for me not to voice displeasure at what Samsung is now up to:
 

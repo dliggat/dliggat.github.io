@@ -4,6 +4,7 @@ title: "Canadian Housing: Noting For Posterity"
 date: 2013-12-15 08:52
 comments: true
 categories: canada housing economics
+description: Noting for posterity the state of Canadian real estate.
 ---
 I'm posting the following chart from [BCA Research](http://blog.bcaresearch.com/canadian-housing-the-bubble-debate) not for the purposes of persuasion, but rather, for posterity.<!--more-->
 

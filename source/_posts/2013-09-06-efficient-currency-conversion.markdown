@@ -3,7 +3,7 @@ layout: post
 title: "Efficient Currency Conversion"
 date: 2013-09-06 09:52
 comments: true
-description: Efficent USDCAD currency conversion using Norbert's Gambit
+description: Efficent USDCAD and vice versa currency conversion using Norbert's Gambit.
 categories: finance forex
 ---
 I'm willing to bet that Canadians, on average, do more foreign exchange (forex) transactions than citizens of many other countries. This is an obvious consequence of the significant shopping and investing opportunities south of the [49th parallel][49]. Moreover, plenty of Canadian software contractors such as myself find themselves billing in American dollars (<span class="money usd">USD</span>) occasionally.

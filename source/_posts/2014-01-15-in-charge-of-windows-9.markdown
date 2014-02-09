@@ -4,6 +4,7 @@ title: "In Charge of Windows 9"
 date: 2014-01-15 17:23:19 -0500
 comments: true
 categories: ["tech strategy", microsoft]
+description: Microsoft's future in Windows 9.
 ---
 
 Peter, an old UBC classmate and frequent co-banterer on Twitter, randomly posed an interesting question to me earlier today:<!--more-->

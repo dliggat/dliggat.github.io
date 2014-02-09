@@ -4,6 +4,7 @@ title: "Static Hosting on Amazon S3"
 date: 2013-11-03 13:13
 comments: true
 categories: blogging octopress aws
+description: Hosting on Amazon S3.
 ---
 I've had an outstanding **todo** for quite some time to migrate my basic and essentially-static [business website](http://www.factorialsystems.ca) off of [Squarespace](http://www.squarespace.com). I ended up replacing it with a combination of [Octopress](http://octopress.org) and Amazon Simple Storage Service ([S3][s3]), which, it turns out, are a fantastic duo.<!--more-->
 

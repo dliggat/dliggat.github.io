@@ -4,6 +4,7 @@ title: "Criticize Real-World NOOPs"
 date: 2014-01-08 23:37:42 -0500
 comments: true
 categories: media
+description: NOOPs in real life.
 ---
 In the world of computation, a *NOOP* (*No-Op*eration) is an instruction that has zero effect on the state of the machine. The term originally hails from the esoteric world of CPU-architecture and instruction-sets[^1], but the term is also used semi-colloquially as programmer shorthand for **'this achieves nothing'**.<!--more-->
 

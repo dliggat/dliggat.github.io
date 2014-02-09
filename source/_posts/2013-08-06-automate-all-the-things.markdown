@@ -5,6 +5,7 @@ date: 2013-08-06 13:04
 comments: true
 published: true
 categories: workflows automation github boxen
+description: Automation of OS X developer environment using boxen.
 ---
 I've spent much of my career in software with automation an implicit and often explicit goal: in testing, in environment creation and deployments, in backups, etc. A conspicuous absence from this list has been the actual development machines I spend many hours each day using, which for me are my Mac desktop and laptop, and occasionally a VM or two. Traditionally, these have ended up at their working state through hours upon hours of gentle tinkering. It's a case of the cobbler's children having no shoes[^1], I suppose.
 <!--more-->

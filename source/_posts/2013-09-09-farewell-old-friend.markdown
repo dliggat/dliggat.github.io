@@ -4,6 +4,7 @@ title: "Farewell, old friend"
 date: 2013-09-09 15:39
 comments: false
 categories: mobile
+description: How my iPhone home screen looks pre-iOS7.
 ---
 iOS 7[^1] and a new iPhone are imminent. <!--more--> Tomorrow is Apple Christmas Morning.
 

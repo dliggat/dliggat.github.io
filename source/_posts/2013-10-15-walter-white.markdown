@@ -4,6 +4,7 @@ title: "Walter White, Art Aficionado"
 date: 2013-10-15 10:41
 comments: true
 categories: breaking_bad tv
+description: A nice artistic touch in Breaking Bad.
 ---
 I've been re-watching *Breaking Bad*, one of my favourite television dramas, ever. Yesterday, midway through an early second season episode, I noticed a connection to a much later point in the story that I haven't seen discussed anywhere else.
 <!--more-->
