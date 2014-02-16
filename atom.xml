@@ -4,7 +4,7 @@
   <title><![CDATA[liggat.org]]></title>
   <link href="http://liggat.org/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2014-02-09T15:39:00-05:00</updated>
+  <updated>2014-02-16T12:37:22-05:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -12,6 +12,62 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Taking a Stand With Work]]></title>
+    <link href="http://liggat.org/2014/02/16/taking-a-stand-with-work/"/>
+    <updated>2014-02-16T10:21:59-05:00</updated>
+    <id>http://liggat.org/2014/02/16/taking-a-stand-with-work</id>
+    <content type="html"><![CDATA[<p>Being a so-called <em>knowledge worker</em> comes with at least one very substantial downside: there is a fundamental lack of physical activity built into the job<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, and long sedentary periods are commonplace. I&rsquo;ve been very cognizant of this for a long time, and do my best to actively combat it with daily exercise, gym routines, etc. While those help substantially, they do not alter the basic reality that one tends to be sitting in a chair for many hours, staring at a screen.</p>
+
+<!--more-->
+
+
+<p>To make matters worse, there appears to be <a href="http://www.nytimes.com/2011/04/17/magazine/mag-17sitting-t.html?_r=0">growing evidence</a> that excessive sitting is pathological all on its own:</p>
+
+<blockquote><p>Sitting, it would seem, is an independent pathology. Being sedentary for nine hours a day at the office is bad for your health whether you go home and watch television afterward or hit the gym. It is bad whether you are morbidly obese or marathon-runner thin. “Excessive sitting,” Dr. Levine says, “is a lethal activity.”</p></blockquote>
+
+<p>Whether or not that hypothesis is even true &ndash; inherently it simply doesn&rsquo;t <em>feel</em> good to sit this much<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>. Two weeks ago, I decided to switch to a standing desk, and I don&rsquo;t think I will ever look back.</p>
+
+<h3>The Trial Run</h3>
+
+<p>A purpose-built <a href="http://thewirecutter.com/reviews/the-best-standing-desks/">standing desk</a> will run you around $1,000, or more. These high end models tend to be motorized and can memorize different configurations &ndash; so you can mode-switch between the ideal standing height and the ideal sitting height. While that sounds great, and while the cost can be easily justified on both amortization as well as &lsquo;mattress logic&rsquo;<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup> grounds &ndash; it&rsquo;s a lot of money to drop without even knowing if it&rsquo;s a good fit. Enter, the trial run.</p>
+
+<p>Via <a href="http://chambersdaily.com/bradleychambers/2013/11/21/building-a-standing-desk-on-the-cheap">Bradley Chambers</a>, I found <a href="http://iamnotaprogrammer.com/Ikea-Standing-desk-for-22-dollars.html">Colin Nederkoorn&rsquo;s</a> instructions for building a standing desk with $22 USD ($30 CAD up here) worth of Ikea parts. I ordered these same parts and followed Colin&rsquo;s directions to build the basic framework that sits on top of my existing desk. The result:</p>
+
+<p><img class="center" src="http://liggat.org/images/2014/desk.jpg" width="500" title="'Homemade Standing Desk'" ></p>
+
+<p>It&rsquo;s not the most attractive thing in the world, and does not permit a quick mode-switch between sitting and standing &ndash; but it&rsquo;s hard to argue with the cost of entry as a way to trial the experience of a standing-desk.</p>
+
+<h3>The Result</h3>
+
+<p>I&rsquo;ve used this now for two weeks. Without exaggeration, I cannot ever see myself going back to a standard desk arrangement. The first couple of days were a bit more tiring than usual, as my body adjusted to the change. A few days later, it feels completely natural. Quite apart from the physical benefit of standing versus sitting, I&rsquo;ve found that standing imparts a greater sense of purpose to my current task: as if I&rsquo;m subconsciously striving towards completion before fatigue can arrive.</p>
+
+<p>In practice, I don&rsquo;t actually stand the whole day &ndash; perhaps only 75%. I have meals sitting down of course, and take a few short sitting breaks during the day &ndash; usually at periods of planning or design. This has the secondary benefit of taking me away from the keyboard to exclusively focus on design itself.</p>
+
+<p>In the medium-term timeframe, I&rsquo;ll almost certainly switch to a &lsquo;real&rsquo; standing desk. For now, this is a great way to work.</p>
+
+<h3>Social Norms?</h3>
+
+<p>I work from home and have the luxury of arranging my own workspace. I could work from an inflatable rubber-dinghy if I so chose, and there would be nothing stopping me from doing so.</p>
+
+<p>Most people are not this lucky. They work at the desk and chair that their employer provides, and it would be frankly odd to be the lone oddball standing beside the Ikea contraption<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>, as everyone else hunches over their desk. I can only hope that the dual forces of sitting-health-research, and remote-work-acceptance will drive us all towards more flexible, personal ergonomic arrangements.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>Unlike, say, an electrician or a nurse. Hat tip, little brother and little sister.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>Despite having a good Herman-Miller chair in my home office.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>&ldquo;You use this a lot so get a good one.&rdquo;<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p>Assuming &lsquo;Health &amp; Safety&rsquo; even let the thing in the front door, which is not necessarily probable.<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Navigating Canadian Cellular Number Portability (in 8 Easy Steps)]]></title>
