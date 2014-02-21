@@ -8,7 +8,7 @@ description: Contact details for Dave Liggat
 # Contact
 
 ### Twitter
-* [@liggs](https://twitter.com/liggs): My canonical online identity. Mostly used as a news aggregator, with occasional inane observations and retweets. Posted photos end up [here](http://instagram.com/dliggat).
+* [@dliggat](https://twitter.com/dliggat): My canonical online identity. Mostly used as a news aggregator, with occasional inane observations and retweets. Posted photos end up [here](http://instagram.com/dliggat).
 * [@liggat_org](https://twitter.com/liggat_org): An [IFTTT](http://ifttt.com)-generated feed of this site's items.
 
 ### GitHub
