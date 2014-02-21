@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Twitter | liggat.org]]></title>
   <link href="http://liggat.org/blog/categories/twitter/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2014-02-19T11:17:09-05:00</updated>
+  <updated>2014-02-20T23:43:28-05:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -12,6 +12,31 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[@liggs Is Now @dliggat]]></title>
+    <link href="http://liggat.org/2014/02/20/at-liggs-is-now-at-dliggat/"/>
+    <updated>2014-02-20T23:20:23-05:00</updated>
+    <id>http://liggat.org/2014/02/20/at-liggs-is-now-at-dliggat</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve changed my Twitter handle from @liggs to <a href="https://twitter.com/dliggat">@dliggat</a>, as part of a general username consolidation that&rsquo;s been nagging me for a while. I figured it was worth marking the <em>occasion</em> with a site entry, given how much I use Twitter.</p>
+
+<!--more-->
+
+
+<p>In case you&rsquo;re wondering, it&rsquo;s quite easy to swap two Twitter handles with a <a href="http://en.wikipedia.org/wiki/Swap_(computer_science)#Using_a_temporary_variable">3-way switch</a>, so long as you control both handles.</p>
+
+<ol>
+<li>In one browser, I opened <strong>@dliggat</strong> to <a href="https://twitter.com/settings/account">https://twitter.com/settings/account</a></li>
+<li>In a seperate browser (Chrome instead of Safari in my case, but a <a href="http://en.wikipedia.org/wiki/Privacy_mode">private browser</a> session would work also) I also opened <strong>@liggs</strong> to <a href="https://twitter.com/settings/account">https://twitter.com/settings/account</a></li>
+<li>I renamed <strong>@dliggat</strong> to <em>@dliggattemp</em>. Once this is confirmed, the next two steps need to be completed as quickly as possible.</li>
+<li>I renamed <strong>@liggs</strong> to <strong>@dliggat</strong>.</li>
+<li>I renamed <em>@dliggattemp</em> to <strong>@liggs</strong>.</li>
+</ol>
+
+
+<p>It all worked out without a hitch. <a href="https://twitter.com/dliggat">@dliggat</a> it is from now on.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Tweet Archive]]></title>
