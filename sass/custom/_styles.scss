@@ -47,6 +47,7 @@ body {
     }
     hgroup {
       h1 {
+        text-transform: lowercase;
         a, a:hover, a:visited {
           font-size: 0.9em;
           color: $header-color;
