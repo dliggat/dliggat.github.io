@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Android | liggat.org]]></title>
+  <title><![CDATA[Category: Android | Liggat.org]]></title>
   <link href="http://liggat.org/blog/categories/android/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2014-02-20T23:43:28-05:00</updated>
+  <updated>2014-02-23T14:14:52-05:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>

@@ -1,0 +1,11 @@
+/* TEAM */
+Your title: Dave Liggat
+Site: http://liggat.org
+Twitter: @dliggat
+Location: Vancouver and Montreal, Canada
+
+/* SITE */
+Last update: 2014-02-23 14:14:52 -0500
+Standards: HTML5, CSS3
+Components: jQuery, Bigfoot
+Software: Octopress, Rake, Compass
