@@ -79,6 +79,6 @@ While I'm happy with this system for me (and eventually I'll roll it out to my f
 [ruby]: https://gist.github.com/dliggat/9677631
 
 [^1]: They were never very good, anyway.
-[^2]: It is generally a bad idea to rely on these type of programs if you care about accessing your data in the distance future. It will likely be inordinately difficult to read a circa-2014 iPhoto library in 2024. I make an [exception](http://liggat.org/2013/07/21/paperless/) in the case of Evernote.
+[^2]: It is generally a bad idea to rely on these type of programs if you care about accessing your data in the distant future. It will likely be difficult, or at best inconvenient, to read a circa-2014 iPhoto library in 2024. I make an [exception](http://liggat.org/2013/07/21/paperless/) in the case of Evernote.
 [^3]: So far this doesn't really apply, as the only camera I use is my iPhone 5s. I hung up my SLR a few years ago.
 [^4]: Ideally I wouldn't be relying on two separate cloud-storage providers, but the combination of Google Drive pricing and Dropbox functionality is compelling. Future changes will be easy, anyhow, depending on how the storage market evolves.
