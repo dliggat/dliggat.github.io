@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Google Drive | Liggat.org]]></title>
+  <link href="http://liggat.org/blog/categories/google-drive/atom.xml" rel="self"/>
+  <link href="http://liggat.org/"/>
+  <updated>2014-03-20T23:54:00-04:00</updated>
+  <id>http://liggat.org/</id>
+  <author>
+    <name><![CDATA[Dave Liggat]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[A Robust Photo Workflow]]></title>
+    <link href="http://liggat.org/2014/03/20/a-robust-photo-workflow/"/>
+    <updated>2014-03-20T21:11:09-04:00</updated>
+    <id>http://liggat.org/2014/03/20/a-robust-photo-workflow</id>
+    <content type="html"><![CDATA[<p>With the proliferation of smartphones, most people now have an excellent camera with them at all times, and are taking many more photographs per year than ever before.<!--more--></p>
+
+<p>However, the current state of photo management on contemporary desktop and mobile operating systems is, frankly, abysmal. Apple, previously the standards-bearer in this arena through the mid-2000s with their <a href="http://www.youtube.com/watch?v=9046oXrm7f8">digital hub</a> strategy, seems to have lost interest in maintaining iPhoto and Aperture as serious photo asset management tools<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>. Adobe Lightroom is expensive, complex and unnecessary for most non-professional purposes. Everpix, sadly, <a href="http://www.theverge.com/2013/11/5/5039216/everpix-life-and-death-inside-the-worlds-best-photo-startup">failed</a> to build a business around photo management.</p>
+
+<h3>Requirements</h3>
+
+<p>So what&rsquo;s the answer? I wanted a way to manage my past and future photos with the following characteristics:</p>
+
+<ol>
+<li>Every photo in my collection (over 10,000 and counting since 2003), and every photo I take from now on, should be preserved by default in an archive with its <a href="http://en.wikipedia.org/wiki/Metadata">metadata</a> intact.</li>
+<li>This archive should have a robust local and offsite backup strategy &ndash; photographs are irreplaceable, and their value to the creator increases with time.</li>
+<li>This archive should be as futureproof as possible &ndash; I want to be able to view my photos at any point in the future regardless of device, machine migration, etc.</li>
+<li>I should have the ability to view any photo in my collection from a mobile device, i.e. my iPhone or iPad, without having it cached locally.</li>
+<li>It should be painless and hassle-free to add new photos into the archive, and thus the backup process.</li>
+</ol>
+
+
+<p>Inspired by <a href="http://www.macstories.net/tutorials/my-photo-management-workflow-early-2014/">Federico Viticci</a>, I&rsquo;ve migrated my photo library to a new system and ongoing process that works really well for me.</p>
+
+<h3>iPhoto => Files &amp; Directories</h3>
+
+<p>Requirement 3, at a stroke, entirely disqualifies database-based applications<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> like iPhoto. As my accumulated photo library was sitting in the increasingly-creaky iPhoto, the first step was to export the original <code>.jpg</code> files. The archive is therefore maintained as a set of files and directories going forward, and is thus highly future-proof.</p>
+
+<p>The single most critical piece of metadata about a photograph is its creation date. Without this, it is inordinately difficult to find a particular photo, or preserve a sense of the original chronology of a series.</p>
+
+<p>Unfortunately, file system metadata is insufficient as a repository for this signal. Machine migrations, underlying file system changes, and general <a href="http://en.wikipedia.org/wiki/Software_rot">bit rot</a> conspire to render this inadequate and fragile. Therefore, it makes sense to encode a photograph&rsquo;s creation date, available in the exif data, right inside its filename.</p>
+
+<p><a href="http://www.sno.phy.queensu.ca/~phil/exiftool/">Exiftool</a>, available in <a href="http://brew.sh/">Homebrew for OS X</a> is a great way to achieve this. After exporting from iPhoto, I was able to rename each file:</p>
+
+<pre><code>exiftool "-FileName&lt;CreateDate" -d "%Y-%m-%d_%H-%M-%S%%-c.%%le" export
+</code></pre>
+
+<h3>Binning the Files</h3>
+
+<p>The above operation resulted in a directory with 10,000 <code>.jpg</code> files with an <a href="http://en.wikipedia.org/wiki/Iso8601#General_principles">ISO8601</a>-like filename, e.g.: <code>2011-02-03_16-12-11.jpg</code>. A bit unwieldy, but chronological and consistent. The next step was to separate these files by month, which I accomplished with a simple bit of Ruby (original on <a href="https://gist.github.com/dliggat/9677631">GitHub</a>):</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>photo_bin.rb: A ruby script to bin photos by year-month directories </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="no">Dir</span><span class="o">.</span><span class="n">glob</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="c1">#{root_dir}/&lt;em&gt;.jpg&amp;rdquo; do |file|</span>
+</span><span class='line'>  <span class="n">match</span> <span class="o">=</span> <span class="sr">/.&lt;/em</span><span class="o">&gt;</span><span class="sc">?(</span><span class="p">\</span><span class="n">d</span><span class="p">\</span><span class="n">d</span><span class="p">\</span><span class="n">d</span><span class="p">\</span><span class="n">d</span><span class="p">)</span><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;(\</span><span class="n">d</span><span class="p">\</span><span class="n">d</span><span class="p">)</span><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;\</span><span class="n">d</span><span class="p">\</span><span class="n">d_</span><span class="p">\</span><span class="n">d</span><span class="p">\</span><span class="n">d</span><span class="o">-</span><span class="p">\</span><span class="n">d</span><span class="p">\</span><span class="n">d</span><span class="o">-</span><span class="p">\</span><span class="n">d</span><span class="p">\</span><span class="n">d</span><span class="o">.</span><span class="n">*</span><span class="o">.</span><span class="n">jpg</span><span class="vg">$/</span><span class="o">.</span><span class="n">match</span> <span class="n">file</span>
+</span><span class='line'>  <span class="k">raise</span> <span class="no">ArgumentError</span><span class="o">.</span><span class="n">new</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="no">File</span> <span class="n">did</span> <span class="ow">not</span> <span class="ss">match</span><span class="p">:</span> <span class="c1">#{file}&amp;rdquo; unless match&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>  <span class="n">year</span>           <span class="o">=</span> <span class="n">match</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span>
+</span><span class='line'>  <span class="n">month</span>          <span class="o">=</span> <span class="n">match</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span>
+</span><span class='line'>  <span class="n">month_abbr</span>     <span class="o">=</span> <span class="ss">Date</span><span class="p">:</span><span class="ss">:MONTHNAMES</span><span class="o">[</span><span class="n">month</span><span class="o">.</span><span class="n">to_i</span><span class="o">][</span><span class="mi">0</span><span class="o">.</span><span class="n">.</span><span class="mi">2</span><span class="o">]</span>
+</span><span class='line'>  <span class="n">photo_dir_name</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="c1">#{year}&amp;ndash;#{month}&amp;ndash;#{month_abbr}&amp;rdquo;</span>
+</span><span class='line'>  <span class="n">photo_abs_dir</span>  <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">join</span> <span class="n">root_dir</span><span class="p">,</span> <span class="n">photo_dir_name</span>
+</span><span class='line'>  <span class="n">abs_file</span>       <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">expand_path</span> <span class="n">file</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;  Dir.mkdir photo_abs_dir unless Dir.exist? photo_abs_dir</span>
+</span><span class='line'><span class="sr">  FileUtils.mv abs_file, photo_abs_dir</span>
+</span><span class='line'><span class="sr">end&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h3>Storage, Backup, Viewing</h3>
+
+<p>I decided that the best place to actually store this [so-far] 55GB archive was on Google Drive. This has a few benefits:</p>
+
+<ul>
+<li><strong>Cheap</strong>: At $2 per month for 100GB of storage as of the <a href="http://googleblog.blogspot.ca/2014/03/save-more-with-google-drive.html">recent price drop</a>, it&rsquo;s hard to argue with the price.</li>
+<li><strong>Local and Offsite Backup</strong>: These files live locally in <code>~/GoogleDrive</code> and therefore get subsumed into my wireless home network backups, but also have a disaster-mitigating copy on the cloud.</li>
+<li><strong>Mobile Viewing</strong>: The iOS Google Drive app has quietly become a really high-quality piece of iOS software. It&rsquo;s a capable photo viewing app, and easily satisfies the mobile-viewing requirement (though I&rsquo;d like to see <a href="http://unboundapp.com/">Unbound</a> support it eventually also).</li>
+</ul>
+
+
+<p><img class="center" src="/images/2014/gd.png" width="600" title="&lsquo;Google Drive&rsquo;" ></p>
+
+<h3>Dealing with New Photos</h3>
+
+<p>All of this so far covers requirements 1 through 4 splendidly. However, it&rsquo;s all a bit pointless if new photos aren&rsquo;t subsumed into this system on a hassle-free, ongoing basis. The final puzzle piece is also the most convoluted, but so far it seems to be holding up nicely:</p>
+
+<ol>
+<li>Take advantage of Dropbox&rsquo;s Camera Upload<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup> functionality to send new photos over WiFi from my iPhone to the <code>~/Dropbox/Camera Uploads</code> directory on my Mac. This will happen in the background occasionally without any intervention from me, or I can trigger it manually whenever I want. Of course, <code>.jpg</code> files from other cameras can be placed here also<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>.</li>
+<li>Use <a href="http://www.noodlesoft.com/hazel">Hazel</a> to watch that directory and segregate iOS screenshots (no need to archive those) and videos (I&rsquo;m still deciding how they should be handled), and then rename all <code>.jpg</code> files to the ISO8601-style format above. In this case, given the recency, it is reasonable to rely on the file metadata to encode the creation date in the filename.</li>
+<li>Again with Hazel watching that directory, send those renamed files to <code>~/GoogleDrive/Photos</code>.</li>
+<li>Another Hazel rule watching <code>~/GoogleDrive/Photos</code> will &ldquo;sort into subfolders&rdquo; and place each file into its appropriate year-month directory (e.g. <code>2014-03-Mar</code>), creating that directory if necessary.</li>
+</ol>
+
+
+<p><img class="center" src="/images/2014/hazel.png" width="600" title="&lsquo;Hazel&rsquo;" ></p>
+
+<p>That&rsquo;s it! The archive is consistent, future-proof, viewable and has a strong backup-strategy &ndash; and all new photos from now on have a frictionless pathway into it.</p>
+
+<p>While I&rsquo;m happy with this system for me (and eventually I&rsquo;ll roll it out to my family) Apple, Google, Microsoft, et al really need to solve this problem for their customers. Photos are precious, and people, as a rule, are far worse at ensuring the longevity of bits than paper.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>They were never very good, anyway.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>It is generally a bad idea to rely on these type of programs if you care about accessing your data in the distance future. It will likely be inordinately difficult to read a circa-2014 iPhoto library in 2024. I make an <a href="http://liggat.org/2013/07/21/paperless/">exception</a> in the case of Evernote.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>Ideally I wouldn&rsquo;t be relying on two separate cloud-storage providers, but the combination of Google Drive pricing and Dropbox functionality is compelling. Future changes will be easy, anyhow, depending on how the storage market evolves.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p>So far this doesn&rsquo;t really apply, as the only camera I use is my iPhone 5s. I hung up my SLR a few years ago.<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+</feed>

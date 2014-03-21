@@ -4,7 +4,7 @@
   <title><![CDATA[Liggat.org]]></title>
   <link href="http://liggat.org/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2014-02-23T14:14:52-05:00</updated>
+  <updated>2014-03-20T23:54:00-04:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -12,6 +12,126 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[A Robust Photo Workflow]]></title>
+    <link href="http://liggat.org/2014/03/20/a-robust-photo-workflow/"/>
+    <updated>2014-03-20T21:11:09-04:00</updated>
+    <id>http://liggat.org/2014/03/20/a-robust-photo-workflow</id>
+    <content type="html"><![CDATA[<p>With the proliferation of smartphones, most people now have an excellent camera with them at all times, and are taking many more photographs per year than ever before.<!--more--></p>
+
+<p>However, the current state of photo management on contemporary desktop and mobile operating systems is, frankly, abysmal. Apple, previously the standards-bearer in this arena through the mid-2000s with their <a href="http://www.youtube.com/watch?v=9046oXrm7f8">digital hub</a> strategy, seems to have lost interest in maintaining iPhoto and Aperture as serious photo asset management tools<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>. Adobe Lightroom is expensive, complex and unnecessary for most non-professional purposes. Everpix, sadly, <a href="http://www.theverge.com/2013/11/5/5039216/everpix-life-and-death-inside-the-worlds-best-photo-startup">failed</a> to build a business around photo management.</p>
+
+<h3>Requirements</h3>
+
+<p>So what&rsquo;s the answer? I wanted a way to manage my past and future photos with the following characteristics:</p>
+
+<ol>
+<li>Every photo in my collection (over 10,000 and counting since 2003), and every photo I take from now on, should be preserved by default in an archive with its <a href="http://en.wikipedia.org/wiki/Metadata">metadata</a> intact.</li>
+<li>This archive should have a robust local and offsite backup strategy &ndash; photographs are irreplaceable, and their value to the creator increases with time.</li>
+<li>This archive should be as futureproof as possible &ndash; I want to be able to view my photos at any point in the future regardless of device, machine migration, etc.</li>
+<li>I should have the ability to view any photo in my collection from a mobile device, i.e. my iPhone or iPad, without having it cached locally.</li>
+<li>It should be painless and hassle-free to add new photos into the archive, and thus the backup process.</li>
+</ol>
+
+
+<p>Inspired by <a href="http://www.macstories.net/tutorials/my-photo-management-workflow-early-2014/">Federico Viticci</a>, I&rsquo;ve migrated my photo library to a new system and ongoing process that works really well for me.</p>
+
+<h3>iPhoto => Files &amp; Directories</h3>
+
+<p>Requirement 3, at a stroke, entirely disqualifies database-based applications<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> like iPhoto. As my accumulated photo library was sitting in the increasingly-creaky iPhoto, the first step was to export the original <code>.jpg</code> files. The archive is therefore maintained as a set of files and directories going forward, and is thus highly future-proof.</p>
+
+<p>The single most critical piece of metadata about a photograph is its creation date. Without this, it is inordinately difficult to find a particular photo, or preserve a sense of the original chronology of a series.</p>
+
+<p>Unfortunately, file system metadata is insufficient as a repository for this signal. Machine migrations, underlying file system changes, and general <a href="http://en.wikipedia.org/wiki/Software_rot">bit rot</a> conspire to render this inadequate and fragile. Therefore, it makes sense to encode a photograph&rsquo;s creation date, available in the exif data, right inside its filename.</p>
+
+<p><a href="http://www.sno.phy.queensu.ca/~phil/exiftool/">Exiftool</a>, available in <a href="http://brew.sh/">Homebrew for OS X</a> is a great way to achieve this. After exporting from iPhoto, I was able to rename each file:</p>
+
+<pre><code>exiftool "-FileName&lt;CreateDate" -d "%Y-%m-%d_%H-%M-%S%%-c.%%le" export
+</code></pre>
+
+<h3>Binning the Files</h3>
+
+<p>The above operation resulted in a directory with 10,000 <code>.jpg</code> files with an <a href="http://en.wikipedia.org/wiki/Iso8601#General_principles">ISO8601</a>-like filename, e.g.: <code>2011-02-03_16-12-11.jpg</code>. A bit unwieldy, but chronological and consistent. The next step was to separate these files by month, which I accomplished with a simple bit of Ruby (original on <a href="https://gist.github.com/dliggat/9677631">GitHub</a>):</p>
+
+<figure class='code'><figcaption><span>photo_bin.rb: A ruby script to bin photos by year-month directories </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="no">Dir</span><span class="o">.</span><span class="n">glob</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">root_dir</span><span class="si">}</span><span class="s2">/*.jpg&quot;</span> <span class="k">do</span> <span class="o">|</span><span class="n">file</span><span class="o">|</span>
+</span><span class='line'>  <span class="n">match</span> <span class="o">=</span> <span class="sr">/.*?(\d\d\d\d)-(\d\d)-\d\d_\d\d-\d\d-\d\d.*\.jpg$/</span><span class="o">.</span><span class="n">match</span> <span class="n">file</span>
+</span><span class='line'>  <span class="k">raise</span> <span class="no">ArgumentError</span><span class="o">.</span><span class="n">new</span> <span class="s2">&quot;File did not match: </span><span class="si">#{</span><span class="n">file</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">unless</span> <span class="n">match</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">year</span>           <span class="o">=</span> <span class="n">match</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span>
+</span><span class='line'>  <span class="n">month</span>          <span class="o">=</span> <span class="n">match</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span>
+</span><span class='line'>  <span class="n">month_abbr</span>     <span class="o">=</span> <span class="ss">Date</span><span class="p">:</span><span class="ss">:MONTHNAMES</span><span class="o">[</span><span class="n">month</span><span class="o">.</span><span class="n">to_i</span><span class="o">][</span><span class="mi">0</span><span class="o">.</span><span class="n">.</span><span class="mi">2</span><span class="o">]</span>
+</span><span class='line'>  <span class="n">photo_dir_name</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">year</span><span class="si">}</span><span class="s2">-</span><span class="si">#{</span><span class="n">month</span><span class="si">}</span><span class="s2">-</span><span class="si">#{</span><span class="n">month_abbr</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'>  <span class="n">photo_abs_dir</span>  <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">join</span> <span class="n">root_dir</span><span class="p">,</span> <span class="n">photo_dir_name</span>
+</span><span class='line'>  <span class="n">abs_file</span>       <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">expand_path</span> <span class="n">file</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="no">Dir</span><span class="o">.</span><span class="n">mkdir</span> <span class="n">photo_abs_dir</span> <span class="k">unless</span> <span class="no">Dir</span><span class="o">.</span><span class="n">exist?</span> <span class="n">photo_abs_dir</span>
+</span><span class='line'>  <span class="no">FileUtils</span><span class="o">.</span><span class="n">mv</span> <span class="n">abs_file</span><span class="p">,</span> <span class="n">photo_abs_dir</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Storage, Backup, Viewing</h3>
+
+<p>I decided that the best place to actually store this [so-far] 55GB archive was on Google Drive. This has a few benefits:</p>
+
+<ul>
+<li><strong>Cheap</strong>: At $2 per month for 100GB of storage as of the <a href="http://googleblog.blogspot.ca/2014/03/save-more-with-google-drive.html">recent price drop</a>, it&rsquo;s hard to argue with the price.</li>
+<li><strong>Local and Offsite Backup</strong>: These files live locally in <code>~/GoogleDrive</code> and therefore get subsumed into my wireless home network backups, but also have a disaster-mitigating copy on the cloud.</li>
+<li><strong>Mobile Viewing</strong>: The iOS Google Drive app has quietly become a really high-quality piece of iOS software. It&rsquo;s a capable photo viewing app, and easily satisfies the mobile-viewing requirement (though I&rsquo;d like to see <a href="http://unboundapp.com/">Unbound</a> support it eventually also).</li>
+</ul>
+
+
+<p><img class="center" src="http://liggat.org/images/2014/gd.png" width="600" title="'Google Drive'" ></p>
+
+<h3>Dealing with New Photos</h3>
+
+<p>All of this so far covers requirements 1 through 4 splendidly. However, it&rsquo;s all a bit pointless if new photos aren&rsquo;t subsumed into this system on a hassle-free, ongoing basis. The final puzzle piece is also the most convoluted, but so far it seems to be holding up nicely:</p>
+
+<ol>
+<li>Take advantage of Dropbox&rsquo;s Camera Upload<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup> functionality to send new photos over WiFi from my iPhone to the <code>~/Dropbox/Camera Uploads</code> directory on my Mac. This will happen in the background occasionally without any intervention from me, or I can trigger it manually whenever I want. Of course, <code>.jpg</code> files from other cameras can be placed here also<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>.</li>
+<li>Use <a href="http://www.noodlesoft.com/hazel">Hazel</a> to watch that directory and segregate iOS screenshots (no need to archive those) and videos (I&rsquo;m still deciding how they should be handled), and then rename all <code>.jpg</code> files to the ISO8601-style format above. In this case, given the recency, it is reasonable to rely on the file metadata to encode the creation date in the filename.</li>
+<li>Again with Hazel watching that directory, send those renamed files to <code>~/GoogleDrive/Photos</code>.</li>
+<li>Another Hazel rule watching <code>~/GoogleDrive/Photos</code> will &ldquo;sort into subfolders&rdquo; and place each file into its appropriate year-month directory (e.g. <code>2014-03-Mar</code>), creating that directory if necessary.</li>
+</ol>
+
+
+<p><img class="center" src="http://liggat.org/images/2014/hazel.png" width="600" title="'Hazel'" ></p>
+
+<p>That&rsquo;s it! The archive is consistent, future-proof, viewable and has a strong backup-strategy &ndash; and all new photos from now on have a frictionless pathway into it.</p>
+
+<p>While I&rsquo;m happy with this system for me (and eventually I&rsquo;ll roll it out to my family) Apple, Google, Microsoft, et al really need to solve this problem for their customers. Photos are precious, and people, as a rule, are far worse at ensuring the longevity of bits than paper.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>They were never very good, anyway.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>It is generally a bad idea to rely on these type of programs if you care about accessing your data in the distance future. It will likely be inordinately difficult to read a circa-2014 iPhoto library in 2024. I make an <a href="http://liggat.org/2013/07/21/paperless/">exception</a> in the case of Evernote.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>Ideally I wouldn&rsquo;t be relying on two separate cloud-storage providers, but the combination of Google Drive pricing and Dropbox functionality is compelling. Future changes will be easy, anyhow, depending on how the storage market evolves.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p>So far this doesn&rsquo;t really apply, as the only camera I use is my iPhone 5s. I hung up my SLR a few years ago.<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[@liggs Is Now @dliggat]]></title>
@@ -973,17 +1093,6 @@ Player, the catch up service for ITV &ndash; the UK’s largest independent terr
 <p>But consider the subversion of Android that this latest chess-move by Samsung represents. They’ve managed to outright exclude Nexus owners from ITV Player in favour of their own devices, using, undoubtedly, the persuasive power of currency. I’m not sure that a precedent for this exists elsewhere in the computing industry’s [rather cutthroat] past. Imagine if Dell successfully convinced Adobe that Photoshop should only be compatible with their particular incarnation of Windows XP machines. Consequently, Android is no longer simply <em>not-a-platform</em> (thanks to the carriers); it has in fact become an <em>anti-platform</em> &ndash; an agent of chaos among existing Android network-effects.</p>
 
 <p>All things considered, it’s just one more disappointment in a long line. But I wish the anti-Apple brigade would spend even 10% of the energy they have for generating vitriol in protest of the destructive actions of the subversive actors in the Android space. This is why, in May 2013, iOS remains the only serious mobile computing <em>platform</em>. I wish it were not thus, but I’m not optimistic this will change any time soon.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Tweet Archive]]></title>
-    <link href="http://liggat.org/2013/05/07/tweet-archive/"/>
-    <updated>2013-05-07T09:55:00-04:00</updated>
-    <id>http://liggat.org/2013/05/07/tweet-archive</id>
-    <content type="html"><![CDATA[<p>When Twitter announced in late 2012 that its users could download their tweet archive, it had a begrudging whiff about it. Given the company’s recent heavy-handedness with API access for not only 3rd-party clients but also complementary services such as Flipboard, I was somewhat surprised it even arrived as promised months earlier. <!--more--> I have no insight into the machinations of Twitter Inc. whatsoever, but for some reason I imagine an executive suite very reluctant to relinquish sole ownership of the veritable treasure trove of historical tweets. However, the constant haranguing by their power users, as well as a general environment that frowns upon overtly blatant lock-in (Google Takeout and the Data Liberation Front do a pretty good job setting a decent industry standard here) probably swung the balance.</p>
-
-<p>This leads me to speculate that Twitter didn’t foresee what an incredible enhancement to their product that Tweet Archive actually is. To look back at previous tweets, retweets and favourites is like a time machine for visiting my own personality in the past. It is truly fascinating to see what I was interested in <code>$X $TIME_UNITS</code> ago, and consequently, I’m tweeting, retweeting, and favouriting more now &ndash; just for the pure whimsical pleasure of viewing this data in the future. Twitter has relinquished a measure of control over its service, and has consequently ‘locked-in’, at least me, ever more. This feels like a nice all-around dynamic &ndash; they’ve given me more control over my data, and have managed to bring me closer into the fold as a user as a result.</p>
 ]]></content>
   </entry>
   
