@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Combinatorics | Liggat.org]]></title>
+  <link href="http://liggat.org/blog/categories/combinatorics/atom.xml" rel="self"/>
+  <link href="http://liggat.org/"/>
+  <updated>2014-03-23T20:59:53-04:00</updated>
+  <id>http://liggat.org/</id>
+  <author>
+    <name><![CDATA[Dave Liggat]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[IPv6: An Unreachable Wall?]]></title>
+    <link href="http://liggat.org/2014/03/23/ipv6-an-unreachable-wall/"/>
+    <updated>2014-03-23T15:55:48-04:00</updated>
+    <id>http://liggat.org/2014/03/23/ipv6-an-unreachable-wall</id>
+    <content type="html"><![CDATA[<p>In <a href="http://www.fiatlux.fm/pragmatic/16">episode 16</a> of <a href="https://twitter.com/fiatluxfm">Ben Alexander</a> and <a href="https://twitter.com/johnchidgey">John Chidgey&rsquo;s</a> excellent <a href="http://www.fiatlux.fm/pragmatic/">Pragmatic</a> podcast, the hosts touched upon the unfortunate tendency of organizations &amp; individuals to underanticipate the scale of future demands upon their designed technology.<!--more--></p>
+
+<p>Examples of this phenomenon abound:</p>
+
+<ul>
+<li>The North American <a href="http://en.wikipedia.org/wiki/Public_switched_telephone_network">PSTN</a> seemed like a vast address space at the time of its inception, and yet I&rsquo;ve been through <a href="http://www.cbc.ca/news/canada/vancouver-gets-10-digit-dialing-1.275934">at least one</a> extension in my life, as fax machines and mobile phones consumed far more telephone numbers than was anticipated.</li>
+<li>&ldquo;<em>640k [of computer memory] ought to be enough for anybody</em>&rdquo; &ndash; as famously attributed to Bill Gates<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.</li>
+<li>The ubiquitous Intel x86<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> CPU architecture use 32-bits for addressing locations in system memory; this imposes a hard theoretical 4GiB limit on memory size, which is meager by 2014 standards.</li>
+<li><a href="http://en.wikipedia.org/wiki/IPv4">IPv4</a>, which uses <strong>32-bits</strong> to assign IP addresses (e.g. of the form <code>123.255.123.255</code>) to devices on the public Internet is insufficiently large of an address space to accommodate all future computing devices, and the world will need to transition<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup> to <a href="http://en.wikipedia.org/wiki/IPv6">IPv6</a> at some point.</li>
+</ul>
+
+
+<p>At some point, progress causes us to run into the limits imposed by these upper boundaries. John referred to this phenomenon as &ldquo;hitting the wall&rdquo;, and casted it as an inevitability for any technology.</p>
+
+<p>I agree wholeheartedly, but one with one caveat. I know that history (and John Chidgey) are not on my side here<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>, but I&rsquo;m going to go on record with the following postulate: once we finally switch to it, <strong>IPv6 will be an unreachable wall; i.e. it will be sufficient indefinitely as an address space for Internet routing</strong>. That is to say &ndash; a limit exists, but humanity won&rsquo;t be able to reach it.</p>
+
+<h3>IPv4</h3>
+
+<p>My argument for this is strictly numerical. IPv4 uses 32-bits to uniquely identify devices<sup id="fnref:5"><a href="#fn:5" rel="footnote">5</a></sup> on the public Internet. TCP/IP was birthed into a world of expensive, rare mainframes &ndash; computers and Internet connections were scarce. Four billion unique IPs (i.e. <strong>2<sup>32</sup> = 4,294,967,296</strong>) must have seemed vastly beyond sufficient at the time. Yet as in write this in 2014, it&rsquo;s worth noting that China alone has <a href="http://ben-evans.com/benedictevans/2014/3/12/700m-smartphones-tablets-in-china">700 million</a> active smartphones and tablets, most of which consume a IPv4 address. We&rsquo;re hitting the wall.</p>
+
+<h3>IPv6</h3>
+
+<p>IPv6, by contrast, skips over 64 bits and uses 128-bits for addressing. This yields <strong>2<sup>128</sup></strong> possible addresses: an unfathomably huge number. <strong>2<sup>128</sup></strong> written <a href="https://www.wolframalpha.com/input/?i=2%5E128">in full</a> has thirty-nine decimal digits, or can be abbreviated as <em>340 billion billion billion billion</em>, if you prefer.</p>
+
+<p>While I have great faith in the ability of humanity to <a href="http://en.wikipedia.org/wiki/Tragedy_of_the_commons">squander</a> a seemingly-endless resource, it is worth reflecting on the sheer scale of this number. The surface area of the Earth is <strong>510,072,000 km<sup>2</sup></strong>, or, less usefully, <strong>5.101 × 10<sup>20</sup> square-millimeters</strong>. <strong>2<sup>128</sup></strong> is so large that each millimeter of area on the Earth&rsquo;s surface could <a href="https://www.wolframalpha.com/input/?i=2%5E128+%2F+5.101e20">support</a> <strong>667,000,000,000,000,000</strong> unique IPv6 addresses! Not in aggregate &ndash; that number of addresses exists for <em>each and every square</em> millimeter on the Earth, ocean and land alike!</p>
+
+<p>Of course in practice the IPv6 address space will likely not be allocated cleanly &ndash; various countries and corporations will likely receive an undeservedly large allocation; blocks may sit unused and reserved, etc. But it seems to me that no matter how poorly IPv6 is stewarded &ndash; its massive, planetary scale allows for truly indefinite room to grow. With IPv6<sup id="fnref:6"><a href="#fn:6" rel="footnote">6</a></sup> the wall seems, to me, to be unreachable with certainty.</p>
+
+<p><em>(It will be especially interesting for me to read this in a decade or two.)</em></p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>There is apparently some <a href="http://en.wikiquote.org/wiki/Bill_Gates#Misattributed">doubt</a> as to the veracity of the actual attribution to Gates &ndash; but the point stands &ndash; everyone in tech has heard a form of this sentiment expressed.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>Well, it used to be ubiquitous (and unassailable!). The rise of <a href="http://en.wikipedia.org/wiki/ARM_architecture">ARM</a> (like so much in the tech world since 2007, blame the iPhone) has been fascinating to witness.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>I&rsquo;m not too sure how the actual transition process is going. Things have seemed awfully quiet on that front since <a href="http://en.wikipedia.org/wiki/World_IPv6_Day_and_World_IPv6_Launch_Day">World IPv6 Day</a> in 2011&hellip;<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p>Both of which should give anyone pause&hellip;<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+<li id="fn:5">
+<p>Clever tricks such as <a href="http://en.wikipedia.org/wiki/Network_address_translation">NAT</a> ensure that machines in a household or business don&rsquo;t consume one public address each. As far as I&rsquo;m aware, mobile phones on a data network always consume one public address.<a href="#fnref:5" rev="footnote">&#8617;</a></p></li>
+<li id="fn:6">
+<p>Unless, of course, we decide that every <strong>N<sub>2</sub></strong> molecule on Earth needs to be addressable!<a href="#fnref:6" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+</feed>
