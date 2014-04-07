@@ -4,7 +4,7 @@
   <title><![CDATA[Liggat.org]]></title>
   <link href="http://liggat.org/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2014-04-06T23:28:13-04:00</updated>
+  <updated>2014-04-06T23:28:50-04:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -41,15 +41,6 @@
 </ol>
 </div>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Backup Strategy]]></title>
-    <link href="http://liggat.org/2014/03/28/backup-strategy/"/>
-    <updated>2014-03-28T10:40:39-04:00</updated>
-    <id>http://liggat.org/2014/03/28/backup-strategy</id>
-    <content type="html"><![CDATA[
 ]]></content>
   </entry>
   
@@ -1075,6 +1066,88 @@ For the sake of completeness, it is worth mentioning the concept of the <strong>
 <p>Using the method of https repository access and the OS X system keychain, not ssh keys.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
 <li id="fn:4">
 <p>A happy side benefit to letting boxen manage ruby versions is the obviation of somewhat horrible kludges like <code>.rvmrc</code> files in ruby project directories.<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Paperless, Finally]]></title>
+    <link href="http://liggat.org/2013/07/21/paperless/"/>
+    <updated>2013-07-21T13:33:00-04:00</updated>
+    <id>http://liggat.org/2013/07/21/paperless</id>
+    <content type="html"><![CDATA[<p>I&rsquo;m sick to death of accumulating useless paper detritus. I&rsquo;ve fantasized for quite a while about finally finding a &lsquo;paperless&rsquo; workflow that will work well for me now and, <em>crucially</em>, many years (decades) into the future. After reading posts on <a href="http://shawnblanc.net/2012/09/the-paperless-puzzel/">similar</a> <a href="http://speirs.org/blog/2012/6/25/book-scanning.html">initiatives</a>, I think I&rsquo;ve got it. I figured I&rsquo;d document it here, mostly as an exercise in <a href="https://en.wikipedia.org/wiki/Rubber_duck_debugging">rubber-duck debugging</a> of sorts.<!--more--></p>
+
+<h3>Requirements</h3>
+
+<ul>
+<li><strong>Recallable</strong>: I should be able to look up a particular document or item purely by knowing a keyword or two, or the rough timeframe in which it was generated. Vast hierarchical organization schemes are only defensible if you&rsquo;re a librarian in the pre-computing age. We can do much better in 2013. The Gmail ethos of &ldquo;search, don&rsquo;t sort&rdquo; works really well for me.</li>
+<li><strong>Enduring</strong>: This needs to last for the long haul. There&rsquo;s an expectation I&rsquo;ve set for myself that the core elements of this workflow will persist well beyond a decade, and ideally for the entirety of my [useful] life.</li>
+<li><strong>Robust</strong>: Really this applies to all my personal data at this point &ndash; but under <strong>no</strong> circumstances can a paperless archive be allowed to suffer any data loss.</li>
+<li><strong>Secure</strong>: Whatever system one has for organizing personal documents, even if that&rsquo;s a physical shoebox full of physical documents, there&rsquo;s a chance that a breach of one&rsquo;s personal data can occur. Acknowledging this, I want my system to make sensible security decisions where possible, and overall, to <em>minimize regret</em>. Trade-offs, as ever, exist &ndash; the shoebox may not be vulnerable to Belarusian hackers, but it <em>is</em> vulnerable to house fires.</li>
+</ul>
+
+
+<h3>Implementation</h3>
+
+<h4>Platform</h4>
+
+<p><a href="http://www.evernote.com">Evernote</a> [Premium] forms the centrepiece of my paperless workflow. I&rsquo;m totally sympathetic to the assertion that it&rsquo;s better to keep long-lived data in highly-portable formats (e.g. PDF files, markdown-formatted UTF-8 text, etc). Using Evernote is somewhat in contravention of this goal, as it stores notes within its own opaque archive format. However, this archive is fully-exportable and navigable, and in the event of Evernote dropping off the face of the earth, there will be no shortage of tools for migrating its notes and notebooks to a new platform. And Evernote has proven itself over the years &ndash; achieving profitability, and garnering ever more paying consumers, businesses, and educational institutions every year &ndash; even going so far as to declare itself a <a href="http://techcrunch.com/2011/11/06/evernote-ceo-phil-libins-top-three-tips-for-building-a-hundred-year-old-company">hundred-year company</a>.</p>
+
+<p>Taken together, objections to Evernote for paperless seem mostly theoretical, rather than actual, to me. Moreover, the benefits in having a syncing, sortable, and <em>highly searchable</em> archive seem worth tolerating that conjectural downside.</p>
+
+<h4>Scanning</h4>
+
+<p><img class="right" src="http://liggat.org/images/send_to_evernote.png" width="275" title="'Send to Evernote'" ></p>
+
+<p>I recently ordered a <a href="http://www.getdoxie.com/product/one/">Doxie One scanner</a>, for $147 CAD or thereabouts. It&rsquo;s simple, and gets the job done. Its OS X app manages to be not terrible for scanning/printing software, which is notable, though admittedly only due to the poverty of the competitive landscape. It quickly processes pages, and saves scans to an included SD card. The app purportedly does <a href="http://en.wikipedia.org/wiki/Optical_character_recognition">OCR</a> (I&rsquo;ll be relying on Evernote for this though), and allows individual PDFs to be &lsquo;stapled&rsquo; into multi-page documents, and then sent on to Evernote.</p>
+
+<h4>Evernote Notes Titles</h4>
+
+<p>Once in Evernote, I assign the note containing the scanned PDF to an appropriate notebook (a yearly one for business expenses, and Archive for everything else). I wrote a small bash function to generate note titles in a consistent format:</p>
+
+<pre><code>$ISO8601_FORMATTED_DATE =&gt; $LOWERCASE_DESCRIPTION (Paperless)
+</code></pre>
+
+<p>For example:</p>
+
+<pre><code>2013-07-11 =&gt; apple ipod receipt (Paperless)
+</code></pre>
+
+<p>I reasoned that the date (hat tip to <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO8601</a> for its equivalent chronological and lexicographical sorting) is important enough for later retrieval to warrant hard coding in the title metadata<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>. You can find the bash snippet for this in <a href="https://gist.github.com/dliggat/5990988">this gist</a>.</p>
+
+<h4>Security</h4>
+
+<p>I view &lsquo;security&rsquo; as the dual-property that my data is available to me, and unavailable to unauthorized parties. To this end, I:</p>
+
+<ul>
+<li>Use strong authentication in Evernote: Set a long, unique, random passphrase, and enable 2FA (2-factor authentication)</li>
+<li>Turn on full-disk encryption on my computers and mobile devices</li>
+<li>Set the mobile app passcode for the Evernote iOS apps</li>
+<li>Export my entire archive biweekly, and backup to an external drive and an off-site location<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup></li>
+<li>Encrypt particularly sensitive stored PDFs with a strong key (stored, obviously, outside of Evernote).</li>
+</ul>
+
+
+<p>With these practices in place, I feel sufficiently confident that access to my account is highly-restricted, and even in the worst case scenario of a full data-breach at Evernote, my most sensitive documents (tax receipts, bank statements, etc) are enciphered.</p>
+
+<p><img class="fancybox center" src="http://liggat.org/images/evernote_pdf_protected.png" title="'Protected PDF'" ></p>
+
+<h3>Fin</h3>
+
+<p>I&rsquo;ll inevitably evolve this over time, but I&rsquo;m feeling pretty good about the setup so far, and its adherence to my goals of <strong>Recallable</strong>, <strong>Enduring</strong>, <strong>Robust</strong>, &amp; <strong>Secure</strong>. So far, I&rsquo;ve been happily adding stuff to my archive, and not yet experienced any inertia or fedup-ness. That&rsquo;s probably a good sign.</p>
+
+<p>There will be a few documents I&rsquo;ll begrudgingly retain in paper form &ndash; governments, perennially stuck in the clipboard and fax-machine era, tend to take a dim view of anything digital, but mostly, I&rsquo;ll be enthusiastically converting documents into Evernote notes, and destroying the originals forever.</p>
+
+<p>Another victory for bits over atoms. Any comments, suggestions, or questions, please <a href="http://liggat.org/about">get in touch</a>.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>The date is for sorting and narrowing, the description terms are for searching, and the (Paperless) suffix identifies a note as originating from this workflow<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>I know this probably seems excessive, but having a catastrophic data loss in the past [many years ago] will do that to a person<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 
