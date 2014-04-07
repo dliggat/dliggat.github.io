@@ -10,7 +10,7 @@ Last summer, my better half and I spent some time in Scotland, the country of my
 
 {% img center /images/2014/glencoe.jpg 500 'Glencoe' %}
 
-George R.R. Martin is [well known](http://www.nerdist.com/2013/06/george-r-r-martin-explains-the-red-weddings-historical-roots/) to have drawn inspiration for **A Song of Ice and Fire**[^1] from aspects of this part of the world. Famously, the highly-significant and series-defining *Red Wedding*[^2] event parallels the heinous circumstances of the late-seventeenth century [Massacre of Glencoe](http://en.wikipedia.org/wiki/Massacre_of_Glencoe). Moreover, further North in Scotland is a region known as [Wester Ross](https://www.google.com/maps/search/wester+ross/@57.7018103,-5.6741077,11z).
+George R.R. Martin is [well known](http://www.nerdist.com/2013/06/george-r-r-martin-explains-the-red-weddings-historical-roots/) to have drawn inspiration for **A Song of Ice and Fire**[^1] from aspects of this part of the world. Famously, the highly-significant and series-defining *Red Wedding*[^2] event parallels the heinous circumstances of the late-seventeenth century [Massacre of Glencoe](http://en.wikipedia.org/wiki/Massacre_of_Glencoe). Moreover, further North in Scotland is a region known as [Wester Ross](https://www.google.com/maps/search/wester+ross/@57.7018103,-5.6741077,11z) - which bears more than a passing linguistic similarity to *Westeros*.
 
 With the fourth season of **Game of Thrones** underway today on HBO, this is a fairly relevant time to document my theory about the original series title; i.e. why is **A Song of Ice and Fire** named thusly?
 
