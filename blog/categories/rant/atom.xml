@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Rant | Liggat.org]]></title>
   <link href="http://liggat.org/blog/categories/rant/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2014-04-23T10:15:58-04:00</updated>
+  <updated>2014-04-23T13:40:57-04:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -26,8 +26,8 @@
 
 <ol>
 <li><strong>Two Factor Authentication</strong>. My <a href="https://support.google.com/accounts/answer/180744?hl=en">email</a>, my <a href="http://blog.evernote.com/blog/2013/10/04/two-step-verification-available-to-all-users/">digital archive</a>, my <a href="https://www.dropbox.com/help/363/en">cloud storage</a>, and my <a href="https://blog.twitter.com/2013/getting-started-with-login-verification">Twitter</a> account all have two-factor authentication (<a href="http://en.wikipedia.org/wiki/Two-step_verification">2FA</a>). Why doesn&rsquo;t my bank account? It&rsquo;s not like 2FA is an unfamiliar concept to either the banks or the populace &ndash; <a href="http://en.wikipedia.org/wiki/Chip_and_PIN">chip &amp; PIN</a> for debit and credit cards has been deployed in Canada for many years. It seriously astounds me that as I write this in 2014, this hasn&rsquo;t been rolled out on the web by any bank that I&rsquo;m aware of.</li>
-<li><strong>Sensible Policies on Passwords</strong>. Canadian banks seem to have an odd philosophy on passwords. TD&rsquo;s iOS app does not appear to permit paste into password fields &ndash; needlessly complicating the usage of password managers like <a href="https://agilebits.com/onepassword/mac">1Password</a>. BMO mandates an alphanumeric password of <strong>precisely-six alphanumeric</strong> characters<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>. Why the artificial limitations? These measures are destructive, not augmentative, of online-security.</li>
-<li><strong>Modern Web</strong>. The web has improved immeasurably over the past decade. With the scourge of Internet Explorer&rsquo;s worst transgressions behind us, and transformative technologies like responsive-design, web typography, CSS transforms, client-side JavaScript frameworks (i.e. <a href="http://emberjs.com/">Ember.js</a>) constantly entering the tech-zeitgeist &ndash; it&rsquo;s a golden age for the web<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>. You&rsquo;d never know it though, based on the appearance of online banking. I&rsquo;d be happy as a start with even a bit of interface-enhancing JavaScript, which is curiously absent from banking web apps &ndash; virtually unthinkable in 2014 in most other online contexts. Instead, absurdly high page latencies, an an absence of responsive-design and stodgy <em>Times-New-Arial</em> typefaces<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup> are the order of the day.</li>
+<li><strong>Sensible Policies on Passwords</strong>. Canadian banks seem to have an odd philosophy on passwords. TD&rsquo;s iOS app does not appear to permit paste into password fields &ndash; needlessly hampering the usage of password managers like <a href="https://agilebits.com/onepassword/mac">1Password</a>. BMO mandates an alphanumeric password of <strong>precisely-six alphanumeric</strong> characters<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>. Why the artificial limitations? These measures are destructive, not augmentative, of online-security.</li>
+<li><strong>Modern Web</strong>. The web has improved immeasurably over the past decade. With the scourge of Internet Explorer&rsquo;s worst transgressions behind us, and transformative technologies like responsive-design, web typography, CSS transforms, client-side JavaScript frameworks (i.e. <a href="http://emberjs.com/">Ember.js</a>) constantly entering the tech-zeitgeist &ndash; it&rsquo;s a golden age for the web<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>. You&rsquo;d never know it though, based on the appearance of online banking. I&rsquo;d be happy as a start with even a bit of interface-enhancing JavaScript, which is curiously absent from banking web apps &ndash; virtually unthinkable in 2014 in most other online contexts. Instead, absurdly high page latencies, an absence of responsive-design and stodgy <em>Times-New-Arial</em> typefaces<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup> are the order of the day.</li>
 <li><strong>Mobile apps</strong>. Curiously, most Canadian banks do have mobile apps, on iOS at least, and yet they don&rsquo;t seem to serve any real purpose beyond marketing. Utility wise, there&rsquo;s no point having a mobile app that&rsquo;s nothing but a native container for [in their case, tremendously-slow-to-render] web content. With the exception of the Tangerine<sup id="fnref:5"><a href="#fn:5" rel="footnote">5</a></sup> app&rsquo;s ability to photo-deposit cheques – a welcome, if belated arrival – none of these apps actually enable any use-case that couldn&rsquo;t be accomplished in a mobile browser. I&rsquo;d like to see authentication caching, some use of native UI components perhaps, and a robust, configurable push notification scheme for transaction/payment alerts. And, of course, their possible use as a vehicle for the aforementioned 2FA.</li>
 <li><strong>Data</strong>. I want access to my data. No, not as some Quicken <a href="http://en.wikipedia.org/wiki/Binary_large_object">blob</a> or a poorly-formatted CSV file, but in a sane, structured format, preferably <a href="http://en.wikipedia.org/wiki/Json">JSON</a><sup id="fnref:6"><a href="#fn:6" rel="footnote">6</a></sup>. It remains an utter hassle to view and use historical banking data &ndash; to find a particular subset of recurring transactions for example. Better structured banking data would enable entire classes of tools, workflows, and even businesses to exist.</li>
 <li><strong>API/OAuth</strong>. Relatedly, I want a programmatic method to access this data, and support for an authorization technique like OAuth to delegate <strong>revocable</strong> access to a trusted third party. This is a well-solved problem &ndash; it is a ubiquitous pattern in tech, and there is enormous demand for it to exist. Since it doesn&rsquo;t exist &ndash; horrible kludges like providing aggregation sites (e.g. <a href="https://www.mint.com/">Mint</a><sup id="fnref:7"><a href="#fn:7" rel="footnote">7</a></sup>) banking credentials are the only way to enable third-party access.</li>
@@ -42,7 +42,7 @@
 <li><em>&ldquo;We can&rsquo;t justify the cost of a massive online systems redesign!&rdquo;</em></li>
 <li><em>&ldquo;Don&rsquo;t you know how complex our legacy backend is &ndash; our password policy was chosen to support that!&rdquo;</em></li>
 <li><em>&ldquo;We have a myriad of customers and browsers to support &ndash; not everyone is running Safari on brand-new MacBook Pros you know!&rdquo;</em></li>
-<li><em>&ldquo;The regulations we under would never permit API access! We can&rsquo;t ever permit customer data to go to &lsquo;third parties&rsquo; &ndash; the banking regulators and the newspapers would have a field day!&rdquo;</em></li>
+<li><em>&ldquo;The regulations we are under would never permit API access! We can&rsquo;t ever permit customer data to go to &lsquo;third parties&rsquo; &ndash; the banking regulators and the newspapers would have a field day!&rdquo;</em></li>
 </ul>
 
 
@@ -50,7 +50,7 @@
 
 <p>So, sure – there are obstacles. But this stuff is hard to get right, not just the tech but also the product vision that goes along with it. With each passing year, the gap between online-banking and the rest of the modern web grows ever starker. I see no reason why the tech we use everyday in virtually every other aspect of life should rocket ahead in functionality, design, thoughtfulness, integration, etc &ndash; while finance/banking remains virtually the same today as in 2004.</p>
 
-<p>If nothing else, I believe excellence in these areas will become a competitive advantage sooner than banks apparently seem to think. In ten years time, does anyone really think that the major customer service innovation to be touted from every bus-bench will still involve the local branch in some way?</p>
+<p>If nothing else, I believe excellence in these areas will become a competitive advantage sooner than banks apparently seem to think. Does anyone really think that in ten years time, the major customer service innovation to be touted from every bus-bench will still involve the local branch in some way?</p>
 <div class="footnotes">
 <hr/>
 <ol>
@@ -63,13 +63,13 @@
 <li id="fn:4">
 <p>I realize that <strong>better typography</strong> performs poorly in a DCF calculation. But then, presumably so do the potted rhododendrons festooning the lobby of every branch.<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
 <li id="fn:5">
-<p>née ING Direct<a href="#fnref:5" rev="footnote">&#8617;</a></p></li>
+<p>née ING Direct.<a href="#fnref:5" rev="footnote">&#8617;</a></p></li>
 <li id="fn:6">
 <p>it&rsquo;s easy to parse and is the <a href="http://en.wikipedia.org/wiki/Lingua_franca">lingua franca</a> of programmatic access to data over the Internet.<a href="#fnref:6" rev="footnote">&#8617;</a></p></li>
 <li id="fn:7">
 <p>However good Mint&rsquo;s security is–and I have reason to believe it is <strong>very</strong> good as I&rsquo;ve met a few of the early engineers–providing credentials to them will always be a highly inferior way to delegate access. Plus it&rsquo;s explicitly forbidden by the Terms of Service for many banks.<a href="#fnref:7" rev="footnote">&#8617;</a></p></li>
 <li id="fn:8">
-<p>Presumably age and wealth correlate fairly well, which likely explains a large amount of the dogged focus on new branches and &lsquo;convenient&rsquo; hours in bank advertising.<a href="#fnref:8" rev="footnote">&#8617;</a></p></li>
+<p>I presume age and wealth correlate fairly well, which likely explains a large amount of the dogged focus on new branches and &lsquo;convenient&rsquo; hours in bank advertising.<a href="#fnref:8" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 
