@@ -9,6 +9,14 @@ $subtle: #aaa;
 $faint: #F2F2F2;
 $h1-size: 2em;
 
+*, *:after, *:before {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
 html {
   background: $bg;
   a, a:visited, a:hover {

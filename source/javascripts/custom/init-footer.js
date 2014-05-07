@@ -13,7 +13,7 @@
 
 
   function updateDuration() {
-    var blogStarted = moment([2013, 05, 07]),  // TODO: Grab this from configuration.
+    var blogStarted = moment('20130507', 'YYYYMMDD'),  // TODO: Grab this from configuration.
                 now = moment(),
                unit = 'years',
                diff = now.diff(blogStarted, unit, true);
