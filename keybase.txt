@@ -1,0 +1,77 @@
+==================================================================
+https://keybase.io/dliggat
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://liggat.org
+  * I am dliggat (https://keybase.io/dliggat) on keybase.
+  * I have a public key with fingerprint CD3F 42CD 7EE4 0D76 89B4  2090 44F4 852E 7212 7034
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.3.2"
+        },
+        "key": {
+            "fingerprint": "cd3f42cd7ee40d7689b4209044f4852e72127034",
+            "host": "keybase.io",
+            "key_id": "44F4852E72127034",
+            "uid": "69b652c95b836e471bfd9523f012df00",
+            "username": "dliggat"
+        },
+        "merkle_root": {
+            "ctime": 1399667491,
+            "hash": "794eb63d43ae5e3a6fa1a3c884fa28c3de687942a48edad30242895fe59227690872e0515047703a8fe8b999b1706c08dd0c64fcea4d6c3acaa95b87f2f931a0",
+            "seqno": 6360
+        },
+        "service": {
+            "hostname": "liggat.org",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1399667537,
+    "expire_in": 157680000,
+    "prev": "940b5083ace399f7fa11d5a12eeaf34355c5c5a1a99e879d391b050c5ac872b5",
+    "seqno": 2,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
+Comment: GPGTools - https://gpgtools.org
+
+owFVUm9oVlUcfqdb2GKxTcGFButCxXC+nnv+3HvPa9CHdP1TUKoJm/J67jm/++7q
+du/bvXezoWM27cMiVAZW+AfCalMIg1REywbCZCH9gfdDH5zQiMwRyAoDc5Wdsxbp
+PV/u+Z3n95zneX7nUN3iXG3Vuttv5ZPGMq26OuPnXulZu3m35ceq3yrstmR3CFFm
+/iLRA1bB2gn9vkghH8bNUawgvyNtXsC0Wn2QpGEcaRTKkzy2BloN3DQHYVSCpJyE
+hsuSigQUS+UCUKRcx+M+xYgjSgPqMQwutrGLCNWUXXGaPXCrNc9ZDJWuUtpm8Ovv
+w/fOHzjcdxiWnPkecYC6th8ozjAJkI1VgJABppAsWFLdYakkMiO3B5Kd3VBM4nje
+s8xCg7AJ547jUm5rQSLt0j0up+A7RFEigAERTiBsQaTn0UBgTxIFjqcxWFAPlFAE
+YYo9zgJgHGPX4chzMSBmM0RdLV14AXg+59y3XeRI5CmFpEMDCYIqRxIhhTBu3AAH
+nNjCOEjh9Si2Cg5x0IDZJX2hBKPaZLZg7V9n+Tgp6YZyEmexjLt1vSvLygVjOOsv
+G9wu8IvzDCclFP0wUnpe9w/U1tAHw2DEbbXgjXKYQDE0CKbniPRn7oE+zckp8hny
+tHbQLYGrE7IVEzYGEAGhhDGpl46Nc9BZKcJtHzGkS1KH47P/LWKtU5Q0ZRqWIpH1
+JmANDFetrM5V1eYeqllkXmyu9uH6/57xwc+W5M5ubZn66/rj08+/Pzt3uuFQ89NT
+ucu3/vhhaK59TfW3N9vWwo3vrd/qh5ZveBTvalj2+YqZxcOFjR3fhcMnB49/kaq6
+hsbcred2VB574adPLu/fMwN0fPzM0KuV8ZaWyshH+y+OXB+0/9789bZFncu2X2uf
+PTh9vnri5f47fXefOXD12PmRU47VWzmQ1cjokd9/Xbrmq+nO0VXLhyfufrxncvSD
+3vrG9j83vvTEkraxp8bqDh/ZMPOa9Wbni15H5dzsjyvOPrn3yr14NMT5pmcn/LEL
+628ePqVg1Yeb9l0rnP7GiW9vf7fm072XjjT+PLXu6L6VN+5s+XJo8go0NbwzN3hv
+8viJ1R3vdfzS9PY/
+=PV4c
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/dliggat
+
+==================================================================
