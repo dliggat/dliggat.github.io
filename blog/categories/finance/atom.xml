@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Finance | Liggat.org]]></title>
   <link href="http://liggat.org/blog/categories/finance/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2014-05-09T16:41:17-04:00</updated>
+  <updated>2014-06-05T22:27:28-04:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -12,6 +12,53 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Accounts Are Containers]]></title>
+    <link href="http://liggat.org/2014/06/05/accounts-are-containers/"/>
+    <updated>2014-06-05T17:19:57-04:00</updated>
+    <id>http://liggat.org/2014/06/05/accounts-are-containers</id>
+    <content type="html"><![CDATA[<p>Recently, I&rsquo;ve found myself explaining to some friends and family members the precise difference between a regular (i.e. non-registered) account, an RRSP account, and a TFSA account. In particular, many Canadians hold the mistaken belief that these accounts are <em>products</em> &ndash; a thing that the bank creates and sells. This is incorrect &ndash; <strong>accounts are containers</strong>, into which the same assets (cash savings, stocks, etc) can be placed. The type of the container merely specifies how its gains are taxed, nothing more.<!--more--></p>
+
+<p><img class="center" src="/images/2014/containers.png" width="600" title="&lsquo;Containers&rsquo;" ></p>
+
+<blockquote><p>The type of the container merely specifies how its gains are taxed, nothing more.</p></blockquote>
+
+<h3>Non-registered</h3>
+
+<p>A non-registered account is simply an ordinary container with no special tax treatment. It can hold cash savings, stocks, bonds, ETFs, mutual funds, etc. A vanilla savings account is one such example, but a stock trading account could qualify also. Any &lsquo;gains&rsquo; from the assets in this container are subject to taxation, though it&rsquo;s worth noting that the various types of &lsquo;gain&rsquo; (e.g. interest, Canadian dividends, foreign dividends, capital gains) are each handled in their own special way &ndash; this is where the unfortunate complexity of the tax code rears its head. Regardless, bottom line: <strong>you pay tax on any gains in a non-registered account</strong>.</p>
+
+<h3>RRSP</h3>
+
+<p>An RRSP account is a container designed with retirement needs in mind. Like the non-registered account, it may hold a variety of asset types. It is taxed in a notable manner: when you <em>contribute</em> money to this account, you actually receive a reduction in your tax-payable for the year, today<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>. However, when you <em>withdraw</em> money, usually in retirement, that money is treated as if it were salary income &ndash; and taxed accordingly. In the meantime, the assets in the container grow <em>tax-free</em> through the usual means (interest, dividends, capital gains).</p>
+
+<p><a href="http://www.michaeljamesonmoney.com/2014/03/cra-your-rrsp-partners-whether-you-want.html">Michael James</a> has documented an excellent way to think of this transaction: in exchange for a reduction in this year&rsquo;s taxes, you grant the <a href="http://www.cra-arc.gc.ca/menu-eng.html">CRA</a> an ownership stake in the future value of your RRSP container. This turns out to be a beneficial manoeuvre so long as the <a href="http://en.wikipedia.org/wiki/Tax_rate#Marginal">marginal</a> tax rate on the contributed money is lower than the <em>[unknowable but presumably and hopefully lower]</em> marginal tax rate at retirement. Bottom line: <strong>in an RRSP, you get a reduction in taxes today in exchange for granting the CRA a stake in the container&rsquo;s eventual disbursements</strong>.</p>
+
+<h3>TFSA</h3>
+
+<p>A TFSA is a container whose gains (interest, dividends, capital gains, etc) are <strong>never subject to taxation</strong>. Because that&rsquo;s such an attractive proposition, the government only permits adult individuals to contribute $5000 per year<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>. Assuming wise and/or fortunate investing decisions<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>, the TFSA has the potential to grow substantially over a multi-decade period, and will result in a container of assets which is not subject to any taxation. Bottom line: <strong>Any growth within a TFSA is never taxed but only a limited contribution per year is permitted</strong>.</p>
+
+<h3>Which Should I Use?</h3>
+
+<p>It can be complicated. There is a ton of nuance to the rules governing the above, and this is not financial advice. With these general frameworks in mind, the question for every individual to be asking themselves is: <em>&ldquo;given my tax and income situation and future plans and possible scenarios, which of these gives me the most advantage?&rdquo;</em>. Each of these has a possible role to play, though the TFSA in particular is an excellent vehicle for investing. The opportunity it represents should not be squandered, in my view.</p>
+
+<h3>Who cares &ndash; this is boring!</h3>
+
+<p>I&rsquo;m somewhat sympathetic to that claim. However, ignorance in the basics of this topic is very, very costly &ndash; in missed tax-saving opportunities and in selecting highly-suboptimal financial products. The price for ignorance is <em>substantial</em> personal expense. It&rsquo;s well worth a cursory knowledge of how these containers work, and how they can be used to advance one&rsquo;s freedom, happiness and life goals – which is of course the primary underlying objective of any personal finance initiative.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>i.e. usually in the form of a tax refund<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>This was the figure set in 2009, and is inflation adjusted to be $5500 as of 2013. As of 2014, an eligible adult has $31,000 worth of room for contribution. The contribution room does not expire and accumulates from year to year. There are strict rules on withdrawal and re-contribution, so <strong>tread lightly</strong>!<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>I&rsquo;m a fan of <a href="http://canadiancouchpotato.com/couch-potato-faq/">index investing</a>, myself.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Efficient Currency Conversion]]></title>
