@@ -4,7 +4,7 @@
   <title><![CDATA[Liggat.org]]></title>
   <link href="http://liggat.org/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2014-06-05T22:27:28-04:00</updated>
+  <updated>2014-06-06T09:35:56-04:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -32,7 +32,7 @@
 
 <p>An RRSP account is a container designed with retirement needs in mind. Like the non-registered account, it may hold a variety of asset types. It is taxed in a notable manner: when you <em>contribute</em> money to this account, you actually receive a reduction in your tax-payable for the year, today<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>. However, when you <em>withdraw</em> money, usually in retirement, that money is treated as if it were salary income &ndash; and taxed accordingly. In the meantime, the assets in the container grow <em>tax-free</em> through the usual means (interest, dividends, capital gains).</p>
 
-<p><a href="http://www.michaeljamesonmoney.com/2014/03/cra-your-rrsp-partners-whether-you-want.html">Michael James</a> has documented an excellent way to think of this transaction: in exchange for a reduction in this year&rsquo;s taxes, you grant the <a href="http://www.cra-arc.gc.ca/menu-eng.html">CRA</a> an ownership stake in the future value of your RRSP container. This turns out to be a beneficial manoeuvre so long as the <a href="http://en.wikipedia.org/wiki/Tax_rate#Marginal">marginal</a> tax rate on the contributed money is lower than the <em>[unknowable but presumably and hopefully lower]</em> marginal tax rate at retirement. Bottom line: <strong>in an RRSP, you get a reduction in taxes today in exchange for granting the CRA a stake in the container&rsquo;s eventual disbursements</strong>.</p>
+<p><a href="http://www.michaeljamesonmoney.com/2014/03/cra-your-rrsp-partners-whether-you-want.html">Michael James</a> has documented an excellent way to think of this transaction: in exchange for a reduction in this year&rsquo;s taxes, you grant the <a href="http://www.cra-arc.gc.ca/menu-eng.html">CRA</a> an ownership stake in the future value of your RRSP container. This turns out to be a beneficial manoeuvre so long as the <a href="http://en.wikipedia.org/wiki/Tax_rate#Marginal">marginal</a> tax rate on the contributed money is higher than the <em>[unknowable but presumably and hopefully lower]</em> marginal tax rate at retirement. Bottom line: <strong>in an RRSP, you get a reduction in taxes today in exchange for granting the CRA a stake in the container&rsquo;s eventual disbursements</strong>.</p>
 
 <h3>TFSA</h3>
 
