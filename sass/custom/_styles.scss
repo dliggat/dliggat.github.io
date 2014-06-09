@@ -10,11 +10,11 @@ $faint: #F2F2F2;
 $h1-size: 2em;
 
 *, *:after, *:before {
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -o-font-smoothing: antialiased;
-  font-smoothing: antialiased;
+  -o-font-smoothing: subpixel-antialiased;
+  font-smoothing: subpixel-antialiased;
 }
 
 html {
