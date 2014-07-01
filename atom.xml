@@ -4,7 +4,7 @@
   <title><![CDATA[Liggat.org]]></title>
   <link href="http://liggat.org/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2014-06-26T22:32:14-04:00</updated>
+  <updated>2014-06-30T21:54:59-04:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -12,6 +12,45 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Why Publicly Forecast?]]></title>
+    <link href="http://liggat.org/2014/06/30/why-publicly-forecast/"/>
+    <updated>2014-06-30T21:10:31-04:00</updated>
+    <id>http://liggat.org/2014/06/30/why-publicly-forecast</id>
+    <content type="html"><![CDATA[<p>As part of my <a href="http://en.wikipedia.org/wiki/Operations_research">Operations Research</a> training, I took a course in statistical forecasting. The course, while interesting, had a fairly simple takeaway: more often than not, <em>forecasting is impossible</em>. This is particularly true in scenarios with a <a href="http://en.wikipedia.org/wiki/Martingale_(probability_theory)">martingale</a>-property such as stock prices.<!--more--></p>
+
+<p>So it is with that in mind that I cannot help but be cynical when I see a prominent organization, usually a bank or investment house of some sort, publicly forecast financial figures such as currency exchange rates or stock prices.</p>
+
+<p>Consider this statement, as reported by the CBC in January of 2014:</p>
+
+<h4><a href="http://www.cbc.ca/news/business/canadian-dollar-headed-to-85-cents-us-td-says-1.2516849">Canadian dollar headed to 85 cents US, TD says</a></h4>
+
+<blockquote><p>In the near-term, the loonie is forecast to fall as low as 85 cents U.S. by mid-year.</p></blockquote>
+
+<p>Why do this? It is hard to ascribe intellectual honesty to such prognostication. For one thing, I&rsquo;m largely convinced by the [weak] <a href="http://en.wikipedia.org/wiki/Efficient-market_hypothesis">efficient-market hypothesis</a>, and thus don&rsquo;t believe it is actually <em>possible</em> to forecast the price of a currency six months out<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>. Furthermore, assuming one <em>could</em> perform this forecasting with better-than-chance accuracy &ndash; why share that secret with the world? That knowledge, guarded jealously and carefully executed upon, would lead to untold riches. It is therefore difficult to arrive at charitable reasons why an organization would make such a pronouncement<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>.</p>
+
+<p>As it turns out, this particular &lsquo;mid-year&rsquo; forecast was dead wrong:</p>
+
+<h4><a href="http://www.cbc.ca/news/business/canadian-dollar-nears-2014-high-against-u-s-greenback-1.2689863">Canadian dollar nears 2014 high against U.S. greenback</a></h4>
+
+<blockquote><p>The Canadian dollar tested six-month highs Friday, but analysts say they don’t expect the loonie’s recent strength to be the new normal. The Canadian dollar rose almost three-tenths of a cent to close at 93.80 cents US Friday</p></blockquote>
+
+<p>Interestingly, coverage of such forecasts never seem to hold the prognosticators to account. Although the banks involved in these two statements were different, I have never seen the CBC or other news organization publicly examine the historical record for such forecasts.</p>
+
+<p>My take: forecasting is generally impossible. Stochastic, martingale forecasting <strong>is</strong> impossible. Don&rsquo;t believe anyone who claims otherwise.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>Speaking very imprecisely: if the information existed in the present to do this forecasting, it would quickly be arbitraged away such that the advantage would disappear.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>TD happens to be the forecasting organization in this case, but this activity is by no means exclusive to them. It is very, very common to read all manner of financial forecasts by banks, analysis firms, etc.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Accounts Are Containers]]></title>
@@ -1032,62 +1071,6 @@ For the sake of completeness, it is worth mentioning the concept of the <strong>
 <p>Other reasons include real and artificial barriers to entry, and riskless profits thanks to taxpayer guarantees on various loans issued, but all of that is a rant for another day.<a href="#fnref:5" rev="footnote">&#8617;</a></p></li>
 <li id="fn:6">
 <p>New bucket list item &ndash; invent a thing that comes to be known as <strong>Liggat&rsquo;s Gambit</strong>. How cool would it be to have a <em>gambit</em> to your name&hellip;<a href="#fnref:6" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[A Golden Age of Software]]></title>
-    <link href="http://liggat.org/2013/09/03/a-comparatively-golden-age-of-software/"/>
-    <updated>2013-09-03T17:57:00-04:00</updated>
-    <id>http://liggat.org/2013/09/03/a-comparatively-golden-age-of-software</id>
-    <content type="html"><![CDATA[<p>As someone to whom pessimism and cynicism come naturally, I&rsquo;m often more inclined to complain about things than sit and reflect on positivity. However, I think it&rsquo;s worth taking a moment to acknowledge one thing: we live in a golden age of software right now, at least relative to any point in the past.</p>
-
-<!--more-->
-
-
-<p>This is not to suggest there aren&rsquo;t problems. For example &ndash; I&rsquo;m incredulous to the point of <a href="http://en.wikipedia.org/wiki/Facepalm">speechlessness</a> whenever I use a television set with any current digital TV product at just how universally terrible it all is. I&rsquo;m not at all interested in live TV or any sports or the various trappings, and thus am not in the target market &ndash; but I can scarcely believe people willingly buy these altars of frustration. Just consider, for a moment, the breathtaking lack of product and user-focus that this on-screen prompt represents:</p>
-
-<blockquote><p>This programming is also available in High-Definition. Would you prefer to switch to that instead?</p></blockquote>
-
-<p>All the way from product development, through system design and implementation, to QA, and finally deployment, with presumably a good few boardroom demos along the way &ndash; apparently no one thought about the absurdity of <em>even bothering to ask</em> if HD is preferable to the viewer over SD<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>. I could rant all day about examples like this. Clearly humanity&rsquo;s grand experiment with software has not yet reached its zenith.</p>
-
-<p>However, when I reflect on my career in software &ndash; now close to entering its tenth year &ndash; the progress of that period from <code>2003</code> to <code>now</code>, just in terms of my own personal &lsquo;software environment&rsquo;, is truly staggering to behold:</p>
-
-<ul>
-<li><strong>Operating System</strong>: I used to get work done in Windows XP, which, on good days, would manage to not kernel panic. Linux was around, but &ndash; only if you didn&rsquo;t care about digital cameras or WiFi, and enjoyed endless tinkering with device drivers. For all of Unix&rsquo;s enduring importance from the seventies onwards &ndash; Windows &amp; Microsoft were the absolute ironclad conduit between most people and computation. Compare that to today &ndash; it&rsquo;s worlds apart.</li>
-<li><strong>Productivity</strong>: It used to be that if it had words it went into a <code>.doc</code>, and if it had numbers it went into a <code>.xls</code>. End of story. Now, I have very little real need for an office suite &ndash; all the various little uses cases have been unbundled into more suitable specialized tools. Notes go into Evernote. <a href="http://www.acqualia.com/soulver/">Soulver</a> and <a href="http://www.alfredapp.com/">Alfred</a> for impromptu calculations. Google Docs (and soon, iWork for iCloud) for persisted spreadsheets. <a href="http://www.freshbooks.com/">Freshbooks</a> for accounting. <a href="http://www.goodiware.com/goodreader.html">GoodReader</a> for annotating PDFs. Etc. Excel remains a peerless tool at the high end &ndash; but it overserves most people&rsquo;s, or at least my, needs in the vast majority of cases.</li>
-<li><strong>Email</strong>: I have vivid memories of the days when an email account was tightly coupled to a single physical computer, almost by axiom. No web access, no multi-gigabyte, searchable, hosted backing store, and certainly no IMAP, push notifications, or synchronized read state between multiple devices. Mail host storage was a jealously guarded commodity &ndash; and shunted off their systems to your <em>sole</em> machine with haste.</li>
-<li><strong>Version Control</strong>: God help you if you attempted a merge and got it wrong with early (and hell, probably current, if they still make it) versions of Source Safe. And branches? Forget it. There&rsquo;s no terror quite like the terror of a computer-science co-op student who is pretty sure he just fouled up the company VSS repository (me; circa 2004). Today, git, especially used within <a href="http://github.com">GitHub</a>, verges on perfection for covering the problem space of &lsquo;version control&rsquo;. I&rsquo;m not sure I can name a piece of software more powerful, or useful, or robust, or complete at doing the job it was designed to do.</li>
-<li><strong>Programming Languages</strong>: Dynamic, strongly-typed, ultra-expressive languages like <code>ruby</code> and <code>python</code> have a rich history, but they&rsquo;ve only really come into widespread use in the latter portion of the 2000s. I learned to program in <code>C++</code>, and looking back, I&rsquo;m surprised that didn&rsquo;t put me off the whole enterprise<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>. <code>Java</code> is worse &ndash; the hideous jargon endemic to its ecosystem and infuriating toolchains for starters, let alone the needlessly-verbose language itself.</li>
-<li><strong>Writing Code</strong>: Visual Studio or Eclipse<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup> versus <a href="http://www.sublimetext.com/2">Sublime Text 2</a> &ndash; enough said. IDEs still have a role to be sure, especially for developing native software, but I dislike using them, and I&rsquo;m glad I mostly don&rsquo;t have to.</li>
-</ul>
-
-
-<p>In writing this, I&rsquo;ve basically deduced what are actually two pretty obvious observations:</p>
-
-<ol>
-<li>Current software which already had a predecessor equivalent in the past has gotten <em>profoundly</em> better.</li>
-<li>Devices/objects which weren&rsquo;t software driven in the past and now are (e.g. TVs, cars) need to, and presumably will, improve drastically.</li>
-</ol>
-
-
-<p>It&rsquo;ll be fun to revisit this post in another ten years and opine, hopefully, about how good television<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup> software is and that it has since joined the ranks of productivity, email, version control, etc. I sure hope so.</p>
-
-<p>In the meantime, get rid of the damn HD prompt, <em>please</em>.</p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>Honestly, this was on a shipping digital TV unit that I used.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-<li id="fn:2">
-<p>To be fair, I did hate the first half of UBC&rsquo;s <code>C++</code>-based CPSC 152 until things started to click about two-thirds in. And I do think new programmers should be exposed to the world of pointers and manual memory management &ndash; but I would argue that <code>C</code> is a better environment than <code>C++</code> for that.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
-<li id="fn:3">
-<p>Apparently people still use this. Oh, the humanity.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
-<li id="fn:4">
-<p>Assuming &lsquo;television&rsquo; is even a relevant concept in 10 years. I would not be at all surprised if 100% of the software and network functionality moves to phones and tablets, and TVs become nothing more than dumb wireless output devices for their content. Initiatives like AirPlay, locked thought it is to the Apple ecosystem, are a pretty big step in this direction.<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 
