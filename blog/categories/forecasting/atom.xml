@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Forecasting | Liggat.org]]></title>
   <link href="http://liggat.org/blog/categories/forecasting/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2014-06-30T21:54:59-04:00</updated>
+  <updated>2014-07-04T09:34:27-04:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -18,7 +18,7 @@
     <link href="http://liggat.org/2014/06/30/why-publicly-forecast/"/>
     <updated>2014-06-30T21:10:31-04:00</updated>
     <id>http://liggat.org/2014/06/30/why-publicly-forecast</id>
-    <content type="html"><![CDATA[<p>As part of my <a href="http://en.wikipedia.org/wiki/Operations_research">Operations Research</a> training, I took a course in statistical forecasting. The course, while interesting, had a fairly simple takeaway: more often than not, <em>forecasting is impossible</em>. This is particularly true in scenarios with a <a href="http://en.wikipedia.org/wiki/Martingale_(probability_theory)">martingale</a>-property such as stock prices.<!--more--></p>
+    <content type="html"><![CDATA[<p>As part of my <a href="http://en.wikipedia.org/wiki/Operations_research">Operations Research</a> training, I took a course in statistical forecasting. The course, despite being replete with interesting concepts and methods, had a fairly simple takeaway: more often than not, <em>forecasting is impossible</em>. This is particularly true in scenarios with a <a href="http://en.wikipedia.org/wiki/Martingale_(probability_theory)">martingale</a>-property such as stock prices.<!--more--></p>
 
 <p>So it is with that in mind that I cannot help but be cynical when I see a prominent organization, usually a bank or investment house of some sort, publicly forecast financial figures such as currency exchange rates or stock prices.</p>
 
