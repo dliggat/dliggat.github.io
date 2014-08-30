@@ -5,7 +5,7 @@ Twitter: @dliggat
 Location: Vancouver and Montreal, Canada
 
 /* SITE */
-Last update: 2014-07-04 09:34:27 -0400
+Last update: 2014-08-30 14:57:33 -0700
 Standards: HTML5, CSS3
 Components: jQuery, Bigfoot
 Software: Octopress, Rake, Compass

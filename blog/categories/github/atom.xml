@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Github | Liggat.org]]></title>
   <link href="http://liggat.org/blog/categories/github/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2014-07-04T09:34:27-04:00</updated>
+  <updated>2014-08-30T14:57:33-07:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Automate All the Things]]></title>
     <link href="http://liggat.org/2013/08/06/automate-all-the-things/"/>
-    <updated>2013-08-06T13:04:00-04:00</updated>
+    <updated>2013-08-06T13:04:00-07:00</updated>
     <id>http://liggat.org/2013/08/06/automate-all-the-things</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve spent much of my career in software with automation an implicit and often explicit goal: in testing, in environment creation and deployments, in backups, etc. A conspicuous absence from this list has been the actual development machines I spend many hours each day using, which for me are my Mac desktop and laptop, and occasionally a VM or two. Traditionally, these have ended up at their working state through hours upon hours of gentle tinkering. It&rsquo;s a case of the cobbler&rsquo;s children having no shoes<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, I suppose.</p>
 

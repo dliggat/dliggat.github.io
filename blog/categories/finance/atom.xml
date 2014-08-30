@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Finance | Liggat.org]]></title>
   <link href="http://liggat.org/blog/categories/finance/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2014-07-04T09:34:27-04:00</updated>
+  <updated>2014-08-30T14:57:33-07:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Why Publicly Forecast?]]></title>
     <link href="http://liggat.org/2014/06/30/why-publicly-forecast/"/>
-    <updated>2014-06-30T21:10:31-04:00</updated>
+    <updated>2014-06-30T18:10:31-07:00</updated>
     <id>http://liggat.org/2014/06/30/why-publicly-forecast</id>
     <content type="html"><![CDATA[<p>As part of my <a href="http://en.wikipedia.org/wiki/Operations_research">Operations Research</a> training, I took a course in statistical forecasting. The course, despite being replete with interesting concepts and methods, had a fairly simple takeaway: more often than not, <em>forecasting is impossible</em>. This is particularly true in scenarios with a <a href="http://en.wikipedia.org/wiki/Martingale_(probability_theory)">martingale</a>-property such as stock prices.<!--more--></p>
 
@@ -55,7 +55,7 @@
   <entry>
     <title type="html"><![CDATA[Accounts Are Containers]]></title>
     <link href="http://liggat.org/2014/06/05/accounts-are-containers/"/>
-    <updated>2014-06-05T17:19:57-04:00</updated>
+    <updated>2014-06-05T14:19:57-07:00</updated>
     <id>http://liggat.org/2014/06/05/accounts-are-containers</id>
     <content type="html"><![CDATA[<p>Recently, I&rsquo;ve found myself explaining to some friends and family members the precise difference between a regular (i.e. non-registered) account, an RRSP account, and a TFSA account. In particular, many Canadians hold the mistaken belief that these accounts are <em>products</em> &ndash; a thing that the bank creates and sells. This is incorrect &ndash; <strong>accounts are containers</strong>, into which the same assets (cash savings, stocks, etc) can be placed. The type of the container merely specifies how its gains are taxed, nothing more.<!--more--></p>
 
@@ -102,7 +102,7 @@
   <entry>
     <title type="html"><![CDATA[Efficient Currency Conversion]]></title>
     <link href="http://liggat.org/2013/09/06/efficient-currency-conversion/"/>
-    <updated>2013-09-06T09:52:00-04:00</updated>
+    <updated>2013-09-06T09:52:00-07:00</updated>
     <id>http://liggat.org/2013/09/06/efficient-currency-conversion</id>
     <content type="html"><![CDATA[<p>I&rsquo;m willing to bet that Canadians, on average, do more foreign exchange (forex) transactions than citizens of many other countries. This is an obvious consequence of the significant shopping and investing opportunities south of the <a href="http://en.wikipedia.org/wiki/49th_parallel_north#The_Canada_.E2.80.93_United_States_border">49th parallel</a>. Moreover, plenty of Canadian software contractors such as myself find themselves billing in American dollars (<span class="money usd">USD</span>) occasionally.</p>
 

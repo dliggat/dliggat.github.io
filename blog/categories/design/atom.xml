@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Design | Liggat.org]]></title>
   <link href="http://liggat.org/blog/categories/design/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2014-07-04T09:34:27-04:00</updated>
+  <updated>2014-08-30T14:57:33-07:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[A New Design]]></title>
     <link href="http://liggat.org/2013/12/24/a-new-design/"/>
-    <updated>2013-12-24T21:14:09-05:00</updated>
+    <updated>2013-12-24T18:14:09-08:00</updated>
     <id>http://liggat.org/2013/12/24/a-new-design</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve been using <a href="http://octopress.org">Octopress</a> as a blogging platform for over six months now, and can&rsquo;t recommend it enough for tech capable (or curious) writers. However, I&rsquo;ve never been fully happy with my minor adaptations to the default style. I finally got around to implementing an improved design.<!--more--></p>
 

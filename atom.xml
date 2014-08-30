@@ -4,7 +4,7 @@
   <title><![CDATA[Liggat.org]]></title>
   <link href="http://liggat.org/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2014-07-04T09:34:27-04:00</updated>
+  <updated>2014-08-30T14:57:33-07:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -14,9 +14,77 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Everyone Should Use Twitter]]></title>
+    <link href="http://liggat.org/2014/08/27/everyone-should-use-twitter/"/>
+    <updated>2014-08-27T15:20:45-07:00</updated>
+    <id>http://liggat.org/2014/08/27/everyone-should-use-twitter</id>
+    <content type="html"><![CDATA[<p>Twitter&rsquo;s role in the public sphere is a contradictory one. It is at once ubiquious – adorning all manner of billboards and signs, not to mention the lower fifth of the screen of cable news broadcasts – and yet almost entirely foreign to those who do not use it. That last clause verges on the tautological, but the emphasis is on <em>foreign</em>; I submit that Twitter is <em>bizarre</em> and outright <em>strange</em> to its non-users to a much greater extent than is true in the case of Facebook or just about any of the other prominent social web services.<!--more--></p>
+
+<p>Although Twitter&rsquo;s ubiquity ensures that just about everyone has <em>heard</em> of it, and may even be aware that it has developed into a substantial forum for worldwide discourse, I get the sense that most people have never been shown a single, compelling reason why they might personally trouble to open an account.</p>
+
+<p>As a devoted, adoring user of the service<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, this strikes me as a mild tragedy. It is understandable why many people might feel this way; bootstrapping an account from naught to useful is not an especially easy task, and is fraught with several meaningful obstacles:</p>
+
+<ul>
+<li><strong>The Bootstrapping Problem</strong>: Twitter gets more interesting with each additional account you discover and follow<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>. However, at the dawn of an account – with zero follows – Twitter&rsquo;s &lsquo;interestingness&rsquo; is at a minimum, as low as it will ever be. This is not encouraging to a newcomer.</li>
+<li><strong>Utility</strong>: As a consequence, it is not at all clear to a newcomer what possible utility they might receive from this new account. Moreover, newcomers seem to believe that the primary purpose of Twitter is in <em>tweeting</em><sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>, when in actual fact, <em>reading the timeline</em> is the main reason it&rsquo;s worth having an account. To be sure, it&rsquo;s fun to participate in conversations once in a while, but one can receive an enormous amount of value from Twitter simply by following a set of interesting accounts, reading their updates, and perhaps never once sending a tweet.</li>
+<li><strong>Esotericism</strong>: Twitter pioneered, or at least greatly popularized, several new dynamics such as the asymmetric follower/following relationship and <code>@</code>-mentioning. It also has its own conventions which are opaque from the outset<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>. Although all of this is well understood by regular users, I get the impression it is intimidating to start with.</li>
+</ul>
+
+
+<p>Twitter has visibly attempted to address these issues<sup id="fnref:5"><a href="#fn:5" rel="footnote">5</a></sup>, though not satisfactorially, I would argue. The onboarding process addresses the bootstrapping problem to a degree, but that&rsquo;s only useful once a newcomer has been convinced to sign up. Prior to that point, Twitter has done a poor job communicating the message that, <strong>if you like reading stuff on the web, and most people do, after all; then you would almost certainly enjoy having a Twitter account</strong>.</p>
+
+<p>That is exactly my position. I posit that the intersection of people who (a) currently like reading the internet and (b) would enjoy Twitter with a sufficiently-well-constructed following-list is one and the same.</p>
+
+<p>If you&rsquo;re reading this, and don&rsquo;t have a Twitter account, I <em>implore</em> you to give it a try.</p>
+
+<ol>
+<li>Open an account. Using your real name or having the account be associated in any way with your real identity is strictly optional.</li>
+<li>Pick some people to follow. See the end of this page for some suggestions.</li>
+<li>Have a look at the timeline several times a day. It&rsquo;s not a corporate email inbox – to be doggedly read to completion, but rather, a river of interesting things for perusal and sampling at any time.</li>
+</ol>
+
+
+<p>With a judiciously selected follow-list, Twitter has the potential to become a fascinating window onto the world, tailored to your own interests. It is truly fantastic, and you should give it a try if you haven&rsquo;t already.</p>
+
+<h3>Addendum: Some Follow Suggestions</h3>
+
+<p>Here&rsquo;s a few suggestions of worthwhile accounts to follow<sup id="fnref:6"><a href="#fn:6" rel="footnote">6</a></sup> based on my own interests (the categories are overly-simplistic, of course):</p>
+
+<ul>
+<li>Canadian-focus <a href="https://twitter.com/acoyne">@acoyne</a>, <a href="https://twitter.com/MikePMoffatt">@MikePMoffatt</a>, <a href="https://twitter.com/stephenfgordon">@stephenfgordon</a></li>
+<li>News <a href="https://twitter.com/guardian">@guardian</a>, <a href="https://twitter.com/BreakingNews">@BreakingNews</a>, <a href="https://twitter.com/CBCNews">@CBCNews</a>, <a href="https://twitter.com/BBCNews">@BBCNews</a>, <a href="https://twitter.com/TheTyee">@TheTyee</a></li>
+<li>Economics <a href="https://twitter.com/TheEconomist">@TheEconomist</a>, <a href="https://twitter.com/TimHarford">@TimHarford</a>, <a href="https://twitter.com/Pricenomics">@Pricenomics</a>, <a href="https://twitter.com/planetmoney">@planetmoney</a></li>
+<li>Finance <a href="https://twitter.com/felixsalmon">@felixsalmon</a>, <a href="https://twitter.com/dealbook">@dealbook</a>, <a href="https://twitter.com/CdnCouchPotato">@CdnCouchPotato</a></li>
+<li>Tech <a href="https://twitter.com/pmarca">@pmarca</a>, <a href="https://twitter.com/BenedictEvans">@BenedictEvans</a>, <a href="https://twitter.com/monkbent">@monkbent</a>, <a href="https://twitter.com/fmanjoo">@fmanjoo</a>, <a href="https://twitter.com/gruber">@gruber</a>, <a href="https://twitter.com/troyhunt">@troyhunt</a></li>
+<li>Urbanism <a href="https://twitter.com/StrongTowns">@StrongTowns</a>, <a href="https://twitter.com/neil21">@neil21</a>, <a href="https://twitter.com/modacitylife">@modacitylife</a>, <a href="https://twitter.com/copenhagenize">@copenhagenize</a></li>
+<li>Miscellaneous <a href="https://twitter.com/mathbabedotorg">@mathbabedotorg</a>, <a href="https://twitter.com/TheOnion">@TheOnion</a>, <a href="https://twitter.com/StatFact">@StatFact</a>, <a href="https://twitter.com/RealTimeWWII">@RealTimeWWII</a></li>
+</ul>
+
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>Twitter is quite possibly <em>my favourite thing</em> about our modern, connected, mobile world &ndash; and I include my iPhone in that list.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>Unlike Facebook, which I contend gets less interesting with each additional friend (beyond a minimal set of close contacts).<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>What a tweet even <em>is</em> seems to cause some degree of consternation initially, with many newcomers believing that the act of tweeting is predominantly a way to share breakfast photographs, express inane self-indulgences, or bolster your public persona if you happen to be Ashton Kutcher – all things that no right-thinking individual should engage in.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p>e.g. 140-char limit, <code>@</code>-replies <a href="https://support.twitter.com/articles/119138-types-of-tweets-and-where-they-appear">only appear</a> in the timelines of mutual follows.<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+<li id="fn:5">
+<p>As I write this, in August 2014, there has been word of Twitter monkeying with what shows up in timelines; heretofore this was strictly determined by one&rsquo;s followed accounts. This is <strong>not</strong> the way to solve the utility problem, and I hope they see sense.<a href="#fnref:5" rev="footnote">&#8617;</a></p></li>
+<li id="fn:6">
+<p>Following does not imply endorsement, but it does imply <em>interest</em>.<a href="#fnref:6" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Why Publicly Forecast?]]></title>
     <link href="http://liggat.org/2014/06/30/why-publicly-forecast/"/>
-    <updated>2014-06-30T21:10:31-04:00</updated>
+    <updated>2014-06-30T18:10:31-07:00</updated>
     <id>http://liggat.org/2014/06/30/why-publicly-forecast</id>
     <content type="html"><![CDATA[<p>As part of my <a href="http://en.wikipedia.org/wiki/Operations_research">Operations Research</a> training, I took a course in statistical forecasting. The course, despite being replete with interesting concepts and methods, had a fairly simple takeaway: more often than not, <em>forecasting is impossible</em>. This is particularly true in scenarios with a <a href="http://en.wikipedia.org/wiki/Martingale_(probability_theory)">martingale</a>-property such as stock prices.<!--more--></p>
 
@@ -55,7 +123,7 @@
   <entry>
     <title type="html"><![CDATA[Accounts Are Containers]]></title>
     <link href="http://liggat.org/2014/06/05/accounts-are-containers/"/>
-    <updated>2014-06-05T17:19:57-04:00</updated>
+    <updated>2014-06-05T14:19:57-07:00</updated>
     <id>http://liggat.org/2014/06/05/accounts-are-containers</id>
     <content type="html"><![CDATA[<p>Recently, I&rsquo;ve found myself explaining to some friends and family members the precise difference between a regular (i.e. non-registered) account, an RRSP account, and a TFSA account. In particular, many Canadians hold the mistaken belief that these accounts are <em>products</em> &ndash; a thing that the bank creates and sells. This is incorrect &ndash; <strong>accounts are containers</strong>, into which the same assets (cash savings, stocks, etc) can be placed. The type of the container merely specifies how its gains are taxed, nothing more.<!--more--></p>
 
@@ -102,7 +170,7 @@
   <entry>
     <title type="html"><![CDATA[A Call for Modern Banking]]></title>
     <link href="http://liggat.org/2014/04/22/a-call-for-modern-banking/"/>
-    <updated>2014-04-22T09:40:07-04:00</updated>
+    <updated>2014-04-22T06:40:07-07:00</updated>
     <id>http://liggat.org/2014/04/22/a-call-for-modern-banking</id>
     <content type="html"><![CDATA[<p>I can scarcely walk past a bus shelter without being shown a poster by one of the big-five Canadian banks invariably touting their extended branch hours, new location(s), or magnanimous decision to remain open on Sundays. Guess what? No one under 60 cares.<!--more--> Visiting a bank branch is unnecessary for the overwhelming majority of banking interactions, and most people only do so on exceedingly rare occasions and with substantial reluctance due to the trespass upon time and the general hassle that a visit represents<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.</p>
 
@@ -165,7 +233,7 @@
   <entry>
     <title type="html"><![CDATA[The Name of Thrones]]></title>
     <link href="http://liggat.org/2014/04/06/the-name-of-thrones/"/>
-    <updated>2014-04-06T13:37:29-04:00</updated>
+    <updated>2014-04-06T10:37:29-07:00</updated>
     <id>http://liggat.org/2014/04/06/the-name-of-thrones</id>
     <content type="html"><![CDATA[<p>Last summer, my better half and I spent some time in Scotland, the country of my birth. Departing from Edinburgh, and en route to Inverness, we went through Glencoe in the Scottish Highlands. Leaving aside the very real potential for bias on my part &ndash; Glencoe is a hauntingly beautiful place, with equally impactful history in its past.<!--more--></p>
 
@@ -196,7 +264,7 @@
   <entry>
     <title type="html"><![CDATA[IPv6: An Unreachable Wall?]]></title>
     <link href="http://liggat.org/2014/03/23/ipv6-an-unreachable-wall/"/>
-    <updated>2014-03-23T15:55:48-04:00</updated>
+    <updated>2014-03-23T12:55:48-07:00</updated>
     <id>http://liggat.org/2014/03/23/ipv6-an-unreachable-wall</id>
     <content type="html"><![CDATA[<p>In <a href="http://www.fiatlux.fm/pragmatic/16">episode 16</a> of <a href="https://twitter.com/fiatluxfm">Ben Alexander</a> and <a href="https://twitter.com/johnchidgey">John Chidgey&rsquo;s</a> excellent <a href="http://www.fiatlux.fm/pragmatic/">Pragmatic</a> podcast, the hosts touched upon the unfortunate tendency of organizations &amp; individuals to underanticipate the scale of future demands upon their designed technology.<!--more--></p>
 
@@ -251,7 +319,7 @@
   <entry>
     <title type="html"><![CDATA[A Robust Photo Workflow]]></title>
     <link href="http://liggat.org/2014/03/20/a-robust-photo-workflow/"/>
-    <updated>2014-03-20T21:11:09-04:00</updated>
+    <updated>2014-03-20T18:11:09-07:00</updated>
     <id>http://liggat.org/2014/03/20/a-robust-photo-workflow</id>
     <content type="html"><![CDATA[<p>With the proliferation of smartphones, most people now have an excellent camera with them at all times, and are taking many more photographs per year than ever before.<!--more--></p>
 
@@ -371,7 +439,7 @@
   <entry>
     <title type="html"><![CDATA[@liggs Is Now @dliggat]]></title>
     <link href="http://liggat.org/2014/02/20/at-liggs-is-now-at-dliggat/"/>
-    <updated>2014-02-20T23:20:23-05:00</updated>
+    <updated>2014-02-20T20:20:23-08:00</updated>
     <id>http://liggat.org/2014/02/20/at-liggs-is-now-at-dliggat</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve changed my Twitter handle from @liggs to <a href="https://twitter.com/dliggat">@dliggat</a>, as part of a general username consolidation that&rsquo;s been nagging me for a while. I figured it was worth marking the <em>occasion</em> with a site entry, given how much I use Twitter.</p>
 
@@ -396,7 +464,7 @@
   <entry>
     <title type="html"><![CDATA[Taking a Stand With Work]]></title>
     <link href="http://liggat.org/2014/02/16/taking-a-stand-with-work/"/>
-    <updated>2014-02-16T10:21:59-05:00</updated>
+    <updated>2014-02-16T07:21:59-08:00</updated>
     <id>http://liggat.org/2014/02/16/taking-a-stand-with-work</id>
     <content type="html"><![CDATA[<p>Being a so-called <em>knowledge worker</em> comes with at least one very substantial downside: there is a fundamental lack of physical activity built into the job<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, and long sedentary periods are commonplace. I&rsquo;ve been very cognizant of this for a long time, and do my best to actively combat it with daily exercise, gym routines, etc. While those help substantially, they do not alter the basic reality that one tends to be sitting in a chair for many hours, staring at a screen.</p>
 
@@ -452,7 +520,7 @@
   <entry>
     <title type="html"><![CDATA[Navigating Canadian Cellular Number Portability (in 8 Easy Steps)]]></title>
     <link href="http://liggat.org/2014/01/30/navigating-canadian-cellular-number-portability/"/>
-    <updated>2014-01-30T22:47:12-05:00</updated>
+    <updated>2014-01-30T19:47:12-08:00</updated>
     <id>http://liggat.org/2014/01/30/navigating-canadian-cellular-number-portability</id>
     <content type="html"><![CDATA[<p>Since 2007, Canadians have been afforded the right to migrate (&lsquo;port&rsquo;) their cellular <a href="http://en.wikipedia.org/wiki/Pstn">PSTN</a> number with them when they switch to a new cellular operator. The legislation which enacted this brought to bear a small reduction in <a href="http://en.wikipedia.org/wiki/Switching_barriers">switching costs</a> in a &lsquo;market&rsquo;<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> widely reputed for hostility towards its customers, not to mention, [at the very least] <em>perceived</em> collusion among the operators themselves.<!--more--></p>
 
@@ -499,7 +567,7 @@
   <entry>
     <title type="html"><![CDATA[In Charge of Windows 9]]></title>
     <link href="http://liggat.org/2014/01/15/in-charge-of-windows-9/"/>
-    <updated>2014-01-15T17:23:19-05:00</updated>
+    <updated>2014-01-15T14:23:19-08:00</updated>
     <id>http://liggat.org/2014/01/15/in-charge-of-windows-9</id>
     <content type="html"><![CDATA[<p>Peter, an old UBC classmate and frequent co-banterer on Twitter, randomly posed an interesting question to me earlier today:<!--more--></p>
 
@@ -549,7 +617,7 @@
   <entry>
     <title type="html"><![CDATA[Criticize Real-World NOOPs]]></title>
     <link href="http://liggat.org/2014/01/08/criticize-real-world-noops/"/>
-    <updated>2014-01-08T23:37:42-05:00</updated>
+    <updated>2014-01-08T20:37:42-08:00</updated>
     <id>http://liggat.org/2014/01/08/criticize-real-world-noops</id>
     <content type="html"><![CDATA[<p>In the world of computation, a <em>NOOP</em> (<em>No-Op</em>eration) is an instruction that has zero effect on the state of the machine. The term originally hails from the esoteric world of CPU-architecture and instruction-sets<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, but the term is also used semi-colloquially as programmer shorthand for <strong>&lsquo;this achieves nothing&rsquo;</strong>.<!--more--></p>
 
@@ -587,7 +655,7 @@ practice of tracking and storing user information with the country’s law.</p><
   <entry>
     <title type="html"><![CDATA[A New Design]]></title>
     <link href="http://liggat.org/2013/12/24/a-new-design/"/>
-    <updated>2013-12-24T21:14:09-05:00</updated>
+    <updated>2013-12-24T18:14:09-08:00</updated>
     <id>http://liggat.org/2013/12/24/a-new-design</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve been using <a href="http://octopress.org">Octopress</a> as a blogging platform for over six months now, and can&rsquo;t recommend it enough for tech capable (or curious) writers. However, I&rsquo;ve never been fully happy with my minor adaptations to the default style. I finally got around to implementing an improved design.<!--more--></p>
 
@@ -641,7 +709,7 @@ practice of tracking and storing user information with the country’s law.</p><
   <entry>
     <title type="html"><![CDATA[Canadian Housing: Noting for Posterity]]></title>
     <link href="http://liggat.org/2013/12/15/canadian-housing-noting-for-posterity/"/>
-    <updated>2013-12-15T08:52:00-05:00</updated>
+    <updated>2013-12-15T08:52:00-08:00</updated>
     <id>http://liggat.org/2013/12/15/canadian-housing-noting-for-posterity</id>
     <content type="html"><![CDATA[<p>I&rsquo;m posting the following chart from <a href="http://blog.bcaresearch.com/canadian-housing-the-bubble-debate">BCA Research</a> not for the purposes of persuasion, but rather, for posterity.<!--more--></p>
 
@@ -672,7 +740,7 @@ practice of tracking and storing user information with the country’s law.</p><
   <entry>
     <title type="html"><![CDATA[A Minor Rant on Package Tracking]]></title>
     <link href="http://liggat.org/2013/11/30/a-minor-rant-on-package-tracking/"/>
-    <updated>2013-11-30T23:11:00-05:00</updated>
+    <updated>2013-11-30T23:11:00-08:00</updated>
     <id>http://liggat.org/2013/11/30/a-minor-rant-on-package-tracking</id>
     <content type="html"><![CDATA[<p>I do a fair bit of online shopping<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, and have done so for pretty much my entire credit-card-wielding life. It&rsquo;s a familiar ritual: every time, shortly after I&rsquo;ve clicked <code>Purchase</code>, an email arrives containing a linked phrase with roughly the following copy: <em>Click here to track your shipment</em>. <!--more-->And every time I receive that email, I dutifully click that link, only to be met with the following 404-esque response:</p>
 
@@ -708,7 +776,7 @@ practice of tracking and storing user information with the country’s law.</p><
   <entry>
     <title type="html"><![CDATA[Static Hosting on Amazon S3]]></title>
     <link href="http://liggat.org/2013/11/03/static-hosting-on-amazon-s3/"/>
-    <updated>2013-11-03T13:13:00-05:00</updated>
+    <updated>2013-11-03T13:13:00-08:00</updated>
     <id>http://liggat.org/2013/11/03/static-hosting-on-amazon-s3</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve had an outstanding <strong>todo</strong> for quite some time to migrate my basic and essentially-static <a href="http://www.factorialsystems.ca">business website</a> off of <a href="http://www.squarespace.com">Squarespace</a>. I ended up replacing it with a combination of <a href="http://octopress.org">Octopress</a> and Amazon Simple Storage Service (<a href="http://aws.amazon.com/s3">S3</a>), which, it turns out, are a fantastic duo.<!--more--></p>
 
@@ -766,7 +834,7 @@ practice of tracking and storing user information with the country’s law.</p><
   <entry>
     <title type="html"><![CDATA[Walter White, Art Aficionado]]></title>
     <link href="http://liggat.org/2013/10/15/walter-white/"/>
-    <updated>2013-10-15T10:41:00-04:00</updated>
+    <updated>2013-10-15T10:41:00-07:00</updated>
     <id>http://liggat.org/2013/10/15/walter-white</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve been re-watching <em>Breaking Bad</em>, one of my favourite television dramas, ever. Yesterday, midway through an early second season episode, I noticed a connection to a much later point in the story that I haven&rsquo;t seen discussed anywhere else.</p>
 
@@ -808,7 +876,7 @@ practice of tracking and storing user information with the country’s law.</p><
   <entry>
     <title type="html"><![CDATA[Simulating the Birthday Paradox]]></title>
     <link href="http://liggat.org/2013/10/13/simulating-the-birthday-paradox/"/>
-    <updated>2013-10-13T10:59:00-04:00</updated>
+    <updated>2013-10-13T10:59:00-07:00</updated>
     <id>http://liggat.org/2013/10/13/simulating-the-birthday-paradox</id>
     <content type="html"><![CDATA[<p>Probability theory is a pretty special branch of mathematics in the sense that it is (1) highly applicable to daily life; (2) many of its results are easily comprehensible to most people; and yet despite this (3) it remains a profoundly complex area of mathematical inquiry<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.<!--more--></p>
 
@@ -907,7 +975,7 @@ practice of tracking and storing user information with the country’s law.</p><
   <entry>
     <title type="html"><![CDATA[On Boredom]]></title>
     <link href="http://liggat.org/2013/09/25/on-boredom/"/>
-    <updated>2013-09-25T09:32:00-04:00</updated>
+    <updated>2013-09-25T09:32:00-07:00</updated>
     <id>http://liggat.org/2013/09/25/on-boredom</id>
     <content type="html"><![CDATA[<p><a href="http://teamcoco.com/video/louis-ck-springsteen-cell-phone">Another</a> of Louis C.K.&rsquo;s hilarious talk-show interview diatribes is being widely circulated on the web and Twitter right now &ndash; this time about smartphones, and why he won&rsquo;t let his children have one. It&rsquo;s well worth a watch, but his argument essentially boils down to the observation that smartphones provide a constant stream of distraction that removes the condition, boredom, that is arguably necessary for healthy self-reflection.<!--more--></p>
 
@@ -936,7 +1004,7 @@ practice of tracking and storing user information with the country’s law.</p><
   <entry>
     <title type="html"><![CDATA[Farewell, Old Friend]]></title>
     <link href="http://liggat.org/2013/09/09/farewell-old-friend/"/>
-    <updated>2013-09-09T15:39:00-04:00</updated>
+    <updated>2013-09-09T15:39:00-07:00</updated>
     <id>http://liggat.org/2013/09/09/farewell-old-friend</id>
     <content type="html"><![CDATA[<p>iOS 7<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> and a new iPhone are imminent. <!--more--> Tomorrow is Apple Christmas Morning.</p>
 
@@ -948,129 +1016,6 @@ practice of tracking and storing user information with the country’s law.</p><
 <ol>
 <li id="fn:1">
 <p>I fully expect this screenshot to look hilariously out of date once iOS 7 is rolled out everywhere and the new aesthetic is &lsquo;normal&rsquo; and not at all novel. I won&rsquo;t miss stitched leather one bit.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Efficient Currency Conversion]]></title>
-    <link href="http://liggat.org/2013/09/06/efficient-currency-conversion/"/>
-    <updated>2013-09-06T09:52:00-04:00</updated>
-    <id>http://liggat.org/2013/09/06/efficient-currency-conversion</id>
-    <content type="html"><![CDATA[<p>I&rsquo;m willing to bet that Canadians, on average, do more foreign exchange (forex) transactions than citizens of many other countries. This is an obvious consequence of the significant shopping and investing opportunities south of the <a href="http://en.wikipedia.org/wiki/49th_parallel_north#The_Canada_.E2.80.93_United_States_border">49th parallel</a>. Moreover, plenty of Canadian software contractors such as myself find themselves billing in American dollars (<span class="money usd">USD</span>) occasionally.</p>
-
-<!--more-->
-
-
-<p>Unfortunately, currency conversion to and from Canadian dollars (<span class="money cad">CAD</span>) is no exception to that frequently-bemoaned axiom of Canadian life: it&rsquo;s expensive, and domestic vendors extract a cosy profit margin (i.e. banks in this case). This phenomenon is perennially annoying<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> in general, but especially so when we&rsquo;re talking about <em>bits in a database</em>, which is all money really is at this point.</p>
-
-<p>However, it turns out there&rsquo;s a neat trick you can pull off to convert <span class="money cad">CAD</span> ⇔ <span class="money usd">USD</span> [almost] optimally called <strong>Norbert&rsquo;s Gambit</strong>. There are plenty of <a href="http://canadiancouchpotato.com/2013/07/09/norberts-gambit-at-cibc/">other</a> <a href="http://www.canadiancapitalist.com/a-foolproof-method-to-convert-canadian-dollars-into-us-dollars/">blog</a> <a href="http://www.michaeljamesonmoney.com/2012/03/trying-norbert-gambit-at-bmo.html">posts</a> out there explaining this &ndash; I thought I&rsquo;d throw my hat into the ring also by documenting my experience. <em>This hopefully goes without saying, but this is a personal record of events by a layman of finance, not the provision of financial advice. Your mileage may vary &ndash; do your own research.</em></p>
-
-<p><a href="http://en.wikipedia.org/wiki/Wikipedia:Too_long;_didn't_read">tl; dr</a> version:</p>
-
-<blockquote><p>In conversion rate terms, this is a gain of $138.25 CAD over what the bank offered on the $5,000.00 USD conversion.</p></blockquote>
-
-<h3>Background</h3>
-
-<p><img class="right" src="http://liggat.org/images/forex.jpg" width="325" title="'Forex'" >
-For the sake of completeness, it is worth mentioning the concept of the <strong>mid-market rate</strong> in forex. Although we tend to think of a unit of currency having a fixed, reversible value in a different currency (e.g. <span class="money usd price">$1.00 USD</span> = <span class="money cad price">$1.05 CAD</span>), generally no one will sell you the opposite currency at that rate. Currency conversion boards seen in train stations and airports illustrate this concept; they show <em>two rates</em> &ndash; vendors will transact in the opposite currency at a higher or lower rate, depending on whether you wish to buy or sell, respectively. The difference, of course, is their profit<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>.</p>
-
-<p>The mid-market rate is theoretically equidistant between the two rates, and it&rsquo;s the rate we would ideally achieve when we participate in a forex transaction. Mid-market rates for currency pairs are reported on <a href="http://finance.google.com">Google Finance</a>, <a href="http://xe.com">XE</a>, etc.</p>
-
-<h3>Objective</h3>
-
-<p>My objective on the morning of <strong>2013-09-05</strong> was to convert <span class="money usd price">$5,000.00 USD</span> to <span class="money cad">CAD</span> as efficiently as possible. The value of that sum of money, in <span class="money cad">CAD</span>, implied by the mid-market rate at the time was <span class="money cad price">$5,252.15 CAD</span>. In optimization terms, this is a clear <em>upper bound</em> on the quantity I&rsquo;m trying to maximize.</p>
-
-<h5>Option A: Bank Transfer</h5>
-
-<p>As far as I&rsquo;m aware, most Canadian banks allow for a immediate conversion of <span class="money cad">CAD</span> ⇔ <span class="money usd">USD</span> online from a <span class="money cad">CAD</span>-denominated account to a <span class="money usd">USD</span>-denominated account or vice-versa. In a matter of seconds, one can perform this transaction. The price for this convenience, however, is the suboptimal forex rate that they apply<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>. My bank offered me <span class="money cad price">$5,112.50 CAD</span> in exchange for <span class="money usd price">$5,000.00 USD</span> on <strong>2013-09-05</strong>. Easy, and hassle-free &ndash; but we can do better.</p>
-
-<h5>Option B: Third Party Currency Trader</h5>
-
-<p>Rather than use the functionality built into online banking, we can outsource the conversion to an outfit like <a href="http://xe.com">XE</a>. It&rsquo;s a bit of a hassle to set up, and the website is straight out of 2002, but that aside, it does exactly what it says on the tin. You book a trade; money gets withdrawn in one currency (e.g. <span class="money cad">CAD</span>) and shows up a few days later, converted, in the other currency (e.g. <span class="money usd">USD</span>). I&rsquo;ve used XE on very seldom occasions across a duration of many years and it has always worked out great. On the morning of <strong>2013-09-05</strong>, they quoted a rate of <span class="money cad price">$5,186.72 CAD</span> in exchange for <span class="money usd price">$5,000.00 USD</span>. Not quite the mid-market rate, but this is already an improvement of <span class="money cad price">$74.22 CAD</span> over Option A.</p>
-
-<h3>Option C: Norbert&rsquo;s Gambit</h3>
-
-<p>The process for doing even better relies on what I understand to be the following approximate logic:</p>
-
-<ul>
-<li>Start with money in a given currency, say, <span class="money usd">USD</span>.</li>
-<li>Use that money to purchase units of a security that lists on both the NYSE and TSX. Through the magic of <a href="http://en.wikipedia.org/wiki/Arbitrage">arbitrage</a>, the security on both markets will tend towards an identical price (even if traded in different currencies).</li>
-<li>Once you own it on the NYSE, ask your broker to swap it for equivalent units on the TSX.</li>
-<li>Sell those TSX-listed units of the security, now denominated in <span class="money cad">CAD</span>.</li>
-<li>Congratulations &ndash; all going well, you just converted <span class="money usd ">USD</span> to <span class="money cad">CAD</span> at essentially the mid-market rate. Provided, of course, the security didn&rsquo;t fluctuate much in value between the two trades.</li>
-</ul>
-
-
-<h3>Outcome</h3>
-
-<p>In practice, it seems you don&rsquo;t need to worry too much about the price fluctuation between trades. An <a href="http://en.wikipedia.org/wiki/Exchange-traded_fund">ETF</a> with symbol <a href="http://www.horizonsetfs.com/pub/en/etfs/?etf=DLR&amp;">DLR</a> was apparently created as a stable vehicle for precisely this manoeuvre. I followed <a href="http://www.michaeljamesonmoney.com/2012/03/trying-norbert-gambit-at-bmo.html">these instructions</a> closely and it worked out exactly as described. On <strong>2013-09-05</strong>, I phoned the broker<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>, bought DLR.U with <span class="money usd">USD</span>, exchanged it for DLR, and immediately sold to receive <span class="money cad">CAD</span>.</p>
-
-<p>In actual numeric terms, I bought <span class="money usd">502 DLR.U × $9.97 USD/DLR.U</span> = <span class="money usd price">$5,004.94 USD</span> and subsequently sold <span class="money cad">502 DLR × $10.47 CAD/DLR</span> = <span class="money cad price">$5,255.94 CAD</span>. In conversion rate terms, this is a gain of <span class="money cad price">$138.25 CAD</span> over what the bank offered on the <span class="money usd price">$5,000.00 USD</span> conversion, and the achieved rate <em>is</em> the mid-market rate to three decimal places.</p>
-
-<h4>But wait! There&rsquo;s More</h4>
-
-<p>We can&rsquo;t just call this a <span class="money cad price">$138.25 CAD</span> job well done though. I had to execute two trades&hellip; and trading has transaction costs. Depending on your bank/broker, and various policies, etc, this could be anywhere from $5.00 to $30.00 each direction. So the savings realized in this scenario is actually: <span class="money cad price">$138.25 CAD &ndash; 2 × { cost per trade }</span>. Still, it&rsquo;s a pretty good outcome for doing basically nothing but a bit of one-time research. And the savings scale in proportion to the amount converted!</p>
-
-<p>This is part of the reason<sup id="fnref:5"><a href="#fn:5" rel="footnote">5</a></sup> why banks are so ludicrously profitable. It&rsquo;s all just bits in a database&hellip; but the act of flipping those bits can come at a higher or lower cost depending on how you tell the bank to manipulate them.</p>
-
-<h4>Summary of Implied Rates</h4>
-
-<p>Here&rsquo;s the various rates summarized. Note that the Norbert&rsquo;s Gambit result <strong>does not</strong> include the cost of the trades, which must be accounted for in practice.</p>
-
-<div class="summary">
-  <table>
-    <thead>
-      <tr>
-        <td>Method</td>
-        <td>Starting Value</td>
-        <td>Resulting Value</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Bank Transfer</td>
-        <td><span class="money usd">$5,000.00 USD</span></td>
-        <td><span class="money cad">$5,112.50 CAD</span></td>
-      </tr>
-      <tr>
-        <td>Third Party Conversion</td>
-        <td><span class="money usd">$5,000.00 USD</span></td>
-        <td><span class="money cad">$5,186.72 CAD</span></td>
-      </tr>
-      <tr>
-        <td>Norbert&#8217;s Gambit</td>
-        <td><span class="money usd">$5,000.00 USD</span></td>
-        <td><span class="money cad">$5,250.75 CAD</span></td>
-      </tr>
-      <tr>
-        <td>Theoretical Mid-Market Optimum</td>
-        <td><span class="money usd">$5,000.00 USD</span></td>
-        <td><span class="money cad">$5,252.15 CAD</span></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-
-<p>One last remark: it&rsquo;s probably wise to be circumspect within any dealings with your bank when setting up accounts for this or actually executing the trade. Norbert&rsquo;s Gambit<sup id="fnref:6"><a href="#fn:6" rel="footnote">6</a></sup> is a perfectly legitimate operation, but it&rsquo;s pretty easy to imagine banks getting upset at this reduction in their effortless-profit, and potentially erecting obstacles.</p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>Especially to a Scotsman.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-<li id="fn:2">
-<p>Sometimes these airport outfits add an extra &lsquo;fee&rsquo; on top, as if getting to charge a spread that they pick isn&rsquo;t already a &lsquo;fee&rsquo;.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
-<li id="fn:3">
-<p>Even if the rate is bad, for smaller amounts of money, the convenience is worth it. It&rsquo;s only well into the four-digit zone does this start to become a worthwhile consideration.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
-<li id="fn:4">
-<p>I had to phone rather than do this over the web because apparently the bank&rsquo;s online systems can&rsquo;t handle DLR.U. I don&rsquo;t imagine there&rsquo;s a sound technical reason for this outside of &ldquo;banks being banks&rdquo;, but the guy on the phone was super polite and efficient at getting it done, and didn&rsquo;t charge any extra for the phone service over what it normally costs to transact online.<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
-<li id="fn:5">
-<p>Other reasons include real and artificial barriers to entry, and riskless profits thanks to taxpayer guarantees on various loans issued, but all of that is a rant for another day.<a href="#fnref:5" rev="footnote">&#8617;</a></p></li>
-<li id="fn:6">
-<p>New bucket list item &ndash; invent a thing that comes to be known as <strong>Liggat&rsquo;s Gambit</strong>. How cool would it be to have a <em>gambit</em> to your name&hellip;<a href="#fnref:6" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 
