@@ -4,7 +4,7 @@
   <title><![CDATA[Liggat.org]]></title>
   <link href="http://liggat.org/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2014-09-06T15:00:58-07:00</updated>
+  <updated>2014-09-14T12:12:20-07:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -12,6 +12,70 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Zsh Evangelism]]></title>
+    <link href="http://liggat.org/2014/09/07/zsh-evangelism/"/>
+    <updated>2014-09-07T14:29:24-07:00</updated>
+    <id>http://liggat.org/2014/09/07/zsh-evangelism</id>
+    <content type="html"><![CDATA[<p>After a decade of stubbornly sticking with <code>bash</code>, I&rsquo;ve <a href="http://en.wikipedia.org/wiki/Chsh">changed shells</a> to <code>zsh</code> and couldn&rsquo;t be happier with the decision. The only regret is in not having switched long before now.<!--more--> This was a <code>svn</code> => <code>git</code><sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> sort of transition for me: <em>of course, I should&rsquo;ve been using it all along!</em></p>
+
+<p>By way of evangelism, a few notes on my configuration:</p>
+
+<h3>Prompt</h3>
+
+<p>It is much easier and cleaner to customize a <code>zsh</code> prompt than in <code>bash</code>. It also has a notion of an <code>RPROMPT</code> – the right-aligned prompt – which is excellent for supplementary directory information<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>.
+<img class="center" src="http://liggat.org/images/2014/zsh.png" width="700" title="'Zsh Prompt'" ></p>
+
+<p>My prompt configuration can be found <a href="https://github.com/dliggat/dotfiles/blob/master/zsh/05_prompt.zsh">here</a>.</p>
+
+<h3>Oh My Zsh!</h3>
+
+<p>Another advantage of switching to <code>zsh</code> is the ability to take advantage of <a href="http://ohmyz.sh">oh-my-zsh</a>, a set of plugins, helper functions, and themes for <code>zsh</code>. I&rsquo;m not using any of the themes directly<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>, but the plugins are really nice, and provide, for example, tab completion for executables like <code>ruby</code>, <code>git</code>, etc.</p>
+
+<h3>Dotfiles</h3>
+
+<p>I&rsquo;ve structured my dotfile repository in a modular way: separating into various concern areas such as <a href="https://github.com/dliggat/dotfiles/blob/master/zsh/03_aliases.zsh">aliases.zsh</a>, <a href="https://github.com/dliggat/dotfiles/blob/master/zsh/04_functions.zsh">functions.zsh</a>, and so on. The top level <code>~/.zshrc</code> symlink-target consequently reduces down to a simple <a href="https://github.com/dliggat/dotfiles/blob/master/zshrc">script</a>; its only job is to set a few <code>zsh</code> options and then <code>source</code> the individual modules:</p>
+
+<figure class='code'><figcaption><span>.zshrc: Shell Configuration </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#!/bin/zsh</span>
+</span><span class='line'>
+</span><span class='line'>setopt HIST_IGNORE_ALL_DUPS
+</span><span class='line'>setopt HIST_IGNORE_SPACE
+</span><span class='line'>
+</span><span class='line'><span class="nb">export </span><span class="nv">DOTFILES</span><span class="o">=</span><span class="nv">$HOME</span>/git/me/dotfiles
+</span><span class='line'><span class="k">for </span>zsh_config in <span class="sb">`</span>ls <span class="nv">$DOTFILES</span>/zsh/*.zsh | sort<span class="sb">`</span>  <span class="c"># Sort =&gt; source in order.</span>
+</span><span class='line'><span class="k">do</span>
+</span><span class='line'><span class="k">  </span><span class="nb">source</span> <span class="nv">$zsh_config</span>
+</span><span class='line'><span class="k">done</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If, like me until recently, inertia still keeps you on <code>bash</code> – definitely give <code>zsh</code> a try. You won&rsquo;t regret it.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>Well, <em>any source control system</em> => <code>git</code>, really.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>In my case: <code>git</code> repository status and <code>ruby</code> version information as set by <code>rbenv</code>.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>My prompt is a custom version of the <a href="https://github.com/robbyrussell/oh-my-zsh/blob/master/themes/gallois.zsh-theme">gallois</a> theme.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Everyone Should Use Twitter]]></title>
@@ -995,27 +1059,6 @@ practice of tracking and storing user information with the country’s law.</p><
 <p>Visible screens inscribed on contact lenses?<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
 <li id="fn:3">
 <p>I am convinced that historians will have a well-defined name for this period in decades/centuries to come.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Farewell, Old Friend]]></title>
-    <link href="http://liggat.org/2013/09/09/farewell-old-friend/"/>
-    <updated>2013-09-09T15:39:00-07:00</updated>
-    <id>http://liggat.org/2013/09/09/farewell-old-friend</id>
-    <content type="html"><![CDATA[<p>iOS 7<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> and a new iPhone are imminent. <!--more--> Tomorrow is Apple Christmas Morning.</p>
-
-<p>It&rsquo;s the end of the road for <a href="http://en.wikipedia.org/wiki/Iphone_4s">you</a>, my old friend.</p>
-
-<p><img class="center" src="http://liggat.org/images/2013/iphone_4s.png" width="400" title="'iPhone 4S'" ></p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>I fully expect this screenshot to look hilariously out of date once iOS 7 is rolled out everywhere and the new aesthetic is &lsquo;normal&rsquo; and not at all novel. I won&rsquo;t miss stitched leather one bit.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 
