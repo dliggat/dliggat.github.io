@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Bash | Liggat.org]]></title>
   <link href="http://liggat.org/blog/categories/bash/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2014-09-14T12:12:20-07:00</updated>
+  <updated>2014-09-14T13:42:21-07:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -31,7 +31,7 @@
 
 <h3>Oh My Zsh!</h3>
 
-<p>Another advantage of switching to <code>zsh</code> is the ability to take advantage of <a href="http://ohmyz.sh">oh-my-zsh</a>, a set of plugins, helper functions, and themes for <code>zsh</code>. I&rsquo;m not using any of the themes directly<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>, but the plugins are really nice, and provide, for example, tab completion for executables like <code>ruby</code>, <code>git</code>, etc.</p>
+<p>Another advantage of switching to <code>zsh</code> is the opportunity to use <a href="http://ohmyz.sh">oh-my-zsh</a>, a set of plugins, helper functions, and themes for <code>zsh</code>. I&rsquo;m not using any of the themes directly<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>, but the plugins are really nice, and provide, for example, tab completion for executables like <code>ruby</code>, <code>git</code>, etc.</p>
 
 <h3>Dotfiles</h3>
 
