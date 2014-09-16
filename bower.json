@@ -1,0 +1,6 @@
+{
+  "name": "liggat.org",
+  "dependencies": {
+    "moment": "~2.7.0"
+  }
+}
