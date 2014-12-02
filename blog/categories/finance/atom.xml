@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Finance | Liggat.org]]></title>
   <link href="http://liggat.org/blog/categories/finance/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2014-09-14T13:42:21-07:00</updated>
+  <updated>2014-12-02T15:14:10-08:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -14,210 +14,122 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Why Publicly Forecast?]]></title>
-    <link href="http://liggat.org/2014/06/30/why-publicly-forecast/"/>
-    <updated>2014-06-30T18:10:31-07:00</updated>
-    <id>http://liggat.org/2014/06/30/why-publicly-forecast</id>
-    <content type="html"><![CDATA[<p>As part of my <a href="http://en.wikipedia.org/wiki/Operations_research">Operations Research</a> training, I took a course in statistical forecasting. The course, despite being replete with interesting concepts and methods, had a fairly simple takeaway: more often than not, <em>forecasting is impossible</em>. This is particularly true in scenarios with a <a href="http://en.wikipedia.org/wiki/Martingale_(probability_theory)">martingale</a>-property such as stock prices.<!--more--></p>
+    <title type="html"><![CDATA[Wealthsimple Review]]></title>
+    <link href="http://liggat.org/2014/11/27/wealthsimple-review/"/>
+    <updated>2014-11-27T11:12:15-08:00</updated>
+    <id>http://liggat.org/2014/11/27/wealthsimple-review</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve been watching the ascent of automated index investing services (e.g. <a href="https://www.wealthfront.com">Wealthfront</a>) in the United States with keen interest, and I have been looking forward to the arrival of similar services in Canada. The value proposition is pretty straightfoward: you invest in securities (i.e. <a href="http://en.wikipedia.org/wiki/Exchange-traded_fund">ETFs</a>) in accordance with your savings goals, time horizon, risk tolerance, etc – and they take care of the messy details such as trading, rebalancing, and even tax-loss harvesting.<!--more--> Because computers are involved, and automating this process, it can be done very cheaply and efficiently, but more importantly: <em>sans</em> any human emotion – so often the destroyer of portfolio returns.</p>
 
-<p>So it is with that in mind that I cannot help but be cynical when I see a prominent organization, usually a bank or investment house of some sort, publicly forecast financial figures such as currency exchange rates or stock prices.</p>
+<p>So long as you are convinced by the soundness<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> of <a href="http://canadiancouchpotato.com/couch-potato-faq/">index investing</a> as a strategy – and I invite the skeptic to examine the boatloads of evidence to that effect – there is a lot to like about this concept. When I heard about <a href="https://www.wealthsimple.com">Wealthsimple</a>&rsquo;s launch in Canada, I immediately signed up to try it out.</p>
 
-<p>Consider this statement, as reported by the CBC in January of 2014:</p>
+<p><em>As with anything I write on the topic of finance or investing – this is all just a layperson&rsquo;s opinion – not the provision of advice. Do your own research, or consult with a trusted, qualified advisor.</em></p>
 
-<h4><a href="http://www.cbc.ca/news/business/canadian-dollar-headed-to-85-cents-us-td-says-1.2516849">Canadian dollar headed to 85 cents US, TD says</a></h4>
+<h2>First Impressions</h2>
 
-<blockquote><p>In the near-term, the loonie is forecast to fall as low as 85 cents U.S. by mid-year.</p></blockquote>
+<p>I&rsquo;ve long been a critic of bad software, and in particular <a href="http://liggat.org/2014/04/22/a-call-for-modern-banking/">bad software</a> in financial services. It amazes me that these organizations, with such vast market capitalizations and elephantine top and bottom lines, still mostly have web applications straight out of 2004 – <em>putting it charitably</em>.</p>
 
-<p>Why do this? It is hard to ascribe intellectual honesty to such prognostication. For one thing, I&rsquo;m largely convinced by the [weak] <a href="http://en.wikipedia.org/wiki/Efficient-market_hypothesis">efficient-market hypothesis</a>, and thus don&rsquo;t believe it is actually <em>possible</em> to forecast the price of a currency six months out<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>. Furthermore, assuming one <em>could</em> perform this forecasting with better-than-chance accuracy &ndash; why share that secret with the world? That knowledge, guarded jealously and carefully executed upon, would lead to untold riches. It is therefore difficult to arrive at charitable reasons why an organization would make such a pronouncement<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>.</p>
+<p><img class="center" src="/images/2014/wealthsimple.png" width="700" title="&lsquo;Wealthsimple&rsquo;" ></p>
 
-<p>As it turns out, this particular &lsquo;mid-year&rsquo; forecast was dead wrong:</p>
+<p>Wealthsimple is, refreshingly, a company that appears to <em>get it</em> in this regard. Right on the landing page are some positive indicators: an <a href="http://en.wikipedia.org/wiki/Extended_Validation_Certificate">EV TLS</a> certificate, responsive design, good typography. This is all <a href="http://en.wikipedia.org/wiki/Necessity_and_sufficiency">necessary but not sufficient</a> of course, i.e. certainly not proof-positive of the company&rsquo;s engineering and/or financial acumen – but it is very encouraging on a first-impressions basis<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>.</p>
 
-<h4><a href="http://www.cbc.ca/news/business/canadian-dollar-nears-2014-high-against-u-s-greenback-1.2689863">Canadian dollar nears 2014 high against U.S. greenback</a></h4>
+<h2>Onboarding Process</h2>
 
-<blockquote><p>The Canadian dollar tested six-month highs Friday, but analysts say they don’t expect the loonie’s recent strength to be the new normal. The Canadian dollar rose almost three-tenths of a cent to close at 93.80 cents US Friday</p></blockquote>
+<p>Getting signed up was pretty smooth, and involved zero pieces of physical paper<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>. They walk you through a progression of steps where you verify identification, prove ownership of your bank account, and so on. At any given point, it&rsquo;s very clear how things are progressing. Given the fairly strict requirements on identify verification and so on in financial services – this is about as pleasant a process as one could hope for.</p>
 
-<p>Interestingly, coverage of such forecasts never seem to hold the prognosticators to account. Although the banks involved in these two statements were different, I have never seen the CBC or other news organization publicly examine the historical record for such forecasts.</p>
+<p>As part of the signup, new users also participate in a risk tolerance questionnaire – fairly standard stuff. I can&rsquo;t meaningfully comment on this as I have my own well-established opinions in that area.</p>
 
-<p>My take: forecasting is generally impossible. Stochastic, martingale forecasting <strong>is</strong> impossible. Don&rsquo;t believe anyone who claims otherwise.</p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>Speaking very imprecisely: if the information existed in the present to do this forecasting, it would quickly be arbitraged away such that the advantage would disappear.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-<li id="fn:2">
-<p>TD happens to be the forecasting organization in this case, but this activity is by no means exclusive to them. It is very, very common to read all manner of financial forecasts by banks, analysis firms, etc.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
+<p>Wealthsimple differs from its peers – certainly Wealthfront – in at least one important way: investors have access to an advisor figure who can, presumably, offer advice on matters relating to financial milestones and tax optimization. As part of the onboarding process, they invite you to schedule a brief call with your assigned advisor. I&rsquo;m not sure to what extent this person is available to the investor, and to what extent their advice is personalized, but their presence is surely comforting to any investor keen to escape the fleecing<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup> of their <code>2.5% MER</code> mutual funds, but is not quite ready to be fully self-directed.</p>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Accounts Are Containers]]></title>
-    <link href="http://liggat.org/2014/06/05/accounts-are-containers/"/>
-    <updated>2014-06-05T14:19:57-07:00</updated>
-    <id>http://liggat.org/2014/06/05/accounts-are-containers</id>
-    <content type="html"><![CDATA[<p>Recently, I&rsquo;ve found myself explaining to some friends and family members the precise difference between a regular (i.e. non-registered) account, an RRSP account, and a TFSA account. In particular, many Canadians hold the mistaken belief that these accounts are <em>products</em> &ndash; a thing that the bank creates and sells. This is incorrect &ndash; <strong>accounts are containers</strong>, into which the same assets (cash savings, stocks, etc) can be placed. The type of the container merely specifies how its gains are taxed, nothing more.<!--more--></p>
+<p><img class="center" src="/images/2014/chart.png" width="600" title="&lsquo;Chart&rsquo;" ></p>
 
-<p><img class="center" src="/images/2014/containers.png" width="600" title="&lsquo;Containers&rsquo;" ></p>
+<h2>Investing</h2>
 
-<blockquote><p>The type of the container merely specifies how its gains are taxed, nothing more.</p></blockquote>
+<p>With your risk tolerance identified, Wealthsimple builds a portfolio by transacting ETFs on your behalf.</p>
 
-<h3>Non-registered</h3>
+<p><img class="center" src="/images/2014/portfolio.png" width="600" title="&lsquo;Portfolio&rsquo;" ></p>
 
-<p>A non-registered account is simply an ordinary container with no special tax treatment. It can hold cash savings, stocks, bonds, ETFs, mutual funds, etc. A vanilla savings account is one such example, but a stock trading account could qualify also. Any &lsquo;gains&rsquo; from the assets in this container are subject to taxation, though it&rsquo;s worth noting that the various types of &lsquo;gain&rsquo; (e.g. interest, Canadian dividends, foreign dividends, capital gains) are each handled in their own special way &ndash; this is where the unfortunate complexity of the tax code rears its head. Regardless, bottom line: <strong>you pay tax on any gains in a non-registered account</strong>.</p>
+<p>There&rsquo;s a lot to like here; <a href="http://www.blackrock.com/ca/individual/en/products/239837/ishares-sptsx-capped-composite-index-etf">XIC</a> and <a href="https://personal.vanguard.com/us/funds/snapshot?FundId=0970&amp;FundIntExt=INT">VTI</a> are used for Canadian and US equity respectively. These are large, diverse total stock market indices with ultra-cheap <code>0.05%</code> MERs<sup id="fnref:5"><a href="#fn:5" rel="footnote">5</a></sup>. Moreover, they trade in USD-based securities where appropriate – presumably after first <a href="http://liggat.org/2013/09/06/efficient-currency-conversion/">converting cheaply</a>. This is advantageous, not only for currency diversification reasons, but also for eliminating US <a href="http://canadiancouchpotato.com/2010/03/05/put-your-assets-in-their-place/">dividend-withholding</a> in RRSPs.</p>
 
-<h3>RRSP</h3>
+<p>Other choices in the portfolio – I&rsquo;m not so sure. For example, the category of <strong>Risk-Managed Stocks</strong> has the descriptor <em>&lsquo;uses a momentum-based strategy designed to protect investors against big market downturns&rsquo;</em>, which sounds awfully <a href="http://en.wikipedia.org/wiki/Active_management#Disadvantages_of_active_management">active-management</a> to me. Given that I essentially subscribe to the weak sefficient-market hypothesis, and believe stochastic forecasting <a href="http://liggat.org/2014/06/30/why-publicly-forecast/">is impossible</a> – this is problematic for my own personal investing philosophy. Others may well differ on this point.</p>
 
-<p>An RRSP account is a container designed with retirement needs in mind. Like the non-registered account, it may hold a variety of asset types. It is taxed in a notable manner: when you <em>contribute</em> money to this account, you actually receive a reduction in your tax-payable for the year, today<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>. However, when you <em>withdraw</em> money, usually in retirement, that money is treated as if it were salary income &ndash; and taxed accordingly. In the meantime, the assets in the container grow <em>tax-free</em> through the usual means (interest, dividends, capital gains).</p>
+<p>Regardless of the ultimate performance of these more exotic securities &ndash; their management doesn&rsquo;t come especially cheap. Their presence inflates the weighted MER of the portfolio in my account to <code>0.3622%</code>. Speaking of pricing:</p>
 
-<p><a href="http://www.michaeljamesonmoney.com/2014/03/cra-your-rrsp-partners-whether-you-want.html">Michael James</a> has documented an excellent way to think of this transaction: in exchange for a reduction in this year&rsquo;s taxes, you grant the <a href="http://www.cra-arc.gc.ca/menu-eng.html">CRA</a> an ownership stake in the future value of your RRSP container. This turns out to be a beneficial manoeuvre so long as the <a href="http://en.wikipedia.org/wiki/Tax_rate#Marginal">marginal</a> tax rate on the contributed money is higher than the <em>[unknowable but presumably and hopefully lower]</em> marginal tax rate at retirement. Bottom line: <strong>in an RRSP, you get a reduction in taxes today in exchange for granting the CRA a stake in the container&rsquo;s eventual disbursements</strong>.</p>
+<h2>Pricing</h2>
 
-<h3>TFSA</h3>
-
-<p>A TFSA is a container whose gains (interest, dividends, capital gains, etc) are <strong>never subject to taxation</strong>. Because that&rsquo;s such an attractive proposition, the government only permits adult individuals to contribute $5000 per year<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>. Assuming wise and/or fortunate investing decisions<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>, the TFSA has the potential to grow substantially over a multi-decade period, and will result in a container of assets which is not subject to any taxation. Bottom line: <strong>Any growth within a TFSA is never taxed but only a limited contribution per year is permitted</strong>.</p>
-
-<h3>Which Should I Use?</h3>
-
-<p>It can be complicated. There is a ton of nuance to the rules governing the above, and this is not financial advice. With these general frameworks in mind, the question for every individual to be asking themselves is: <em>&ldquo;given my tax and income situation and future plans and possible scenarios, which of these gives me the most advantage?&rdquo;</em>. Each of these has a possible role to play, though the TFSA in particular is an excellent vehicle for investing. The opportunity it represents should not be squandered, in my view.</p>
-
-<h3>Who cares &ndash; this is boring!</h3>
-
-<p>I&rsquo;m somewhat sympathetic to that claim. However, ignorance in the basics of this topic is very, very costly &ndash; in missed tax-saving opportunities and in selecting highly-suboptimal financial products. The price for ignorance is <em>substantial</em> personal expense. It&rsquo;s well worth a cursory knowledge of how these containers work, and how they can be used to advance one&rsquo;s freedom, happiness and life goals – which is of course the primary underlying objective of any personal finance initiative.</p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>i.e. usually in the form of a tax refund<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-<li id="fn:2">
-<p>This was the figure set in 2009, and is inflation adjusted to be $5500 as of 2013. As of 2014, an eligible adult has $31,000 worth of room for contribution. The contribution room does not expire and accumulates from year to year. There are strict rules on withdrawal and re-contribution, so <strong>tread lightly</strong>!<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
-<li id="fn:3">
-<p>I&rsquo;m a fan of <a href="http://canadiancouchpotato.com/couch-potato-faq/">index investing</a>, myself.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Efficient Currency Conversion]]></title>
-    <link href="http://liggat.org/2013/09/06/efficient-currency-conversion/"/>
-    <updated>2013-09-06T09:52:00-07:00</updated>
-    <id>http://liggat.org/2013/09/06/efficient-currency-conversion</id>
-    <content type="html"><![CDATA[<p>I&rsquo;m willing to bet that Canadians, on average, do more foreign exchange (forex) transactions than citizens of many other countries. This is an obvious consequence of the significant shopping and investing opportunities south of the <a href="http://en.wikipedia.org/wiki/49th_parallel_north#The_Canada_.E2.80.93_United_States_border">49th parallel</a>. Moreover, plenty of Canadian software contractors such as myself find themselves billing in American dollars (<span class="money usd">USD</span>) occasionally.</p>
-
-<!--more-->
-
-
-<p>Unfortunately, currency conversion to and from Canadian dollars (<span class="money cad">CAD</span>) is no exception to that frequently-bemoaned axiom of Canadian life: it&rsquo;s expensive, and domestic vendors extract a cosy profit margin (i.e. banks in this case). This phenomenon is perennially annoying<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> in general, but especially so when we&rsquo;re talking about <em>bits in a database</em>, which is all money really is at this point.</p>
-
-<p>However, it turns out there&rsquo;s a neat trick you can pull off to convert <span class="money cad">CAD</span> ⇔ <span class="money usd">USD</span> [almost] optimally called <strong>Norbert&rsquo;s Gambit</strong>. There are plenty of <a href="http://canadiancouchpotato.com/2013/07/09/norberts-gambit-at-cibc/">other</a> <a href="http://www.canadiancapitalist.com/a-foolproof-method-to-convert-canadian-dollars-into-us-dollars/">blog</a> <a href="http://www.michaeljamesonmoney.com/2012/03/trying-norbert-gambit-at-bmo.html">posts</a> out there explaining this &ndash; I thought I&rsquo;d throw my hat into the ring also by documenting my experience. <em>This hopefully goes without saying, but this is a personal record of events by a layman of finance, not the provision of financial advice. Your mileage may vary &ndash; do your own research.</em></p>
-
-<p><a href="http://en.wikipedia.org/wiki/Wikipedia:Too_long;_didn't_read">tl; dr</a> version:</p>
-
-<blockquote><p>In conversion rate terms, this is a gain of $138.25 CAD over what the bank offered on the $5,000.00 USD conversion.</p></blockquote>
-
-<h3>Background</h3>
-
-<p><img class="right" src="/images/forex.jpg" width="325" title="&lsquo;Forex&rsquo;" >
-For the sake of completeness, it is worth mentioning the concept of the <strong>mid-market rate</strong> in forex. Although we tend to think of a unit of currency having a fixed, reversible value in a different currency (e.g. <span class="money usd price">$1.00 USD</span> = <span class="money cad price">$1.05 CAD</span>), generally no one will sell you the opposite currency at that rate. Currency conversion boards seen in train stations and airports illustrate this concept; they show <em>two rates</em> &ndash; vendors will transact in the opposite currency at a higher or lower rate, depending on whether you wish to buy or sell, respectively. The difference, of course, is their profit<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>.</p>
-
-<p>The mid-market rate is theoretically equidistant between the two rates, and it&rsquo;s the rate we would ideally achieve when we participate in a forex transaction. Mid-market rates for currency pairs are reported on <a href="http://finance.google.com">Google Finance</a>, <a href="http://xe.com">XE</a>, etc.</p>
-
-<h3>Objective</h3>
-
-<p>My objective on the morning of <strong>2013-09-05</strong> was to convert <span class="money usd price">$5,000.00 USD</span> to <span class="money cad">CAD</span> as efficiently as possible. The value of that sum of money, in <span class="money cad">CAD</span>, implied by the mid-market rate at the time was <span class="money cad price">$5,252.15 CAD</span>. In optimization terms, this is a clear <em>upper bound</em> on the quantity I&rsquo;m trying to maximize.</p>
-
-<h5>Option A: Bank Transfer</h5>
-
-<p>As far as I&rsquo;m aware, most Canadian banks allow for a immediate conversion of <span class="money cad">CAD</span> ⇔ <span class="money usd">USD</span> online from a <span class="money cad">CAD</span>-denominated account to a <span class="money usd">USD</span>-denominated account or vice-versa. In a matter of seconds, one can perform this transaction. The price for this convenience, however, is the suboptimal forex rate that they apply<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>. My bank offered me <span class="money cad price">$5,112.50 CAD</span> in exchange for <span class="money usd price">$5,000.00 USD</span> on <strong>2013-09-05</strong>. Easy, and hassle-free &ndash; but we can do better.</p>
-
-<h5>Option B: Third Party Currency Trader</h5>
-
-<p>Rather than use the functionality built into online banking, we can outsource the conversion to an outfit like <a href="http://xe.com">XE</a>. It&rsquo;s a bit of a hassle to set up, and the website is straight out of 2002, but that aside, it does exactly what it says on the tin. You book a trade; money gets withdrawn in one currency (e.g. <span class="money cad">CAD</span>) and shows up a few days later, converted, in the other currency (e.g. <span class="money usd">USD</span>). I&rsquo;ve used XE on very seldom occasions across a duration of many years and it has always worked out great. On the morning of <strong>2013-09-05</strong>, they quoted a rate of <span class="money cad price">$5,186.72 CAD</span> in exchange for <span class="money usd price">$5,000.00 USD</span>. Not quite the mid-market rate, but this is already an improvement of <span class="money cad price">$74.22 CAD</span> over Option A.</p>
-
-<h3>Option C: Norbert&rsquo;s Gambit</h3>
-
-<p>The process for doing even better relies on what I understand to be the following approximate logic:</p>
+<p>Wealthsimple has various offerings depending on the size of the portfolio under management, but generally speaking:</p>
 
 <ul>
-<li>Start with money in a given currency, say, <span class="money usd">USD</span>.</li>
-<li>Use that money to purchase units of a security that lists on both the NYSE and TSX. Through the magic of <a href="http://en.wikipedia.org/wiki/Arbitrage">arbitrage</a>, the security on both markets will tend towards an identical price (even if traded in different currencies).</li>
-<li>Once you own it on the NYSE, ask your broker to swap it for equivalent units on the TSX.</li>
-<li>Sell those TSX-listed units of the security, now denominated in <span class="money cad">CAD</span>.</li>
-<li>Congratulations &ndash; all going well, you just converted <span class="money usd ">USD</span> to <span class="money cad">CAD</span> at essentially the mid-market rate. Provided, of course, the security didn&rsquo;t fluctuate much in value between the two trades.</li>
+<li>investors pay a management fee of <code>0.5%</code>; less on Premium (above $100k) or above portfolios</li>
+<li>automated <a href="http://canadiancouchpotato.com/2014/09/26/is-it-time-for-tax-loss-selling/">tax-loss harvesting</a> is included with Premium accounts and above</li>
+<li>ETF trading fees are <em>not</em> charged; this is covered by Wealthsimple<sup id="fnref:6"><a href="#fn:6" rel="footnote">6</a></sup></li>
+<li>The management fee is <em>not inclusive</em> of the MER of the underlying ETFs, so it&rsquo;s really <code>0.5% + 0.3622%</code>, assuming the same portfolio as mine in Wealthsimple.</li>
 </ul>
 
 
-<h3>Outcome</h3>
-
-<p>In practice, it seems you don&rsquo;t need to worry too much about the price fluctuation between trades. An <a href="http://en.wikipedia.org/wiki/Exchange-traded_fund">ETF</a> with symbol <a href="http://www.horizonsetfs.com/pub/en/etfs/?etf=DLR&amp;">DLR</a> was apparently created as a stable vehicle for precisely this manoeuvre. I followed <a href="http://www.michaeljamesonmoney.com/2012/03/trying-norbert-gambit-at-bmo.html">these instructions</a> closely and it worked out exactly as described. On <strong>2013-09-05</strong>, I phoned the broker<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>, bought DLR.U with <span class="money usd">USD</span>, exchanged it for DLR, and immediately sold to receive <span class="money cad">CAD</span>.</p>
-
-<p>In actual numeric terms, I bought <span class="money usd">502 DLR.U × $9.97 USD/DLR.U</span> = <span class="money usd price">$5,004.94 USD</span> and subsequently sold <span class="money cad">502 DLR × $10.47 CAD/DLR</span> = <span class="money cad price">$5,255.94 CAD</span>. In conversion rate terms, this is a gain of <span class="money cad price">$138.25 CAD</span> over what the bank offered on the <span class="money usd price">$5,000.00 USD</span> conversion, and the achieved rate <em>is</em> the mid-market rate to three decimal places.</p>
-
-<h4>But wait! There&rsquo;s More</h4>
-
-<p>We can&rsquo;t just call this a <span class="money cad price">$138.25 CAD</span> job well done though. I had to execute two trades&hellip; and trading has transaction costs. Depending on your bank/broker, and various policies, etc, this could be anywhere from $5.00 to $30.00 each direction. So the savings realized in this scenario is actually: <span class="money cad price">$138.25 CAD &ndash; 2 × { cost per trade }</span>. Still, it&rsquo;s a pretty good outcome for doing basically nothing but a bit of one-time research. And the savings scale in proportion to the amount converted!</p>
-
-<p>This is part of the reason<sup id="fnref:5"><a href="#fn:5" rel="footnote">5</a></sup> why banks are so ludicrously profitable. It&rsquo;s all just bits in a database&hellip; but the act of flipping those bits can come at a higher or lower cost depending on how you tell the bank to manipulate them.</p>
-
-<h4>Summary of Implied Rates</h4>
-
-<p>Here&rsquo;s the various rates summarized. Note that the Norbert&rsquo;s Gambit result <strong>does not</strong> include the cost of the trades, which must be accounted for in practice.</p>
+<p>Here is how Wealthsimple&rsquo;s portfolio fees compare to other options. These options are discussed in more detail at <a href="http://canadiancouchpotato.com/model-portfolios/">Canadian Couch Potato</a>, and I won&rsquo;t replicate that here. I operate in the <em>Low-cost Index ETF</em> category myself.</p>
 
 <div class="summary">
   <table>
     <thead>
       <tr>
         <td>Method</td>
-        <td>Starting Value</td>
-        <td>Resulting Value</td>
+        <td>Weighted MER (Approx %)</td>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Bank Transfer</td>
-        <td><span class="money usd">$5,000.00 USD</span></td>
-        <td><span class="money cad">$5,112.50 CAD</span></td>
+        <td>Typical Mutual Funds</td>
+        <td><span>2.5</span></td>
       </tr>
       <tr>
-        <td>Third Party Conversion</td>
-        <td><span class="money usd">$5,000.00 USD</span></td>
-        <td><span class="money cad">$5,186.72 CAD</span></td>
+        <td>Tangerine Mutual Funds</td>
+        <td><span>1.07</span></td>
       </tr>
       <tr>
-        <td>Norbert's Gambit</td>
-        <td><span class="money usd">$5,000.00 USD</span></td>
-        <td><span class="money cad">$5,250.75 CAD</span></td>
+        <td>Wealthsimple (MER + fee)</td>
+        <td><span><strong>0.85</strong></span></td>
       </tr>
       <tr>
-        <td>Theoretical Mid-Market Optimum</td>
-        <td><span class="money usd">$5,000.00 USD</span></td>
-        <td><span class="money cad">$5,252.15 CAD</span></td>
+        <td>TD e-series Mutual Funds</td>
+        <td><span>0.44</span></td>
+      </tr>
+      <tr>
+        <td>Low-cost Index ETFs</td>
+        <td><span>0.18</span></td>
       </tr>
     </tbody>
   </table>
 </div>
 
 
-<p>One last remark: it&rsquo;s probably wise to be circumspect within any dealings with your bank when setting up accounts for this or actually executing the trade. Norbert&rsquo;s Gambit<sup id="fnref:6"><a href="#fn:6" rel="footnote">6</a></sup> is a perfectly legitimate operation, but it&rsquo;s pretty easy to imagine banks getting upset at this reduction in their effortless-profit, and potentially erecting obstacles.</p>
+<p>Wealthsimple is undoubtedly far, far cheaper than the most egregious mutual fund offerings to be found in this country. However, it remains quite a bit more expensive than either a TD <a href="https://www.tdcanadatrust.com/products-services/investing/mutual-funds/td-eseries-funds.jsp">e-series</a> portfolio, or a low-cost ETF portfolio. Obviously this isn&rsquo;t an apples-to-apples comparison; Wealthsimple automates much of the work and provides access to an advisor – neither of which is available in the cheaper options above. The more exotic ETF choices are harder for me to justify. Ultimately, it&rsquo;s up to the individual investor whether the value justifies the cost based on their needs and philosophy. There&rsquo;s nothing wrong with paying more to get a better level of service or experience, so long as one is aware that seemingly small percentages in fact <a href="http://www.michaeljamesonmoney.com/2011/12/better-way-to-explain-investing-costs.html">compound</a> rather substantially.</p>
 
-<p></p>
+<p>As it stands, right now I still see TD <a href="https://www.tdcanadatrust.com/products-services/investing/mutual-funds/td-eseries-funds.jsp">e-series</a> remaining in the sweet spot, given its low cost and relative lack of maintenance required.</p>
+
+<h2>Would I Use It?</h2>
+
+<p>I&rsquo;ll probably keep my initial deposit invested as an experiment, but I&rsquo;m unlikely to go all-in on it with my entire portfolio. Leaving aside my investment objections raised above, I&rsquo;m ultimately not really the target market. I&rsquo;m a finance geek – I <em>like</em> executing trades, <a href="http://liggat.org/2013/09/06/efficient-currency-conversion/">efficiently converting currency</a>, manually rebalancing – this stuff is interesting and intellectually rewarding to me. Saving roughly sixty basis points for doing this on my own is simply a bonus for doing something I&rsquo;m inclined towards anyway.</p>
+
+<h2>Conclusion</h2>
+
+<p>I&rsquo;ll be following Wealthsimple&rsquo;s progress with great interest. I can object about their precise portfolio choices, or the size of their fee in relation to other alternatives, but these aspects of the service needn&rsquo;t be permanently fixed. I would like to see them at least <em>offer</em> a more traditional indexed option aside from what they have. Of particular interest to me is if they can find a way to enable frequent, dollar-cost averaged purchases – <em>crucially</em> with a good solution for calculating <a href="http://www.theglobeandmail.com/globe-investor/investor-education/the-abcs-of-tracking-your-acb/article17838427/">adjusted cost-bases</a> in non-registered accounts. This is a very difficult thing to achieve elsewhere, even at TD e-series.</p>
+
+<p>Taken as a whole, it seems to me that they&rsquo;ve built the beginnings of something great. However their offerings play out, the fees that most investors in this country pay, often-unwittingly, are <em>eye-wateringly</em> high, so it seems to me there is a pretty substantial <a href="http://en.wikipedia.org/wiki/Price_umbrella">price umbrella</a> for Wealthsimple to comfortably sit under! Investing is a natural place for software to be deployed, and after wistfully observing the US-market progress on this front, I&rsquo;m happy to see Canada start to catch up. I wish Wealthsimple the best of luck – innovation in the customer facing part of banking and investing is always appreciated, and seems to be oddly rare among the incumbents.</p>
 <div class="footnotes">
 <hr/>
 <ol>
 <li id="fn:1">
-<p>Especially to a Scotsman.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<p>To what extent Wealthsimple truly adheres to indexing is not fully clear, as explored below.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
 <li id="fn:2">
-<p>Sometimes these airport outfits add an extra &lsquo;fee&rsquo; on top, as if getting to charge a spread that they pick isn&rsquo;t already a &lsquo;fee&rsquo;.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<p>Especially <a href="http://liggat.org/about/">to me</a>, as I&rsquo;m immersed in web application engineering and infrastructure daily.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
 <li id="fn:3">
-<p>Even if the rate is bad, for smaller amounts of money, the convenience is worth it. It&rsquo;s only well into the four-digit zone does this start to become a worthwhile consideration.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<p>I <a href="http://liggat.org/2013/07/21/paperless/">went paperless</a> over a year ago, so this is always appreciated.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
 <li id="fn:4">
-<p>I had to phone rather than do this over the web because apparently the bank&rsquo;s online systems can&rsquo;t handle DLR.U. I don&rsquo;t imagine there&rsquo;s a sound technical reason for this outside of &ldquo;banks being banks&rdquo;, but the guy on the phone was super polite and efficient at getting it done, and didn&rsquo;t charge any extra for the phone service over what it normally costs to transact online.<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+<p>This is about the least harsh word I can reasonably apply here.<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
 <li id="fn:5">
-<p>Other reasons include real and artificial barriers to entry, and riskless profits thanks to taxpayer guarantees on various loans issued, but all of that is a rant for another day.<a href="#fnref:5" rev="footnote">&#8617;</a></p></li>
+<p>That&rsquo;s a fee of $5 for every $10,000 invested. It doesn&rsquo;t get much better than that.<a href="#fnref:5" rev="footnote">&#8617;</a></p></li>
 <li id="fn:6">
-<p>New bucket list item &ndash; invent a thing that comes to be known as <strong>Liggat&rsquo;s Gambit</strong>. How cool would it be to have a <em>gambit</em> to your name&hellip;<a href="#fnref:6" rev="footnote">&#8617;</a></p></li>
+<p>Self-directed investors typically pay $9.95 or so for a trade, so this represents a cost saving. The transactional batching may well have bid/ask spread implications though, but I didn&rsquo;t look into this.<a href="#fnref:6" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 
