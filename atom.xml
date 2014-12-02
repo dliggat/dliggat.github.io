@@ -4,7 +4,7 @@
   <title><![CDATA[Liggat.org]]></title>
   <link href="http://liggat.org/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2014-12-02T15:14:10-08:00</updated>
+  <updated>2014-12-02T15:20:48-08:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -50,7 +50,7 @@
 
 <p>There&rsquo;s a lot to like here; <a href="http://www.blackrock.com/ca/individual/en/products/239837/ishares-sptsx-capped-composite-index-etf">XIC</a> and <a href="https://personal.vanguard.com/us/funds/snapshot?FundId=0970&amp;FundIntExt=INT">VTI</a> are used for Canadian and US equity respectively. These are large, diverse total stock market indices with ultra-cheap <code>0.05%</code> MERs<sup id="fnref:5"><a href="#fn:5" rel="footnote">5</a></sup>. Moreover, they trade in USD-based securities where appropriate – presumably after first <a href="http://liggat.org/2013/09/06/efficient-currency-conversion/">converting cheaply</a>. This is advantageous, not only for currency diversification reasons, but also for eliminating US <a href="http://canadiancouchpotato.com/2010/03/05/put-your-assets-in-their-place/">dividend-withholding</a> in RRSPs.</p>
 
-<p>Other choices in the portfolio – I&rsquo;m not so sure. For example, the category of <strong>Risk-Managed Stocks</strong> has the descriptor <em>&lsquo;uses a momentum-based strategy designed to protect investors against big market downturns&rsquo;</em>, which sounds awfully <a href="http://en.wikipedia.org/wiki/Active_management#Disadvantages_of_active_management">active-management</a> to me. Given that I essentially subscribe to the weak sefficient-market hypothesis, and believe stochastic forecasting <a href="http://liggat.org/2014/06/30/why-publicly-forecast/">is impossible</a> – this is problematic for my own personal investing philosophy. Others may well differ on this point.</p>
+<p>Other choices in the portfolio – I&rsquo;m not so sure. For example, the category of <strong>Risk-Managed Stocks</strong> has the descriptor <em>&lsquo;uses a momentum-based strategy designed to protect investors against big market downturns&rsquo;</em>, which sounds awfully <a href="http://en.wikipedia.org/wiki/Active_management#Disadvantages_of_active_management">active-management</a> to me. Given that I essentially subscribe to the weak efficient-market hypothesis, and believe stochastic forecasting <a href="http://liggat.org/2014/06/30/why-publicly-forecast/">is impossible</a> – this is problematic for my own personal investing philosophy. Others may well differ on this point.</p>
 
 <p>Regardless of the ultimate performance of these more exotic securities &ndash; their management doesn&rsquo;t come especially cheap. Their presence inflates the weighted MER of the portfolio in my account to <code>0.3622%</code>. Speaking of pricing:</p>
 
