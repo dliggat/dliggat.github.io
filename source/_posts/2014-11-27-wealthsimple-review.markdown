@@ -8,7 +8,7 @@ description: A review of Wealthsimple.
 ---
 I've been watching the ascent of automated index investing services (e.g. [Wealthfront][wf]) in the United States with keen interest, and I have been looking forward to the arrival of similar services in Canada. The value proposition is pretty straightfoward: you invest in securities (i.e. [ETFs][etf]) in accordance with your savings goals, time horizon, risk tolerance, etc – and they take care of the messy details such as trading, rebalancing, and even tax-loss harvesting.<!--more--> Because computers are involved, and automating this process, it can be done very cheaply and efficiently, but more importantly: *sans* any human emotion – so often the destroyer of portfolio returns.
 
-So long as you are convinced by the soundness[^1] of [index investing][index] as a strategy – and I invite the skeptic to examine the boatloads of evidence to that effect – there is a lot to like about this concept. When I heard about [Wealthsimple][ws]'s launch in Canada, I immediately signed up to try it out.
+So long as you are convinced by the soundness[^1] of [index investing][index] as a strategy – and I invite the skeptic to examine the boatloads of [evidence][vanguard] to that effect – there is a lot to like about this concept. When I heard about [Wealthsimple][ws]'s launch in Canada, I immediately signed up to try it out.
 
 *As with anything I write on the topic of finance or investing – this is all just a layperson's opinion – not the provision of advice. Do your own research, or consult with a trusted, qualified advisor.*
 
@@ -114,6 +114,7 @@ Taken as a whole, it seems to me that they've built the beginnings of something 
 [index]: http://canadiancouchpotato.com/couch-potato-faq/
 [eseries]: https://www.tdcanadatrust.com/products-services/investing/mutual-funds/td-eseries-funds.jsp
 [merq]: http://www.michaeljamesonmoney.com/2011/12/better-way-to-explain-investing-costs.html
+[vanguard]: https://pressroom.vanguard.com/content/nonindexed/Updated_The_Case_for_Index_Fund_Investing_4.9.2014.pdf
 
 [^1]: To what extent Wealthsimple truly adheres to indexing is not fully clear, as explored below.
 [^2]: Especially [to me](http://liggat.org/about/), as I'm immersed in web application engineering and infrastructure daily.
