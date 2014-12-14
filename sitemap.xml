@@ -117,12 +117,18 @@
         <lastmod>2014-12-08T17:02:18-08:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://liggat.org/2014/12/13/a-full-AWS-rails-stack-provision-and-deployment-with-the-rubber-gem/
+        </loc>
+        <lastmod>2014-12-14T15:38:43-08:00</lastmod>
+    </url>
+    <url>
         <loc>http://liggat.org/about/</loc>
         <lastmod>2014-12-07T23:03:28-08:00</lastmod>
     </url>
     <url>
         <loc>http://liggat.org/archive/</loc>
-        <lastmod>2014-12-08T17:02:18-08:00</lastmod>
+        <lastmod>2014-12-14T15:38:43-08:00</lastmod>
     </url>
     <url>
         <loc>http://liggat.org/contact/</loc>
@@ -134,7 +140,7 @@
     </url>
     <url>
         <loc>http://liggat.org/</loc>
-        <lastmod>2014-12-08T17:02:18-08:00</lastmod>
+        <lastmod>2014-12-14T15:38:43-08:00</lastmod>
     </url>
     <url>
         <loc>http://liggat.org/robots.txt</loc>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby | Liggat.org]]></title>
   <link href="http://liggat.org/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2014-12-08T17:15:37-08:00</updated>
+  <updated>2014-12-14T15:40:06-08:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -12,6 +12,176 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[A Full AWS Rails Stack Provision and Deployment With the Rubber Gem]]></title>
+    <link href="http://liggat.org/2014/12/13/a-full-AWS-rails-stack-provision-and-deployment-with-the-rubber-gem/"/>
+    <updated>2014-12-13T16:00:21-08:00</updated>
+    <id>http://liggat.org/2014/12/13/a-full-AWS-rails-stack-provision-and-deployment-with-the-rubber-gem</id>
+    <content type="html"><![CDATA[<p>It&rsquo;d been some time since I&rsquo;d set up a full <a href="http://rubyonrails.org/">Rails</a> stack on <a href="http://aws.amazon.com/">Amazon Web Services</a>. I thought it would be worth trying out <a href="https://github.com/rubber/rubber">rubber</a> from scratch to provision a full <strong>{Nginx, Passenger, PostgreSQL}</strong> stack on a single AWS host, with as much automation as possible, but without prematurely resorting to the cognitive-overhead of <a href="http://docs.aws.amazon.com/opsworks/latest/userguide/workingcookbook-chef11.html">Chef/OpsWorks</a>. This is my attempt to document the process, as I ran into a few roadblocks along the way.</p>
+
+<!--more-->
+
+
+<p>The <a href="http://railscasts.com/episodes/347-rubber-and-amazon-ec2">RailsCast</a> on <code>rubber</code> is a great place to start, as it gives a good overview on some of the primitive pieces such as setting up EC2 keypairs and so on. This post is written under the assumption it has been watched and understood, but I&rsquo;ll be targeting the <code>complete_passenger_nginx_postgresql</code> template rather than <code>complete_passenger_postgresql</code>, which the episode uses.</p>
+
+<h2>Creating And Deploying &lsquo;Bloggy&rsquo;</h2>
+
+<p>I started out with a super basic Rails app. The <code>git</code> repository is visible <a href="https://github.com/dliggat/bloggy">here</a>; each commit in the <a href="https://github.com/dliggat/bloggy/commits/master">history</a> corresponds to a step along the way. It has a root route which renders a page with the current time and hostname, and a single <code>REST</code>-ful resource: <code>/posts</code>.</p>
+
+<h3>(1) Set Up the Basic App</h3>
+
+<ul>
+<li><a href="https://github.com/dliggat/bloggy/commit/e52a13e96549230cb8f0f1ad7e81381ae2434013">Create</a> the app: <code>bundle exec rails new bloggy -d postgresql</code></li>
+<li><a href="https://github.com/dliggat/bloggy/commit/dcddbc02350812ce9f94842d09078b93f2257cb7">Scaffold</a> a model: <code>bundle exec rails g scaffold post title:string body:text</code></li>
+<li><a href="https://github.com/dliggat/bloggy/commit/f59b8f311aab8cd24c8213f64b4e1441fdf03243">Create</a> database and migrate: <code>bundle exec rake db:create db:migrate</code></li>
+<li><a href="https://github.com/dliggat/bloggy/commit/521fac60a7ab97e9c7a1fb2c6f54b514dbaa2a44">Add</a> a root route and a basic root page</li>
+<li><a href="https://github.com/dliggat/bloggy/commit/5999bed32663165875726437cf04f3a0a23ff6ea">Add</a> <code>dotenv</code> for environment variable management in production</li>
+<li><a href="https://github.com/dliggat/bloggy/compare/5999bed...63b4a27">Add</a> the following gems:
+
+<ul>
+<li><code>capistrano</code>: for deployment automation</li>
+<li><code>rubber</code>: for EC2 provisioning</li>
+<li><code>passenger</code>: for the Rails app server</li>
+<li><code>therubyracer</code>: for asset precompilation in production</li>
+</ul>
+</li>
+</ul>
+
+
+<h3>(2) Configure Rubber</h3>
+
+<ul>
+<li><a href="https://github.com/dliggat/bloggy/commit/de11b73ede158f3b6a439ea68d8ebdc797850e74">Vulcanize</a> the desired stack: <code>vulcanize complete_passenger_nginx_postgresql</code></li>
+<li><a href="https://github.com/dliggat/bloggy/compare/de11b73...d2536ec">Set</a> appropriate versions of <code>ruby</code> (for me: <code>2.1.2</code>), <code>ruby-build</code> and <code>passenger</code><sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.</li>
+<li><a href="https://github.com/dliggat/bloggy/commit/d046ae4314ba669f465c18c9be0606de3398e22f">Set</a> basic properties of the app; <code>app_name</code> and so on.</li>
+<li><a href="https://github.com/dliggat/bloggy/commit/d71b25d31986cd56543eeaae2b36b091f08de4f6">Pick</a> an EC2 image size and type compliant with your region. I&rsquo;m using Ubuntu 14.04 LTS in <code>us-west-2</code> (Oregon)<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>.</li>
+<li><a href="https://github.com/dliggat/bloggy/commit/b1f0d94aba4da1e6eabdfb01290c3b06ead8384f">Enable</a> secure AWS credential storage for rubber using <code>~/.ec2/rubber-secret.yml</code>. You <strong>do not</strong> want to have these credentials in a <code>git</code> repository, irrespective of whether your repository is private or public (like <a href="https://github.com/dliggat/bloggy">mine</a>). My EC2 keys and credential file all live in <code>~/.ec2</code>:</li>
+</ul>
+
+
+<p><img class="center" src="/images/2014/ec2.png" width="700" title="&lsquo;EC2&rsquo;" ></p>
+
+<h3>(3) Instantiate the EC2 Instance</h3>
+
+<p>At this point, we&rsquo;re ready to fire up the EC2 instance:</p>
+
+<ul>
+<li><code>bundle exec rubber cap:create</code></li>
+<li>Call the instance <code>production</code> and assign it every role within the app: <code>web,app,db:primary=true</code>.</li>
+<li>Enter your local admin password when prompted – so rubber can modify your <code>/etc/hosts</code> file.</li>
+<li>Log into the AWS console => EC2, and ensure the image has been started. Grab the public DNS name of the instance<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>.</li>
+</ul>
+
+
+<p>If all has gone well, and the keys were setup correctly ahead of time, it should be possible to <code>ssh</code> to the newly launched instance:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>SSH to the instance </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>ssh -v -i ~/.ec2/gsg-keypair &lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">&quot;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#x6c;&amp;#x74;&amp;#x6f;&amp;#x3a;&amp;#x75;&amp;#x62;&amp;#117;&amp;#110;&amp;#x74;&amp;#x75;&amp;#x40;&amp;#x65;&amp;#99;&amp;#50;&amp;#x2d;&amp;#53;&amp;#52;&amp;#45;&amp;#x36;&amp;#57;&amp;#45;&amp;#x31;&amp;#56;&amp;#48;&amp;#45;&amp;#x31;&amp;#56;&amp;#50;&amp;#46;&amp;#x75;&amp;#115;&amp;#45;&amp;#119;&amp;#x65;&amp;#x73;&amp;#x74;&amp;#45;&amp;#x32;&amp;#x2e;&amp;#x63;&amp;#111;&amp;#x6d;&amp;#112;&amp;#x75;&amp;#x74;&amp;#x65;&amp;#x2e;&amp;#x61;&amp;#x6d;&amp;#97;&amp;#x7a;&amp;#x6f;&amp;#110;&amp;#97;&amp;#x77;&amp;#115;&amp;#x2e;&amp;#x63;&amp;#x6f;&amp;#109;&quot;</span>&gt;&amp;#x75;&amp;#x62;&amp;#117;&amp;#x6e;&amp;#x74;&amp;#x75;&amp;#x40;&amp;#x65;&amp;#99;&amp;#50;&amp;#x2d;&amp;#x35;&amp;#x34;&amp;#x2d;&amp;#54;&amp;#57;&amp;#x2d;&amp;#x31;&amp;#56;&amp;#48;&amp;#x2d;&amp;#x31;&amp;#56;&amp;#x32;&amp;#x2e;&amp;#x75;&amp;#115;&amp;#x2d;&amp;#x77;&amp;#x65;&amp;#x73;&amp;#116;&amp;#45;&amp;#x32;&amp;#x2e;&amp;#x63;&amp;#111;&amp;#109;&amp;#x70;&amp;#117;&amp;#x74;&amp;#101;&amp;#x2e;&amp;#97;&amp;#x6d;&amp;#x61;&amp;#x7a;&amp;#111;&amp;#110;&amp;#x61;&amp;#x77;&amp;#115;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#109;&lt;/a&gt;
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h3>(4) Create the Deployment Environment</h3>
+
+<p>With the instance running, we can now instruct <code>rubber</code> to install the relevant packages that are necessary to build the environment. Locally, run <code>bundle exec cap rubber:bootstrap</code>. This can take a while: it installs Linux updates, configures Nginx, builds and installs <code>ruby</code>, etc. This is the core of the annoying, manual, error-prone work that we seek to eliminate with <code>rubber</code>.</p>
+
+<p>Once that completes, the machine is mostly ready to go. With <code>ssh</code> we can verify that the correct version of <code>ruby</code> is installed, etc:</p>
+
+<pre><code># ruby --version
+ruby 2.1.2p95 (2014-05-08 revision 45877) [x86_64-linux]
+</code></pre>
+
+<h3>(5) Initial Deployment</h3>
+
+<p>With the machine ready, we can now use <code>capistrano</code> to deploy. This is where I first ran into issues. After attempting to deploy using <code>bundle exec cap deploy:cold</code>, I received the <code>rubber</code> error output:</p>
+
+<pre><code>** [out :: production.bloggy.com] [ALERT] 347/141816 (2034) :
+** [out :: production.bloggy.com] Starting proxy passenger_proxy: cannot bind socket
+** [out :: production.bloggy.com]
+** [out :: production.bloggy.com]
+** [out :: production.bloggy.com]
+** [out :: production.bloggy.com] [
+** [out :: production.bloggy.com]
+** [out :: production.bloggy.com] fail
+** [out :: production.bloggy.com]
+</code></pre>
+
+<p>It turns out we need to delete the default Nginx configuration, which is conflicting with the port we&rsquo;re attempting to use. After <code>ssh</code>-ing to the machine:</p>
+
+<ul>
+<li>Delete the default configuration file: <code>sudo rm /etc/nginx/sites-enabled/default</code></li>
+<li>Restart Nginx: <code>sudo service nginx restart</code></li>
+</ul>
+
+
+<p>Back again locally, attempt to deploy once more: <code>bundle exec cap deploy:cold</code>. It should succeed this time around.</p>
+
+<h3>(6) Accessing the App</h3>
+
+<p>With the machine provisioned, we are close to success. However, at this point I got an error page at <a href="http://ec2-54-69-180-182.us-west-2.compute.amazonaws.com">http://ec2-54-69-180-182.us-west-2.compute.amazonaws.com</a> in the browser. <code>curl</code> gives some insight as to what&rsquo;s going on:</p>
+
+<pre><code>$ curl -i http://ec2-54-69-180-182.us-west-2.compute.amazonaws.com
+HTTP/1.1 502 Bad Gateway
+Server: nginx/1.6.2
+Date: Sun, 14 Dec 2014 22:29:03 GMT
+Content-Type: text/html
+Content-Length: 1477
+Connection: keep-alive
+</code></pre>
+
+<p>At this point, we need to take a look at the Nginx logs. After <code>ssh</code>-ing again to our instance, we can <code>tail -f /var/log/nginx/error.log</code> and notice that:</p>
+
+<pre><code>App 2213 stderr: [ 2014-12-14 14:29:03.3709 2275/0x007f5d4ea08798(Worker 1) utils.rb:84 ]: *** Exception RuntimeError in Rack application object (Missing `secret_key_base` for 'production' environment, set this value in `config/secrets.yml`) (process 2275, thread 0x007f5d4ea08798(Worker 1)):
+App 2213 stderr:  from /mnt/bloggy-production/shared/bundle/ruby/2.1.0/gems/railties-4.1.7/lib/rails/application.rb:462:in `validate_secret_key_config!'
+</code></pre>
+
+<p>We need to setup an <code>.env</code> file that the <code>dotenv-deployment</code> gem will use to set this cryptographic environment variable. Locally, create a <code>.env</code> file and copy it to the server:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>secret_copy.sh: Copying an .env file to the server </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">echo</span> &amp;ldquo;SECRET_KEY_BASE<span class="o">=</span>&lt;code&gt;be rake secret&lt;/code&gt;&amp;rdquo; &gt; .env
+</span><span class='line'>scp -v -i ~/.ec2/gsg-keypair .env ubuntu@ec2-54-69-180-182.us-west-2.compute.amazonaws.com:/home/ubuntu
+</span><span class='line'>rm .env
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Back on the server, <code>sudo mv /home/ubuntu/.env /mnt/bloggy-production/shared/</code> to copy the file to the appropriate place. The final <a href="https://github.com/dliggat/bloggy/commit/23bac39176accbee69ba3465d8aad92e822f2972">repo commit</a> ensures that capistrano will symlink this from the <code>release</code> directory into the <code>shared</code> directory on deployment.</p>
+
+<p>One final deployment should do the trick to get this into the Rails app on production: <code>bundle exec cap:deploy</code>:</p>
+
+<p>Sure enough:</p>
+
+<pre><code>ubuntu@production:~$ cd /mnt/bloggy-production/current/
+ubuntu@production:/mnt/bloggy-production/current$ ls -la .env
+lrwxrwxrwx 1 root root 34 Dec 14 14:49 .env -&gt; /mnt/bloggy-production/shared/.env
+</code></pre>
+
+<p>Visiting the URL once more:</p>
+
+<p><img class="center" src="/images/2014/app.png" width="700" title="&lsquo;App on EC2&rsquo;" ></p>
+
+<p>And there we have it! The full stack <strong>{Nginx, Passenger, PostgreSQL}</strong> app is now live on the EC2 instance. This process falls slightly short of the ideal of <em>one-click machine provisioning</em>, but it&rsquo;s pretty close<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>. Going through this additional work seems preferable to me versus <a href="https://www.heroku.com/">Heroku</a> or <a href="http://aws.amazon.com/elasticbeanstalk/">Elastic Beanstalk</a> &ndash; both of which have their place<sup id="fnref:5"><a href="#fn:5" rel="footnote">5</a></sup> to be sure, but ultimately abstract away rather more of these details than I would prefer.</p>
+
+<p>With the basic app deployed with a production-grade full stack using <code>rubber</code> &ndash; we can be sure the app has a clear, repeatable, configurable path forward for vertical and horizontal scaling if and when the need should arise.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>There&rsquo;s a fair bit of documentation staleness around these values, so unless you&rsquo;re reading this around December 2014, the world has likely moved onto something newer, and you may get errors as a result. Look for values that will be mutually compliant right now.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>You can find the various options in the dropdown on the right side of <a href="http://alestic.com">alestic.com</a>.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p><code>rubber</code> monkeys with your <code>/etc/hosts</code> file to alias this locally, but I tend to ignore that and just grab it directly from the EC2 console.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p>This would likely be rectified with some <code>rubber</code> pull requests, which I hope to create and contribute in the near future.<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+<li id="fn:5">
+<p>Heroku remains the undisputed master of the <em>get this thing deployed ASAP</em> market in my book<a href="#fnref:5" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[A Robust Photo Workflow]]></title>
