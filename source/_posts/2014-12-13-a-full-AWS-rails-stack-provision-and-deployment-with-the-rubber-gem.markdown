@@ -19,7 +19,7 @@ I started out with a super basic Rails app, unimaginatively named `bloggy`. The 
 
 ### (1) Set Up the Basic App
 
-* [Create][create] the app: `bundle exec rails new bloggy -d postgresql`
+* [Create][create] the app: `rails new bloggy -d postgresql`
 * [Scaffold][scaffold] a model: `bundle exec rails g scaffold post title:string body:text`
 * [Create][db] database and migrate: `bundle exec rake db:create db:migrate`
 * [Add][root] a root route and a basic root page
