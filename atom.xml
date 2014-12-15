@@ -4,7 +4,7 @@
   <title><![CDATA[Liggat.org]]></title>
   <link href="http://liggat.org/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2014-12-15T09:48:37-08:00</updated>
+  <updated>2014-12-15T09:49:20-08:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -12,6 +12,190 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[A Full AWS Rails Stack Provision and Deployment With the Rubber Gem]]></title>
+    <link href="http://liggat.org/2014/12/13/a-full-AWS-rails-stack-provision-and-deployment-with-the-rubber-gem/"/>
+    <updated>2014-12-13T16:00:21-08:00</updated>
+    <id>http://liggat.org/2014/12/13/a-full-AWS-rails-stack-provision-and-deployment-with-the-rubber-gem</id>
+    <content type="html"><![CDATA[<p>It&rsquo;d been some time since I&rsquo;d set up a full <a href="http://rubyonrails.org/">Rails</a> stack and deployment process on <a href="http://aws.amazon.com/">Amazon Web Services</a>. I thought it would be worth trying out <a href="https://github.com/rubber/rubber">rubber</a> from scratch to provision a full <strong>{Nginx, Passenger, PostgreSQL}</strong> stack on a single AWS host, with as much automation as possible, but without prematurely resorting to the cognitive-overhead of <a href="http://docs.aws.amazon.com/opsworks/latest/userguide/workingcookbook-chef11.html">Chef/OpsWorks</a>. This is my attempt to document the process, as I ran into a few roadblocks along the way.</p>
+
+<!--more-->
+
+
+<p>The <a href="http://railscasts.com/episodes/347-rubber-and-amazon-ec2">RailsCast</a> on <code>rubber</code> is a great place to start, as it gives a good overview/refresher on some of the primitive pieces such as setting up EC2 key-pairs and so on. This post is written under the assumption it has been watched and understood, but I&rsquo;ll be targeting the <code>complete_passenger_nginx_postgresql</code> template rather than <code>complete_passenger_postgresql</code>, which the episode uses. The various other <code>rubber</code> templates are all available <a href="https://github.com/rubber/rubber/tree/master/templates">in its repo</a>.</p>
+
+<h2>Creating And Deploying &lsquo;bloggy&rsquo;</h2>
+
+<p>I started out with a super basic Rails app, unimaginatively named <code>bloggy</code>. The <code>git</code> repository is available <a href="https://github.com/dliggat/bloggy">here</a>; each commit in the <a href="https://github.com/dliggat/bloggy/commits/master">history</a> corresponds to a step along the way. It has a root route which renders a page with the current time and hostname, and a single <a href="http://en.wikipedia.org/wiki/Representational_state_transfer">REST</a>-ful resource: <code>/posts</code>.</p>
+
+<h3>(1) Set Up the Basic App</h3>
+
+<ul>
+<li><a href="https://github.com/dliggat/bloggy/commit/e52a13e96549230cb8f0f1ad7e81381ae2434013">Create</a> the app: <code>bundle exec rails new bloggy -d postgresql</code></li>
+<li><a href="https://github.com/dliggat/bloggy/commit/dcddbc02350812ce9f94842d09078b93f2257cb7">Scaffold</a> a model: <code>bundle exec rails g scaffold post title:string body:text</code></li>
+<li><a href="https://github.com/dliggat/bloggy/commit/f59b8f311aab8cd24c8213f64b4e1441fdf03243">Create</a> database and migrate: <code>bundle exec rake db:create db:migrate</code></li>
+<li><a href="https://github.com/dliggat/bloggy/commit/521fac60a7ab97e9c7a1fb2c6f54b514dbaa2a44">Add</a> a root route and a basic root page</li>
+<li><a href="https://github.com/dliggat/bloggy/commit/5999bed32663165875726437cf04f3a0a23ff6ea">Add</a> <code>dotenv</code> for environment variable management in production</li>
+<li><a href="https://github.com/dliggat/bloggy/compare/5999bed...63b4a27">Add</a> the following gems:
+
+<ul>
+<li><code>capistrano</code>: for deployment automation</li>
+<li><code>rubber</code>: for EC2 provisioning</li>
+<li><code>passenger</code>: for the Rails app server</li>
+<li><code>therubyracer</code>: for asset precompilation in production</li>
+</ul>
+</li>
+</ul>
+
+
+<h3>(2) Configure Rubber</h3>
+
+<ul>
+<li><a href="https://github.com/dliggat/bloggy/commit/de11b73ede158f3b6a439ea68d8ebdc797850e74">Vulcanize</a> the desired stack: <code>vulcanize complete_passenger_nginx_postgresql</code></li>
+<li><a href="https://github.com/dliggat/bloggy/compare/de11b73...d2536ec">Set</a> appropriate versions of <code>ruby</code> (for me: <code>2.1.2</code>), <code>ruby-build</code> and <code>passenger</code><sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.</li>
+<li><a href="https://github.com/dliggat/bloggy/commit/d046ae4314ba669f465c18c9be0606de3398e22f">Set</a> basic properties of the app; <code>app_name</code> and so on.</li>
+<li><a href="https://github.com/dliggat/bloggy/commit/d71b25d31986cd56543eeaae2b36b091f08de4f6">Pick</a> an EC2 image size and type compliant with your region. I&rsquo;m using Ubuntu 14.04 LTS in <code>us-west-2</code> (Oregon)<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>.</li>
+<li><a href="https://github.com/dliggat/bloggy/commit/b1f0d94aba4da1e6eabdfb01290c3b06ead8384f">Enable</a> secure AWS credential storage for <code>rubber</code> using <code>~/.ec2/rubber-secret.yml</code>. You <strong>do not</strong> want to have these credentials in a <code>git</code> repository, irrespective of whether your repository is private or public (like <a href="https://github.com/dliggat/bloggy">mine</a>). My EC2 keys and credential file all live in <code>~/.ec2</code>:</li>
+</ul>
+
+
+<p><img class="center" src="http://liggat.org/images/2014/ec2.png" width="700" title="'EC2'" ></p>
+
+<h3>(3) Instantiate the EC2 Instance</h3>
+
+<p>At this point, we&rsquo;re ready to fire up the EC2 instance:</p>
+
+<ul>
+<li><code>bundle exec rubber cap:create</code></li>
+<li>Name the single instance <code>production</code> and assign it every role within the app: <code>web,app,db:primary=true</code><sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>.</li>
+<li>Enter your local admin password when prompted – so <code>rubber</code> can modify your <code>/etc/hosts</code> file.</li>
+<li>Log into the AWS console => EC2, and ensure the image has been started. Grab the public DNS name of the instance<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>.</li>
+</ul>
+
+
+<p>If all has gone well, and the keys were setup correctly ahead of time, it should be possible to <code>ssh</code> to the newly launched instance:</p>
+
+<figure class='code'><figcaption><span>SSH to the instance </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>ssh -v -i ~/.ec2/gsg-keypair ubuntu@ec2-54-69-180-182.us-west-2.compute.amazonaws.com
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>(4) Create the Deployment Environment</h3>
+
+<p>With the instance running, we can now instruct <code>rubber</code> to install the relevant packages that are necessary to build the environment. Locally, run <code>bundle exec cap rubber:bootstrap</code>. This can take a while: it installs Linux updates, configures Nginx, builds and installs <code>ruby</code>, etc. This is the core of the annoying, manual, error-prone work that we seek to eliminate with <code>rubber</code>.</p>
+
+<p>Once that completes, the instance is mostly ready to go. After <code>ssh</code>-ing to the instance we can verify that the correct version of <code>ruby</code> is installed, etc:</p>
+
+<pre><code># ruby --version
+ruby 2.1.2p95 (2014-05-08 revision 45877) [x86_64-linux]
+</code></pre>
+
+<h3>(5) Initial Deployment</h3>
+
+<p>With the instance ready, we can now use <code>capistrano</code> to deploy. This is where I first ran into issues. After attempting to deploy using <code>bundle exec cap deploy:cold</code>, I received the <code>rubber</code> error output:</p>
+
+<pre><code>** [out :: production.bloggy.com] [ALERT] 347/141816 (2034) :
+** [out :: production.bloggy.com] Starting proxy passenger_proxy: cannot bind socket
+** [out :: production.bloggy.com]
+** [out :: production.bloggy.com]
+** [out :: production.bloggy.com]
+** [out :: production.bloggy.com] [
+** [out :: production.bloggy.com]
+** [out :: production.bloggy.com] fail
+** [out :: production.bloggy.com]
+</code></pre>
+
+<p>It turns out we need to delete the default Nginx configuration, which is conflicting with the port (obviously <code>80</code>) we&rsquo;re attempting to use. After <code>ssh</code>-ing to the instance:</p>
+
+<ul>
+<li>Delete the default configuration file: <code>sudo rm /etc/nginx/sites-enabled/default</code></li>
+<li>Restart Nginx: <code>sudo service nginx restart</code></li>
+</ul>
+
+
+<p>Back again locally, attempt to deploy once more: <code>bundle exec cap deploy:cold</code>. It should succeed this time around without the error message we encountered previously.</p>
+
+<h3>(6) Accessing the App</h3>
+
+<p>With the instance provisioned, we are close to success. However, at this point I got an error page at <a href="http://ec2-54-69-180-182.us-west-2.compute.amazonaws.com">http://ec2-54-69-180-182.us-west-2.compute.amazonaws.com</a> in the browser. <code>curl</code> gives some insight as to what&rsquo;s going on:</p>
+
+<pre><code>$ curl -i http://ec2-54-69-180-182.us-west-2.compute.amazonaws.com
+HTTP/1.1 502 Bad Gateway
+Server: nginx/1.6.2
+Date: Sun, 14 Dec 2014 22:29:03 GMT
+Content-Type: text/html
+Content-Length: 1477
+Connection: keep-alive
+</code></pre>
+
+<p>To proceed, we need to take a look at the Nginx logs. After <code>ssh</code>-ing again to our instance, we can <code>tail -f /var/log/nginx/error.log</code> and notice that:</p>
+
+<pre><code>App 2213 stderr: [ 2014-12-14 14:29:03.3709 2275/0x007f5d4ea08798(Worker 1) utils.rb:84 ]: *** Exception RuntimeError in Rack application object (Missing `secret_key_base` for 'production' environment, set this value in `config/secrets.yml`) (process 2275, thread 0x007f5d4ea08798(Worker 1)):
+App 2213 stderr:  from /mnt/bloggy-production/shared/bundle/ruby/2.1.0/gems/railties-4.1.7/lib/rails/application.rb:462:in `validate_secret_key_config!'
+</code></pre>
+
+<p>We need to create an <code>.env</code> file in the Rails app root directory that the <code>dotenv-deployment</code> gem will use to set the missing <code>SECRET_KEY_BASE</code> cryptographic environment variable that is referenced in the app&rsquo;s <code>config/secrets.yml</code>. Locally, create a <code>.env</code> file and copy it to the server:</p>
+
+<figure class='code'><figcaption><span>Copying an .env file to the server </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">echo</span> <span class="s2">&quot;SECRET_KEY_BASE=`bundle exec rake secret`&quot;</span> &gt; .env
+</span><span class='line'>scp -v -i ~/.ec2/gsg-keypair .env ubuntu@ec2-54-69-180-182.us-west-2.compute.amazonaws.com:/home/ubuntu
+</span><span class='line'>rm .env
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Back on the server, <code>sudo mv /home/ubuntu/.env /mnt/bloggy-production/shared/</code> to copy the file to the appropriate place. The final <a href="https://github.com/dliggat/bloggy/commit/23bac39176accbee69ba3465d8aad92e822f2972">repo commit</a> ensures that <code>capistrano</code> will symlink this from the <code>release</code> directory into the <code>shared</code> directory on deployment.</p>
+
+<p>One final deployment should do the trick to get this into the Rails app on production: <code>bundle exec cap:deploy</code>:</p>
+
+<p>Sure enough:</p>
+
+<pre><code>ubuntu@production:~$ cd /mnt/bloggy-production/current/
+ubuntu@production:/mnt/bloggy-production/current$ ls -la .env
+lrwxrwxrwx 1 root root 34 Dec 14 14:49 .env -&gt; /mnt/bloggy-production/shared/.env
+</code></pre>
+
+<p>With that in place, we can visit the URL once more:</p>
+
+<p><img class="center" src="http://liggat.org/images/2014/app.png" width="700" title="'App on EC2'" ></p>
+
+<p>And there we have it! The full stack <strong>{Nginx, Passenger, PostgreSQL}</strong> app is now live on the EC2 instance. This process falls slightly short of the ideal of <em>one-click instance provisioning</em>, but it&rsquo;s pretty close<sup id="fnref:5"><a href="#fn:5" rel="footnote">5</a></sup>. Going through this additional work seems preferable to me versus <a href="https://www.heroku.com/">Heroku</a> or <a href="http://aws.amazon.com/elasticbeanstalk/">Elastic Beanstalk</a> &ndash; both of which have their place<sup id="fnref:6"><a href="#fn:6" rel="footnote">6</a></sup> to be sure, but ultimately abstract away rather more of these details than I would prefer.</p>
+
+<p>With the basic app deployed with a production-grade full stack using <code>rubber</code> &ndash; we can be sure we have a clear, repeatable, configurable path for future vertical and/or horizontal scaling if and when the need should arise.</p>
+
+<h3>(7) Teardown</h3>
+
+<p>Finally, the deployed instance can be dismantled via <code>bundle exec cap rubber:destroy_all</code> when it&rsquo;s no longer needed, as of course EC2 bills by the hour.</p>
+
+<h3>Addendum: Asset Compilation</h3>
+
+<p>Thanks to the <code>therubyracer</code> gem added earlier, we can observe that the application&rsquo;s JavaScript has indeed undergone precompilation in deployment.</p>
+
+<p><img class="center" src="http://liggat.org/images/2014/assets.png" width="700" title="'Precompilation'" ></p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>There&rsquo;s a fair bit of documentation staleness around these values, so unless you&rsquo;re reading this around December 2014, the world has likely moved onto something newer, and you may get errors as a result. Look for values that will be mutually compliant <em>today</em>, whenver that might be.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>You can find the various options in the dropdown on the right side of <a href="http://alestic.com">alestic.com</a>.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>As the app matures, these roles would tend to migrate to separate instances, and possibly leverage other AWS services such as <a href="http://aws.amazon.com/rds/">RDS</a>, but for now one instance is adequate for all the roles.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p><code>rubber</code> monkeys with your <code>/etc/hosts</code> file to alias this locally, but I tend to ignore that and just grab it directly from the EC2 console.<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+<li id="fn:5">
+<p>This could likely be slightly streamlined with some <code>rubber</code> pull requests, which I hope to create and contribute in the near future.<a href="#fnref:5" rev="footnote">&#8617;</a></p></li>
+<li id="fn:6">
+<p>Heroku remains the undisputed master of the <em>get this thing deployed ASAP</em> market in my book<a href="#fnref:6" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Wealthsimple Review]]></title>
@@ -1054,105 +1238,6 @@ practice of tracking and storing user information with the country’s law.</p><
 <p>These events occurred in the fifth season episode, <em>Gliding all Over</em>.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
 <li id="fn:2">
 <p>This was visible in the second season episode <em>Bit by Dead Bee</em>. Walt had just completed implementing his not-altogether-plausible &lsquo;fugue state&rsquo; alibi, and was back in chemo.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Simulating the Birthday Paradox]]></title>
-    <link href="http://liggat.org/2013/10/13/simulating-the-birthday-paradox/"/>
-    <updated>2013-10-13T10:59:00-07:00</updated>
-    <id>http://liggat.org/2013/10/13/simulating-the-birthday-paradox</id>
-    <content type="html"><![CDATA[<p>Probability theory is a pretty special branch of mathematics in the sense that it is (1) highly applicable to daily life; (2) many of its results are easily comprehensible to most people; and yet despite this (3) it remains a profoundly complex area of mathematical inquiry<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.<!--more--></p>
-
-<p>An example which perfectly encapsulates this is the <a href="http://en.wikipedia.org/wiki/Birthday_paradox">birthday paradox</a>. In short, it can be represented by the question:</p>
-
-<blockquote><p>With a group of <code>N</code> randomly chosen people, how large does <code>N</code> need to be so that there&rsquo;s a 50% chance of a shared birthday within the group?</p></blockquote>
-
-<p>The birthday paradox is a great opportunity to use some basic computation as an exploratory tool. I think more people should have the ability to use this.</p>
-
-<h3>Finding N</h3>
-
-<p>The group size is clearly less than or equal to 365. Above 365, we know with 100% certainty that there&rsquo;s a shared birthday somewhere<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>. Intuition (or at least my intuition before I knew the answer) usually suggests that the 50% probability threshold value for N is probably at or around the 100-150 mark. In other words, we might guess that you need 100-150 people in the group before the probability of a shared birthday is equal to a coin flip.</p>
-
-<p>It turns out that&rsquo;s a gross overestimate. The actual value is <strong>staggeringly lower</strong> than people tend to guess:</p>
-
-<blockquote><p>With a group size of 23 people, the probability that two people share a birthday is ~= 50.36%.</p></blockquote>
-
-<p>This is a pretty astonishing result. It is, of course, provably true by an <a href="http://en.wikipedia.org/wiki/Birthday_paradox#Calculating_the_probability">analytical argument</a>, but it is actually far easier to convince oneself of its trueness with a simple computational exercise (full version on <a href="https://gist.github.com/dliggat/6963840">GitHub</a>):</p>
-
-<figure class='code'><figcaption><span>birthday.rb: Simulate the birthday paradox </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="c1">#!/usr/bin/env ruby</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">def</span> <span class="nf">shared_birthday?</span><span class="p">(</span><span class="n">group_size</span><span class="p">)</span>
-</span><span class='line'>  <span class="c1"># Generate an array with size `group_size`, and randomly assign every member a birthday.</span>
-</span><span class='line'>  <span class="c1"># Return true if two members share a birthday; else return false.</span>
-</span><span class='line'>  <span class="n">counter</span>   <span class="o">=</span> <span class="no">Hash</span><span class="o">.</span><span class="n">new</span> <span class="mi">0</span>
-</span><span class='line'>  <span class="n">birthdays</span> <span class="o">=</span> <span class="n">group_size</span><span class="o">.</span><span class="n">times</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="nb">rand</span> <span class="mi">365</span> <span class="p">}</span>
-</span><span class='line'>  <span class="n">birthdays</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">birthday</span><span class="o">|</span>
-</span><span class='line'>    <span class="n">counter</span><span class="o">[</span><span class="n">birthday</span><span class="o">]</span> <span class="o">+=</span> <span class="mi">1</span>
-</span><span class='line'>    <span class="k">return</span> <span class="kp">true</span> <span class="k">if</span> <span class="n">counter</span><span class="o">[</span><span class="n">birthday</span><span class="o">]</span> <span class="o">&gt;</span> <span class="mi">1</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'>  <span class="kp">false</span>
-</span><span class='line'><span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">def</span> <span class="nf">run_birthday_trials</span><span class="p">(</span><span class="n">group_size</span><span class="p">,</span> <span class="n">trial_count</span><span class="p">)</span>
-</span><span class='line'>  <span class="c1"># Run the shared_birthday? experiment `trial_count` times.</span>
-</span><span class='line'>  <span class="c1"># Return the number of experiments which resulted in a shared birthday.</span>
-</span><span class='line'>  <span class="n">successes</span> <span class="o">=</span> <span class="mi">0</span>
-</span><span class='line'>  <span class="n">trial_count</span><span class="o">.</span><span class="n">times</span> <span class="p">{</span> <span class="n">successes</span> <span class="o">+=</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">shared_birthday?</span> <span class="n">group_size</span> <span class="p">}</span>
-</span><span class='line'>  <span class="n">successes</span>
-</span><span class='line'><span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">run_birthday_trials</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">1000</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>This very simple code runs a series of birthday-paradox experiments &ndash; within each trial, it generates a group of people, and tests for the presence of a shared birthday. By doing this repeatedly, a thousand times in this case, we can approximate the actual probability of a shared birthday with a particular group size.</p>
-
-<h3>Why Bother Sharing This?</h3>
-
-<p>To any mildly-capable programmer<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>, none of this is particularly interesting or novel. Many of us in this line of work have a pretty decent mathematical background, and have done all sorts of these little simulation exercises in the past, both academically and professionally.</p>
-
-<p>However, it is my firm belief that a great many people could stand to benefit if the ability to use basic computational principles and tools were more widely disseminated. Windows and OS X machines ship with browsers with full JavaScript runtimes; Ruby and Python runtimes <em>ship</em> with OS X, and can easily be added to Windows. The tools of exploratory computation are everywhere &ndash; but very few people were ever given the knowledge to use them. This could be easily remedied by offering basic Computer Science in high school, either on its own, or as part of a math or science class. This might be the case today for all I know, but my own experience on that front was not encouraging<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>.</p>
-
-<p>To anyone even moderately interested in the vast possibilities that are unlocked with a bit of computational knowledge, I strongly encourage you to check out <a href="http://www.codecademy.com/">Code Academy</a> or <a href="http://projecteuler.net">Project Euler</a>. Of all of Steve Jobs&#8217; various witty and insightful aphorisms, the notion that a computer is a <em>bicycle for the mind</em> has always struck me as especially apt.</p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>Unlike, say, <a href="http://en.wikipedia.org/wiki/Real_analysis">real analysis</a>, which has zero applicability to daily life and is not comprehensible by most people, including myself.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-<li id="fn:2">
-<p>By the <a href="http://en.wikipedia.org/wiki/Pigeonhole_principle">pigeonhole principle</a>: If we have 365 pigeonholes into which we place 366 objects, at least one pigeonhole must contain more than one object.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
-<li id="fn:3">
-<p><a href="http://www.codinghorror.com/blog/2007/02/why-cant-programmers-program.html">FizzBuzz</a>, as ever, remains a cautionary tale about our industry.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
-<li id="fn:4">
-<p>Around the time I was in grade 11 and 12, Computer Science was <em>dropped</em> as an offering at my high school. Yes, <em>dropped</em>. Lack of demand; lack of staff to teach it. University was thus my first opportunity to gain exposure to computation as an academic/professional field.<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 

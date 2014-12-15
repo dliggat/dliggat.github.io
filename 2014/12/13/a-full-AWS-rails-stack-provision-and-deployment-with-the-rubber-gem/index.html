@@ -1,24 +1,115 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Aws | Liggat.org]]></title>
-  <link href="http://liggat.org/blog/categories/aws/atom.xml" rel="self"/>
-  <link href="http://liggat.org/"/>
-  <updated>2014-12-15T09:49:20-08:00</updated>
-  <id>http://liggat.org/</id>
-  <author>
-    <name><![CDATA[Dave Liggat]]></name>
-    
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>A Full AWS Rails Stack Provision and Deployment With the Rubber Gem - Liggat.org</title>
+  <meta name="author" content="Dave Liggat">
 
   
-  <entry>
-    <title type="html"><![CDATA[A Full AWS Rails Stack Provision and Deployment With the Rubber Gem]]></title>
-    <link href="http://liggat.org/2014/12/13/a-full-AWS-rails-stack-provision-and-deployment-with-the-rubber-gem/"/>
-    <updated>2014-12-13T16:00:21-08:00</updated>
-    <id>http://liggat.org/2014/12/13/a-full-AWS-rails-stack-provision-and-deployment-with-the-rubber-gem</id>
-    <content type="html"><![CDATA[<p>It&rsquo;d been some time since I&rsquo;d set up a full <a href="http://rubyonrails.org/">Rails</a> stack and deployment process on <a href="http://aws.amazon.com/">Amazon Web Services</a>. I thought it would be worth trying out <a href="https://github.com/rubber/rubber">rubber</a> from scratch to provision a full <strong>{Nginx, Passenger, PostgreSQL}</strong> stack on a single AWS host, with as much automation as possible, but without prematurely resorting to the cognitive-overhead of <a href="http://docs.aws.amazon.com/opsworks/latest/userguide/workingcookbook-chef11.html">Chef/OpsWorks</a>. This is my attempt to document the process, as I ran into a few roadblocks along the way.</p>
+  <meta name="description" content="How to deploy a full Nginx, Passenger, PostgreSQL Ruby-on-Rails stack on Amazon Web Services using the Rubber gem.">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://liggat.org/2014/12/13/a-full-AWS-rails-stack-provision-and-deployment-with-the-rubber-gem">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Liggat.org" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<!-- MAYBE <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,400italic' rel='stylesheet' type='text/css'> -->
+
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,700italic|Lora:400,400italic|Raleway:100|Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
+
+<link type="text/plain" rel="author" href="http://liggat.org/humans.txt" />
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-42613016-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body    class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Liggat.org</a></h1>
+  
+    <h2>by Dave Liggat</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:liggat.org" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/archive">Archive</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/contact">Contact</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">A Full AWS Rails Stack Provision and Deployment With the Rubber Gem</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-12-13T16:00:21-08:00" pubdate data-updated="true">December 13<span>th</span>, 2014</time>  • <a rel="full-article" href="">&infin;</a> 
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>It&rsquo;d been some time since I&rsquo;d set up a full <a href="http://rubyonrails.org/">Rails</a> stack and deployment process on <a href="http://aws.amazon.com/">Amazon Web Services</a>. I thought it would be worth trying out <a href="https://github.com/rubber/rubber">rubber</a> from scratch to provision a full <strong>{Nginx, Passenger, PostgreSQL}</strong> stack on a single AWS host, with as much automation as possible, but without prematurely resorting to the cognitive-overhead of <a href="http://docs.aws.amazon.com/opsworks/latest/userguide/workingcookbook-chef11.html">Chef/OpsWorks</a>. This is my attempt to document the process, as I ran into a few roadblocks along the way.</p>
 
 <!--more-->
 
@@ -60,7 +151,7 @@
 </ul>
 
 
-<p><img class="center" src="/images/2014/ec2.png" width="700" title="&lsquo;EC2&rsquo;" ></p>
+<p><img class="center" src="/images/2014/ec2.png" width="700" title="'EC2'" ></p>
 
 <h3>(3) Instantiate the EC2 Instance</h3>
 
@@ -76,10 +167,11 @@
 
 <p>If all has gone well, and the keys were setup correctly ahead of time, it should be possible to <code>ssh</code> to the newly launched instance:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>SSH to the instance </span></figcaption>
+<figure class='code'><figcaption><span>SSH to the instance </span></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>ssh -v -i ~/.ec2/gsg-keypair &lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">&quot;&amp;#109;&amp;#x61;&amp;#105;&amp;#108;&amp;#x74;&amp;#x6f;&amp;#58;&amp;#117;&amp;#x62;&amp;#117;&amp;#110;&amp;#x74;&amp;#x75;&amp;#64;&amp;#x65;&amp;#99;&amp;#x32;&amp;#45;&amp;#x35;&amp;#x34;&amp;#45;&amp;#54;&amp;#57;&amp;#x2d;&amp;#x31;&amp;#x38;&amp;#48;&amp;#45;&amp;#x31;&amp;#56;&amp;#x32;&amp;#x2e;&amp;#x75;&amp;#115;&amp;#x2d;&amp;#119;&amp;#x65;&amp;#x73;&amp;#116;&amp;#45;&amp;#50;&amp;#46;&amp;#99;&amp;#x6f;&amp;#x6d;&amp;#x70;&amp;#x75;&amp;#116;&amp;#x65;&amp;#46;&amp;#x61;&amp;#109;&amp;#97;&amp;#x7a;&amp;#x6f;&amp;#x6e;&amp;#97;&amp;#x77;&amp;#x73;&amp;#x2e;&amp;#x63;&amp;#x6f;&amp;#109;&quot;</span>&gt;&amp;#117;&amp;#x62;&amp;#117;&amp;#110;&amp;#116;&amp;#x75;&amp;#64;&amp;#101;&amp;#x63;&amp;#x32;&amp;#45;&amp;#53;&amp;#52;&amp;#x2d;&amp;#x36;&amp;#57;&amp;#x2d;&amp;#49;&amp;#x38;&amp;#x30;&amp;#45;&amp;#49;&amp;#56;&amp;#50;&amp;#x2e;&amp;#117;&amp;#x73;&amp;#45;&amp;#x77;&amp;#101;&amp;#x73;&amp;#116;&amp;#x2d;&amp;#x32;&amp;#46;&amp;#x63;&amp;#111;&amp;#x6d;&amp;#112;&amp;#117;&amp;#116;&amp;#101;&amp;#46;&amp;#97;&amp;#109;&amp;#97;&amp;#122;&amp;#x6f;&amp;#110;&amp;#x61;&amp;#119;&amp;#115;&amp;#x2e;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>ssh -v -i ~/.ec2/gsg-keypair ubuntu@ec2-54-69-180-182.us-west-2.compute.amazonaws.com
+</span></code></pre></td></tr></table></div></figure>
+
 
 <h3>(4) Create the Deployment Environment</h3>
 
@@ -137,14 +229,15 @@ App 2213 stderr:  from /mnt/bloggy-production/shared/bundle/ruby/2.1.0/gems/rail
 
 <p>We need to create an <code>.env</code> file in the Rails app root directory that the <code>dotenv-deployment</code> gem will use to set the missing <code>SECRET_KEY_BASE</code> cryptographic environment variable that is referenced in the app&rsquo;s <code>config/secrets.yml</code>. Locally, create a <code>.env</code> file and copy it to the server:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Copying an .env file to the server </span></figcaption>
+<figure class='code'><figcaption><span>Copying an .env file to the server </span></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">echo</span> &amp;ldquo;SECRET_KEY_BASE<span class="o">=</span>&lt;code&gt;bundle <span class="nb">exec </span>rake secret&lt;/code&gt;&amp;rdquo; &gt; .env
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">echo</span> <span class="s2">&quot;SECRET_KEY_BASE=`bundle exec rake secret`&quot;</span> &gt; .env
 </span><span class='line'>scp -v -i ~/.ec2/gsg-keypair .env ubuntu@ec2-54-69-180-182.us-west-2.compute.amazonaws.com:/home/ubuntu
 </span><span class='line'>rm .env
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Back on the server, <code>sudo mv /home/ubuntu/.env /mnt/bloggy-production/shared/</code> to copy the file to the appropriate place. The final <a href="https://github.com/dliggat/bloggy/commit/23bac39176accbee69ba3465d8aad92e822f2972">repo commit</a> ensures that <code>capistrano</code> will symlink this from the <code>release</code> directory into the <code>shared</code> directory on deployment.</p>
 
@@ -159,7 +252,7 @@ lrwxrwxrwx 1 root root 34 Dec 14 14:49 .env -&gt; /mnt/bloggy-production/shared/
 
 <p>With that in place, we can visit the URL once more:</p>
 
-<p><img class="center" src="/images/2014/app.png" width="700" title="&lsquo;App on EC2&rsquo;" ></p>
+<p><img class="center" src="/images/2014/app.png" width="700" title="'App on EC2'" ></p>
 
 <p>And there we have it! The full stack <strong>{Nginx, Passenger, PostgreSQL}</strong> app is now live on the EC2 instance. This process falls slightly short of the ideal of <em>one-click instance provisioning</em>, but it&rsquo;s pretty close<sup id="fnref:5"><a href="#fn:5" rel="footnote">5</a></sup>. Going through this additional work seems preferable to me versus <a href="https://www.heroku.com/">Heroku</a> or <a href="http://aws.amazon.com/elasticbeanstalk/">Elastic Beanstalk</a> &ndash; both of which have their place<sup id="fnref:6"><a href="#fn:6" rel="footnote">6</a></sup> to be sure, but ultimately abstract away rather more of these details than I would prefer.</p>
 
@@ -173,7 +266,7 @@ lrwxrwxrwx 1 root root 34 Dec 14 14:49 .env -&gt; /mnt/bloggy-production/shared/
 
 <p>Thanks to the <code>therubyracer</code> gem added earlier, we can observe that the application&rsquo;s JavaScript has indeed undergone precompilation in deployment.</p>
 
-<p><img class="center" src="/images/2014/assets.png" width="700" title="&lsquo;Precompilation&rsquo;" ></p>
+<p><img class="center" src="/images/2014/assets.png" width="700" title="'Precompilation'" ></p>
 <div class="footnotes">
 <hr/>
 <ol>
@@ -192,65 +285,125 @@ lrwxrwxrwx 1 root root 34 Dec 14 14:49 .env -&gt; /mnt/bloggy-production/shared/
 </ol>
 </div>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Static Hosting on Amazon S3]]></title>
-    <link href="http://liggat.org/2013/11/03/static-hosting-on-amazon-s3/"/>
-    <updated>2013-11-03T13:13:00-08:00</updated>
-    <id>http://liggat.org/2013/11/03/static-hosting-on-amazon-s3</id>
-    <content type="html"><![CDATA[<p>I&rsquo;ve had an outstanding <strong>todo</strong> for quite some time to migrate my basic and essentially-static <a href="http://www.factorialsystems.ca">business website</a> off of <a href="http://www.squarespace.com">Squarespace</a>. I ended up replacing it with a combination of <a href="http://octopress.org">Octopress</a> and Amazon Simple Storage Service (<a href="http://aws.amazon.com/s3">S3</a>), which, it turns out, are a fantastic duo.<!--more--></p>
-
-<h3>Prelude</h3>
-
-<p>A brief prelude: Squarespace is fantastic, and should be the first port of call for anyone, especially a business, who needs a website. I can&rsquo;t even enumerate the number of ostensibly well-run restaurants and businesses who either don&rsquo;t have a website, or if they do, it&rsquo;s some horrid Flash-payload thing that won&rsquo;t run on the primary device customers tend to be using at the point of need: their phones! Squarespace isn&rsquo;t free, but is totally worth the small monthly cost for pretty much anyone.</p>
-
-<p>I started my business site there due to a combination of being overwhelmingly-busy at the time, as well as generally curious about the service&hellip; but it eventually became time for me to move on<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.</p>
-
-<h3>Octopress</h3>
-
-<p>I&rsquo;ve become quite enamoured with Octopress &ndash; the blogging engine that I use for this site (and host on GitHub). I like to think of it as the anti-Wordpress &ndash; it produces good, old-fashioned directory trees of HTML pages from <a href="http://en.wikipedia.org/wiki/Markdown">markdown</a>-formatted source files and <a href="http://sass-lang.com/">SASS</a> style sheets. No application server or database, and the attendant care and feeding, required &ndash; just a plain old web server serving files<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>. This is a perfect choice, it turns out, for a basic company site. It has all the necessary infrastructure for blogging, should that become necessary, and has built-in responsive design and other niceties.</p>
-
-<h3>Hosting</h3>
-
-<p>S3 is Amazon Web Services' online file storage service (distributed, redundant, RESTful, etc). It is purportedly used as the persistence backend for <a href="http://dropbox.com">Dropbox</a>, among others. My needs are considerably more modest &ndash; I just want it to store and serve my site content. It turns out it has an option for exactly this purpose:</p>
-
-<p><img class="center" src="/images/2013/s3.png" width="600" title="&lsquo;S3 Static Website Hosting&rsquo;" ></p>
-
-<p>Thus, a static website with Octopress and S3 requires that you simply:</p>
-
-<ol>
-<li>create content within an Octopress repository</li>
-<li>execute Octopress' <code>bundle exec rake generate</code> to produce static HTML</li>
-<li>deploy the output to an S3 bucket (<code>bundle exec rake deploy</code>)</li>
-</ol>
-
-
-<h3>Deploying</h3>
-
-<p>Out of the box, Octopress does not know how to deploy to S3. That&rsquo;s easily remedied via an extension to the <code>Rakefile</code> that I found via this <a href="http://www.jerome-bernard.com/blog/2011/08/20/quick-tip-for-easily-deploying-octopress-blog-on-amazon-s3/">blog post</a>. With that <code>s3</code> rake task added, and S3 bucket variables defined, it&rsquo;s simply a matter of running <code>bundle exec rake deploy</code>. to deploy new content. The underlying <code>s3cmd</code> is, obviously, smart enough to only send content deltas to the S3 bucket.</p>
-
-<h3>Cost</h3>
-
-<p>At the time of writing, Amazon charges 9.5¢ per Gigabyte-month for the first 1TB of storage (cheaper thereafter), plus 0.5¢ per 1000 RESTful (GET, PUT, etc) operations, plus some minimal data transfer charge. One reasonable way to describe this might be: <strong>extremely inexpensive</strong>!</p>
-
-<h3>So Far, So Good</h3>
-
-<p>Thus far, I&rsquo;m really happy with this setup. My personal blog, this site, is currently hosted on <a href="http://pages.github.com">GitHub Pages</a><sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>, but I&rsquo;ll probably move this over to S3 also. Obviously, the static site constraint remains &ndash; I can&rsquo;t, for instance, have a page with a form, or an XHR endpoint, etc. But if those should become necessary &ndash; it&rsquo;s very easy to upgrade to an EC2 instance with Rails, and remain within the Amazon ecosystem. I guess that&rsquo;s how they get you&hellip;</p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>Squarespace is definitely overkill for a static site if you have the time, knowledge and inclination to host it elsewhere. But many website-needing entities do not possess the intersection of those properties &ndash; hence the genius of Squarespace as a product itself.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-<li id="fn:2">
-<p>This resultant simplicity has an inherent appeal &ndash; not dissimilar to that, for me, of iOS vs OS X. The former trades possibility for simplicity &ndash; a desirable exchange in many (but obviously not all) scenarios.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
-<li id="fn:3">
-<p>GitHub Pages hosts static sites for free &ndash; not wishing to trespass on GitHub&rsquo;s awesomeness, I reasoned that I should probably pay for the business site&rsquo;s hosting. All 68¢ of it, or whatever the final bill ends up being.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
-</ol>
 </div>
 
-]]></content>
-  </entry>
+
+  <footer>
+    <p class="meta">
+      
   
-</feed>
+
+<span class="byline author vcard">Posted by <span class="fn">Dave Liggat</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-12-13T16:00:21-08:00" pubdate data-updated="true">December 13<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/aws/'>aws</a>, <a class='category' href='/blog/categories/dev-ops/'>dev_ops</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://liggat.org/2014/12/13/a-full-AWS-rails-stack-provision-and-deployment-with-the-rubber-gem/" data-via="" data-counturl="http://liggat.org/2014/12/13/a-full-AWS-rails-stack-provision-and-deployment-with-the-rubber-gem/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2014/11/27/wealthsimple-review/" title="Previous Post: Wealthsimple Review">&laquo; Wealthsimple Review</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - <a href="http://liggat.org/about">Dave Liggat</a>.
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span> &
+  <span class="credit">hosted on <a href="http://pages.github.com">GitHub Pages</a></span>.
+</p>
+<p id="duration-statement">
+  <span class="credit">Liggat.org has been active for <span id='site-duration'></span>. </span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'liggatorg';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://liggat.org/2014/12/13/a-full-AWS-rails-stack-provision-and-deployment-with-the-rubber-gem/';
+        var disqus_url = 'http://liggat.org/2014/12/13/a-full-AWS-rails-stack-provision-and-deployment-with-the-rubber-gem/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+<script src="/javascripts/bigfoot.min.js"></script>
+<script src="/javascripts/moment.min.js"></script>
+<script src="/javascripts/custom/init-footer.js"></script>
+<script src="/javascripts/custom/init-bigfoot.js"></script>
+
+
+</body>
+</html>
