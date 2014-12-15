@@ -4,7 +4,7 @@
   <title><![CDATA[Liggat.org]]></title>
   <link href="http://liggat.org/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2014-12-15T10:20:04-08:00</updated>
+  <updated>2014-12-15T10:35:18-08:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -32,7 +32,7 @@
 <h3>(1) Set Up the Basic App</h3>
 
 <ul>
-<li><a href="https://github.com/dliggat/bloggy/commit/e52a13e96549230cb8f0f1ad7e81381ae2434013">Create</a> the app: <code>bundle exec rails new bloggy -d postgresql</code></li>
+<li><a href="https://github.com/dliggat/bloggy/commit/e52a13e96549230cb8f0f1ad7e81381ae2434013">Create</a> the app: <code>rails new bloggy -d postgresql</code></li>
 <li><a href="https://github.com/dliggat/bloggy/commit/dcddbc02350812ce9f94842d09078b93f2257cb7">Scaffold</a> a model: <code>bundle exec rails g scaffold post title:string body:text</code></li>
 <li><a href="https://github.com/dliggat/bloggy/commit/f59b8f311aab8cd24c8213f64b4e1441fdf03243">Create</a> database and migrate: <code>bundle exec rake db:create db:migrate</code></li>
 <li><a href="https://github.com/dliggat/bloggy/commit/521fac60a7ab97e9c7a1fb2c6f54b514dbaa2a44">Add</a> a root route and a basic root page</li>

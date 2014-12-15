@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Aws | Liggat.org]]></title>
   <link href="http://liggat.org/blog/categories/aws/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2014-12-15T10:20:04-08:00</updated>
+  <updated>2014-12-15T10:35:18-08:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -32,7 +32,7 @@
 <h3>(1) Set Up the Basic App</h3>
 
 <ul>
-<li><a href="https://github.com/dliggat/bloggy/commit/e52a13e96549230cb8f0f1ad7e81381ae2434013">Create</a> the app: <code>bundle exec rails new bloggy -d postgresql</code></li>
+<li><a href="https://github.com/dliggat/bloggy/commit/e52a13e96549230cb8f0f1ad7e81381ae2434013">Create</a> the app: <code>rails new bloggy -d postgresql</code></li>
 <li><a href="https://github.com/dliggat/bloggy/commit/dcddbc02350812ce9f94842d09078b93f2257cb7">Scaffold</a> a model: <code>bundle exec rails g scaffold post title:string body:text</code></li>
 <li><a href="https://github.com/dliggat/bloggy/commit/f59b8f311aab8cd24c8213f64b4e1441fdf03243">Create</a> database and migrate: <code>bundle exec rake db:create db:migrate</code></li>
 <li><a href="https://github.com/dliggat/bloggy/commit/521fac60a7ab97e9c7a1fb2c6f54b514dbaa2a44">Add</a> a root route and a basic root page</li>
@@ -78,7 +78,7 @@
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>SSH to the instance </span></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>ssh -v -i ~/.ec2/gsg-keypair &lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">&quot;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#108;&amp;#116;&amp;#x6f;&amp;#58;&amp;#117;&amp;#98;&amp;#x75;&amp;#110;&amp;#116;&amp;#117;&amp;#64;&amp;#101;&amp;#x63;&amp;#x32;&amp;#45;&amp;#53;&amp;#52;&amp;#x2d;&amp;#54;&amp;#57;&amp;#x2d;&amp;#x31;&amp;#56;&amp;#48;&amp;#x2d;&amp;#49;&amp;#56;&amp;#50;&amp;#46;&amp;#117;&amp;#x73;&amp;#45;&amp;#119;&amp;#101;&amp;#115;&amp;#116;&amp;#x2d;&amp;#x32;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#109;&amp;#x70;&amp;#x75;&amp;#x74;&amp;#x65;&amp;#x2e;&amp;#x61;&amp;#109;&amp;#97;&amp;#122;&amp;#x6f;&amp;#x6e;&amp;#97;&amp;#119;&amp;#115;&amp;#x2e;&amp;#99;&amp;#111;&amp;#x6d;&quot;</span>&gt;&amp;#117;&amp;#98;&amp;#x75;&amp;#110;&amp;#116;&amp;#117;&amp;#64;&amp;#x65;&amp;#x63;&amp;#50;&amp;#45;&amp;#x35;&amp;#52;&amp;#x2d;&amp;#54;&amp;#x39;&amp;#45;&amp;#x31;&amp;#x38;&amp;#48;&amp;#x2d;&amp;#x31;&amp;#56;&amp;#50;&amp;#x2e;&amp;#117;&amp;#x73;&amp;#45;&amp;#119;&amp;#x65;&amp;#x73;&amp;#x74;&amp;#x2d;&amp;#x32;&amp;#x2e;&amp;#99;&amp;#x6f;&amp;#109;&amp;#x70;&amp;#117;&amp;#116;&amp;#101;&amp;#x2e;&amp;#x61;&amp;#x6d;&amp;#x61;&amp;#122;&amp;#111;&amp;#x6e;&amp;#x61;&amp;#119;&amp;#115;&amp;#46;&amp;#99;&amp;#x6f;&amp;#109;&lt;/a&gt;
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>ssh -v -i ~/.ec2/gsg-keypair &lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">&quot;&amp;#x6d;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#x6f;&amp;#x3a;&amp;#x75;&amp;#98;&amp;#x75;&amp;#x6e;&amp;#116;&amp;#x75;&amp;#64;&amp;#x65;&amp;#99;&amp;#50;&amp;#45;&amp;#53;&amp;#x34;&amp;#45;&amp;#x36;&amp;#57;&amp;#x2d;&amp;#49;&amp;#x38;&amp;#x30;&amp;#45;&amp;#49;&amp;#x38;&amp;#x32;&amp;#x2e;&amp;#117;&amp;#x73;&amp;#x2d;&amp;#119;&amp;#x65;&amp;#115;&amp;#116;&amp;#x2d;&amp;#x32;&amp;#x2e;&amp;#x63;&amp;#111;&amp;#109;&amp;#112;&amp;#117;&amp;#116;&amp;#101;&amp;#46;&amp;#97;&amp;#109;&amp;#97;&amp;#122;&amp;#x6f;&amp;#110;&amp;#x61;&amp;#119;&amp;#115;&amp;#x2e;&amp;#x63;&amp;#111;&amp;#109;&quot;</span>&gt;&amp;#x75;&amp;#x62;&amp;#x75;&amp;#110;&amp;#116;&amp;#x75;&amp;#64;&amp;#x65;&amp;#x63;&amp;#x32;&amp;#45;&amp;#x35;&amp;#x34;&amp;#45;&amp;#54;&amp;#57;&amp;#45;&amp;#49;&amp;#56;&amp;#48;&amp;#45;&amp;#49;&amp;#x38;&amp;#x32;&amp;#46;&amp;#x75;&amp;#x73;&amp;#x2d;&amp;#x77;&amp;#x65;&amp;#115;&amp;#116;&amp;#x2d;&amp;#x32;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#109;&amp;#x70;&amp;#117;&amp;#116;&amp;#x65;&amp;#x2e;&amp;#x61;&amp;#109;&amp;#x61;&amp;#x7a;&amp;#111;&amp;#110;&amp;#x61;&amp;#x77;&amp;#115;&amp;#46;&amp;#99;&amp;#x6f;&amp;#109;&lt;/a&gt;
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <h3>(4) Provision the Environment</h3>
