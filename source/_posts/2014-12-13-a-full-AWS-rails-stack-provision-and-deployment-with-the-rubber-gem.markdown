@@ -160,7 +160,7 @@ Thanks to the `therubyracer` gem added earlier, we can observe that the applicat
 [temp]: https://github.com/rubber/rubber/tree/master/templates
 [rest]: http://en.wikipedia.org/wiki/Representational_state_transfer
 
-[^1]: There's a fair bit of documentation staleness around these values, so unless you're reading this around December 2014, the world has likely moved onto something newer, and you may get errors as a result. Look for values that will be mutually compliant *today*, whenver that might be.
+[^1]: There's a fair bit of documentation staleness around these values, so unless you're reading this around December 2014, the world has likely moved onto something newer, and you may get errors as a result. Look for values that will be mutually compliant *today*, whenever that might be.
 [^2]: You can find the various options in the dropdown on the right side of [alestic.com](http://alestic.com).
 [^3]: As the app matures, these roles would tend to migrate to separate instances, and possibly leverage other AWS services such as [RDS](http://aws.amazon.com/rds/), but for now one instance is adequate for all the roles.
 [^4]: `rubber` monkeys with your `/etc/hosts` file to alias this locally, but I tend to ignore that and just grab it directly from the EC2 console.
