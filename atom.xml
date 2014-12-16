@@ -4,7 +4,7 @@
   <title><![CDATA[Liggat.org]]></title>
   <link href="http://liggat.org/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2014-12-15T10:35:18-08:00</updated>
+  <updated>2014-12-16T09:59:46-08:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -67,7 +67,7 @@
 <p>At this point, we&rsquo;re ready to fire up the EC2 instance:</p>
 
 <ul>
-<li><code>bundle exec rubber cap:create</code></li>
+<li><code>bundle exec cap rubber:create</code></li>
 <li>Name the single instance <code>production</code> and assign it every role within the app: <code>web,app,db:primary=true</code><sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>.</li>
 <li>Enter your local admin password when prompted – so <code>rubber</code> can modify your <code>/etc/hosts</code> file.</li>
 <li>Log into the AWS console => EC2, and ensure the image has been started. Grab the public DNS name of the instance<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>.</li>

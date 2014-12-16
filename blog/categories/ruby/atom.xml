@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby | Liggat.org]]></title>
   <link href="http://liggat.org/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2014-12-15T10:35:18-08:00</updated>
+  <updated>2014-12-16T09:59:46-08:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -67,7 +67,7 @@
 <p>At this point, we&rsquo;re ready to fire up the EC2 instance:</p>
 
 <ul>
-<li><code>bundle exec rubber cap:create</code></li>
+<li><code>bundle exec cap rubber:create</code></li>
 <li>Name the single instance <code>production</code> and assign it every role within the app: <code>web,app,db:primary=true</code><sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>.</li>
 <li>Enter your local admin password when prompted – so <code>rubber</code> can modify your <code>/etc/hosts</code> file.</li>
 <li>Log into the AWS console => EC2, and ensure the image has been started. Grab the public DNS name of the instance<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>.</li>
@@ -78,7 +78,7 @@
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>SSH to the instance </span></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>ssh -v -i ~/.ec2/gsg-keypair &lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">&quot;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#x6c;&amp;#116;&amp;#x6f;&amp;#58;&amp;#117;&amp;#98;&amp;#x75;&amp;#x6e;&amp;#116;&amp;#x75;&amp;#x40;&amp;#101;&amp;#99;&amp;#x32;&amp;#x2d;&amp;#x35;&amp;#x34;&amp;#45;&amp;#54;&amp;#x39;&amp;#x2d;&amp;#x31;&amp;#56;&amp;#48;&amp;#45;&amp;#x31;&amp;#x38;&amp;#50;&amp;#46;&amp;#x75;&amp;#x73;&amp;#45;&amp;#x77;&amp;#101;&amp;#115;&amp;#x74;&amp;#45;&amp;#x32;&amp;#46;&amp;#99;&amp;#x6f;&amp;#x6d;&amp;#112;&amp;#x75;&amp;#116;&amp;#x65;&amp;#46;&amp;#97;&amp;#x6d;&amp;#97;&amp;#x7a;&amp;#x6f;&amp;#x6e;&amp;#x61;&amp;#x77;&amp;#x73;&amp;#46;&amp;#x63;&amp;#111;&amp;#x6d;&quot;</span>&gt;&amp;#117;&amp;#x62;&amp;#x75;&amp;#x6e;&amp;#x74;&amp;#x75;&amp;#x40;&amp;#x65;&amp;#x63;&amp;#x32;&amp;#x2d;&amp;#53;&amp;#x34;&amp;#x2d;&amp;#x36;&amp;#x39;&amp;#45;&amp;#x31;&amp;#x38;&amp;#x30;&amp;#x2d;&amp;#49;&amp;#56;&amp;#50;&amp;#46;&amp;#117;&amp;#115;&amp;#45;&amp;#x77;&amp;#101;&amp;#x73;&amp;#x74;&amp;#x2d;&amp;#50;&amp;#46;&amp;#99;&amp;#111;&amp;#x6d;&amp;#x70;&amp;#x75;&amp;#x74;&amp;#101;&amp;#x2e;&amp;#97;&amp;#x6d;&amp;#97;&amp;#x7a;&amp;#x6f;&amp;#x6e;&amp;#x61;&amp;#119;&amp;#115;&amp;#x2e;&amp;#x63;&amp;#111;&amp;#x6d;&lt;/a&gt;
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>ssh -v -i ~/.ec2/gsg-keypair &lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">&quot;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#x6c;&amp;#x74;&amp;#x6f;&amp;#x3a;&amp;#117;&amp;#x62;&amp;#x75;&amp;#x6e;&amp;#x74;&amp;#117;&amp;#x40;&amp;#x65;&amp;#99;&amp;#50;&amp;#45;&amp;#x35;&amp;#x34;&amp;#45;&amp;#x36;&amp;#x39;&amp;#45;&amp;#49;&amp;#x38;&amp;#x30;&amp;#x2d;&amp;#49;&amp;#x38;&amp;#x32;&amp;#x2e;&amp;#117;&amp;#115;&amp;#45;&amp;#x77;&amp;#x65;&amp;#x73;&amp;#x74;&amp;#x2d;&amp;#x32;&amp;#x2e;&amp;#99;&amp;#x6f;&amp;#109;&amp;#x70;&amp;#x75;&amp;#x74;&amp;#101;&amp;#46;&amp;#97;&amp;#109;&amp;#x61;&amp;#x7a;&amp;#111;&amp;#x6e;&amp;#97;&amp;#x77;&amp;#115;&amp;#x2e;&amp;#x63;&amp;#x6f;&amp;#109;&quot;</span>&gt;&amp;#x75;&amp;#x62;&amp;#x75;&amp;#x6e;&amp;#x74;&amp;#117;&amp;#64;&amp;#101;&amp;#x63;&amp;#x32;&amp;#45;&amp;#x35;&amp;#52;&amp;#x2d;&amp;#54;&amp;#x39;&amp;#x2d;&amp;#x31;&amp;#x38;&amp;#x30;&amp;#45;&amp;#x31;&amp;#56;&amp;#50;&amp;#x2e;&amp;#x75;&amp;#115;&amp;#45;&amp;#119;&amp;#101;&amp;#x73;&amp;#116;&amp;#x2d;&amp;#50;&amp;#x2e;&amp;#99;&amp;#111;&amp;#x6d;&amp;#112;&amp;#117;&amp;#x74;&amp;#101;&amp;#x2e;&amp;#x61;&amp;#109;&amp;#x61;&amp;#122;&amp;#x6f;&amp;#110;&amp;#x61;&amp;#x77;&amp;#x73;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#109;&lt;/a&gt;
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <h3>(4) Provision the Environment</h3>
