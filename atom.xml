@@ -4,7 +4,7 @@
   <title><![CDATA[Liggat.org]]></title>
   <link href="http://liggat.org/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2014-12-16T09:59:46-08:00</updated>
+  <updated>2014-12-16T10:01:52-08:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -150,9 +150,7 @@ App 2213 stderr:  from /mnt/bloggy-production/shared/bundle/ruby/2.1.0/gems/rail
 
 <p>Back on the server, <code>sudo mv /home/ubuntu/.env /mnt/bloggy-production/shared/</code> to copy the file to the appropriate place. The final <a href="https://github.com/dliggat/bloggy/commit/23bac39176accbee69ba3465d8aad92e822f2972">repo commit</a> ensures that <code>capistrano</code> will symlink this from the <code>release</code> directory into the <code>shared</code> directory on deployment.</p>
 
-<p>One final deployment should do the trick to get this into the Rails app on production: <code>bundle exec cap:deploy</code>:</p>
-
-<p>Sure enough:</p>
+<p>One final deployment should do the trick to get this into the Rails app on production: <code>bundle exec cap deploy</code>. Sure enough:</p>
 
 <pre><code>ubuntu@production:~$ cd /mnt/bloggy-production/current/
 ubuntu@production:/mnt/bloggy-production/current$ ls -la .env
