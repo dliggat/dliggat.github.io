@@ -112,9 +112,7 @@ rm .env
 
 Back on the server, `sudo mv /home/ubuntu/.env /mnt/bloggy-production/shared/` to copy the file to the appropriate place. The final [repo commit][capis] ensures that `capistrano` will symlink this from the `release` directory into the `shared` directory on deployment.
 
-One final deployment should do the trick to get this into the Rails app on production: `bundle exec cap:deploy`:
-
-Sure enough:
+One final deployment should do the trick to get this into the Rails app on production: `bundle exec cap deploy`. Sure enough:
 
     ubuntu@production:~$ cd /mnt/bloggy-production/current/
     ubuntu@production:/mnt/bloggy-production/current$ ls -la .env
