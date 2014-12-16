@@ -44,7 +44,7 @@ I started out with a super basic Rails app, unimaginatively named `bloggy`. The 
 
 At this point, we're ready to fire up the EC2 instance:
 
-* `bundle exec rubber cap:create`
+* `bundle exec cap rubber:create`
 * Name the single instance `production` and assign it every role within the app: `web,app,db:primary=true`[^3].
 * Enter your local admin password when prompted – so `rubber` can modify your `/etc/hosts` file.
 * Log into the AWS console => EC2, and ensure the image has been started. Grab the public DNS name of the instance[^4].
