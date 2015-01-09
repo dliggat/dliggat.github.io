@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>HTTPS: Emulate the Newspaper - Liggat.org</title>
+  <meta name="author" content="Dave Liggat">
+
+  
+  <meta name="description" content="There&rsquo;s a pretty substantial effort around the Internet to get SSL/TLS (i.e. HTTPS as far as the web is concerned) deployed as widely as &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://liggat.org/2015/01/07/https-emulate-the-newspaper">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Liggat.org" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<!-- MAYBE <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,400italic' rel='stylesheet' type='text/css'> -->
+
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,700italic|Lora:400,400italic|Raleway:100|Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
+
+<link type="text/plain" rel="author" href="http://liggat.org/humans.txt" />
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-42613016-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body    class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Liggat.org</a></h1>
+  
+    <h2>by Dave Liggat</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:liggat.org" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/archive">Archive</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/contact">Contact</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">HTTPS: Emulate the Newspaper</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-07T20:47:11-08:00" pubdate data-updated="true">January 7<span>th</span>, 2015</time>  • <a rel="full-article" href="">&infin;</a> 
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>There&rsquo;s a pretty substantial effort around the Internet to get <a href="http://en.wikipedia.org/wiki/Transport_Layer_Security">SSL/TLS</a> (i.e. <a href="http://en.wikipedia.org/wiki/HTTP_Secure">HTTPS</a> as far as the web is concerned) deployed as widely as possible in favour of unencrypted-<a href="http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">HTTP</a>. I won&rsquo;t enumerate the reasons here, though I will direct the reader to <a href="https://www.tbray.org/ongoing/misc/Tim">Tim Bray</a>&rsquo;s excellent <a href="https://www.tbray.org/ongoing/When/201x/2012/12/02/HTTPS">Private by Default</a> post on the topic.<!--more--></p>
+
+<p>This issue was further covered for a couple of weeks by the folks on the <a href="http://atp.fm">ATP podcast</a>; in particular they <a href="http://atp.fm/episodes/97">discussed</a> the issue of whether HTTPS is worth bothering with on mostly-or-entirely static endpoints such as blogs or news sites. They mentioned a number of excellent points, including the use of HTTPS as a mechanism to defeat, or at least hinder, the repellent practice of a <a href="http://en.wikipedia.org/wiki/Man-in-the-middle_attack">man-in-the-middle</a> injecting <a href="https://www.eff.org/deeplinks/2014/11/verizon-x-uidh">ad tracking codes</a> into the unencrypted-HTTP payloads, or otherwise monkeying with the payload in any way en-route to its client.</p>
+
+<p>Between these and other worthwhile discussions of the issue, I don&rsquo;t have a great deal to add, especially since <a href="http://en.wikipedia.org/wiki/Information_security">infosec</a> is a discipline for which I have nothing but personal interest to purvey as a credential. However, an analogy did recently occur to me, and though it&rsquo;s clearly <a href="#flawed">flawed</a>, as are all analogies, it just might be a helpful way to think about the issue.</p>
+
+<p>Imagine a mailbox, attached to a house. The occupant is an enthusiastic reader; and subscribes to a substantial bundle of newspapers. Daily, the occupant retrieves the newspapers, brings them into the house, and behind closed doors engages in an leisurely perusal of their contents.</p>
+
+<p>Any observer of this ritual – from the delivering postal-worker to the binoculared-neighbour on the lookout for prurient gossip – is only able to gain <em>limited</em> insight into the interests of the occupant. Certainly, the newspapers themselves leak information about the occupant – conclusions are immediately drawn upon witnessing the various publication titles, and the personal interests and perhaps even personality characteristics that their <a href="http://en.wikipedia.org/wiki/Union_%28set_theory%29">union</a> implies.</p>
+
+<p>But that&rsquo;s as far as it goes. <em>Crucially</em> – no observer is privy to the set of <em>actual articles</em> that pique the occupant&rsquo;s interest, and the time spent reading each one. It is between the occupant and the bundle itself how high-brow, or how low-brow those interests are, how much time is spent on world affairs versus comics and sports, whether any lingering on the seedier classifieds goes on, and so on.</p>
+
+<p>It&rsquo;s undoubtedly clear where this is going: hosts on the Internet are newspapers, and URLs are articles. Host visitation may well be visible to the observer; URL visitation should not be. It is entirely reasonable to demand that the Internet should seek to emulate, at a minimum, a comparable privacy affordance to that which naturally exists in the newspaper scenario. Asterisks and fine-print abound, but HTTPS brings this newspaper-esque privacy to the web.</p>
+
+<p>Given the extent to which life – personal, civic, political and otherwise – has moved, and continues to move online, private-by-default is a crucial and long-overdue evolutionary step for the Internet. Whether any given site is largely &lsquo;static&rsquo; or not – it&rsquo;s a distinction that&rsquo;s ultimately irrelevant.</p>
+
+<h3><a name="flawed" class="target">Addendum I</a></h3>
+
+
+<p><em>Of course the analogy breaks comprehensively upon casual analysis: newspapers don&rsquo;t have certificate authorities and the attendant hassles; it&rsquo;s hard to fail at privately readingly newspapers but easy to fail at deploying and consuming TLS; things like <a href="http://heartbleed.com/">Heartbleed</a> happen, etc. It&rsquo;s also the case that without particular care taken, the <a href="http://security.stackexchange.com/questions/73309/do-payload-sizes-reveal-urls-when-https-is-deployed-on-news-blogs-etc">unique payload</a> sizes for the set of site URLs will be able to imply URL visitation anyhow. And perhaps most obviously: the newspaper itself doesn&rsquo;t receive requests for which individual articles you&rsquo;d like you read.</em></p>
+
+<h3>Addendum II</h3>
+
+<p><em>I&rsquo;m very vulnerable to charges of hypocrisy, or at least neglect – this very site has no HTTPS endpoint. That&rsquo;ll be rectified this year &ndash; probably as a test case for when the <a href="https://letsencrypt.org/">Let&rsquo;s Encrypt</a> Certificate Authority launches.</em></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Dave Liggat</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-07T20:47:11-08:00" pubdate data-updated="true">January 7<span>th</span>, 2015</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/https/'>https</a>, <a class='category' href='/blog/categories/infosec/'>infosec</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://liggat.org/2015/01/07/https-emulate-the-newspaper/" data-via="" data-counturl="http://liggat.org/2015/01/07/https-emulate-the-newspaper/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2014/12/13/a-full-AWS-rails-stack-provision-and-deployment-with-the-rubber-gem/" title="Previous Post: A Full AWS Rails Stack Provision and Deployment with the Rubber Gem">&laquo; A Full AWS Rails Stack Provision and Deployment with the Rubber Gem</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - <a href="http://liggat.org/about">Dave Liggat</a>.
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span> &
+  <span class="credit">hosted on <a href="http://pages.github.com">GitHub Pages</a></span>.
+</p>
+<p id="duration-statement">
+  <span class="credit">Liggat.org has been active for <span id='site-duration'></span>. </span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'liggatorg';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://liggat.org/2015/01/07/https-emulate-the-newspaper/';
+        var disqus_url = 'http://liggat.org/2015/01/07/https-emulate-the-newspaper/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+<script src="/javascripts/bigfoot.min.js"></script>
+<script src="/javascripts/moment.min.js"></script>
+<script src="/javascripts/custom/init-footer.js"></script>
+<script src="/javascripts/custom/init-bigfoot.js"></script>
+
+
+</body>
+</html>
