@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Infosec | Liggat.org]]></title>
   <link href="http://liggat.org/blog/categories/infosec/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2015-01-09T08:26:57-08:00</updated>
+  <updated>2015-01-09T12:16:42-08:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -30,14 +30,14 @@
 
 <p>But that&rsquo;s as far as it goes. <em>Crucially</em> – no observer is privy to the set of <em>actual articles</em> that pique the occupant&rsquo;s interest, and the time spent reading each one. It is between the occupant and the bundle itself how high-brow, or how low-brow those interests are, how much time is spent on world affairs versus comics and sports, whether any lingering on the seedier classifieds goes on, and so on.</p>
 
-<p>It&rsquo;s undoubtedly clear where this is going: hosts on the Internet are newspapers, and URLs are articles. Host visitation may well be visible to the observer; URL visitation should not be. It is entirely reasonable to demand that the Internet should seek to emulate, at a minimum, a comparable privacy affordance to that which naturally exists in the newspaper scenario. Asterisks and fine-print abound, but HTTPS brings this newspaper-esque privacy to the web.</p>
+<p>It&rsquo;s undoubtedly clear where this is going: hosts on the web are newspapers, and URLs are articles. Host visitation may well be visible to the observer; URL visitation should not be. It is entirely reasonable to demand that the web should seek to emulate, at a minimum, a comparable privacy affordance to that which naturally exists in the newspaper scenario. Asterisks and fine-print abound, but HTTPS brings this newspaper-esque privacy to the web.</p>
 
 <p>Given the extent to which life – personal, civic, political and otherwise – has moved, and continues to move online, private-by-default is a crucial and long-overdue evolutionary step for the Internet. Whether any given site is largely &lsquo;static&rsquo; or not – it&rsquo;s a distinction that&rsquo;s ultimately irrelevant.</p>
 
 <h3><a name="flawed" class="target">Addendum I</a></h3>
 
 
-<p><em>Of course the analogy breaks comprehensively upon casual analysis: newspapers don&rsquo;t have certificate authorities and the attendant hassles; it&rsquo;s hard to fail at privately readingly newspapers but easy to fail at deploying and consuming TLS; things like <a href="http://heartbleed.com/">Heartbleed</a> happen, etc. It&rsquo;s also the case that without particular care taken, the <a href="http://security.stackexchange.com/questions/73309/do-payload-sizes-reveal-urls-when-https-is-deployed-on-news-blogs-etc">unique payload</a> sizes for the set of site URLs will be able to imply URL visitation anyhow. And perhaps most obviously: the newspaper itself doesn&rsquo;t receive requests for which individual articles you&rsquo;d like you read.</em></p>
+<p><em>Of course the analogy breaks comprehensively upon casual analysis: newspapers don&rsquo;t have certificate authorities and the attendant hassles; it&rsquo;s hard to fail at privately reading newspapers but easy to fail at deploying and consuming TLS; things like <a href="http://heartbleed.com/">Heartbleed</a> happen, etc. It&rsquo;s also the case that without particular care taken, the <a href="http://security.stackexchange.com/questions/73309/do-payload-sizes-reveal-urls-when-https-is-deployed-on-news-blogs-etc">unique payload</a> sizes for the set of site URLs will be able to imply URL visitation anyhow. And perhaps most obviously: the newspaper itself doesn&rsquo;t receive requests for which individual articles you&rsquo;d like you read.</em></p>
 
 <h3>Addendum II</h3>
 
