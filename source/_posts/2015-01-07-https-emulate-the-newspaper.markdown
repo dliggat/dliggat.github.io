@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "HTTPS: Emulate the Newspaper"
+description: "A defense of HTTPS for all websites, whether static or not"
 date: 2015-01-07 20:47:11 -0800
 comments: true
 categories: ["infosec", "https"]
