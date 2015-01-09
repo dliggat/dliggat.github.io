@@ -25,6 +25,9 @@ html {
   a, a:visited {
     color: $link-color;
   }
+  a:target, .target {
+    color: inherit;
+  }
   a:hover {
     color: red;
   }
