@@ -4,7 +4,7 @@
   <title><![CDATA[Liggat.org]]></title>
   <link href="http://liggat.org/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2015-01-30T14:42:45-08:00</updated>
+  <updated>2015-01-30T14:44:49-08:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -108,7 +108,7 @@
 <hr/>
 <ol>
 <li id="fn:1">
-<p>That may no longer <em>technically</em> be true with the onset of <code>.docx</code> versus <code>.doc</code> but it&rsquo;s true for all practical purposes. No one&rsquo;s putting their Word docs in <code>git repositories</code>, and if they are, they aren&rsquo;t happy about it.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<p>That may no longer <em>technically</em> be true with the onset of <code>.docx</code> versus <code>.doc</code> but it&rsquo;s true for all practical purposes. No one&rsquo;s putting their Word docs in <code>git</code> repositories, and if they are, they aren&rsquo;t happy about it.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
 <li id="fn:2">
 <p>A lazy portmanteau of <em>curriulum-vitae</em> and <em>HTML</em>.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
 <li id="fn:3">

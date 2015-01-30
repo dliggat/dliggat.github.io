@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby | Liggat.org]]></title>
   <link href="http://liggat.org/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2015-01-30T14:42:45-08:00</updated>
+  <updated>2015-01-30T14:44:49-08:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -127,7 +127,7 @@
 <hr/>
 <ol>
 <li id="fn:1">
-<p>That may no longer <em>technically</em> be true with the onset of <code>.docx</code> versus <code>.doc</code> but it&rsquo;s true for all practical purposes. No one&rsquo;s putting their Word docs in <code>git repositories</code>, and if they are, they aren&rsquo;t happy about it.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<p>That may no longer <em>technically</em> be true with the onset of <code>.docx</code> versus <code>.doc</code> but it&rsquo;s true for all practical purposes. No one&rsquo;s putting their Word docs in <code>git</code> repositories, and if they are, they aren&rsquo;t happy about it.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
 <li id="fn:2">
 <p>A lazy portmanteau of <em>curriulum-vitae</em> and <em>HTML</em>.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
 <li id="fn:3">
@@ -203,7 +203,7 @@
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>SSH to the instance </span></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>ssh -v -i ~/.ec2/gsg-keypair &lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">&quot;&amp;#109;&amp;#97;&amp;#x69;&amp;#x6c;&amp;#116;&amp;#x6f;&amp;#58;&amp;#117;&amp;#x62;&amp;#117;&amp;#110;&amp;#116;&amp;#x75;&amp;#x40;&amp;#101;&amp;#x63;&amp;#50;&amp;#45;&amp;#x35;&amp;#x34;&amp;#45;&amp;#54;&amp;#x39;&amp;#45;&amp;#x31;&amp;#x38;&amp;#x30;&amp;#x2d;&amp;#x31;&amp;#x38;&amp;#50;&amp;#x2e;&amp;#x75;&amp;#x73;&amp;#x2d;&amp;#x77;&amp;#101;&amp;#x73;&amp;#x74;&amp;#x2d;&amp;#x32;&amp;#x2e;&amp;#99;&amp;#x6f;&amp;#x6d;&amp;#112;&amp;#117;&amp;#x74;&amp;#101;&amp;#x2e;&amp;#x61;&amp;#109;&amp;#97;&amp;#122;&amp;#111;&amp;#x6e;&amp;#x61;&amp;#x77;&amp;#115;&amp;#x2e;&amp;#99;&amp;#111;&amp;#109;&quot;</span>&gt;&amp;#x75;&amp;#x62;&amp;#x75;&amp;#110;&amp;#116;&amp;#x75;&amp;#x40;&amp;#x65;&amp;#99;&amp;#x32;&amp;#x2d;&amp;#x35;&amp;#52;&amp;#x2d;&amp;#54;&amp;#x39;&amp;#x2d;&amp;#x31;&amp;#56;&amp;#x30;&amp;#x2d;&amp;#49;&amp;#x38;&amp;#50;&amp;#46;&amp;#117;&amp;#x73;&amp;#x2d;&amp;#119;&amp;#x65;&amp;#x73;&amp;#x74;&amp;#x2d;&amp;#x32;&amp;#x2e;&amp;#x63;&amp;#111;&amp;#x6d;&amp;#112;&amp;#117;&amp;#116;&amp;#101;&amp;#46;&amp;#97;&amp;#x6d;&amp;#97;&amp;#x7a;&amp;#x6f;&amp;#x6e;&amp;#97;&amp;#119;&amp;#x73;&amp;#46;&amp;#99;&amp;#x6f;&amp;#109;&lt;/a&gt;
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>ssh -v -i ~/.ec2/gsg-keypair &lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">&quot;&amp;#109;&amp;#x61;&amp;#105;&amp;#108;&amp;#116;&amp;#x6f;&amp;#x3a;&amp;#117;&amp;#x62;&amp;#x75;&amp;#110;&amp;#116;&amp;#x75;&amp;#x40;&amp;#101;&amp;#x63;&amp;#x32;&amp;#x2d;&amp;#53;&amp;#x34;&amp;#45;&amp;#x36;&amp;#57;&amp;#45;&amp;#x31;&amp;#x38;&amp;#x30;&amp;#45;&amp;#x31;&amp;#x38;&amp;#x32;&amp;#x2e;&amp;#117;&amp;#x73;&amp;#x2d;&amp;#119;&amp;#101;&amp;#115;&amp;#116;&amp;#x2d;&amp;#50;&amp;#x2e;&amp;#x63;&amp;#x6f;&amp;#109;&amp;#112;&amp;#117;&amp;#x74;&amp;#x65;&amp;#46;&amp;#97;&amp;#109;&amp;#97;&amp;#x7a;&amp;#111;&amp;#x6e;&amp;#97;&amp;#x77;&amp;#115;&amp;#x2e;&amp;#x63;&amp;#x6f;&amp;#109;&quot;</span>&gt;&amp;#x75;&amp;#98;&amp;#117;&amp;#110;&amp;#116;&amp;#117;&amp;#64;&amp;#101;&amp;#99;&amp;#x32;&amp;#x2d;&amp;#53;&amp;#52;&amp;#x2d;&amp;#54;&amp;#x39;&amp;#x2d;&amp;#x31;&amp;#56;&amp;#x30;&amp;#x2d;&amp;#x31;&amp;#x38;&amp;#50;&amp;#x2e;&amp;#117;&amp;#115;&amp;#x2d;&amp;#x77;&amp;#x65;&amp;#x73;&amp;#x74;&amp;#x2d;&amp;#x32;&amp;#x2e;&amp;#99;&amp;#111;&amp;#x6d;&amp;#112;&amp;#117;&amp;#x74;&amp;#x65;&amp;#46;&amp;#x61;&amp;#x6d;&amp;#x61;&amp;#122;&amp;#111;&amp;#110;&amp;#97;&amp;#x77;&amp;#x73;&amp;#x2e;&amp;#99;&amp;#x6f;&amp;#x6d;&lt;/a&gt;
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <h3>(4) Provision the Environment</h3>
