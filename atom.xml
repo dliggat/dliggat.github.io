@@ -4,7 +4,7 @@
   <title><![CDATA[Liggat.org]]></title>
   <link href="http://liggat.org/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2015-01-30T14:31:46-08:00</updated>
+  <updated>2015-01-30T14:42:45-08:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -18,7 +18,7 @@
     <link href="http://liggat.org/2015/01/30/personal-cvs-with-curriculum-vitml/"/>
     <updated>2015-01-30T12:16:04-08:00</updated>
     <id>http://liggat.org/2015/01/30/personal-cvs-with-curriculum-vitml</id>
-    <content type="html"><![CDATA[<p>Word-processing documents are, charitably, a <em>less-than-ideal</em> way to represent textual content. As a recipient, they necessitate the presence of current and often expensive application software (i.e. Microsoft Office) &ndash; at least if you want to view the document with its original visual fidelity intact.<!--more--> As a creator, they are even worse: one ends up pouring effort into a digital <a href="http://en.wikipedia.org/wiki/Binary_large_object">binary-blob</a><sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> artifact that is, practically-speaking, untraceable and unversionable. Even if all of these objections were addressed, a substantial existential quandary remains: Word processing workflows were built for a paper centric world. We no longer live in such a world.</p>
+    <content type="html"><![CDATA[<p>Word-processing documents are, charitably, a <em>less-than-ideal</em> way to represent textual content. As a recipient, they necessitate the presence of current and often expensive application software (i.e. Microsoft Office) &ndash; at least if you want to view the document with its original visual fidelity intact.<!--more--> As a creator, they are even worse: one ends up pouring effort into a <a href="http://en.wikipedia.org/wiki/Binary_large_object">binary-blob</a><sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> artifact that is, practically-speaking, untraceable and unversionable. Even if all of these objections were addressed, a substantial existential quandary remains: Word processing workflows were built for a paper centric world. We no longer live in such a world.</p>
 
 <p>And yet, the obvious candidate to replace these has existed for some time: the web!</p>
 
