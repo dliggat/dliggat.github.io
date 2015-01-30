@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Web | Liggat.org]]></title>
+  <link href="http://liggat.org/blog/categories/web/atom.xml" rel="self"/>
+  <link href="http://liggat.org/"/>
+  <updated>2015-01-30T14:31:46-08:00</updated>
+  <id>http://liggat.org/</id>
+  <author>
+    <name><![CDATA[Dave Liggat]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Personal CVs With Curriculum-Vitml]]></title>
+    <link href="http://liggat.org/2015/01/30/personal-cvs-with-curriculum-vitml/"/>
+    <updated>2015-01-30T12:16:04-08:00</updated>
+    <id>http://liggat.org/2015/01/30/personal-cvs-with-curriculum-vitml</id>
+    <content type="html"><![CDATA[<p>Word-processing documents are, charitably, a <em>less-than-ideal</em> way to represent textual content. As a recipient, they necessitate the presence of current and often expensive application software (i.e. Microsoft Office) &ndash; at least if you want to view the document with its original visual fidelity intact.<!--more--> As a creator, they are even worse: one ends up pouring effort into a digital <a href="http://en.wikipedia.org/wiki/Binary_large_object">binary-blob</a><sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> artifact that is, practically-speaking, untraceable and unversionable. Even if all of these objections were addressed, a substantial existential quandary remains: Word processing workflows were built for a paper centric world. We no longer live in such a world.</p>
+
+<p>And yet, the obvious candidate to replace these has existed for some time: the web!</p>
+
+<p>For all of my philosophical objections to <code>.docx</code> and its various derivatives and predecessors and workflows, there&rsquo;s only a single such document in my life that I begrudgingly find myself re-opening to replenish its life and relevance: my resume. I set out to build a better solution.</p>
+
+<h3>Requirements</h3>
+
+<p>A better replacement for a word-processor-based resume requires the following:</p>
+
+<ul>
+<li>Built with web technologies (HTML, CSS)</li>
+<li>Easy to deploy and update at a URL endpoint</li>
+<li>Version controlled content with <code>git</code></li>
+<li>Responsive layout for acceptable mobile-sized viewing</li>
+<li>Reasonable print-to-PDF output for when that&rsquo;s inevitably requested</li>
+</ul>
+
+
+<h3>Curriculum-Vitml</h3>
+
+<p>I&rsquo;ve written a tool to address this need called <a href="https://github.com/dliggat/curriculum-vitml">curriculum-vitml</a><sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>. It&rsquo;s a Ruby-<a href="https://middlemanapp.com/">Middleman</a> static site generator which relies on <a href="http://foundation.zurb.com">Foundation</a> for responsiveness, <a href="http://sass-lang.com/">Sass/SCSS</a> for styling and <a href="http://slim-lang.com/">Slim</a> partials and templates for the various resume elements. Its final output is a static HTML document with a single accompanying stylesheet, but the middleman server and SCSS/Slim components provide an easy update cycle. And of course the whole thing is inherently versionable<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>.</p>
+
+<h3>Entry</h3>
+
+<p>A single <a href="https://github.com/dliggat/curriculum-vitml/blob/master/source/content/roles/_01_role.html.slim">CV entry</a> looks like this:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>_01_role.html.slim: A Slim partial representing a CV-entry </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="o">.</span><span class="n">cv</span><span class="o">-</span><span class="n">entry</span>
+</span><span class='line'>  <span class="o">.</span><span class="n">coordinates</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;.duration</span>
+</span><span class='line'><span class="sr">  h4 Apr-2012 – present</span>
+</span><span class='line'><span class="sr">h3 Chief Awesome Officer</span>
+</span><span class='line'><span class="sr">h4</span>
+</span><span class='line'><span class="sr">  span.company Initech</span>
+</span><span class='line'><span class="sr">  span.location Vancouver, BC</span>
+</span><span class='line'><span class="sr">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;</span><span class="sr">/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;  .synopsis&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="nb">p</span>
+</span><span class='line'>  <span class="o">|</span>
+</span><span class='line'>    <span class="no">Here</span> <span class="n">I</span> <span class="n">did</span> <span class="n">awesome</span> <span class="n">things</span><span class="o">.</span>
+</span><span class='line'><span class="o">&lt;</span><span class="sr">/code&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>  <span class="o">.</span><span class="n">additional</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;h4 Highlights</span>
+</span><span class='line'><span class="sr">ul</span>
+</span><span class='line'><span class="sr">  li Crafted artisanal code with a focus on awesomeness</span>
+</span><span class='line'><span class="sr">  li Ensured I is not in TEAM</span>
+</span><span class='line'><span class="sr">  li Leveraged core competencies with a focus on profitability</span>
+</span><span class='line'><span class="sr">h4 Technologies</span>
+</span><span class='line'><span class="sr">p Ruby, JavaScript</span>
+</span><span class='line'><span class="sr">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;</span><span class="sr">/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Each job or &lsquo;role&rsquo; is represented by one of these Slim partials in the repository. I thought about using JSON or YAML for the data storage, but Slim is so readable and easy to update that I decided it wasn&rsquo;t even worth the translation. Additionally – keeping things in web markup allows for custom sections of data – an education section with a grade <code>&lt;table&gt;</code> for instance.</p>
+
+<h3>Output</h3>
+
+<p>The final web output looks quite notionally like a traditional resume at desktop size:</p>
+
+<p><img class="center" src="/images/2015/resume-desktop.png" width="500" title="&lsquo;Resume Desktop&rsquo;" ></p>
+
+<p>It&rsquo;s responsive on mobile:</p>
+
+<p><img class="center" src="/images/2015/resume-mobile.png" width="500" title="&lsquo;Resume Mobile&rsquo;" ></p>
+
+<p>And its print media queries allow for reasonable <a href="https://github.com/dliggat/curriculum-vitml/blob/master/sample/curriculum-vitml.pdf?raw=true">PDF output</a> (this was generated from Chrome using OS X&rsquo;s &lsquo;print to PDF&rsquo;).</p>
+
+<p>Of course, this is all very specific to resume-needs in general, and my resume-needs in particular. But it&rsquo;s the only &lsquo;document&rsquo; in my life with a reasonable chance of still being requested in &lsquo;file&rsquo; format instead of &lsquo;URL&rsquo; format. This bridges that gap. Feel free to use it as a starting point for your own.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>That may no longer <em>technically</em> be true with the onset of <code>.docx</code> versus <code>.doc</code> but it&rsquo;s true for all practical purposes. No one&rsquo;s putting their Word docs in <code>git repositories</code>, and if they are, they aren&rsquo;t happy about it.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>A lazy portmanteau of <em>curriulum-vitae</em> and <em>HTML</em>.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>My own personal resume is now a private fork of this repo.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+</feed>
