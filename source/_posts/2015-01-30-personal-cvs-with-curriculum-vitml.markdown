@@ -4,6 +4,7 @@ title: "Personal CVs With Curriculum-Vitml"
 date: 2015-01-30 12:16:04 -0800
 comments: true
 categories: ["ruby", "web"]
+description: A tool for personal resumes using nice web technologies.
 ---
 Word-processing documents are, charitably, a *less-than-ideal* way to represent textual content. As a recipient, they necessitate the presence of current and often expensive application software (i.e. Microsoft Office) - at least if you want to view the document with its original visual fidelity intact.<!--more--> As a creator, they are even worse: one ends up pouring effort into a [binary-blob][blob][^1] artifact that is, practically-speaking, untraceable and unversionable. Even if all of these objections were addressed, a substantial existential quandary remains: Word processing workflows were built for a paper centric world. We no longer live in such a world.
 
