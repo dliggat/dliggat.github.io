@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Investing | Liggat.org]]></title>
   <link href="http://liggat.org/blog/categories/investing/atom.xml" rel="self"/>
   <link href="http://liggat.org/"/>
-  <updated>2015-01-30T14:49:10-08:00</updated>
+  <updated>2015-02-09T17:58:04-08:00</updated>
   <id>http://liggat.org/</id>
   <author>
     <name><![CDATA[Dave Liggat]]></name>
@@ -12,6 +12,46 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Perpetually-Current Asset Allocation]]></title>
+    <link href="http://liggat.org/2015/02/09/perpetually-current-asset-allocation/"/>
+    <updated>2015-02-09T12:06:37-08:00</updated>
+    <id>http://liggat.org/2015/02/09/perpetually-current-asset-allocation</id>
+    <content type="html"><![CDATA[<p>One of the more tiresome aspects of self-directed investing is keeping track of a single logical portfolio that spans multiple accounts on an up-to-date basis. For a Canadian individual, this is quite often as many as three separate accounts – RRSP, TFSA, and non-registered.<!--more--> For a family unit treating its assets as one joint portfolio, this can balloon to well above six separate accounts once the various RESP, LIRA, etc<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> possibilities are factored in.</p>
+
+<p>The various online brokerages <em>could</em> solve this problem for their customers very effectively as they uniquely possess all the relevant data, but of course, as I&rsquo;ve <a href="http://liggat.org/2014/04/22/a-call-for-modern-banking/">oft-lamented</a>, financial institutions generally don&rsquo;t seem to be clued into the <em>not-at-all-controversial</em> idea that their customers would appreciate high-quality and useful software experiences in banking. Therefore, it usually falls to the individual to build and maintain a spreadsheet that captures this information. The problem with this approach is that it&rsquo;s a <em>point-in-time</em> measurement: it&rsquo;s accurate right now, but becomes stale as time marches on – at which point you need to update it to reflect current prices.</p>
+
+<p>It turns out that <a href="https://docs.google.com/spreadsheets/u/0/">Google Sheets</a> has a very useful <em>function</em><sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> which facilitates a <em>perpetually-current</em> rather than <em>point-in-time</em> overview of one&rsquo;s asset allocation: <code>=GOOGLEFINANCE()</code>. This spreadsheet function makes an API call to <a href="https://www.google.com/finance">Google Finance</a> to get the current price for a particular asset. It even works with currency pairs; e.g. <code>USDCAD</code>. For example, these invocations in Google Sheets will yield the current price:</p>
+
+<pre><code>=GOOGLEFINANCE("AAPL", "price")
+=GOOGLEFINANCE("TSE:XIC", "price")
+=GOOGLEFINANCE("currency:USDCAD")
+</code></pre>
+
+<p>The asset allocation measurement implications are undoubtedly obvious: one can represent a portfolio as a Google Sheets document, and the asset balances, and more importantly, allocation percentages will be perpetually-current. I&rsquo;ve built a sample spreadsheet using this technique &ndash; it&rsquo;s publicly <a href="https://docs.google.com/spreadsheets/d/1CiCxHDfLRKANMKoE_vwecvc86tJ-sh9FHPNpNVmoVB0/edit?pli=1#gid=0">available here</a>.</p>
+
+<p><img class="center" src="/images/2015/portfolio.png" width="700" title="&lsquo;Portfolio&rsquo;" ></p>
+
+<p>One need only update the quantities in the <strong>ETF Units</strong> section, and the total in the bottom-right will be the current value, in CAD, of the entire portfolio. A few caveats: this won&rsquo;t track cash dividends, and ETF unit totals will need to be updated on the dividend frequency if <a href="http://en.wikipedia.org/wiki/Dividend_reinvestment_plan">Dividend Re-Investing</a> (DRIP) is enabled. Still, it has served as a useful tool for me, especially in the context of contributions on an ongoing basis. With a perpetually-current asset allocation, I can very easily determine which asset class is furthest out of alignment, and use new contributions to rebalance.</p>
+
+<p>As ever, none of this is financial advice – simply a retelling of my own [lay] experience.</p>
+
+<h3>Confidentiality Implications</h3>
+
+<p>There&rsquo;s a broader discussion to be had about one&rsquo;s comfort level with this sort of information, or any confidential data, living <em>in the cloud</em> – whether directly in Google Docs, or via files in a synced directory like Dropbox. Personally, on balance, I&rsquo;m fine with it, and a great deal of that comfort derives from my fairly stringent security practices: strong unique passwords, a <a href="https://agilebits.com/onepassword">password manager</a>, two-factor authentication, etc.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>As ever, <a href="http://liggat.org/2014/06/05/accounts-are-containers/">accounts are containers</a>.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>In the <code>function()</code> sense of the word.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Wealthsimple Review]]></title>
